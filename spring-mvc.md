@@ -63,9 +63,9 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 ├───resources
 │		└───springmvc.xml//因为难受而自定义的另一个配置文件
 └───webapp
-    └───WEB-INF
+	└───WEB-INF//这里面的文件对用户是不开放的
 		└───web.xml
-└───dispatcher-servlet.xml
+		└───dispatcher-servlet.xml
 			//这个名字是随着web.xml中自己定义的调度器名称而改变（是默认的格式），对应着springmvc的配置
 ```
 
@@ -101,7 +101,7 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 ```java
 <servlet-mapping>
-        <servlet-name>自定义名字</servlet-name>
+        <servlet-name>调度器的名字</servlet-name>
         <url-pattern>*.随意的扩展名</url-pattern>
      	<!--当传输来的url需求对应着不同的扩展名，将会对应着不同的操作-->
  </servlet-mapping>
@@ -109,7 +109,7 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
      <!--那么www.bilibili.com/v/music对应的是音乐区，www.bilibili.com/anime对应的是番剧区-->
      <!--此时，不同的url在功能上有着巨大的差别，因此，也可以通过指定域名之后的名称确定具体的职责，以指定对应的类来负责-->
  <servlet-mapping>
-        <servlet-name>假如这里自定义为番剧区</servlet-name>
+        <servlet-name>调度器的名字</servlet-name>
         <url-pattern>/anime</url-pattern>
     	<!之后"www.bilibili.com/anime..."对应的url将由番剧区的类负责解析并回复-->
  </servlet-mapping>
@@ -117,7 +117,61 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 上述代码同样添加在web.xml文件中，所谓的扩展名即index.jsp，index.html属于不同的文件。
 
-### 3. Controller
+### 3. @Controller
+
+> @Controller本身于@Bean类似，都是自发地实例化一个类，并将对象放入Spring容器中。
+>
+> 在底层中，容器实际上是一个Map对象，负责存储所有的对象，以及调用。当产生对象后，便使用map.put("新对象名"，实际的对象)。
+
+上述过程基本完成了一些初步的没什么太特殊的工作。接下来，我们需要考虑，一开始我们认为的WEB框架需要做的工作，就是根据url做相应的工作。
+
+@Controller注解，是告诉spring我是一个控制类，当url进来后，可以通过我来进行判断工作含义并执行工作。
+
+我们首先定义一个类，并标注Controller注解，然后在内部加上不同的方法，方法内部是我们需要返回怎样的页面文件，或其它各种结果，以及进行其它额外的操作。
+
+仅仅需要在内部的方法上加上@RequestMapping(value="/地址，如bilibili的anime")，这个注解也可以放在类的上面，总之就是指示接下来的内容适应的url类型，大致的样子如下：
+
+```java
+@RequestMapping(value="/")
+public class MyController(){
+    @RequestMapping(value="anime")
+    public 类型 dosomething(){
+        //发现当前对应的是地址"www.bilibili.com/anime..."
+        //可以随便做点事
+    }
+}
+```
+
+虽然完成了控制器，但spring此时是不知道它的存在的，需要在前面文件树中的`springmvc.xml`或`dispatcher-servlet.xml`文件中放入控制器类所在的包，spring就会知道把这里扫描一遍。
+
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+<context:component-scan base-package="包的路径"></context:component-scan>
+</beans>
+```
+
+如果我们在控制器中执行了相关的命令，并且试图返回一个页面时，
+
+​	*例如方法的类型为ModelAndView时，可以添加各种数据进去，而页面文件本身可以放在其它位置，使用setViewName()可以指向该页面文件的位置*
+
+​	*但有时候，我们是将大量这类页面文件放在同一目录下，或者所处的目录是处于同一目录下的，而且文件类型相同。那么，我们就希望把前面和后面总是重复的内容删减掉，为了达到这一一点，可以在Springmvc的配置文件中指定这些返回页面位置的前缀和后缀，以后就只需要写对应的文件名即可*
+
+```xml
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix" value="路径前缀"/><!--注意:这个前缀前后都需要/符号，以表明是目录-->
+    <!--额外的，前面提到WEB-INF目录下的文件是对用户隐藏的，如果调用的页面不希望用户能够直接调用，则可以在		WEB-INF目录下专门开辟一块目录存放页面文件-->
+       <property name="suffix" value=".文件类型"/>
+</bean>
+```
+
+
 
 
 
