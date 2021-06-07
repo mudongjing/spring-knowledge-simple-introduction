@@ -35,15 +35,17 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 上述就是，我们使用Spring MVC主要的目的和重要的技术点。而具体到实际的项目，则需要考虑一些细枝末节，对产品做优化，不至于粗糙。
 
+> 所谓的MVC是Model-View-Controller，controller负责判断url请求并分配到对应的负责方法，model就是这个方法，方法内部将各种工作完成后，将结果或直接将任务交给页面负责，即view，由此将一套任务进行分配，各司其职。
+
  ### 2.  代码的主要内容
 
 前面了解了这一框架的用处，那么实际的使用则需要注重功能的组织。
 
 - 首先在创建项目时，需要引入spring-webmvc的依赖。
 
-- 而由于浏览器发送来的请求多种多样，不一定都是简单地获取页面，即使是页面，当我们的目标复杂时，对网址的各种状况也有明确的任务分类，导致有多个Controller对象，因此需要一个请求的管理器，这里是称为中央调度器DispatcherServlet来根据请求选择不同的应对方案，这是一个继承自类HttpServlet的servlet，需要在web.xml注册，即
-- 需要的话，在写一些页面文件
-- 再写几个控制器类即Controller，以负责处理页面的各种效果
+- 而由于浏览器发送来的请求多种多样，不一定都是简单地获取页面，即使是页面，当我们的目标复杂时，对网址的各种状况也有明确的任务分类，导致有多个Controller对象，因此需要一个请求的管理器，这里是称为中央调度器DispatcherServlet来根据请求选择不同的应对方案，这是一个继承自类HttpServlet的servlet，需要在web.xml注册
+- 需要的话，再写一些页面文件
+- 再写几个控制器类即Controller，以负责完成各种内部工作，并可能负责返回页面文件
 - 为了保证spring知道你的Controller在哪，还需要一个配置文件指明控制器所在的包的位置
 - 此外，我们可能使用了一些视图解析器以处理页面效果，同样需要在配置文件中指明对应的包的位置。
 
@@ -71,6 +73,8 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 首先，整个项目需要中央调度器，要求在web.xml中告诉tomcat之类的服务器生成一个DispatchServlet的对象【更严格的说，tomcat只能算是Servlet容器】
 
+#### 3.1 xml构建
+
 最简单的web.xml指明要加载调度器对象：
 
 ```xml-dtd
@@ -86,12 +90,15 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 		<!--指明需要生成对象的类的全限定名-->
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup><!--加载顺序，这里就是要求赶紧加载，数字越小越急-->
-<!--如果觉得dispatcher和dispatcher-servlet.xml必须对应非常难受。-->
-		<init-param>
-			<param-name>contextConfigLocation</param><!--springmvc配置文件的位置属性-->
-			<param-value>classpath:springmvc.xml</param-value>
-			<!--指定的位置，这里是在resources目录下-->
-		</init-param>
+		<!--如果觉得dispatcher和dispatcher-servlet.xml必须对应非常难受。
+			<init-param>
+				--springmvc配置文件的位置属性--
+				<param-name>contextConfigLocation</param>
+				<param-value>classpath:springmvc.xml</param-value>
+				--指定的位置，这里是在resources目录下--
+				--当然你要可以放在其它目录下，如WEB-INF--
+				<param-value>/WEB-INF/springmvc.xml</param-value>
+			</init-param>-->
 	</servlet>
 </web-app>
 
@@ -99,15 +106,16 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 上述完成后，基本上搭配tomcat就能启动了。但是作为一个调度器，自然需要添加一些不同的情况，如
 
-```java
+```xml
 <servlet-mapping>
         <servlet-name>调度器的名字</servlet-name>
         <url-pattern>*.随意的扩展名</url-pattern>
      	<!--当传输来的url需求对应着不同的扩展名，将会对应着不同的操作，当然url中的扩展名与实际返回的页面文			  件的扩展名是没有直接关系的，这里只是作为我们划分不同url的依据而已-->
  </servlet-mapping>
-     <!--如果我们自己网站的域名是www.bilibili.com-->
-     <!--那么www.bilibili.com/v/music对应的是音乐区，www.bilibili.com/anime对应的是番剧区-->
-     <!--此时，不同的url在功能上有着巨大的差别，因此，也可以通过指定域名之后的名称确定具体的职责，以指定对应		 的类来负责-->
+     <!--如果我们自己网站的域名是www.bilibili.com
+     	 那么www.bilibili.com/v/music对应的是音乐区，www.bilibili.com/anime对应的是番剧区
+     	 此时，不同的url在功能上有着巨大的差别，
+		 因此，也可以通过指定域名之后的名称确定具体的职责，以指定对应的类来负责-->
  <servlet-mapping>
         <servlet-name>调度器的名字</servlet-name>
         <url-pattern>/anime</url-pattern>
@@ -116,6 +124,37 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 ```
 
 上述代码同样添加在web.xml文件中，所谓的扩展名即index.jsp，index.html属于不同的文件。
+
+#### 3.2 java Bean配置
+
+上述的XML文件配置，对于很多人而言觉得非常繁琐，而且还必须在指定的位置指定的文件名内写大量各种标签，从spring3.1开始，我们可以通过写普通的java类来初始化调度器。【但springmvc的配置文件还需要xml文件】
+
+下面是官方示例：
+
+```java
+ public class MyWebAppInitializer implements WebApplicationInitializer {
+    @Override
+    public void onStartup(ServletContext container) {
+      // Create the 'root' Spring application context
+      AnnotationConfigWebApplicationContext rootContext =
+        new AnnotationConfigWebApplicationContext();
+      rootContext.register(AppConfig.class);
+      // Manage the lifecycle of the root application context
+      container.addListener(new ContextLoaderListener(rootContext));
+      // Create the dispatcher servlet's Spring application context
+      AnnotationConfigWebApplicationContext dispatcherContext =
+        new AnnotationConfigWebApplicationContext();
+      dispatcherContext.register(DispatcherConfig.class);
+      // Register and map the dispatcher servlet
+      ServletRegistration.Dynamic dispatcher =
+        container.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
+      dispatcher.setLoadOnStartup(1);
+      dispatcher.addMapping("/");
+    }
+ }
+```
+
+
 
 ### 3. @Controller
 
