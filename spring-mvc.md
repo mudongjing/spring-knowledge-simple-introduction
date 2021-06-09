@@ -173,7 +173,7 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 ```java
 @RequestMapping(value="/")
 public class MyController(){
-    @RequestMapping(value="anime")
+    @RequestMapping(value="假设为anime")
     public 类型 dosomething(){
         //发现当前对应的是地址"www.bilibili.com/anime..."
         //可以随便做点事
@@ -216,19 +216,102 @@ public class MyController(){
 
 --------------------------------
 
-### 3. 接受参数
+> 现在，我们基本上知道了spring mvc大体的使用方式【当然了，还远远不够】。就像是开车上路，前面的知识让我们学会了启动，刹车，踩油门。但好的司机，会把握细节，开得平稳潇洒，什么路段怎么开，车子出毛病怎么修。
+>
+> 因此，我们需要暂停学技术，简单了解一下，spring mvc的一些内部机制。
 
-到此，用户如果要访问我们的各种页面都可以返回对应的页面文件。但是，正如第一节中所说的，页面的访问大多数不会是这样的静态页面，最简单的，我们需要调取某一个学生的信息表，那么不同学生对应的学生表的页面基本结构是相同的，只是内部的数据有所差别。
+> java的web编程，说到底是编写servlet【这是Server和Applet的组合词，Applet是以前java的web客户端技术，现在基本不用了】，它的意思大致为服务端的小程序，可生成动态的web页面，是作为客户请求和后端服务的中间层。【即前面的controller能接受浏览器的请求，即客户端请求，同时能够显示后端做出的回复】（所以前面说了tomcat本质上就是一个servlet的容器）
+>
+> servlet对应的java接口或类，主要为`javax.servlet`包实现了接口，其中`javax.servlet.http`包提供了派生出的用于处理HTTP请求的抽象类和一半的工具类，我们主要也就是使用这一类型。
+>
+> 如果想自己常见一种servlet，可以自行实现`javax.servlet.Servlet`接口，但需要实现里面的很多方法。也可以继承一个抽象类`GenericServlet`，只需要覆写里面的service方法即可。当然，我们最主要的还是继承`HttpServlet`，其中的主要方法为`doGet()`和`doPost()`。
+>
+> 为了运行我们编写的servlet【我们上面编写的项目实际就是一个servlet，当加载到Tomcat后，它会自动识别目录webapp，并找到里面的web.xml文件读取当前servlet的配置信息。
+>
+> 前文中提及到，项目创建初期要先创建一个中央调度器（Dispatcher），用于将客户端的请求进行分发，而实际上spring的这个调度器最后还是把任务交给了java的`RequestDispatcher`，位于javax.servlet包中，是一个接口，只是Tomcat有它关于该接口的实现类。
 
-那么用如果户输入的url就包含了查询的学生姓名，我们首先需要识别这个url的基本格式以判断处理此场景的方法，该方法还需要读取url中的变量，然后再根据数据查询获取具体的数据，此时，url就不是静态的，而是可能不断变化的，
+> 大致了解了底层的一些实际机制后，我们需要了解一下最直观的页面。这里常用的就是jsp文件，全称是Java server pages，属于动态网页开发技术。我们可以在里面写HTML语言作为静态内容，也可以使用标签`<% %>`在%中间插入java代码，更多的可自行了解jsp中java代码的使用，主要需要了解的就是**JSTL和EL表达式**【不过现在jsp算是一种老技术了（似乎java开发的这类东西总是要被别人替代，但仍然很有用），而且spring框架推荐使用freemarker、thymeleaf等模板编写页面，因此需要了解jsp，但要学会这些新的技术】（由于jsp支持java代码，所以它本质上不是一个单纯的页面文件，而是伪装成页面的servlet）
 
-​	~~就像我们在网页上看动漫，不同动漫的页面也就是评论、评分以及视频等主要信息是不同的，而页面大致都是统一结构，总不至于为每一个动漫或各种视频都写一个相应的页面文件。~~
+> 通过上述的描述，我们最终可以获得一个认识，所谓的web框架，就是借着java的servlet完成客户端与服务端的消息传递。其余的琐碎工作就是，如何管理这些servlet(Tomcat)，如何显示内容（页面）。
 
-这就需要url中可以包含变量，而方法则根据变量的不同将数据注入到某一个页面模板，并返回。
+*下图为spring mvc内部处理请求的基本流程。*
+
+```mermaid
+graph LR
+ browser(浏览器)-->|1.请求|dispatcher(DispatcherServlet 中央调度器)
+ dispatcher-->|12.相应|browser
+ handleMapping(HandleMapping 处理器映射器)
+ handleAdaptor(HandleAdaptor 处理器适配器)
+ controller(Controller 处理器)
+ viewresolver(ViewResolver 试图解析器)
+ view(View 视图)
+ dispatcher-->|2.请求|handleMapping
+ handleMapping-->|3.处理器执行链|dispatcher
+ dispatcher-->|4.处理器执行链|handleAdaptor
+ handleAdaptor-->|7.ModelAndView|dispatcher
+ handleAdaptor-->|5.执行|controller
+ controller-->|6.ModelAndView|handleAdaptor
+ dispatcher-->|8.ModelAndView|viewresolver
+ viewresolver-->|9.View|dispatcher
+ dispatcher-->|10.调用|view
+ view-->|11.执行|dispatcher
+```
+
+> 具体的运行过程是：我们创建的各种controller对象都保存在一个实现了handleExecutionChain的对象中，通过映射器得到对应的控制器，再将控制器交给适配器运行其中的方法，最后的结果由视图解析器确定视图文件位置，最后调用页面文件，回复浏览器的请求。
+
+### 4. 文件目录操作
+
+本节将叙述如何指定静态文件，如何重定向【forward,redirect】。
 
 
 
-### 4. 请求方式
+### 5. 请求的不同
 
-如第一节所说，浏览器在发送请求时index.html文件时，会附带着说明我需要这样的文件，这里的说明既包含了浏览器请求时所携带的各种属性，如对象头等，也携带着我是用get方式还是post方式进行请求。
+前面的各种从浏览器发送来的请求，基本上都是get方式，而对于我们填表发送的请求则属于post请求，因此，本节简单说明一下这两种方式。
+
+
+
+
+
+### 6. 拦截过滤
+
+诸如我们在一些网站种试图进入某些会员页面时，都会强行进入一个登录页面，这就是程序对这类uri地址的特殊照顾。对uri地址先进行判断，再决定是否有必要照顾一下，这种实现就包括了spring mvc的拦截器以及servlet自身的过滤器。
+
+**需要注意的是，这里虽然把拦截过滤混在一起，但二者的侧重点不同，上面强行进入登录页面属于拦截的做法，而过滤器是运行在调度器之前，即提前判断客户端发送来的内容其中的属性是否符合我们设定的要求，否则根本不会接受，即没有过滤器的允许，连框架都进不了。**
+
+spring产品的主要的看点【容器、注入、切面】，前面的各种注解已经大范围使用的容器和注入。现在的拦截器则是面向切面编程（AOP）的一个典型使用，我们需要做的就是看情况实现指定的接口，再实现其中几个不同阶段的方法即可。
+
+
+
+
+
+
+
+
+
+<mvc:resource mapping="/**" location=""/>
+
+
+
+jsp文件中，\<a href ="${pagecontext.request.contextPath}"/>
+
+base标签，参考地址
+
+
+
+handlerExecutionChain: 保存处理器对象，拦截器，内部使用集合保存
+
+视图解析器，实现了ViewResolver接口
+
+实际完成工作的是处理器适配器对象（是实现了HandlerAdapter接口的），用于执行对应处理器对象种方法
+
+
+
+
+
+
+
+
+
+
 
