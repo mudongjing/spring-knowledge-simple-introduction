@@ -121,6 +121,7 @@ public class DispatcherConfig implements WebMvcConfigurer {
     public void configureViewResolvers(ViewResolverRegistry registry) {//视图解析器
         registry.jsp("/WEB-INF/jsp/", ".jsp");//假设页面文件都放在了jsp目录下
         //控制类返回的字符串一一般都会认为是逻辑名，将在前后加上这些前后缀
+        //更深入的，可以通过prefix,suffix,viewClass指定前后缀，和加载视图的类
     }
 }
 ```
@@ -170,6 +171,8 @@ public class TestController {
    ```java
    @RequestMapping("uri格式"，method=RequestMethod.POST)//对应的就是POST请方式
    //其中uri格式可以包括多个，即不同的uri地址都可以被一个方法或类负责
+   //不同的方法则可以使用类似@PostMapping代替
+   
    @RequestMapping(value={"第一个uri格式","第二个",...},method=你需要的方式（其中，GET可以不写）)
    //不同的请求方式，则可以简化为对应的@GetMapping,@PostMapping等
    //其中，put和delete方式很少用
@@ -187,58 +190,82 @@ public class TestController {
 
 4. 请求头
 
+   所谓请求头示例如下：
+
+   ```
+   Host 				 localhost:8080
+   Accept 				 text/html,application/xhtml+xml,application/xml;q=0.9
+   Accept-Language 	 fr,en-gb;q=0.7,en;q=0.3
+   Accept-Encoding 	 qzip,defiate
+   Accept-Charset       ISO-8859-1,UTF-8;q=0.7,*;q=0.7
+   Keep-Alive           300
+   ```
+
    在这些注解中可以使用 `headers`指定对应的请求头
 
    ```java
-   @RequestMapping(...,headers="请求头格式内容")
+   @RequestMapping(...,headers="Host=localhost:8080")
+   //类似的，可以指定header中某些值必须符合某些要求
+   //官方文档中举例，如果对应的类型不是指定的值，自然无法匹配
+   @RequestMapping(value = "/something", headers = "content-type=text/*")
+   
+   //另外，如果我们希望可以使用请求头中的某些值，则类似下述方法
+   @GetMapping("uri格式")
+   public  方法(@RequestHeader("请求头中的类型，如Keep-Alive") 对应的数据类型，如 Long 随意设定一个变量名 就弄个 keepAlive ){
+       //方法实现
+   }
    ```
 
-5. 
+5. 参数
 
+   这应该是常用且非常重要的，即判断传递进来的参数是否符合要求，也可以获取对应的参数。
 
+   ```java
+   @RequestMapping(value="/uri/{bianliang}")
+   public 方法(@PathVariable 类型 bianliang){方法实现}//从uri中获取对应的变量,参数与对应的变量名相同
+   
+   /*--------------------------------------------------------------*/
+   //另外，如果一次传进来大量的参数，而且使用了类似map的形式，即用等号赋值，形成键值对
+   //这里使用陈学明的《Spring +Spring MVC+Mybatis 整合开发实战》中的例子
+   /*
+   	路径为
+       /depts/dept001;att1=values/users/user001;att1=value11;att2=value2
+   	我们真正需要获得的是那些带有等号的键值对，这些map结构的内容与路径其它部分用`;`分隔
+   */
+   //用@MatrixVariable提取这些值
+   @RequestMapping(value="/depts/{deptId/uers/{userId}}")
+   public 方法(
+   			@MatrixVariable MultiValueMap<String,String> bianliang1,
+       		//上述匹配得到的值为
+       		//              {att1=[value1,value11],att2=[value2]}
+       		@MatrixVariable(pathVar="userId") MultiValueMap<String,String> bianliang2
+       		//上述使用pathVar指定了获取userId位置的变量，因此匹配值为
+       		//									   {att1=[value11],att2=[value2]}
+   ){方法实现}
+   
+   /*----------------------------------------------------------------*/
+   @RequestMapping("uri格式")
+   public 方法 (
+   			@RequestParam(value="bianliang",required=false) 类型 bianliang
+       		//指示要求传入一个名为bianliang的参数值，默认不传就报异常，
+       		//这里可以用required=false取消
+       		//且负责参数与方法中的参数名是相同的
+   ){方法实现}
+   
+   /*----------------------------------------------------------------*/
+   @RequestMapping("uri格式/{canshu1}/{canshu2}")
+   public 方法 (
+   			@Valid 类型 对象名
+       		//更常用的是，如果一次需要接受多个变量，我们则使用一个java对象负责接受
+       		//这个对象的类，内部将具有与参数名相同的属性，这样就会框架会自动将参数存到对应的属性中
+       		//@Valid指示用来判断对象是否合法
+   ){方法实现}
+   
+   
+   
+   ```
 
-
-
-
-
-
-
-
-
-
-
-```java
-@RequestMapping(value="/")
-public class MyController(){
-    @RequestMapping(value="假设为anime")
-    public 类型 dosomething(){
-        //发现当前对应的是地址"www.bilibili.com/anime..."
-        //可以随便做点事
-    }
-}
-```
-
-其中的value对应的是一个String数组，所以可以在其中写入多个需要的字符串，使用花括号{}，逗号分隔。
-
-如果在类上也写了@RequestMapping，类似于上面的代码，则代表，后面方法对应的地址，前面都会加上类对应的value值，即上面代码中dosomething对应的就是”/anime"。
-
-虽然完成了控制器，但spring此时是不知道它的存在的，需要在前面文件树中的`springmvc.xml`或`dispatcher-servlet.xml`文件中放入控制器类所在的包，spring就会知道把这里扫描一遍。
-
-如果我们在控制器中执行了相关的命令，并且试图返回一个页面时，
-
-​	*例如方法的类型为ModelAndView时，可以添加各种数据进去，而页面文件本身可以放在其它位置，使用setViewName()可以指向该页面文件的位置*
-
-​	*但有时候，我们是将大量这类页面文件放在同一目录下，或者所处的目录是处于同一目录下的，而且文件类型相同。那么，我们就希望把前面和后面总是重复的内容删减掉，为了达到这一一点，可以在Springmvc的配置文件中指定这些返回页面位置的前缀和后缀，以后就只需要写对应的文件名即可*
-
-```xml
-<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-       <property name="prefix" value="路径前缀"/><!--注意:这个前缀前后都需要/符号，以表明是目录-->
-    <!--额外的，前面提到WEB-INF目录下的文件是对用户隐藏的，如果调用的页面不希望用户能够直接调用，则可以在		WEB-INF目录下专门开辟一块目录存放页面文件-->
-       <property name="suffix" value=".文件类型"/>
-</bean>
-```
-
-
+   
 
 --------------------------------
 
