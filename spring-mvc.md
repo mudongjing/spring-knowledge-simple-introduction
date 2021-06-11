@@ -1,8 +1,10 @@
+
+
 ## Spring MVC的主要知识介绍
 
 [TOC]
 
-### 1. 主要的运行机制
+### 1. WEB的主要运行流程
 
 spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定的网址上根据不同的页面需求而返回对应的页面信息。
 
@@ -53,6 +55,10 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 
 我们可以利用maven或gradle引入`javax.servlet-api`，`spring-webmvc`。
 
+首先，整个项目需要中央调度器，要求在web.xml中告诉tomcat之类的服务器生成一个DispatchServlet的对象【更严格的说，tomcat只能算是Servlet容器】，如果是通过类创建调度器，则要求tomcat支持servlet3.0+，基本现在官网能下载的版本都是支持的（基本上6.0以上的版本就OK）。
+
+#### 3.1 xml构建
+
 大致的源代码文件框架如下：
 
 ```basic
@@ -66,109 +72,140 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 │		└───springmvc.xml//因为难受而自定义的另一个配置文件
 └───webapp
 	└───WEB-INF//这里面的文件对用户是不开放的
-		└───web.xml
-		└───dispatcher-servlet.xml
-			//这个名字是随着web.xml中自己定义的调度器名称而改变（是默认的格式），对应着springmvc的配置
+		└───web.xml//传统做法，需要借助这个文件作为项目的启动入口，现在我们可以直接创建java类取代
+		└───dispatcher-servlet.xml//springmvc的配置文件
+								//这个名字是随着自己定义的调度器名称而改变（是默认的格式）
 ```
 
-首先，整个项目需要中央调度器，要求在web.xml中告诉tomcat之类的服务器生成一个DispatchServlet的对象【更严格的说，tomcat只能算是Servlet容器】
+关于其中的xml文件编写，读者搜索关于springmvc配置的结果，基本上都是这方面的资料。而且，xml配置属于以前的传统方式，本文更注重现有的纯java配置，但这要求使用的servlet版本至少是3.0，如果不是太老旧的，应该是没问题的。
 
-#### 3.1 xml构建
-
-最简单的web.xml指明要加载调度器对象：
-
-```xml-dtd
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
-                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
-         version="4.0">
-    <servlet>
-		<!--名字随意，也对应着dispatcher-servlet.xml-->
-		<servlet-name>dispatcher</servlet-name>
-		<!--指明需要生成对象的类的全限定名-->
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup><!--加载顺序，这里就是要求赶紧加载，数字越小越急-->
-		<!--如果觉得dispatcher和dispatcher-servlet.xml必须对应非常难受。
-			<init-param>
-				--springmvc配置文件的位置属性--
-				<param-name>contextConfigLocation</param>
-				<param-value>classpath:springmvc.xml</param-value>
-				--指定的位置，这里是在resources目录下--
-				--当然你要可以放在其它目录下，如WEB-INF--
-				<param-value>/WEB-INF/springmvc.xml</param-value>
-			</init-param>-->
-	</servlet>
-</web-app>
-
-```
-
-上述完成后，基本上搭配tomcat就能启动了。但是作为一个调度器，自然需要添加一些不同的情况，如
-
-```xml
-<servlet-mapping>
-        <servlet-name>调度器的名字</servlet-name>
-        <url-pattern>*.随意的扩展名</url-pattern>
-     	<!--当传输来的url需求对应着不同的扩展名，将会对应着不同的操作，当然url中的扩展名与实际返回的页面文			  件的扩展名是没有直接关系的，这里只是作为我们划分不同url的依据而已-->
- </servlet-mapping>
-     <!--如果我们自己网站的域名是www.bilibili.com
-     	 那么www.bilibili.com/v/music对应的是音乐区，www.bilibili.com/anime对应的是番剧区
-     	 此时，不同的url在功能上有着巨大的差别，
-		 因此，也可以通过指定域名之后的名称确定具体的职责，以指定对应的类来负责-->
- <servlet-mapping>
-        <servlet-name>调度器的名字</servlet-name>
-        <url-pattern>/anime</url-pattern>
-    	<!之后"www.bilibili.com/anime..."对应的url将由番剧区的类负责解析并回复-->
- </servlet-mapping>
-```
-
-上述代码同样添加在web.xml文件中，所谓的扩展名即index.jsp，index.html属于不同的文件。
+可以了解一下，毕竟现如今存在的一些项目还是使用着上述的大体结构。
 
 #### 3.2 java Bean配置
 
-上述的XML文件配置，对于很多人而言觉得非常繁琐，而且还必须在指定的位置指定的文件名内写大量各种标签，从spring3.1开始，我们可以通过写普通的java类来初始化调度器。【但springmvc的配置文件还需要xml文件】
-
-下面是官方示例：
+上述的XML文件配置，对于很多人而言觉得非常繁琐，而且还必须在指定的位置指定的文件名内写大量各种标签，从spring3.1开始，我们可以通过写普通的java类来初始化调度器。
 
 ```java
- public class MyWebAppInitializer implements WebApplicationInitializer {
+//继承并实现后，将创建出Dispatcher对象
+public class MyWebAppInitializer 
+    				extends AbstractAnnotationConfigDispatcherServletInitializer{
     @Override
-    public void onStartup(ServletContext container) {
-      // Create the 'root' Spring application context
-      AnnotationConfigWebApplicationContext rootContext =
-        new AnnotationConfigWebApplicationContext();
-      rootContext.register(AppConfig.class);
-      // Manage the lifecycle of the root application context
-      container.addListener(new ContextLoaderListener(rootContext));
-      // Create the dispatcher servlet's Spring application context
-      AnnotationConfigWebApplicationContext dispatcherContext =
-        new AnnotationConfigWebApplicationContext();
-      dispatcherContext.register(DispatcherConfig.class);
-      // Register and map the dispatcher servlet
-      ServletRegistration.Dynamic dispatcher =
-        container.addServlet("dispatcher", new DispatcherServlet(dispatcherContext));
-      dispatcher.setLoadOnStartup(1);
-      dispatcher.addMapping("/");
+    protected Class<?>[] getRootConfigClasses() {
+        return new Class[] { springConfig.class };
     }
- }
+    @Override
+    protected Class<?>[] getServletConfigClasses() {
+        return new Class[] { DispatcherConfig.class };
+    }
+    @Override
+    protected String[] getServletMappings() {
+        return new String[] { "/" };
+        //告诉dispatcher仅可以捕获仅有"/"的uri，如果使用了"/*"则会将其它uri交给dispatcher直接负责，																则绕过了控制器类，导致无法成功访问
+    }
+}
 ```
 
+```java
+@Configuration//指明是配置类
+public class springConfig {
+}
+```
 
+```java
+@Configuration
+@ComponentScan("控制器所在的包")
+@EnableWebMvc
+@EnableScheduling
+public class DispatcherConfig implements WebMvcConfigurer {
+    @Override
+    public void configureViewResolvers(ViewResolverRegistry registry) {//视图解析器
+        registry.jsp("/WEB-INF/jsp/", ".jsp");//假设页面文件都放在了jsp目录下
+        //控制类返回的字符串一一般都会认为是逻辑名，将在前后加上这些前后缀
+    }
+}
+```
 
-### 3. @Controller
+```java
+@Controller//本质上就是个特别的@Bean，表明这是一个负责uri的控制器类
+@RequestMapping("/views/*")//随意搞些花样，指view/*表示view/之后跟任何字符串，该地址都会交给这个类负							责。而且这个注解既可以放在类上，也可以放在方法上
+public class TestController {
+    @GetMapping("test")
+    public String test(){
+        return "index";//返回一个名为index的jsp文件，该文件位于视图解析器前缀的目录下
+        //随意写一个自己的页面文件名称，别忘了自己写好页面文件，就是一个html语言写的jsp文件
+        //以后可以按照spring给定的模板引擎写相应的页面文件，大体上都是在html之上做些手脚
+    }
+}
+```
 
-> @Controller本身于@Bean类似，都是自发地实例化一个类，并将对象放入Spring容器中。
+现在，可以将项目交给Tomcat运行，例如在IDEA中设置运行的各种属性时，在 `deployment`中添加自己的项目时需要的带有 `exploded`，下面的 `Application context`可以随便填一些字符串，但要记得前面的 `/`不能少，例如写一个 `/suiyi`，运行后【记得对应的目录下有你的页面文件】，访问 `http://localhost:8080/suiyi/views/test`，即可。
+
+### 3. Mapping
+
+前文中，我们已经基本实现了一个spring mvc项目，其中主要的@controller，@requestmapping，@getmapping也都有出场。代码中的使用基本上可以让读者明白大致的使用目的。本节，则需要进一步介绍更为细致的操作，其实也很简单。
+
+如果读者觉得复杂，那是因为没有意识到某些功能对开发的简化。我们在使用浏览器时，
+
+> - 最常用的就是简单的请请求一个页面，
 >
-> 在底层中，容器实际上是一个Map对象，负责存储所有的对象，以及调用。当产生对象后，便使用map.put("新对象名"，实际的对象)。
+> - 若是搜索内容，则uri还包含一个参数；
+> - 如果是在页面填一些表格之类的，浏览器也需要将这个表格的相关信息发送过去；
+> - 对于同一个uri的请求，如果请求的内容类型不同，返回的结果可能是下载一个文件，也可能就是单纯的页面；
+> - 类似地，我们有时也许要特意地指定我们发送的内容，如果图片的具体格式，别把jpeg当作gif给处理了；                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
-上述过程基本完成了一些初步的没什么太特殊的工作。接下来，我们需要考虑，一开始我们认为的WEB框架需要做的工作，就是根据url做相应的工作。
+1. 路径匹配规则
 
-@Controller注解，是告诉spring我是一个控制类，当url进来后，可以通过我来进行判断工作含义并执行工作。
+   在开始具体内容前，先补充一下，上述代码中的 `*`的符号的意义。
 
-我们首先定义一个类，并标注Controller注解，然后在内部加上不同的方法，方法内部是我们需要返回怎样的页面文件，或其它各种结果，以及进行其它额外的操作。
+   - ?：匹配任意一个字符
+   - *：匹配任意多个字符
+   - **：匹配多层路径
 
-仅仅需要在内部的方法上加上@RequestMapping(value="/地址，如bilibili的anime")，这个注解也可以放在类的上面，总之就是指示接下来的内容适应的url类型，大致的样子如下：
+2. 路径匹配 *( @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, @PatchMapping )*
+
+   其中，@RequestMapping是我们常用的一种，类似上面代码中的使用，是要内部对应的uri格式内容匹配到了，则有对应该注解的方法负责该uri。
+
+   但是，浏览器对于请求也有不同的方式，*GET, POST*。@RequestMapping默认是接受GET方式。
+
+   ```java
+   @RequestMapping("uri格式"，method=RequestMethod.POST)//对应的就是POST请方式
+   //其中uri格式可以包括多个，即不同的uri地址都可以被一个方法或类负责
+   @RequestMapping(value={"第一个uri格式","第二个",...},method=你需要的方式（其中，GET可以不写）)
+   //不同的请求方式，则可以简化为对应的@GetMapping,@PostMapping等
+   //其中，put和delete方式很少用
+   ```
+
+3. 内容类型
+
+   在这些Mapping注解中，可以使用 `consumes`和 `produces`指定内容在发送和接受时的内容类型。
+
+   ```java
+   @RequestMapping(...,consumes="application/json",produces="application/json;charset=UTF-8")
+   //上述代码，指示内容提交给服务器是json格式，当然还可以是其它格式，可自行查询，如 "text/plain",如果内容格式可以随意，但就是 "text/plain"不行，那就使用 "!text/plain"表示。
+   //produces指示了返回的内容也是json格式，并指定了编码格式为 UTF-8。同样可以根据需要改变格式。
+   ```
+
+4. 请求头
+
+   在这些注解中可以使用 `headers`指定对应的请求头
+
+   ```java
+   @RequestMapping(...,headers="请求头格式内容")
+   ```
+
+5. 
+
+
+
+
+
+
+
+
+
+
+
+
 
 ```java
 @RequestMapping(value="/")
@@ -187,19 +224,6 @@ public class MyController(){
 
 虽然完成了控制器，但spring此时是不知道它的存在的，需要在前面文件树中的`springmvc.xml`或`dispatcher-servlet.xml`文件中放入控制器类所在的包，spring就会知道把这里扫描一遍。
 
-```xml
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
-       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-<context:component-scan base-package="包的路径"></context:component-scan>
-</beans>
-```
-
 如果我们在控制器中执行了相关的命令，并且试图返回一个页面时，
 
 ​	*例如方法的类型为ModelAndView时，可以添加各种数据进去，而页面文件本身可以放在其它位置，使用setViewName()可以指向该页面文件的位置*
@@ -213,6 +237,8 @@ public class MyController(){
        <property name="suffix" value=".文件类型"/>
 </bean>
 ```
+
+
 
 --------------------------------
 
@@ -243,7 +269,7 @@ graph LR
  handleMapping(HandleMapping 处理器映射器)
  handleAdaptor(HandleAdaptor 处理器适配器)
  controller(Controller 处理器)
- viewresolver(ViewResolver 试图解析器)
+ viewresolver(ViewResolver 视图解析器)
  view(View 视图)
  dispatcher-->|2.请求|handleMapping
  handleMapping-->|3.处理器执行链|dispatcher
@@ -277,7 +303,7 @@ graph LR
 
 诸如我们在一些网站种试图进入某些会员页面时，都会强行进入一个登录页面，这就是程序对这类uri地址的特殊照顾。对uri地址先进行判断，再决定是否有必要照顾一下，这种实现就包括了spring mvc的拦截器以及servlet自身的过滤器。
 
-**需要注意的是，这里虽然把拦截过滤混在一起，但二者的侧重点不同，上面强行进入登录页面属于拦截的做法，而过滤器是运行在调度器之前，即提前判断客户端发送来的内容其中的属性是否符合我们设定的要求，否则根本不会接受，即没有过滤器的允许，连框架都进不了。**
+**需要注意的是，这里虽然把拦截--过滤混在一起，但二者的侧重点不同，上面强行进入登录页面属于拦截的做法，而过滤器是运行在调度器之前，即提前判断客户端发送来的内容其中的属性是否符合我们设定的要求，否则根本不会接受，即没有过滤器的允许，连框架都进不了。**
 
 spring产品的主要的看点【容器、注入、切面】，前面的各种注解已经大范围使用的容器和注入。现在的拦截器则是面向切面编程（AOP）的一个典型使用，我们需要做的就是看情况实现指定的接口，再实现其中几个不同阶段的方法即可。
 
