@@ -44,12 +44,13 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 前面了解了这一框架的用处，那么实际的使用则需要注重功能的组织。
 
 - 首先在创建项目时，需要引入spring-webmvc的依赖。
-
 - 而由于浏览器发送来的请求多种多样，不一定都是简单地获取页面，即使是页面，当我们的目标复杂时，对网址的各种状况也有明确的任务分类，导致有多个Controller对象，因此需要一个请求的管理器，这里是称为中央调度器DispatcherServlet来根据请求选择不同的应对方案，这是一个继承自类HttpServlet的servlet，需要在web.xml注册
 - 需要的话，再写一些页面文件
 - 再写几个控制器类即Controller，以负责完成各种内部工作，并可能负责返回页面文件
 - 为了保证spring知道你的Controller在哪，还需要一个配置文件指明控制器所在的包的位置
 - 此外，我们可能使用了一些视图解析器以处理页面效果，同样需要在配置文件中指明对应的包的位置。
+
+> 读者可以阅读[开源项目]([spring-projects/spring-mvc-showcase: Demonstrates the features of the Spring MVC web framework (github.com)](https://github.com/spring-projects/spring-mvc-showcase)) ，该项目简单同时包含了springmvc较为完整的功能实现，非常适合初学者参考。
 
 ### 3. 项目构建
 
@@ -330,14 +331,17 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
     └───webapp
     	└───WEB-INF
     	└───resources
+    		└───tupian.jpg
     		└───form.css
     		└───jquery
     			└───1.6
     				└───jquery.js
     */
-  /*例如，在页面文件中请求css文件和js文件
+  /*例如，在页面文件中请求css文件和js文件，以及插入图片
   <link href="<c:url value="/resources/form.css" />" rel="stylesheet"  type="text/css" />
   <script type="text/javascript" src="<c:url value="/resources/jquery/1.6/jquery.js" />">	</script>
+  <img src="${pageContext.request.contextPath }/resources/tupian.jpg" />
+  //愿意的话，还可以指定图片的尺寸大小
   */
 }
 ```
@@ -492,9 +496,51 @@ public class FileUploadController {
 >
 > upfile.jsp中包含了负责上传文件的表单，并指定点击上传后，将调用`你的uri/fileupload`，并触发对应的控制器类，方法内完成文件的存储，并返回一个新的页面，用以显示文件上传情况。
 
-#### 4.3 外部文件
+#### 4.3 跳转
 
-这里主要是`forward`与`redirect`。
+在控制类中，我们通常根据用户的请求而返回对应的页面文件，但是当我们的整个业务发生了变化，原有的工作转移到其它地址负责，而之前的地址不想再多余在里面写相关的方法实现，于是我们就希望直接将用户的请求转移到新的地址上由对应的地址负责。则使用`redirect`或`forward`。
+
+```java
+@RequestMapping("/uri")
+    public String tiaozhuan(){
+        return "redirect:/新uri";
+        //此时将以当前页面的父级uri为起点查询新uri，浏览器会接受这个新地址并主动发送请求
+        /*如果不希望浏览器主动发送请求，而是服务器自己完成这些工作，那就使用forward
+        return "forward:/新uri";
+        */
+        //如果需要访问全新的页面，那就使用完成的地址，即包含http这些协议字眼
+    }
+```
+
+#### 4.4 文件下载
+
+类似于静态文件的获取，我们可以把文件放在 `webapp`的任意目录下，这里做一些简化，首先需要一个负责下载文件的页面【当然，也可以在已有的页面中，增加个链接】
+
+```jsp
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html><head>
+    <title>下载文件</title>
+</head><body><div id="global">
+    <p><a href="downloadfile">Download file</a></p></div></body></html>
+```
+
+我们只需要再增加一个控制器，负责 `downloadfile`的uri，
+
+```java
+@Controller
+public class downloadController {
+    @GetMapping(value = "/downloadfile")
+    public void download(HttpServletRequest request,HttpServletResponse response){
+        String datadir = request.getServletContext().getRealPath("/resources");
+        Path file = Paths.get(datadir, "data.txt");
+        //这里设置为在`webapp/resources`下存放一个data.txt文件
+        if (Files.exists(file)) {
+            response.setContentType("text/plain");//不同文件的类型有所不同
+            response.addHeader("Content-Disposition","attachment;filename="+ "data.txt");
+            try { Files.copy(file, response.getOutputStream());//将文件放入流中进行返回
+            } catch (IOException e) { e.printStackTrace();
+            } } }}
+```
 
 ### 5. 数据格式
 
