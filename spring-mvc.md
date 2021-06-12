@@ -65,12 +65,13 @@ spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定�
 ├───java
 │   └───自定义的
 │       └───包名
-│           ├───controller(自己随便命名)
+│           ├───controller(自己随便命名，控制类的包)
 │           └───···
 │			└───···
 ├───resources
 │		└───springmvc.xml//因为难受而自定义的另一个配置文件
 └───webapp
+	└───resources
 	└───WEB-INF//这里面的文件对用户是不开放的
 		└───web.xml//传统做法，需要借助这个文件作为项目的启动入口，现在我们可以直接创建java类取代
 		└───dispatcher-servlet.xml//springmvc的配置文件
@@ -260,14 +261,13 @@ public class TestController {
        		//这个对象的类，内部将具有与参数名相同的属性，这样就会框架会自动将参数存到对应的属性中
        		//@Valid指示用来判断对象是否合法
    ){方法实现}
-   
-   
-   
    ```
 
    
 
 --------------------------------
+
+### ------过场-----
 
 > 现在，我们基本上知道了spring mvc大体的使用方式【当然了，还远远不够】。就像是开车上路，前面的知识让我们学会了启动，刹车，踩油门。但好的司机，会把握细节，开得平稳潇洒，什么路段怎么开，车子出毛病怎么修。
 >
@@ -312,17 +312,195 @@ graph LR
 
 > 具体的运行过程是：我们创建的各种controller对象都保存在一个实现了handleExecutionChain的对象中，通过映射器得到对应的控制器，再将控制器交给适配器运行其中的方法，最后的结果由视图解析器确定视图文件位置，最后调用页面文件，回复浏览器的请求。
 
-### 4. 文件目录操作
+### 4. 文件获取
 
-本节将叙述如何指定静态文件，如何重定向【forward,redirect】。
+#### 4.1 静态文件
+
+通过控制器类，我们可以获取对应目录下的页面文件，这源于我们对uri的请求有对应的处理机制，但是对应的静态文件并没有这样的控制器类逐一负责，诸如`js`，`css`文件等都属于静态文件，页面文件内部可能会直接调用进行页面渲染等工作。
+
+我们只需要在 `DispatcherConfig`类中添加：
+
+```java
+@Override
+public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+    //当用户在页面中请求的uri符合 `/resouces/**`，则对应的文件将从resources目录开始查找，这里的		//														resource是指在webapp目录下的
+    //作为WEB框架，资源的获取基本都是以目录 `webapp`为根目录
+    /*假设webapp的目录结构如下
+    └───webapp
+    	└───WEB-INF
+    	└───resources
+    		└───form.css
+    		└───jquery
+    			└───1.6
+    				└───jquery.js
+    */
+  /*例如，在页面文件中请求css文件和js文件
+  <link href="<c:url value="/resources/form.css" />" rel="stylesheet"  type="text/css" />
+  <script type="text/javascript" src="<c:url value="/resources/jquery/1.6/jquery.js" />">	</script>
+  */
+}
+```
+
+#### 4.2 上传文件
+
+上传文件相比于索取页面，是一个反向的操作，自然需要在springmvc的框架中设置一下，则需要在本文中负责springmvc入口的DispatcherConfig类中添加内容。
+
+首先，在页面中上传文件的常规操作是利用表单并使用`POST`方式进行传输，如果使用了`GET`方式，则上传的内容将转换为字符串像参数一样跟在uri后面一起传输，而`POST`则将传输内容放在请求体中。
+
+```html
+<!--上传文件的表单，其实就是正常的表单，就是用了上传文件的功能而已-->
+<form method="POST" enctype="multipart/form-data" action="指定的uri格式，假设为 fileupload">
+    <!--enctype用来指定请求内容的MIME编码类型，默认是”application/x-www-form-urlencoded-->
+    <!--action指定后端服务的地址，即等会设定的控制类管理的uri格式-->
+    <!--action中的uri如果前面有"/"，则代表这里的uri的前缀是我们的域名，不加，则从当前页面的根开始-->
+    <!--加入当前页面是 `http://www.baidu.com/suibian/yemian`，
+			加了"/"则请求的uri为 
+								`http://www.baidu.com/fileupload`，
+			否则是 
+								`http://www.baidu.com/suibian/fileupload`-->
+    <input type="file" name="upfile">
+    <input type="submit" value="Upload">
+</form>
+```
+
+而在这里进行文件上传的表单，则是一种`multipart`表单，意为将表单分成多个块，并以二进制流进行传输。
+
+因此，需要告诉框架我们需要处理这样的`multipart`表单。只要添加如下的代码即可。
+
+> 首先需要添加依赖 `commons-fileupload`
+
+```java
+@Bean
+public MultipartResolver multipartResolver() {
+   return new CommonsMultipartResolver();
+    //CommonsMultipartResolver继承自抽象类CommonsFileUploadSupport
+    //CommonsFileUploadSupport内部包含了，限制上传文件大小的方法，文件默认编码等方法
+}
+```
+
+此时，我们仅仅是有了上传文件的底子，还缺少控制类，
+
+```java
+@Controller
+public class FileUploadController {
+	@PostMapping("/fileupload")
+	public void processUpload(@RequestParam("页面中上传文件的名字") MultipartFile file, Model model) {方法实现}
+}
+```
+
+下面我们给出一个较为完整且简单的示例：
+
+> 首先是大体的文件结构
+>
+> ```basic
+> ├───java
+> │   └───org
+> │       └───example
+> │ 			└───DispatcherConfig.java
+> │ 			└───MyWebAppInitializer.java//上述的内容即可
+> │ 			└───springConfig.java//上述的内容即可
+> │           └───controller
+> │          		 └───UpfileController.java
+> │				 └───ResultController.java
+> ├───resources	
+> └───webapp
+> 	└───resources
+> 	└───WEB-INF
+> 		└───html
+> 			└───upload
+>     			└───upfile.jsp
+>     			└───result.jsp
+> ```
+
+> ```java
+> @Configuration
+> @ComponentScan("org.example.controller")
+> @EnableWebMvc
+> @EnableScheduling
+> public class DispatcherConfig implements WebMvcConfigurer {
+>     @Override
+>     public void configureViewResolvers(ViewResolverRegistry registry) {
+>         registry.jsp("/WEB-INF/html/", ".jsp");
+>     }
+>     @Bean
+>     public MultipartResolver multipartResolver(){
+>         return new CommonsMultipartResolver();
+>     }
+> }
+> ```
+>
+> ```jsp
+> <!--upfile.jsp-->
+> <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+> <html>
+> <head>
+>     <title>文件上传</title>
+> </head>
+> <body>
+> <form method="POST" enctype="multipart/form-data" action="fileupload">
+>     <!--action 对应的是将要调用的uri，用于触发对应的控制器-->
+>     <input type="file" name="upfile">
+>     <!--上面的name可自定义，后面的控制类中获取的file需要注意就是这个名字-->
+>     <input type="submit" value="Upload">
+> </form>
+> </body>
+> </html>
+> ```
+>
+> ```java
+> /*UpfileController.java*/
+> @Controller
+> public class FileUploadController {
+>    @PostMapping("/fileupload")
+>    public String fileupload(@RequestParam("upfile") MultipartFile file, Model model){
+>        //获取之前upfile.jsp上传的名为upfile的文件
+>         if (!file.isEmpty()) {
+>             try {
+>                 File dir = new File("E:/tmp" + File.separator + "tmpFiles");
+>                 //File.separator用于生成一个分隔符，用于创建一个名为"E:/tmp/tmpFiles"的目录
+>                 if (!dir.exists()) dir.mkdirs();//此时才真正创建了目录
+>               	// 准备好一个文件壳子
+>                 File serverFile = new File(dir.getAbsolutePath() +
+>                         File.separator + file.getOriginalFilename());
+>                 file.transferTo(serverFile);//将实际的文件诸如到壳子里，获得实际的文件
+>                 model.addAttribute("message","你的文件"
+>                                    +file.getOriginalFilename()+"已上传成功！");
+>             } catch (Exception e) {
+>                 model.addAttribute("message","You failed to upload " +
+>                       file.getOriginalFilename() + " => " +e.getMessage());
+>             }
+>         } else {model.addAttribute("message","You failed to upload "+        			      			file.getOriginalFilename() +" because the file was empty.") ;
+>         }
+>         return "upload/result";
+>     }
+> }
+> ```
+>
+> ```jsp
+> <!--result.jsp-->
+> <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+> <html>
+> <head>
+>     <title>文件上传状况</title>
+> </head>
+> <body>
+>     <div>${message}</div>
+> </body>
+> </html>
+> ```
+>
+> upfile.jsp中包含了负责上传文件的表单，并指定点击上传后，将调用`你的uri/fileupload`，并触发对应的控制器类，方法内完成文件的存储，并返回一个新的页面，用以显示文件上传情况。
+
+#### 4.3 外部文件
+
+这里主要是`forward`与`redirect`。
+
+### 5. 数据格式
 
 
 
-### 5. 请求的不同
-
-前面的各种从浏览器发送来的请求，基本上都是get方式，而对于我们填表发送的请求则属于post请求，因此，本节简单说明一下这两种方式。
-
-
+### ------过场-----
 
 
 
