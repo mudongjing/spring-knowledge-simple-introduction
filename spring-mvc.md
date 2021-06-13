@@ -4,6 +4,8 @@
 
 [TOC]
 
+==本文使用spring mvc为版本5.3.7==
+
 ### 1. WEB的主要运行流程
 
 spring mvc是作为一个WEB框架使用，主要的作用就是在我们指定的网址上根据不同的页面需求而返回对应的页面信息。
@@ -264,7 +266,7 @@ public class TestController {
    ){方法实现}
    ```
 
-   
+   **如果希望将控制类中获得的数据显示在页面中，简单来说，就是在页面文件中写 `${内写数据名}`，数据名就是对应控制类方法中的变量名或对象名，其中对象也完全可以使用类似 `对象名.属性`指定对应内部属性值。**
 
 --------------------------------
 
@@ -542,11 +544,112 @@ public class downloadController {
             } } }}
 ```
 
-### 5. 数据格式
+user.withoutpasswordview
+
+### 5. 数据
+
+类似于前面所述的，利用对象进行数据存储的操作，由于大型项目中由于各部分工作重点不同，处理数据所需要的数据格式不一定相同，比如单纯需要数据可以使用对象传递，而负责页面渲染而言，更希望直接传递过来的是模型类型的数据。
+
+其它的，由于需要的数据格式不同，也要求我们需要进行数据格式转换，对于一些常用场景，我们可以使用注解简单地完成任务。
+
+#### 5.1 JSON格式
+
+json格式由于非常简洁，在WEB前端中已成为常用的数据类型，也普遍用于前后端的数据交换【由于前后端可能不共享java对象，因此需要共同支持的数据格式】。这里先简单介绍几种关于json格式的第三方库。
+
+这里主要介绍几种json库：`Gson`，`Fastjson`，`Jackson`。
+
+其中`Jackson`需要倒入3个依赖包：`jackson-core`，`jackson-annotations`，`jackson-databind`。
+
+>  具体使用可阅读对应库的文档，主要的操作就是将原有的对象转换为字符串或数组格式。
+
+如果单纯使用，自然需要利用不同依赖对应的处理方法，将对象进行转化，但是既然使用到了框架，则不需要我们做这些工作【凡是机械，没有额外需要创造的工作，框架基本都会替我们完成大部分工作】。
+
+- 首先，我们仍然需要为项目添加对应的json依赖包，最好是`Gson`或`Jackson`，因为框架似乎对它们具有较好的支持。
+- 其次也是最后，当我们希望将数据按照json格式输出，在原有具有类型输出的方法上添加注解`@ResponseBody`。
+  - 此时，方法原本输出的各种对象，包括数组，都会自动转化为json。
+
+json格式本身是javascript的数据格式，因此为了真正地使用这种数据，则需要配合ajax之类的工具进行显示。暂且不谈。
+
+#### 5.2 格式转换
+
+使用格式转换不只是将某一种对象转换为另一种对象，而是可以按照你给定的格式将传进来的数据转换为指定的格式，例如一串字符串可以转为对应的对象。
+
+这里先举一个最简单的日期格式，我们给定一个日期 格式的字符串，它可以转化为对应的日期对象，
+
+```java
+SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+Date date=format.parse("日期字符串");//这要求字符串符合指定的格式，即类似2021-05-01
+```
+
+上述是最纯粹的字符串转日期，框架有更为广泛的转化，名为属性编辑器，将这些内部操作封装起来，
+
+```java
+public class MyDate extends PropertyEditorSupport{//随意自定义一个类名
+    @Override
+    public void SetAsText(String text) throws IllegalArgumentException{
+        SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+        Date date=null;
+        try{
+            date=format.parse(text);
+        }catch(ParseException e){}
+        setValue(date);
+    }
+}
+/* 接下来使用这个属性编辑器*/
+PropertyEditorSupport editor=new Mydate();
+editor.setAsText(日期字符串);
+Date date=(Date) editor.getValue();
+```
+
+spring已实现了各种属性编辑器，读者可在`org.springframework.beans.propertyeditors`包中查阅已有的类。
+
+上述的属性编辑器是在原有用于设计界面的类上进行操作的，原本的类中存在许多额外的方法，为简化，3.0之后，提供了转换器接口 `Convert`，不同的转换器类需要实现该接口，而spring又提供了一个转化器容器接口`ConversionService`，该接口的实现有：`DefaultConversionService`【简单的实现，可利用不同的转换器进行不同类型的转换】、`DefaultFormattingConversionService`【在前面简单实现的基础上，增加国际化的格式化和解析】。
+
+spring框架本身也已经实现了很多类型转换的类，具体的可在包 `org.springframework.core.convert.support`中查看，在我们使用时，不需要指定转换器，而是由容器自己判断，如：
+
+```java
+public 方法(){
+    ConversionService conversionService=new DefaultConversionService();
+    Date date=conversionService.convert("2021/05/01", Date.class);
+    System.out.println(date);
+}
+```
+
+如果自定义转换器，示例如下：
+
+```java
+public class myconvert implements Converter<String, User> {
+    //我们这里的转换器，用于从字符串中提取User对象的名字和其中的日期
+    //所谓的User类只有简单的name和birthday两个属性
+    @Override
+    public User convert(String source) {
+        User user=new User();
+        String[] result=source.split(",");
+        Date birthday=null;
+        try{
+            birthday=(new SimpleDateFormat("yyyy-MM-dd")).parse(result[1]);
+        }catch(ParseException e){}
+        user.setName(result[0]);
+        user.setBirthday(birthday);
+        return user;
+    }
+    public static void main(String[] args) throws ParseException {
+        DefaultConversionService conversionService=new DefaultConversionService();
+        conversionService.addConverter(new myconvert());//将我们的转换器加入容器中
+        User user=conversionService.convert("学生名字,2021-05-01",User.class);
+        //字符串将两种属性用逗号分隔
+        System.out.println(user);
+        //下面，我们顺便再介绍json的格式转换，
+        Gson gson=new Gson();
+        String user_string=gson.toJson(user);//转化成json，方便我们确定是否是我们指定的对象格式
+        System.out.println(user_string);
+        User user1=gson.fromJson(user_string,User.class);//这里从json格式反向转为对应的对象
+        System.out.println(user1);
+    }
+}
+```
 
 
-
-### ------过场-----
 
 
 
