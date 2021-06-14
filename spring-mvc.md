@@ -504,15 +504,32 @@ public class FileUploadController {
 
 ```java
 @RequestMapping("/uri")
-    public String tiaozhuan(){
+public String tiaozhuan(){
         return "redirect:/新uri";
         //此时将以当前页面的父级uri为起点查询新uri，浏览器会接受这个新地址并主动发送请求
+        /*如果没有加上”/“，则代表返回的是某个页面文件，需要注意的是WEB-INF目录下的文件无法被浏览器直接获			得，对应的文件需要放在webapp其它目录下
+        	也可以使用 return new RedirectView("页面文件"),默认以webapp目录为起点，因此，需要写入完整的路径，但是大工程尽量不同，这属于硬编码耦合。*/
         /*如果不希望浏览器主动发送请求，而是服务器自己完成这些工作，那就使用forward
         return "forward:/新uri";
         */
         //如果需要访问全新的页面，那就使用完成的地址，即包含http这些协议字眼
-    }
+}
 ```
+
+关于redirect，由于通过用户的浏览器实现跳转，导致信息缺失，为了保证能携带信息进行跳转，框架准备了flash属性，用于临时存储指定的信息，当完成跳转后，这部分信息传递给对应的控制器，原本的信息将自动删除。更具体的是，内容信息使用了map结构进行存储，称为flashmap，另外还有flashmapmanger用于管理flashmap。
+
+但我们实际使用，则代码如下：
+
+```java
+public String 方法名(RedirectAttributes attr){
+    	//其它实现内容
+        attr.addFlashAttribute("key值", "对应信息");//这里可以看出实际存储的就是map结构
+   		//也可以创建一个map提前存储对应的信息，通过 `addAllAttributes` 一次性存储
+        return "跳转地址";
+}
+```
+
+
 
 #### 4.4 文件下载
 
