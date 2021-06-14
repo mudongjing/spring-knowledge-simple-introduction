@@ -315,6 +315,8 @@ graph LR
 
 > 具体的运行过程是：我们创建的各种controller对象都保存在一个实现了handleExecutionChain的对象中，通过映射器得到对应的控制器，再将控制器交给适配器运行其中的方法，最后的结果由视图解析器确定视图文件位置，最后调用页面文件，回复浏览器的请求。
 
+--------------------------------
+
 ### 4. 文件获取
 
 #### 4.1 静态文件
@@ -666,6 +668,50 @@ public class myconvert implements Converter<String, User> {
 }
 ```
 
+#### 5.3 封装、绑定
+
+##### 5.3.1 封装
+
+`BeanWrapperImpl`可以吸纳给定的对象，完成属性的装载和提取，虽然本质上就是普通的setter/getter操作，但是相对于不同对象具体方法名的多样，使用封装后，我们的方法中，可以传入任意对象，并且能够以同样的方法完成属性操作。
+
+具体的操作可见下面的代码：
+
+```java
+//假设我们定义User类,并包含name，age属性
+//【要记得实现setter/getter方法】
+方法(){
+        User user=new User();
+        BeanWrapperImpl beanWrapper=new BeanWrapperImpl();
+        beanWrapper.setBeanInstance(user);
+        beanWrapper.setBeanInstance(student);
+        PropertyValue[] propertyValues={new PropertyValue("name", "lisi"),
+                new PropertyValue("age", "26")};
+	    //PropertyValue用于保存属性与对应的赋值
+        for (PropertyValue s:propertyValues){
+            beanWrapper.setPropertyValue(s);//装载对应的属性赋值
+            //如果属性不多，想直接赋值，可以直接setPropertyValue("属性名",赋值)
+        }
+        Object name= beanWrapper.getPropertyValue("name");
+    	System.out.println(name.toString()+
+                beanWrapper.getPropertyValue("age").toString());
+}
+```
+
+假如我们需要传递不同的对象作为参数，这种做法就可以极大简化了不同对象属性的操作。
+
+假如，属性中包含一些特有的类型，如Date，我们希望赋值的时候转化为对应的类型，即格式转换，这里有简单的实现，
+
+```java
+class 类名{
+    @DateTimeFormat(pattern="yyyy+mm+dd")
+    private Date date;//之后，在赋值的时候，对应的日期字符串需要符合该格式，并且会自动转换为Date类型
+}
+```
+
+##### 5.3.2 绑定
+
+
+
 
 
 
@@ -686,19 +732,11 @@ spring产品的主要的看点【容器、注入、切面】，前面的各种�
 
 
 
-<mvc:resource mapping="/**" location=""/>
 
-
-
-jsp文件中，\<a href ="${pagecontext.request.contextPath}"/>
-
-base标签，参考地址
 
 
 
 handlerExecutionChain: 保存处理器对象，拦截器，内部使用集合保存
-
-视图解析器，实现了ViewResolver接口
 
 实际完成工作的是处理器适配器对象（是实现了HandlerAdapter接口的），用于执行对应处理器对象种方法
 
