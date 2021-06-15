@@ -116,6 +116,7 @@ public class springConfig {
 ```
 
 ```java
+//配置调度器
 @Configuration
 @ComponentScan("控制器所在的包")
 @EnableWebMvc
@@ -874,20 +875,59 @@ class 类名{
 
 读者在一些网站中可能会发现，例如购物网站，或论坛，有时我们作为游客查看一些页面没问题，而当我们视图添加商品，或试图评论，或下载某些文件等，由于这些功能被网站设置为需要注册用户才能使用，则我们的页面被强制转到了登录或注册页面。
 
+#### 6.1 拦截器
+
 上述的强制登录手段，则涉及到了网站对请求的拦截技术，所谓的拦截，即在我们已经实现的功能之上，在请求和我们的回复之间插入一个额外的工作。
 
 如果读者是遵循建议先阅读SpringMVC的话，可能不了解面向切面编程(AOP)，这种拦截其实就是AOP，对实现的方法在外部进行扩充或判断是否执行。
 
 【这也是我建议先阅读Spring MVC的原因，与其预先了解大量基础的知识，不如先尝试着实现功能，不然程序员从学习计算机开始得先去学习数理逻辑】
 
-拦截器的实现：
+拦截器的实现的框架：
 
 ```java
+public class SessionCheckInterceptor  implements HandlerInterceptor {
+    @Override
+    public boolean preHandle(HttpServletRequest request,
+                             HttpServletResponse response, Object handler) throws Exception {
+        //这里的判断只是示例，不一定需要写，总之，内部的实现完全看情况随便写，
+        //但这里需要注意最后返回一个bool值
+        //你可以判断任意你需要确认的内容，并做出你任意想做的操作，如转移到其它页面，或直接报异常，都可以
+        if(request.getSession().getAttribute("username")==null){
+            response.sendRedirect("/login.jsp");//在这里，可以强制我们转到登录页面
+        }
+        return true;
+    //返回true后，请求将转移到postHandle，如果返回false，则表示当前的方法不通过，无法继续下面的方法而结束
+    }
+    //上面完成了真正实现方法前的准备工作
+    //下述方法，将真正执行对应的方法，并可能对request或response进行处理
+    @Override
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, 							Object handler, ModelAndView modelAndView) throws Exception {}
+    //最后，在请求结束后，可能需要完成资源释放的工作
+    @Override
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {}
+}
 ```
 
+拦截的样子大概是下面的样子：
 
+![](http://p2pworker.xyz/wp-content/uploads/2021/06/拦截.png)
 
+其次。为了告诉框架何时需要拦截，需要在关于调度器的配置文件中覆写对应的方法
 
+```java
+@Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new SessionCheckInterceptor()).
+            							addPathPatterns("/指定uri格式");
+        							//凡是遇到这种uri都会启动拦截
+        //如果有很多不同的uri格式需要拦截，也可以以List形式放入
+}
+```
+
+到这里基本上拦截器就差不多了，具体的操作就是看情况随便写了。
+
+#### 6.2 过滤器
 
 
 
