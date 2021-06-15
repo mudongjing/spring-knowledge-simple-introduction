@@ -808,37 +808,82 @@ class 类名{
   //当对象中包含其它类型的属性，我们就可以使用自己的转换器将传入参数的字符串转换为我们需要的类型对象
   ```
 
-  
+- 但是上述的表单行为，实际使用很不方便，可以对用户填写某些信息时，对个别数据做转换，但对于项目本身方法之间的通信而言，前后端的交流更多的还是使用json等格式进行通信【比如将对象转化为对应的json进行传递】，此时就需要更高一级的转换器来负责。
+
+  在前面我们已经不自觉的使用了，就是@ResponseBody，我们仅仅添加了这个注解，就可以将生成的对象转化为json返回给服务器 。
+
+  作为response仅仅是作为后端的响应类型，我们现在更希望从请求request中获取数据。首先介绍框架中对于请求和响应的类：`RequestEntity`, `ResponseEntity`，都是HttpEntity的子类。
+
+  当配置好json的依赖包，且返回的请求体是一个对象的json格式，则RequestEntity的请求体能够自动转化为对应的对象。下面首先看一下，响应是怎么发送的【注意这不是浏览器的请求，仍然是服务器内部的】。
+
+  ```java
+  ResponseEntity<String> responseEntity (RequestEntity<String> requestEntity){
+          String str="随便写点";
+      //这里指定请求体是个字符串，可以随便设置成其它对象，当然最好是把自己的对象转化为json格式的字符串
+          HttpHeaders response=new HttpHeaders();
+          ResponseEntity<String> responseEntity=new ResponseEntity<>(str,response, HttpStatus.OK);//设置的依此是请求体，请求头，状态码
+          return responseEntity;
+  }
+  /*
+  至于如何从响应中读取对象，则异常简单，导致没必要多余写上面*/
+  方法(RequestEntity<指定的对象类型> requestEntity){
+      对象类型 对象名=requestEntity.getBody();//此时就从请求体中获得对象了
+  }
+  ```
+
+  为模拟浏览器的请求以及后端的提取操作，我们设置某一页面触发向另一个地址发送请求，并获得对应的响应：
+
+  ```java
+  /*后端用于返回响应的页面*/
+  @Controller
+  public class jsonbodyController {
+      @GetMapping("/jsonbody")
+      public ResponseEntity<User> jsonBody(RequestEntity<User> request){
+          User user=request.getBody();
+          ResponseEntity<User> responseEntity=new ResponseEntity<>(user,
+                                                      new HttpHeaders(), HttpStatus.OK);
+          return responseEntity;
+      }
+  }
+  /*发送请求的页面*/
+  @Controller
+  public class httpbodyController {
+      @ResponseBody//为方便，我们这里将在页面以json格式显示对象结果
+      @GetMapping("/body")
+      public User body(){
+          String str=null;
+          String url="http://localhost:8080/m/jsonbody";
+          //m是启动tomcat对应的Appliation context
+          RestTemplate restTemplate=new RestTemplate();
+          HttpHeaders headers = new HttpHeaders();
+          headers.setContentType(MediaType.APPLICATION_JSON);
+          User user=new User("sdsdd00","44545");
+          String body=(new Gson()).toJson(user);
+          HttpEntity<String> entity = new HttpEntity<String>(body, headers);
+          ResponseEntity<User> user1=restTemplate.exchange(url, HttpMethod.GET, 
+                                                           entity, User.class);
+          User user2=user1.getBody();
+          return user;
+      }
+  }
+  ```
 
   
 
+### 6. 登录
 
+读者在一些网站中可能会发现，例如购物网站，或论坛，有时我们作为游客查看一些页面没问题，而当我们视图添加商品，或试图评论，或下载某些文件等，由于这些功能被网站设置为需要注册用户才能使用，则我们的页面被强制转到了登录或注册页面。
 
+上述的强制登录手段，则涉及到了网站对请求的拦截技术，所谓的拦截，即在我们已经实现的功能之上，在请求和我们的回复之间插入一个额外的工作。
 
+如果读者是遵循建议先阅读SpringMVC的话，可能不了解面向切面编程(AOP)，这种拦截其实就是AOP，对实现的方法在外部进行扩充或判断是否执行。
 
-### 6. 拦截过滤
+【这也是我建议先阅读Spring MVC的原因，与其预先了解大量基础的知识，不如先尝试着实现功能，不然程序员从学习计算机开始得先去学习数理逻辑】
 
-诸如我们在一些网站种试图进入某些会员页面时，都会强行进入一个登录页面，这就是程序对这类uri地址的特殊照顾。对uri地址先进行判断，再决定是否有必要照顾一下，这种实现就包括了spring mvc的拦截器以及servlet自身的过滤器。
+拦截器的实现：
 
-**需要注意的是，这里虽然把拦截--过滤混在一起，但二者的侧重点不同，上面强行进入登录页面属于拦截的做法，而过滤器是运行在调度器之前，即提前判断客户端发送来的内容其中的属性是否符合我们设定的要求，否则根本不会接受，即没有过滤器的允许，连框架都进不了。**
-
-spring产品的主要的看点【容器、注入、切面】，前面的各种注解已经大范围使用的容器和注入。现在的拦截器则是面向切面编程（AOP）的一个典型使用，我们需要做的就是看情况实现指定的接口，再实现其中几个不同阶段的方法即可。
-
-
-
-
-
-
-
-
-
-
-
-
-
-handlerExecutionChain: 保存处理器对象，拦截器，内部使用集合保存
-
-实际完成工作的是处理器适配器对象（是实现了HandlerAdapter接口的），用于执行对应处理器对象种方法
+```java
+```
 
 
 
