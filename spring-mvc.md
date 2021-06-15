@@ -257,7 +257,9 @@ public class TestController {
    ){方法实现}
    
    /*----------------------------------------------------------------*/
-   @RequestMapping("uri格式/{canshu1}/{canshu2}")
+   @RequestMapping("uri格式/{属性名1}/{属性名2}")
+   //或者直接用纯粹的参数传递形式@RequestMapping("uri格式")，在浏览器中输入的时候，如下
+   //uri?属性名1=某某&属性名2=某某，同样可以达到效果
    public 方法 (
    			@Valid 类型 对象名
        		//更常用的是，如果一次需要接受多个变量，我们则使用一个java对象负责接受
@@ -265,7 +267,7 @@ public class TestController {
        		//@Valid指示用来判断对象是否合法
    ){方法实现}
    ```
-
+   
    **如果希望将控制类中获得的数据显示在页面中，简单来说，就是在页面文件中写 `${内写数据名}`，数据名就是对应控制类方法中的变量名或对象名，其中对象也完全可以使用类似 `对象名.属性`指定对应内部属性值。**
 
 --------------------------------
@@ -710,7 +712,105 @@ class 类名{
 
 ##### 5.3.2 绑定
 
+所谓的绑定其实就是针对特定的格式进行转换，本质还是格式转换。
 
+- DataBinder
+
+  ```java
+  方法(){//这里假设user包含name和date属性，其中date为Date类型
+          User user=new User();
+          DataBinder databinder=new DataBinder(user);
+          databinder.addCustomFormatter(new DateFormatter("yyyy-MM-dd"));
+          MutablePropertyValues propertyValues=new MutablePropertyValues();
+          propertyValues.add("name","8989");
+          propertyValues.add("date","8989-12-12");
+          databinder.bind(propertyValues);
+          BindingResult bindingResult=databinder.getBindingResult();
+          user=(User) bindingResult.getTarget();
+          System.out.println((new Gson()).toJson(user));
+  }
+  ```
+
+  > 读者也发现了，上面的代码中格式转换使用Formatter为后缀的方法实现，而不是converter的方法，其实二者都是同样的功能，只不过在这里，我们需要专门使用formatter的方法。
+
+  另外，我们需要保证指定的字符串格式是正确的，否则程序是无法识别出来的。
+
+  如果我们希望实现我们自己指定的转换方式，也只需要学习DateFormatter的实现，即实现接口Formatter，完善对应的方法。这里我们再额外实现一下，上面的converter已经实现过字符串转User，主要的实现代码也就是那些。
+
+  - 首先，我们假设在一个Person类中，包含User的属性为user，把上面的代码稍微调整调整类和对象，然后，就需要增加关于user的代码
+
+    ```java
+    propertyValues.add("user","user 1 ,2021-05-01");
+    ```
+
+  - 为此，我们额外实现一个Formatter类，`UserFormatter`，增加一个转换器
+
+    ```java
+    databinder.addCustomFormatter(new UserFormatter());
+    ```
+
+  - 现在就是实现UserFormatter
+
+    ```java
+    public class UserFormatter  implements Formatter<User> {
+        /*其中Formatter对应的源码为
+        public interface Formatter<T> extends Printer<T>, Parser<T> {}
+        进一步的，我们发现就是需要实现两个方法 `print` 和 `parse`
+        */
+        @Override
+        public String print(User user, Locale locale) {
+            return (new Gson()).toJson(user);//这里随便实现，就是返回一个String值，到时候
+        }
+        @Override
+        public User parse(String source, Locale locale) throws ParseException {
+            //就是之前转换的代码
+            User user=new User();
+            String[] result=source.split(",");
+            Date date=null;
+            try{
+                date=(new SimpleDateFormat("yyyy-MM-dd")).parse(result[1]);
+            }catch(ParseException e){}
+            user.setName(result[0]);
+            user.setDate(date);
+            return user;}}
+    ```
+
+- WebDataBinder
+
+  这里的绑定主要针对浏览器发来的请求参数。
+
+  前面我们提及过，可以通过uri传递参数，这里则视图将这些参数由框架直接转化为我们希望的对象等。读者也应该记得前面的参数最下面也提及了，通过指定参数位置，可以直接转化为方法指定的对象。【实际框架的调度器底层就已经利用WebDataBinder】。
+
+  而我们只需要使用注解@InitBinder指定即可，在其中加载指定的转换器，将把符合对应格式的参数进行转换。
+
+  ```java
+  @InitBinder("随便指定对象名")
+  public void initBinderAddr(WebDataBinder binder) {
+      binder.setFieldDefaultPrefix("随便什么对象名.");
+  }
+  //这里主要针对的是表单传入参数，在表单中，通过设置对应数据的name,符合指定的前缀，后面跟着的不同的属性名
+  //例如
+  /*
+  <form action="uri" method="post">
+      <input type="text" name="user.name" >
+  	<input type="text" name="user.age" >
+      <input type="submit" value="提交">
+  */
+  //此时，对应的属性将假如到指定方法参数中，如
+  /*
+  @ResponseBody
+  @RequestMapping("/user")
+  public User userinit11(@ModelAttribute("user") User user){
+  									 //"user"需要对应的是上面"随便指定对象名"
+  	return user;
+  }
+  */
+  //当对象中包含其它类型的属性，我们就可以使用自己的转换器将传入参数的字符串转换为我们需要的类型对象
+  ```
+
+  
+
+  
 
 
 
