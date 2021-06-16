@@ -1,0 +1,8 @@
+#! /bin/bash
+host=rm-bp13j3k8j7222149cnm.mysql.rds.aliyuncs.com
+user=root_wcd
+password=Pi_31415926
+
+mysql -h $host -u$user -p$password << EOF
+show procedure status into outfile '/home/procedure-status.txt';
+EOF

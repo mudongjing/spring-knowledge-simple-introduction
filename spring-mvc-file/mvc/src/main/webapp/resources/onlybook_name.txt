@@ -1,0 +1,4504 @@
+(GoF)：设计模式——可复用面向对象软件的基础@2000 (扫描版).pdf
+0.左看右看一定要看20181028.txt
+0.推荐安装的软件.txt
+0.本文件夹的书排版不如同名的azw3格式.txt
+0.本文件夹若有重复的，请参照亚马逊的书名，越接近越好.txt
+09secret.doc
+0day安全_软件漏洞分析技术[撩撩前端].pdf
+1 Algebraic Topology - A. Hatcher.PDF
+1 Peter Petersen - Riemannian Geometry.pdf
+1.ed2k下载链接20161120.csv
+1.《大学》.txt
+1.资源详情.txt
+1.部分软件来源.txt
+100001qlyqs.doc
+100002sms.doc
+100003smsft.doc
+100004smszy.doc
+100007zldlwts.doc
+10000个科学难题_信息科学卷_BB6D59DFCF15D40AE9CC86CECC5CDFCB2000_INDEXED.pdf
+10000物理.pdf
+10000生物.pdf
+1001-3695(2008)06-1611-05.pdf
+1060发生函数论_11085298.pdf
+12《李群论》(作者)[日]岩堀长庆(译者)孙泽瀛 上海科学技术1962年1月第1版.pdf
+14-1 Programming for Computations、.pdf
+1601.00835.pdf
+18、Linux.for.Hackers.pdf
+1__Digital_Media_Steganography_Principles,_Algorithms,_and_Advances.pdf
+1、金融工程-银河量化十周年专题之一：选股因子Alpha的起源.pdf
+2.《孟子》.txt
+2.数据列表20171225.txt
+2.文件列表.txt
+2008contribute.doc
+20100201 股指期货在机构投资者中的应用研究：重点关注各类风险中性策略.pdf
+20100224   行业研究   广发证券   余晓宜   银行业融资融券风险准备金比例上调点评   净资本不足券商将受影响.pdf
+20100325   罗军   从判定系数R^2的角度看市场   部分行业失去选股意义   高R^2组合长期产生超额收益.pdf
+20100526   广发证券-投资策略-基于高频数据的市场情绪择时研究-胡海涛.pdf
+20100526 多因子Alpha系列报告之（一） ——风格因子驱动下的行业选择：超配金融地产.pdf
+20100527 多因子Alpha系列报告之（二） ——风格因子驱动下的行业内量化选股研究.pdf
+20100617   广发证券   探寻西蒙斯投资之道   基于HMM模型的周择时策略研究.pdf
+20100625 股指期货专题系列报告之二——沪深300股指期货的期现关系及相互影响研究.pdf
+20100804   罗军   VBPI保本策略结合股指期货的应用研究   产品创新专题系列报告之二.pdf
+20101129   罗军   2011年量化投资策略   明年继续轻指数重个股   估值类因子仍将发挥重要作用.pdf
+20101203 多因子Alpha系列报告之（三）——估值与动量结合的选股模型.pdf
+20110302   罗军   胡海涛   量化行业配置系列报告之二   基于ABL的行业配置方法   经济周期、估值反转与股价动量的结合.pdf
+20110511 股指期货专题系列报告之六——基于混沌理论的股指期货噪声趋势交易（NTT）策略.pdf
+20110519 多因子Alpha系列报告之（五）——广发证券-多因子Alpha模型研究：沪深300成份股的应用分析（下）.pdf
+20110519 多因子Alpha系列报告之（四）——广发证券-多因子Alpha模型研究：沪深300成份股的应用分析（上）.pdf
+20110810   胡海涛   2011年金融工程研讨会专题报告系列之四   大单资金流的反转效应更适用于周期性行业的选择.pdf
+20110810 多因子Alpha系列报告之（六）——从宏观角度观察Alpha因子趋势.pdf
+20110815 多因子Alpha系列报告之（七）——大浪淘金，Alpha因子何处寻？.pdf
+20110906   罗军   胡海涛   基于自适应网络模糊推理系统的择时研究   拨开云雾见月明.pdf
+20111011 股指期货专题系列报告之八——基于低阶多项式拟合的股指期货趋势交易(LPTT)策略.pdf
+20111025 掀开资金管理的神秘面纱：既有策略下财富增长之最优路径.pdf
+20111124   罗军   胡海涛   金融工程2012年度策略报告   把握市场风格   探寻量化纵深.pdf
+20111216   胡海涛   罗军   回归树在行业配臵中的应用探讨   盈利能力与动量因子是行业配臵的制胜关键.pdf
+20111220 多因子Alpha系列报告之（八）——观宏观经济周期,察风格因子轮动.pdf
+20120104 与情绪俱进 贪婪恐惧中孕育市场反转契机.pdf
+20120201 多因子Alpha系列报告之（九）——追踪行业特点，捕获行业ALPHA驱动力(PPT).pdf
+20120314   安宁宁   另类交易策略研究之五   基于缠中说禅之分型通道趋势交易系统.pdf
+20120314 事件驱动策略量化研究系列专题之一 ——高管增持事件驱动策略量化研究.pdf
+20120314 基于修正Vasicek模型的配对交易研究——精选非周期行业的配对机会.pdf
+20120315   胡海涛   门槛放宽更利于   大宗交易   融券卖出   的套利模式.pdf
+20120321   夏潇阳   事件驱动策略量化研究系列专题之二   此时无声胜有声   长期不出公告股票的投资机会.pdf
+20120410   夏潇阳   网络文本挖掘方法介绍   网络文本挖掘研究系列专题之一.pdf
+20120415 基金业绩比较基准约束机制点评.pdf
+20120509   安宁宁   GFTD模型系列报告之二   基于GFTD模型的股票多空组合策略系统.pdf
+20120522   夏潇阳   宏观经济数据一致预期及其应用   网络文本挖掘研究系列专题之二.pdf
+20120605   胡海涛   沪深300ETF进入融资融券标的首日点评   折价较高   两融规模平平.pdf
+20120607   胡海涛   量化投资专题   配对交易系列报告之三   ETF配对交易实操方案.pdf
+20120608   夏潇阳   量化投资专题   欧洲杯魔咒或将延续.pdf
+20120611   罗军   算法交易系列研究之一   积小流以成江海   关于算法交易的一个综述.pdf
+20120611   罗军   量化投资专题   转融通   双刃剑之惑   基于多因子选股的量化对冲方案分析.pdf
+20120611 多因子Alpha系列报告之（十）——转融通：双刃剑之“惑”：基于多因子选股的量化对冲方案分析.pdf
+20120611 算法交易系列研究之一——积小流以成江海——关于算法交易的一个综述.pdf
+20120613 沪深 300股指期货跨套利研究之二 ——沪深300股指期货高频跨期套利策略研究.pdf
+20120614   俞文冰   汪鑫   技术分析系列报告之一   头肩形态的识别与有效性测算.pdf
+20120618   夏潇阳   事件驱动策略量化研究系列专题之三   事件驱动的负Alpha选股策略.pdf
+20120621   叶涛   量化投资专题   时变贝塔动态估计模型的预测效果检验   基于均值回复过程的状态空间估计模型.pdf
+20120629 多因子Alpha系列报告之（十一）——考虑换手率限制的多因子Alpha模型.pdf
+20120705   安宁宁   算法交易系列研究之二   传统算法交易策略中的相关参数研究.pdf
+20120709   安宁宁   另类交易策略研究之七   在标度不变性破缺下洞察资金流向   MFT交易策略.pdf
+20120709   安宁宁   另类交易策略系列之六   基于GFTD的期指日内程序化交易策略.pdf
+20120712   叶涛   汪鑫   量化投资专题   考虑非预期基差效应的期指对冲模型构建方法研究   标准β对冲模型的一种扩展形式.pdf
+20120720   俞文冰   汪鑫   技术分析系列报告之二   五点式技术形态的穷举及相互转换关系.pdf
+20120720 技术分析系列报告之二——五点式技术形态的穷举与相互转化关系.pdf
+20120724   夏潇阳   事件驱动策略量化研究系列专题之三   分析师调研带来的投资机会.pdf
+20120725   安宁宁   算法交易系列研究之三   看得见的冲击成本   IS算法交易策略.pdf
+20120801   罗军   多因子Alpha系列报告之(十二)   从ICIR角度挖掘风格因子的均值回复性.pdf
+20120808   安宁宁   评GFTD择时模型发出买入信号   破茧成蝶.pdf
+20120828   胡海涛   转融通试点启动点评   转融资先行   融资融券期限分档.pdf
+20120910   叶涛   汪鑫   基于截面混合复制技术的指数增强组合构建方法研究.pdf
+20120913 跨期套利策略研究之三——趋强避弱 商品期货套利策略.pdf
+20120916   安宁宁   另类交易策略系列之九   基于遗传规划的智能交易策略方法.pdf
+20120917   安宁宁   另类交易策略研究之八   基于时域分形的相似性匹配日内低频交易(SMT)策略.pdf
+20120919   罗军   多因子Alpha系列报告之(十三)   考虑因子非线性特征的多因子Alpha策略.pdf
+20120920   胡海涛   期权复制策略的另类应用.pdf
+20120921   史庆盛   基于时间及截面双维度的多因子Alpha分析体系.pdf
+20120928   俞文冰   汪鑫   技术分析系列报告之三   矩形形态的识别与有效性测算.pdf
+20121008   安宁宁   相似性匹配量化模型研究之二   基于历史状态空间相似性匹配的行业配置SMIA模型.pdf
+20121017 短线择时策略研究之一——基于股指期货在A股非交易时间表现的短线择时研究.pdf
+20121116 多因子Alpha系列报告之（十四）——基于情景分析的多因子Alpha策略.pdf
+20121121 相似性匹配量化模型研究之三——双重相似性匹配量化选股SMIP策略.pdf
+20121206 事件驱动策略量化研究系列专题之四——岁末年初的事件驱动投资机会.pdf
+20130218 事件驱动策略量化研究系列专题之五——分析师首次关注股票的投资机会.pdf
+20130225 多因子Alpha系列报告之（十五）——宏观事件驱动下的风格轮动.pdf
+20130225 股指期货跨期套利研究之三——基于HP滤波的高频混合交易策略.pdf
+20130225 风格轮动系列专题之二——宏观事件驱动下的风格轮动.pdf
+20130228 量化投资专题   配对交易系列报告之四——A股与H股配对交易研究.pdf
+20130326 事件驱动策略量化研究系列专题之六——在中小板与创业板中挖掘调研机会.pdf
+20130329 国债期货系列报告之三——转换因子影响因素分析.pdf
+20130412 杠杆型ETF的价值波动特征研究.pdf
+20130416 技术分析系列报告之四——股指期货日内分时段收益特征.pdf
+20130601 广发证券_基于情景切换的技术指标选股策略（PPT）.pdf
+20130601 广发证券_权益类证券收益互换交易业务介绍(PPT).pdf
+20130601 广发证券_跨品种套利策略研究(PPT).pdf
+20130617 基于上市公司区域差异的选股策略.pdf
+20130617 多因子Alpha系列报告之（十六）——基于情景切换的技术选股策略.pdf
+20130617 套利策略研究之四——跨品种套利策略研究.pdf
+20130617 技术指标选股系列之KDJ——基于情景切换的技术选股策略.pdf
+20130617 短线择时策略研究之二——希尔伯特变换下的短线择时策略.pdf
+20130726 GFTD系列之二——A股量化择时模型GFTD第二版.pdf
+20130726 短线择时策略研究之三——低延迟趋势线与交易性择时.pdf
+20130801 广发证券_杠杆ETF的交易特征剖析与组合策略构建(PPT).pdf
+20130801 广发证券_金融工程年度论坛系列报告之一：广发证券2013年金融工程研究成果回顾.pdf
+20130801 广发证券_金融工程年度论坛系列报告之七：在深度报告中挖掘事件驱动投资机会.pdf
+20130801 广发证券_金融工程年度论坛系列报告之九：基于贝叶斯统计的套利策略.pdf
+20130801 广发证券_金融工程年度论坛系列报告之五：基于波动率预测的交易策略.pdf
+20130801 广发证券_金融工程年度论坛系列报告之八：基于风格特征归因的动态因子策略.pdf
+20130801 广发证券_金融工程年度论坛系列报告之十：相位指标在短线择时中的应用.pdf
+20130807 多因子Alpha系列报告之（十七）——行业事件驱动下的风格轮动.pdf
+20130807 风格轮动系列专题之三——行业事件驱动下的风格轮动.pdf
+20130902 事件驱动策略量化研究系列专题之七——在深度报告中挖掘事件驱动投资机会.pdf
+20130902 多因子Alpha系列报告之（十八）——基于风格特征归因的动态因子策略.pdf
+20130902 套利策略研究之五——基于贝叶斯统计的套利策略.pdf
+20130902 杠杆ETF的交易特征剖析与组合策略构建.pdf
+20130902 短线择时策略研究之四——相位指标在短线择时中的应用.pdf
+20130903 国债期货系列报告之四——国债期货趋势交易的可能性探讨.pdf
+20130903 基于波动率预测的交易策略.pdf
+20130904 国债期货系列报告之五——国债期货推出市场影响及参与策略.pdf
+20131230 行业轮动系列专题之（六）——寻找行业“似曾相识”的轮动规律.pdf
+20131231 年报披露时间大幅提前策略.pdf
+2013全国注册电气工程师执业资格考试辅导书——重点难点解析与典型例题精讲（发输变电专业）.pdf
+2014.08-中国校花大赛官网-4029-mysql.txt
+2014.08-中国校花大赛官网会员信息-2818-csv.csv
+2014.08-中国校花大赛报名信息-1211-csv.csv
+20140102 GFTD择时2013年度总结：多空进退自如，蛇年收益满满.pdf
+20140102 交易性择时策略研究之五——从希尔伯特变换到波浪理论择时.pdf
+20140402 万二佣金，且行且珍惜：低佣金下ETF参与T+0交易的可行性分析.pdf
+20140414 行为金融投资策略专题之（一）：捕捉羊群效应下的行业轮动机会.pdf
+20140421 量化看市场系列之一——暴涨记忆犹新，炒新思路解析.pdf
+20140512 “相似性匹配”行业轮动模型回顾——煤炭、有色等行业大涨点评.pdf
+20140519 寻找世界杯期间的投资机会：解除“世界杯魔咒”，且看A股！.pdf
+20140613 多因子ALPHA系列报告之（十九）——笑看北雁南飞南雁北归.pdf
+20140619 基于集合竞价试盘者行为的A股T 0策略：大数据应用背景下的蓝筹T 0初探.pdf
+20140619 大数据深度学习系列之二——深度学习算法掘金ALPHA因子.pdf
+20140624 互联网金融的模式与产品：机构产品，化繁为简.pdf
+20140625 互联网大数据挖掘系列专题之一——基于网络新闻热度的择时策略.pdf
+20140626 互联网大数据挖掘系列专题之二——公告披露背后隐藏的投资机会.pdf
+20140702 风格及多因子对冲策略半年回顾：追寻阿尔法芬芳，我们一直在路上.pdf
+20140707 产品创新专题系列报告之五——金融工程的新天地，结构化产品初探.pdf
+20140707 基金公司合作互联网公司指数点评：大数据技术在股票投资上的崛起.pdf
+20140828 交易性择时策略研究之七——基于加权傅里叶变换的长期趋势预测.pdf
+20140902 多因子Alpha系列报告之（二十一）——ALPHA因子何处寻觅 掘金海量技术指标.pdf
+20141106 行业轮动系列专题之（八）——月份效应下的行业配置策略与逻辑.pdf
+20141226 事件驱动策略量化研究系列专题之十四——上市公司披露信息变更隐含的投资机会.pdf
+2014版智能电网用户端系统解决方案汇编.pdf
+20150331 广发证券_广发证券产品创新专题报告系列之十五：利用事件构筑Smart Beta ETF.pdf
+20150831-申万宏源-申万大师系列价值投资篇之一：本杰明.格雷厄姆经典价值投资法.pdf
+20150909-申万宏源-申万大师系列价值投资篇之二：本杰明.格雷厄姆成长股内在价值投资法.pdf
+20150910-申万宏源-申万大师系列价值投资篇之三：本杰明.格雷厄姆企业主投资法.pdf
+20150915-申万宏源-申万大师系列价值投资篇之四：詹姆斯.奥肖内西价值投资法.pdf
+20150917-申万宏源-申万大师系列价值投资篇之五：查尔斯.布兰德斯价值投资法.pdf
+20150922-申万宏源-申万大师系列价值投资篇之六：三一投资管理公司价值选股法.pdf
+20150929-申万宏源-申万大师系列价值投资篇之七：彼得.林奇基层调查选股法.pdf
+20151009-申万宏源-申万大师系列价值投资篇之八：史蒂夫·路佛价值选股法则.pdf
+20151012-申万宏源-申万大师系列价值投资篇之九：迈克尔·普莱斯低估价值选股法.pdf
+20151012-申万宏源-申万大师系列价值投资篇之十：阿梅特.欧卡莫斯集中投资法则.pdf
+20151014-申万宏源-申万大师系列.价值投资篇之十一：罗伯特·山朋价值型投资法.pdf
+20151014-申万宏源-申万大师系列.价值投资篇之十二：柏顿.墨基尔成功选股法.pdf
+20151019-申万宏源-申万大师系列.价值投资篇之十三：罗伯.瑞克超额现金流选股法则.pdf
+20151020-申万宏源-申万大师系列价值投资篇之十四：麦克.劳尔集中价值选股法则.pdf
+20151021-申万宏源-申万大师系列价值投资篇之十五：惠特尼.乔治小型价值股投资法.pdf
+20151022-申万宏源-申万大师系列价值投资篇之十六：理查马文价值导向选股法则.pdf
+20151023-申万宏源-申万大师系列价值投资篇之十七：戴维.波伦价值型系统评价投资法.pdf
+20151025-申万宏源-申万大师系列价值投资篇之十九：迈克尔.喜伟收益型投资法.pdf
+20151025-申万宏源-申万大师系列价值投资篇之十八：麦克.贝利2~2~2选股法则.pdf
+20151027-申万宏源-申万大师系列价值投资篇之二十：《MASETR》第一季价值投资篇结果汇总.pdf
+2017 更新日志.txt
+2018 更新日志.txt
+20180206153157392351.doc
+2019 更新日志.txt
+20190920163712263061.docx
+20190920163837183134.doc
+20191031094818258122.doc
+2020 更新日志.txt
+20201130141524.dotx
+2021 更新日志.1.txt
+2021 更新日志.2.txt
+2021 更新日志.3.txt
+2021 更新日志.4.txt
+2021 更新日志.5.txt
+2021 更新日志.6.txt
+2021 更新日志.7.txt
+2021 更新日志.txt
+2021 更新日志.txt
+20210406095120947.doc
+20、Cyberwarfare_ An Introduction To Information.pdf
+20世纪数学的五大指导理论.pdf
+210不动点定理 张奠宙_顾鹤荣-世界数学名题欣赏.pdf
+24 分布式系统关键技术：全栈监控.pdf
+26 分布式系统关键技术：流量与数据调度.pdf
+27 洞悉PaaS平台的本质.pdf
+2、Practical_Guide_to_Digital_Forensics_Investigations,_A,_2nd_Edition.pdf
+2、金融工程-银河量化十周年专题之二：CTA程序化交易实战指南.pdf
+3-2路由网关-Nginx-实践作业.pdf
+3.《论语》.txt
+3.更新情况.txt
+34《网络拓扑学》(作者)[日]近藤一夫 小野寺力男(译者)张设 上海科学技术1963年7月第1版.pdf
+3、金融工程-银河量化十周年专题之三：从一到多，银河多事件策略集.pdf
+4.《中庸》.txt
+4.最后更新日期2021年03月24日.txt
+404.html
+404.html
+48-脑的进化  自我意识的创生_11947798.pdf
+4G移动宽带革命——全面解析EPC和4G分组网络_(原书第2版).pdf
+4、金融工程-银河量化十周年专题之四：日间大盘择时策略汇.pdf
+5 Advanced Modern Algebra - J.Rotman 2003.pdf
+5 Lie groups and algebraic groups III - A. L. Onishchik, E. B. Vinberg.pdf
+5.《左传》.txt
+553952+深入解析IPv6++第3版.pdf
+5G：关键技术与系统演进.pdf
+5、Randolph_Hock,_Gary_Price_The_Extreme_Searcher’s_Internet_Handbook.pdf
+5、金融工程-银河量化十周年专题之五：选股因子与因子择时新视角.pdf
+6 Algebra - I.Martin Isaacs.PDF
+6 Complex Analysis - Elias M. Stein.pdf
+6.《礼记》.txt
+6.资源目录(自动生成).html
+638343+精通Scrapy网络爬虫.pdf
+6LoWPAN：无线嵌入式物联网.pdf
+6、金融工程-银河量化十周年专题之六：量化行业择时与行业配置.pdf
+7 Functional Analysis - Lax.pdf
+7 The Red Book of Varieties and Schemes - Mumford.PDF
+7.《周易》.txt
+7.资源目录(Snap2HTML生成，2个目录内容相同).html
+78 程序员练级攻略（2018）：Linux系统、内存和网络极客时....pdf
+7、金融工程-事件研究：全业绩报告链策略样本外一周年回顾.pdf
+7天學會大數據資料處理 NoSQL：MongoDB 入門與活用（第三版） by 黃士嘉, 林敬傑 (z-lib.org).pdf
+8 A Concise Course in Algebraic Topology - J.P.May.pdf
+8 Elliptic Partial Differential Equations of Second Order - David Gilbarg.pdf
+8.《尚书》.txt
+80384条借款数据.xlsx
+8、金融工程-鹏华指数产品择时周报（20140909）：顺势而为.pdf
+9 - Riemannian Geometry - I.Chavel.pdf
+9.《诗经》.txt
+91328-0136097111_Intro.ppt
+91329-0136097111_ch01.ppt
+91330-0136097111_ch02.ppt
+91331-0136097111_ch03.ppt
+91332-0136097111_ch04.ppt
+91333-0136097111_ch05.ppt
+91334-0136097111_ch06.ppt
+91335-0136097111_ch07.ppt
+91336-0136097111_ch08.ppt
+91337-0136097111_ch09.ppt
+91339-0136097111_ch11.ppt
+91340-0136097111_ch12.ppt
+91341-0136097111_ch13.ppt
+91342-0136097111_ch14.ppt
+91343-0136097111_ch15.ppt
+91344-0136097111_ch10.ppt
+92 素数判定与大数分解 孙琦，旷京华-世界数学名.pdf
+9《有限群构造 下册》(作者)张远达 科学1982年12月第1版.pdf
+@bookusefor3目录20201010.txt
+@更多资源尽在同步范SyncFan.com.txt
+[10000个科学难题：数学卷].数学编委会.扫描版.pdf
+[100伟大初等数学问题他们的历史和解决方案(奥林匹克数学)]100.Great.Problems.of.Elementary.Mathematics.Their.History.And.Solution.Heinrich.Dorrie.影印版.pdf
+[emuch.net]数学哲学——对数学的思考_斯图尔特.pdf
+[Java典型应用彻查1000例：Web应用开发].pdf
+[Java典型应用彻查1000例：数据库应用基础].pdf
+[Java典型应用彻查1000例：网站数据库设计].pdf
+[Java典型应用彻查1000例：网络应用开发].pdf
+[Lua程序设计].(Programming.in.Lua,Second.Edition).(巴西)Roberto.Ierusalimschy.扫描版.pdf
+[TCP.IP协议及网络编程技术].(TCP.IP协议及网络编程技术).黄健.扫描版.pdf
+[全能战略家：对策论入门].(美)J·D·威廉斯.pdf
+[博弈与决策].(中).南旭光.pdf
+[博弈论与信息经济学(1996)].(中)张维迎.pdf
+[博弈论与经济模型].(中).蒲勇健.pdf
+[双击打开] 神Key - 最有种的 Sync 资源.html
+[哥德尔证明].(美)内格尔-(美)纽曼.pdf
+[图灵图书].精通Django：Django 1.8 LTS全解.pdf
+[图灵程序设计丛书].Docker开发指南.pdf
+[图灵程序设计丛书].Docker经典实例.pdf
+[图灵程序设计丛书].Erlang ／ OTP并发编程实战.pdf
+[图灵程序设计丛书].Erlang程序设计.第2版.pdf
+[图灵程序设计丛书].HTTP／2基础教程.pdf
+[图灵程序设计丛书].Kafka权威指南.pdf
+[图灵程序设计丛书].Python网络编程攻略.pdf
+[图灵程序设计丛书].SQL反模式.pdf
+[图灵程序设计丛书].Web安全开发指南.pdf
+[图灵程序设计丛书].Web开发权威指南.pdf
+[图灵程序设计丛书].两周自制脚本语言.pdf
+[图灵程序设计丛书].函数式编程思维.pdf
+[图灵程序设计丛书].垃圾回收的算法与实现.pdf
+[图灵程序设计丛书].客户端存储技术.pdf
+[图灵程序设计丛书].数据科学入门.pdf
+[图灵程序设计丛书].自制编程语言.pdf
+[图灵程序设计丛书].自制编译器.pdf
+[图论导引].(美国)Douglas.B.West.扫描版(ED2000.COM).pdf
+[新世紀EVANGELION福音戰士][GAINAX×貞本義行][東販][14完] 清晰度较高.txt
+[模式识别与智能计算：MATLAB技术实现(第2版)].杨淑莹.扫描版.pdf
+[深入解析Spring MVC与Web Flow].拉德.扫描版.pdf
+[独·数之道]标准数独技巧(1).pdf
+[线性微分方程的伽罗瓦理论].van.der.put.m..pdf
+[黎曼几何].Jost.Riemannian.Geometry.and.Geome.pdf
+__所有电子书目录的密钥__.txt
+A Beginner's Guide to the Mathematics of Neural Networks.pdf
+A Beginners Guide to Scala, Object Orientation and Functional Programming by John Hunt (auth.) (z-lib.org).pdf
+A Benchmark Approach to Quantitative Finance（数理金融基准分析法）, Eckhard Platen, Springer, 2006.pdf
+A Clash of Kings Maps.pdf
+A Concise Course in Algebraic Topology（代数拓扑简明教程）, J.P.May.pdf
+A Course in Derivative Securities：Introduction to Theory and Computation（衍生证券教程：理论和计算导论）, Kerry Back, Springer, 2005.pdf
+A Dance with Dragons Maps.pdf
+A Feast for Crows Maps.pdf
+A First Course in Abstract Algebra, 7ed（抽象代数基础教程 第7版）, John Fraleigh, Addison Wesley, 2002.pdf
+A First Course in Stochastic Processes, 2ed（随机过程初级教程 第2版）, Samuel Karlin ＆ Howard M.Taylor, Academic, 1975.pdf
+A Framework for Reliable and Efficient Data Placement in Distributed Computing Systems.pdf
+A Game of Thrones Maps.pdf
+A Mathematical Theory of Communication.pdf
+A Programmer's Introduction to Mathematics.pdf
+A Second Course in Stochastic Processes（随机过程高级教程）, Samuel Karlin ＆ Howard M.Taylor, Academic, 1981.pdf
+A Storm of Swords Maps.pdf
+A Study on Configuration of NDN Based Identifier Using Block Chain in Fog Computing Environment.pdf
+Abe Fettig：Twisted Network Programming Essentials@2005 (第1版).chm
+Abelson & Sussman：Structure and Interpretation of Computer Programs@1996 (第2版).pdf
+Abelson & Sussman：计算机程序的构造和解释@2004 (第2版 扫描版).pdf
+Absolute OpenBSD - Unix For The Practical Paranoid 2003.pdf
+Active Portfolio Management：A Quantitative Approach for Providing Superior Returns and Controlling Risk, 2ed（主动投资组合管理：创造高收益并控制风险的量化投资方法 第2版）, Grinold ＆ Kahn, MacGraw-Hill, 2000.pdf
+Adaptive Control with Recurrent High-order Neural Networks：Theory and Industrial Applications（高阶递归自适应神经网络：理论与工业应用）, Rovithakis ＆ Christodoulou, Springer, 2000.pdf
+Adaptive Control with Recurrent High-order Neural Networks：Theory and Industrial Applications（高阶递归自适应神经网络：理论与工业应用）, Rovithakis ＆ Christodoulou, Springer, 2000.pdf
+Additive Combinatorics（可加性组合学）, Terence Tao（陶哲轩） ＆ Van H.Vu, Cambridge, 2006.pdf
+Advanced Equity Derivatives：Volatility and Correlation（高等股票衍生产品：波动性和相关性）, Sebastien Bossu, Wiley, 2014.pdf
+Advanced Linux Networking 2002.chm
+Advanced Linux Programming - Chapter 01-advanced-unix-programming-with-linux.pdf
+Advanced Modelling in Finance using Excel and VBA（高级金融建模：使用Excel和VBA）, Mary Jackson etc., Wiley, 2001.pdf
+Advanced Modern Algebra（高等近世代数）, Joseph J.Rotman, Prentice Hall, 2003.pdf
+Advanced Programming In The UNIX Environment, 2nd Ed 2005.chm
+aibooksync.txt
+Ajax 权威指南.chm
+AJAX实战.pdf
+Alan Donovan & Brian Kernighan：Go 语言圣经 (第1版).pdf
+Algebra, Topology, Differential Calculus, and Optimization Theory For Computer Science and Engineering.pdf
+Algebraic Topology（代数拓扑）, Allen Hatcher, Cambridge, 2002.pdf
+Algorithmic and High-Frequency Trading（算法和高频交易）, Alvaro Cartea etc., Cambridge, 2015.pdf
+Algorithmic Trading and DMA：An introduction to direct access trading strategies（算法交易和DMA：直接访问式交易策略导论）, Barry Johnson, 4Myeloma, 2010.pdf
+Algorithmic Trading：Winning Strategies and Their Rationale（算法交易：制胜策略及其缘由）, Ernest P.Chan, Wiley, 2013.pdf
+Algorithms, 4ed（算法 第4版）, Robert Sedgewick ＆ Kevin Wayne, Addison-Wesley, 2011.pdf
+Allen Downey：像计算机科学家一样思考 Python (第2版).pdf
+Allen Harper 等：Gray Hat Hacking——The Ethical Hacker's Handbook@2011 (第3版).pdf
+Allen Harper 等：灰帽攻击安全手册——渗透测试与漏洞分析技术 (第1版).pdf
+An Elementary Introduction to Mathematical Finance：Options and Other Topics, 2ed（数理金融初步：期权及其它主题 第2版）, Sheldon M.Ross, Cambridge, 2002.pdf
+An Introduction to High-Frequency Finance（高频金融导论）, Michel M.Dacorogna etc., Academic, 2001.pdf
+An Introduction to Mathematical Finance：Options and Other Topics（数理金融导论：期权和其它主题）, Sheldon M.Ross, Cambridge, 1999.pdf
+Andrei Alexandrescu：C++ 设计新思维——泛型编程与设计模式之应用@2003 (侯捷译 扫描版).pdf
+Andrew Hunt & David Thomas：Pragmatic Programmers——From Journeyman to Master@1999 (第1版).pdf
+Andrew Hunt & David Thomas：程序员修炼之道——从小工到专家.txt
+Andrew Hunt & David Thomas：程序员修炼之道——从小工到专家@2011 (马维达译 扫描版).pdf
+Andrew Koenig：C 陷阱与缺陷@2002 (扫描版).pdf
+Andrew Tanenbaum & Albert Woodhull：Operating Systems——Design and Implementation@2006 (第3版).pdf
+Andrew Tanenbaum & David Wetherall：Computer Networks@2011 (第5版).pdf
+Andrew Tanenbaum & David Wetherall：计算机网络@2012 (第5版 扫描版).pdf
+Andrew Tanenbaum & Maarten Van Steen：Distributed Systems——Principles and Paradigms@2007 (第2版 扫描版).pdf
+Andrew Tanenbaum：Modern Operating Systems@2015 (第4版).pdf
+Android开发入门与实战体验.pdf
+ANDROID框架揭秘_369.pdf
+Android系统优化从入门到精通.pdf
+Android系统安全与攻防.1.pdf
+Android系统安全与攻防.pdf
+Android系统安全与攻防.pdf
+Android网络开发从入门到精通.pdf
+Android软件安全与逆向分析_带书签.pdf
+Andy本资源密钥B2YZTLQJYCRWAM4LJLWBZWH7EEYU25J3T.txt
+Angular从零到一@java1234.com.pdf
+Ansible权威指南.html.pdf
+Apache Kylin权威指南 Apache Kylin核心团队 2017.1.pdf
+Applying Elliott Wave Theory Profitably（应用艾略特波浪理论获利）, Steve W.Poser, Wiley, 2003.pdf
+Arbitrage Theory in Continuous Time, 2ed（连续时间中的套利理论 第2版）, Tomas Bjork, Oxford, 2003.pdf
+Arbitrage Theory in Continuous Time, 3ed（连续时间中的套利理论 第3版）, Tomas Bjork, Oxford, 2009.pdf
+Architecting modern data platforms  a guide to enterprise Hadoop at scale by Buss, Ian George, Lars Kunigk, Jan Wilkinson, Paul (z-lib.org).pdf
+Architecture of the hyperledger blockchain fabric.pdf
+Architecture of the hyperledger blockchain fabric.pdf
+Arduino机器人制作指南-[美]Gordon McComb-唐乐(译)-科学出版社-2014.pdf
+ARM快速嵌入式系统原型设计+基于开源硬件mbed+,RobToulson，（英）TimWilmshurst著+,P294.pdf
+Arnold Robbins & Nelson Beebe：Shell 脚本学习指南@2009 (扫描版).pdf
+Artificial Intelligence with Python（人工智能：Python实现）, Prateek Joshi, Packt Publishing, 2017.pdf
+AspectJ in Action Enterprise AOP with Spring Applications, 2nd Edition by Ramnivas Laddad (z-lib.org).pdf
+AspectJ程序设计指南@www.java1234.com.pdf
+Asset Pricing, rev（资产定价 修订版）, John H.Cochrane, Princeton, 2005.pdf
+Attacking network protocols. James Forshaw.pdf
+Attacking_Network_Protocols_A_Hacker's.pdf
+Automating UNIX and Linux Administration 2003.chm
+bash Quick Reference 2006.pdf
+Bayesian Methods for Hackers Probabilistic Programming and Bayesian Inference（贝叶斯方法：概率编程与贝叶斯推断）, Cameron Davidson-Pilon, Addison-Wesley, 2016.pdf
+Bayes方法基础（数学之美：平凡而又神奇的贝叶斯方法）.pdf
+bbs.html
+Beginning Hibernate  For Hibernate 5 by Ottinger, Joseph, Linwood, Jeff, Minter, Dave (z-lib.org).pdf
+Beginning Linux Programming,3rd Ed 2004.pdf
+beginning red hat linux 9.pdf
+Beginning Spring Boot 2 Applications and Microservices with the Spring Framework.pdf
+Beginning SUSE Linux - From Novice To Professional 2005.chm
+Beginning Unix 2005.pdf
+Big Data Analytics with Hadoop 3 Build highly effective analytics solutions to gain valuable insight into your big data by Sridhar Alla (z-lib.org).pdf
+Bjarne Stroustrup：C++ 程序设计语言@2002 (特别版 扫描版).pdf
+Björn Karlsson：Beyond the C++ Standard Library——An Introduction to Boost@2005.chm
+Black Hat Python_ Python Programming for Hackers and Pentesters. Justin Seitz.pdf
+book_list2.list.txt
+book_lists.txt
+bookmarks_20_3_19.html
+Bounded gaps between primes.pdf
+Brain functional network analysis based on mismatch negativity.pdf
+Brendan Burns：Designing Distributed Systems——Patterns and Paradigms for Scalable, Reliable Services@2018.pdf
+Brian Kernighan & Dennis Ritchie：C 程序设计语言.pdf
+Brownian Motion and Stochastic Calculus（布朗运动和随机分析）, Shreve & Karasatz, Springer-Verlag, 1988.pdf
+browserconfig.xml
+browserconfig.xml
+Bruce Eckel：C++ 编程思想 (第1版).pdf
+Bruce Eckel：Java 编程思想@2007 (第4版 扫描版).pdf
+Bruce Schneier：Applied Cryptography——Protocols, Algorithms, and Source Code in C@1996 (第2版).pdf
+Bruce Schneier：应用密码学——协议、算法与 C 源程序@2000 (第2版 扫描版).pdf
+Bruce Tate：七周七语言——理解多种编程范型@2012.pdf
+btsynckeys.csv
+Building Applications with the Linux Standard Base 2004.chm
+Building Automated Trading Systems：With an Introduction to Visual C＋＋.NET 2005（构建自动交易系统：基于VC++.NET2005的导论）, Benjamin Van Vliet, Academic, 2007.pdf
+Building Embedded Linux Systems 2003.chm
+Building Machine Learning Systems with Python, 2ed（用Python构建机器学习系统 第二版）, Willi Richert, Packt, 2015.pdf
+Building Probabilistic Graphical Models with Python（用Python构建概率图模型）, Kiran R. Karkera, Packt, 2014.pdf
+Building Secure Servers With Linux 2002.chm
+Building Secure Servers With Linux 2003.pdf
+BWJD4CGQIZOBKO7X6KMWYOBLPVL2Q4OHB.txt
+C#经典实例.第4版.pdf
+C++多线程编程实战.pdf
+C++性能优化指南.pdf
+c++数据并行.pdf
+c++框架.pdf
+C++面向对象多线程编程.pdf
+Ceph分布式存储实战.html.pdf
+Ceph源码分析.html.pdf
+CFA协会投资系列-固定收益证券分析(原书第2版)-[美]弗兰克·J·法博齐-汤震宇＆扬玲琪(译)-机械工业出版社-2015.pdf
+CFA协会投资系列-定量投资分析(原书第2版)-[美]理查德·A·德弗斯科 等-劳兰珺＆王祺(译)-机械工业出版社-2012.pdf
+CFA协会投资系列-投资组合管理：动态过程(原书第3版)-[美]约翰·L·马金 等-李翔＆刚建华(译)-机械工业出版社-2012.pdf
+CFA协会金融前沿译丛-投资组合绩效测评实用方法(原书第2版)-[英]卡尔·R·培根-黄海东(译)-机械工业出版社-2014.pdf
+CFA翻译系列-投资分析与组合管理(第4版)-[美]弗兰克·K·赖利-陈跃(译)-中信出版社-2004.pdf
+CFA翻译系列-财务管理基础（第9版）-[美]尤金·F·布里格姆、乔尔·F·休斯顿-张志强＆王春香(译)-中信出版社-2004.pdf
+Challenges in Quantitative Equity Management（量化股权管理的挑战）, Frank J.Fabozzi etc., Research Foundation, 2008.pdf
+Chaos and Order in The Capital Markets（资本市场的混沌与秩序）, Edgar E.Peters, Wiley, 1991.pdf
+chap-前馈神经网络.pdf
+chap-卷积神经网络.pdf
+chap-序列生成模型.pdf
+chap-循环神经网络.pdf
+chap-数学基础.pdf
+chap-无监督学习.pdf
+chap-机器学习概述.pdf
+chap-概率图模型.pdf
+chap-模型独立的学习方式.pdf
+chap-注意力机制与外部记忆.pdf
+chap-深度信念网络.pdf
+chap-深度强化学习.pdf
+chap-深度生成模型.pdf
+chap-线性模型.pdf
+chap-绪论.pdf
+chap-网络优化与正则化.pdf
+chap-语言模型与词嵌入.pdf
+Charlie Hunt & Binu John：Java Performance@2012 (第1版).pdf
+CherryPy Essentials - Rapid Python Web Application Development[Packt](200703).pdf
+chiang2016.pdf
+Cloud Charts Trading Success with the Ichimoku technique （基于Ichimoku技术的胜算云图交易）, David Linton, 2010.pdf
+CMD命令速查手册.pdf
+cnn-conv-2d.html
+cnn-conv-more.html
+Cobalt Strike 4.2 Manual.pdf
+cobalt-strike教程.pdf
+CobaltStrike4.0用户手册_中文翻译.pdf
+Coding for Distributed Fog Computing.pdf
+Coevolution of neocortical size,group size and language in humans.pdf
+Complex network measures of brain connectivity_Uses and interpretations.pdf
+Computer_Hacking_A_beginners_guide_to_computer_hacking_how_to_hack.pdf
+computing-overview.pdf
+Consistency-based thresholding of the human connectome.pdf
+contact.html
+Cooperative and Competitive Spreading Dynamics.pdf
+Correspondences on Hyperbolic Curves.pdf
+Creative Projects for Rust Programmers Build exciting projects on domains such as web apps, WebAssembly, games, and parsing by Carlo Milanesi (z-lib.org).pdf
+Curvature and Temperature of Complex Networks.pdf
+C外挂编写深究4.3.pdf
+Dafydd Stuttard & Marcus Pinto：The Web Application Hacker's Handbook——Finding and Exploiting Security Flaws@2011 (第2版).pdf
+DanielP Bovet & Marco Cesati：Understanding the Linux Kernel@2005 (第3版).chm
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+danmaku.xml
+Dasgupta & Papadimitriou & Vazirani：Algorithms@2006.pdf
+Data Driven Investing, Prof. Ed.（数据驱动的投资 专业版）, Bill Matson etc., Data Driven, 2004.pdf
+Data Mining and Analysis：Fundamental Concepts and Algorithms（数据挖掘与分析：基本概念与算法）, Mohammed J.Zaki＆Wagner Meira Jr..pdf
+Data Mining, Concepts and Techniques（数据挖掘：概念与技术）, Third Edition, Jiawei Han, Elsevier, 2012.pdf
+Data Mining, Practical Machine Learning Tools and Techniques（数据挖掘：实用机器学习技术）, Third Edition, Ian H. Witten, Elsevier, 2011.pdf
+Data Science and Big Data Analytics：Discovering,Analyzing,Visualizing and Presenting Data（数据科学与大数据：发现、分析、可视化与表示）, EMC Education Services, Wiley, 2015.pdf
+Data Structures and Algorithms in C＋＋, 2ed（C＋＋数据结构和算法 第2版）, Adam Drozdek, Brooks_Cole, 2001.pdf
+David Beazley & Brian Jones：Python Cookbook@2016 (中文 第3版 翻译版本2.0.0).pdf
+David Cooper：Basic Lisp Techniques@2003.pdf
+David Gourley & Brian Totty 等：HTTP 权威指南@2012 (扫描版).pdf
+David Gourley & Brian Totty 等：HTTP——The Definitive Guide@2002.pdf
+David Tansley：Linux 与 UNIX Shell 编程指南.pdf
+DDoS Attacks. Bhattacharyya, Kalita.pdf
+Debian GNU-Linux Bible 2001.pdf
+Deep Learning Methods and Applications（深度学习：方法及应用）, 邓力＆俞栋, NOW, 2014.pdf
+Deep Learning with Python（Python深度学习）, François Chollet,  Manning, 2017.pdf
+Deep Learning with Python：A Hands-on Introduction（Python深度学习：实践导引）, Nikhil Ketkar,  Apress, 2017.pdf
+Deep_learning_with_python--develop_deep.pdf
+Deep_Learning_with_Python.pdf
+Delta－hedging_Vega_Risk.pdf
+DeMark Indicators（德马克指标）, Jason Perl, Bloomberg, 2008.pdf
+desktop.ini
+desktop.ini
+Development of large-scale functional networks from birth to adulthood Aguide to the neuroimaging literature.pdf
+Diomidis Spinellis：代码阅读方法与实践@2003 (第1版 扫描版).pdf
+div-class-title-a-simple-proof-of-the-erdos-gallai-theorem-on-graph-sequences-div.pdf
+Docker+容器与容器云（第2版）.pdf
+Docker从入门到实践.pdf
+Docker全攻略.pdf
+Docker技术入门与实战.pdf
+Douglas Crockford：JavaScript 语言精粹@2012 (修订版 扫描版).pdf
+Douglas Schmidt：C++ Network Programming Volume 1——Mastering Complexity with ACE and Patterns.chm
+Douglas Schmidt：C++ Network Programming Volume 2——Systematic Reuse with ACE and Frameworks.chm
+Douglas Stinson：Cryptography——Theory and Practice@1995.chm
+Douglas Stinson：密码学原理与实践@2003 (第2版).pdf
+Dubbo用户指南.pdf
+Dynamic Hedging：Managing Vanilla and Exotic Options（动态对冲：管控普通和奇异期权）, Steve Dalton, Wiley, 1996.pdf
+Ebbinghaus - Mathematical Logic (Springer, 1984).pdf
+Eigenvalues of normalized Laplacian matrices of fractal trees and dendrimers Ana.pdf
+Elasticsearch- The Definitive Guide.pdf
+ElasticSearch可扩展的开源弹性搜索解决方案.pdf
+Elasticsearch权威指南（中文版）.pdf
+Elementary Stochastic Calculus With Finance In View（金融视角的随机分析基础）, Thomas Mikosch, World Scientific, 1998.pdf
+Encyclopedia of Quantitative Finance（数量金融百科全书）, Rama Cont, Wiley, 2010.pdf
+Enrico Perla & Massimiliano Oldani：A Guide to Kernel Exploitation——Attacking the Core@2011 (第1版).pdf
+Eric Brewer：CAP Theorem@2000.pdf
+Eric Brewer：CAP Twelve Years Later——How the 'Rules' Have Changed@2012.pdf
+Eric Freeman 等：Head First 设计模式@2007 (扫描版).pdf
+Eric Raymond：UNIX 编程艺术 (扫描版).pdf
+Ether_rfc894.pdf
+euclid.em.1136926970.pdf
+euronext－volatility_smile.pdf
+Excel Add-in Development in C／C＋＋：Applications in Finance（Excel之C／C＋＋加载项开发：在金融中的应用）, Steve Dalton, Wiley, 2005.pdf
+Expert Spring MVC and Web Flows.pdf
+Exploring the JDS Linux Desktop Sep 2004.chm
+Extremal Graph Theory（极图理论）, Bela Bollobas, Dover Publications, 2004.pdf
+faq.html
+Faruk Akgul：ZeroMQ——Use ZeroMQ and Learn How to Apply Different Message Patterns@2013.pdf
+Fast+and+Effective+Embedded+Systems+Design.pdf
+Federico Biancuzzi & Shane Warden：编程之魂——与27位编程语言创始人对话@2010 (扫描版).pdf
+fei.pdf
+FFMPEG - From Zero to Hero by Nick Ferrando (z-lib.org).pdf
+FFmpeg从入门到精通 by 刘歧；赵文杰 (z-lib.org).pdf
+Fiddler调试权威指南[撩撩前端].pdf
+Fileless_Malware_Infection_and_Linux.pdf
+Financial Applications Using Excel Add-in Development in C／C＋＋, 2ed（Excel之C／C＋＋加载项开发在金融领域的应用 第2版）, Steve Daltion, Wiley, 2007.pdf
+First-order transition in small-world networks.pdf
+Fixed Income Analysis, 2ed（固定收益分析 第2版）, Frank J.Fabozzi etc., Wiley, 2007.pdf
+Fixed Income Mathematics（固定收益数学）, Robert Zipf, Academic, 2003.pdf
+Flink基础教程.pdf
+FPGA安全性设计指南.pdf
+Fractals in Small-World Networks With Time Delay.pdf
+Frederick Brooks：人月神话@1995 (20周年纪念版).pdf
+Functional connectivity dynamically evolves on multiple time-scales over astatic structural connectome Models and mechanisms.pdf
+Functional connectomics from a“big data”perspective.pdf
+Functional Data Analysis, 2ed（函数型数据分析 第2版）, J.O.Ramsay etc., Springer, 2005.pdf
+Functional Interfaces in Java Fundamentals and Examples by Ralph Lecessi (z-lib.org).pdf
+Fundamentals of Deep Learning（深度学习基础）, Nikhil Buduma, O'Reilly, 2017.pdf
+George Coulouris 等：Distributed Systems——Concepts and Design@2012 (第5版).pdf
+Git快捷键.pdf
+git教程progit.pdf
+Go Web编程.pdf
+goremyko2017.pdf
+Go并发编程实战 第2版.pdf
+Go源码剖析.pdf
+Go语言学习笔记 雨痕 2016.8.pdf
+GO语言核心编程.pdf
+Go语言编程 by 许式伟 (z-lib.org).pdf
+Go语言高级编程 柴树杉 2019.7.pdf
+GPS原理与接收机设计_12404273_谢钢编译_北....pdf
+GPU与MATLAB混合编程.pdf
+Gradle 使用手册.pdf
+Grokking_Deep_Learning_v3_MEAP.pdf
+gs－implied_trinomial_trees.pdf
+gs－outperformance_options.pdf
+gs－volatility_smile.pdf
+GTM042.有限群的线性表示 Serre，郝鈵新译.pdf
+gtm76+代数几何，双有理几何介绍+S Iitaka.pdf
+Guide To Assembly Language Programming In Linux 2005.pdf
+Guido Urdaneta & Guillaume Pierre & Maarten van Steen：A Survey of DHT Security Techniques@2011.pdf
+Guy Steele & Richard Gabriel：The Evolution of Lisp@1993.pdf
+Guy Steele：Common Lisp——The Language@1989 (第2版).pdf
+Hacker Disassembling Uncovered. Kaspersky.pdf
+Hacking how to make your own keylogger in c++ programming language. Alan T. Norman.pdf
+Hacking Linux Exposed 2001.pdf
+Hacking Raspberry Pi.pdf
+Hacking the Hacker_ Learn From the Experts Who Take Down Hackers. A. Grimes.pdf
+Hadoop in the Enterprise Architecture A Guide to Successful Integration by Jan Kunigk, Ian Buss, Paul Wilkinson, Lars George (z-lib.org).pdf
+Hadoop云计算一体机实践指南.pdf
+Hadoop应用架构.pdf
+Hadoop数据分析.pdf
+Hadoop集群与安全 [（美）扎伯瑞福斯基，（美）娜拉燕南 著] 2014年版.pdf
+Handbook of Data Visualization（数据可视化手册）, Chun-houh Chen etc., springer, 2008.pdf
+Hardening Linux 2005.pdf
+Haskell Programming from First Principles by Chris Allen, Julie Moronuki (z-lib.org).pdf
+HASKELL函数式程序设计.pdf
+HBase企业应用开发实战.html.pdf
+Herb Sutter & Andrei Alexandrescu：C++ Coding Standards——101 Rules, Guidelines and Best Practices@2004.chm
+Hierarchical Connectome Modes and Critical State Jointly Maximize Human Brain.pdf
+High Performance Linux Clusters With Oscar Rocks openmosix And Mpi 2004.chm
+High-Frequency Trading：New Realities for Traders, Markets and Regulators（高频交易：交易者，市场和监管机构面临的新现实）, David Easley etc., Risk Books, 2013.pdf
+Higher Order Fourier Analysis（高阶傅里叶分析）, Terence Tao（陶哲轩）, AMS, 2012.pdf
+How Linux Works - What Every Super-User Should Know 2004.chm
+HTML+CSS网页设计详解.pdf
+HTTP Developers Handbook by Chris Shiflett (z-lib.org).chm
+HTTP2 in Action by Barry Pollard (z-lib.org).pdf
+Hyperbolic Geometry of Complex Networks.pdf
+HyperMesh&HyperView应用技巧与高级实例.pdf
+IDA Pro权威指南第2版.pdf
+IDEA快捷键.pdf
+ieee-standard-for-adoption-of-openfog-reference-architecture-for.pdf
+IIC+Journal+of+Innovation+10th+Edition.pdf
+IIC+Journal+of+Innovation+10th+Edition.pdf
+iMapReduce-A Distributed Computing Framework for Iterative Computation.pdf
+Improvement of Pastry routing mechanism.pdf
+index-1.html
+index.2.html
+index.3.html
+index.html
+index.html
+index.html
+index.xml
+index.xml
+index.xml
+index.xml
+index.xml
+Inside the Black Box：A Simple Guide to Quantitative and High-Frequency Trading, 2ed（黑箱之内：量化和高频交易的一个简单指南 第2版）, Rishi K Narang, Wiley, 2013.pdf
+insoutbarriers1.pdf
+insoutbarriers2.pdf
+Instant Kali Linux. Abhinav Singh.pdf
+Inter-universal Teichmuller Theory I.pdf
+Inter-universal Teichmuller Theory III.pdf
+Inter-universal Teichmuller Theory IV.pdf
+Interest Rate Modeling：Theory and Practice（利率模型：理论和实践）, Lixin Wu, CRC, 2009.pdf
+Interest Rate Models：Theory and Practice（利率模型：理论和实践）, Damiano Brigo etc., Springer, 2001.pdf
+Interest-Rate Option Models, 2ed（利率期权模型 第2版）, Riccardo Rebonato, Wiley, 1998.pdf
+Introducing Erlang Getting Started in Functional Programming by Simon St. Laurent (z-lib.org).pdf
+Introduction to Algorithms, 3ed（算法导论 第3版）, Thomas H.Cormen etc., MIT, 2009.pdf
+Introduction to C＋＋ for Financial Engineers：An Object-Oriented Approach（金融工程师Ｃ＋＋导论：面向对象的方法）, Daniel J.Duffy, Wiley, 2006.pdf
+Introduction to The Economics And Mathematics Of Financial Markets（金融市场经济学与数学导论）, Jaksa Cvitanic etc., MIT, 2004.pdf
+Introductory Real Analysis - A. N. Kolmogorov, V. Fomin.txt
+Investment Psychology Explained：Classic Strategies to Beat The Markets（投资心理解释：战胜市场的经典策略）, Martin J.Pring, Wiley, 1995.pdf
+Ion Stoica 等：Chord——A Scalable Peer-to-peer Lookup Service for Internet Applications@2001.pdf
+IoT开发实战：CoAP卷.html.pdf
+IoT开发实战：CoAP卷.pdf
+IP_rfc791.pdf
+IPFS原理与实践.pdf
+IPv6部署和管理.pdf
+IPv6部署和管理.pdf
+IPv6部署和管理.pdf
+IP地址管理原理与实践.pdf
+IP地址管理原理与实践.pdf
+IP地址管理原理与实践.pdf
+Is God a Mathematician（上帝是数学家吗？）, Mario Livio, Simon&Schuster, 2009.pdf
+Iterative Methods for Sparse Linear Systems, 2ed（稀疏线性系统的迭代方法 第2版）, Yousef Saad, SIAM, 2000.pdf
+Ivo Balbaert：Go 入门指南.pdf
+Ivo Balbaert：The Way to Go——A Thorough Introduction to the Go Programming Language@2012.pdf
+J.Rotman - A first course in abstract algebra.pdf
+Java 13 Distributed programming and Java EE by Poul Klausen (z-lib.org).pdf
+JAVA 9.0 To 13.0 New Features Learn, Implement and Migrate to New Version of Java by Mandar Jog (z-lib.org).pdf
+Java EE核心框架实战 高洪岩 2017.9.pdf
+Java EE设计模式：Spring企业级开发最佳实践.pdf
+Java Persistence with Hibernate, 2nd Edition by Christian Bauer, Gavin King, Gary Gregory (z-lib.org).pdf
+Java+8实战.pdf
+java-深入剖析Tomcat（中文版）.pdf
+JavaScript Web应用开发.pdf
+JavaScript异步编程：设计快速响应的网络应用.pdf
+JavaScript快速全栈开发.pdf
+JavaScript编程精粹.pdf
+JavaScript面向对象编程指南.pdf
+java中反射知识总结.pdf
+Java从小白到大牛精简版.pdf
+Java代码与架构之完美优化——实战经典.pdf
+JAVA反射机制详解.pdf
+JAVA并发编程  核心方法与框架 ,高洪岩著.pdf
+Java并发编程实战.pdf
+Java并发编程的艺术 (Java核心技术系列).pdf
+Java技术手册.第6版.pdf
+Java服务端研发知识图谱.pdf
+java知识点.pdf
+Java程序员面试笔试真题与解析.pdf
+Java程序员面试笔试真题库.pdf
+Java编程思想（第四版）.pdf
+Java网络编程与分布式计算.pdf
+Java自然语言处理.html.pdf
+JBoss in Action - Javid Jamae.pdf
+JBoss Tools 3 Developers Guide - Unknown.pdf
+JDBC.pdf
+Joe Amstrong：Making Reliable Distributed Systems in the Presence of Software Errors@2003.pdf
+Joel Spolsky：Joel on Software.chm
+Joel Spolsky：More Joel on Software@2008.pdf
+Joel Spolsky：软件随想录——程序员部落酋长 Joel 谈软件@2009 (阮一峰译 扫描版).pdf
+John Lakos：大规模 C++ 程序设计@2003 (扫描版).pdf
+John Lions：A Commentary on the Sixth Edition UNIX Operating System@1977.pdf
+Jon Bentley：编程珠玑@2004 (第2版 扫描版).pdf
+Jon Erickson：Hacking——The Art of Exploitation@2008 (第2版).pdf
+jOOQ-manual-3.14.pdf
+Joshua Bloch：Effective Java@2008 (第2版).pdf
+jQuery实战.pdf
+Juan Benet：IPFS——Content Addressed, Versioned, P2P File System@2014.pdf
+Justin Seitz：Black Hat Python——Python Programming for Hackers and Pentesters@2015.pdf
+Justin Seitz：Gray Hat Python——Python Programming for Hackers and Reverse Engineers@2009.pdf
+Kali Linux Cookbook. Willie L. Pritchett, David De Smet.pdf
+Kali Linux Social Engineering - Rahul Singh Patel.pdf
+KaliLinux高级渗透测试.html.pdf
+Kay Robbins & Steven Robbins：UNIX Systems Programming——Communication, Cocurrency, and Threads.chm
+Keras中文手册.pdf
+Keras快速上手：基于Python的深度学习实战-谢梁＆鲁颖＆劳虹岚-电子工业出版社-2017.pdf
+Kettle集群.pdf
+Kevlin Henney (主编)：97 Things Every Programmer Should Know——Collective Wisdom from the Experts.pdf
+keys.html
+Knoppix Hacks 2004.chm
+Korn Shell Unix and Linux Programming Manual, 3rd ed 2001.chm
+kotlin-docs_cn.pdf
+Kotlin从入门到进阶实战 孙光剑 2018.9.pdf
+Kubernetes中文指南.pdf
+Kubernetes权威指南：从Docker到Kubernetes（第四版）.pdf
+latex.pdf
+latora_phys_rep.pdf
+Lawrence Lessig：Free Culture.pdf
+Learning From Data：A Short Course（从数据中学习：短期课程）, Yaser S.Abu-Mostafa＆Malik Magdon-Ismail＆Hsuan-Tien Lin, AMLbook, 2012.pdf
+Learning Groovy 3 by Adam L. Davis (z-lib.org).pdf
+Learning Red Hat Enterprise Linux & Fedora, 4th ed 2004.chm
+Learning Red Hat Linux, 3rd ed 2003.chm
+Learning the bash Shell 2nd Ed 1998.chm
+Learning the UNIX Operating System 4th ed 1998.chm
+Learning the UNIX Operating System 4th ed 1998.pdf
+Learning the Vi Editor 6th ed.pdf
+Learning TypeScript[撩撩前端].pdf
+Learning Unix For Mac OS X Panther 2004.chm
+Learning with Uncertainty（不确定性学习）, 王熙照＆翟俊海, CRC, 2017.pdf
+legacy－black.pdf
+Leslie Lamport 等：The Byzantine Generals Problem@1982 (扫描版).pdf
+Linear Algebra Done Right, 2ed（线性代数应该这样学 第2版）, Sheldon Axler, Springer, 1997.pdf
+LINUX admin 2000.pdf
+Linux All-in-One Desk Reference for Dummies 2005.pdf
+Linux All-In-One Desk Reference For Dummies 2006.pdf
+Linux Bible 2005 ed.pdf
+Linux Bible 2006 ed.pdf
+Linux Command Directory 2000.pdf
+Linux Cookbook 2004.chm
+Linux Debugging And Performance Tuning - Tips And Techniques 2005.chm
+Linux Desktop Hacks 2005.chm
+Linux Device Drivers, 2nd Ed 2001.pdf
+Linux For Dummies, 6th Ed 2005.pdf
+Linux For Non-Geeks - A Hands-On, Project-Based, Take-It-Slow Guidebook 2004.chm
+Linux For Programmers And Users 2006.chm
+Linux In A Nutshell, 4th Ed 2003.chm
+Linux Network Administrator's Guide 2nd ed 2000.pdf
+Linux Network Servers.pdf
+Linux Newbie Administrator Guide 2002.pdf
+Linux On The Mainframe 2003.chm
+Linux Plus Study Guide 2nd Ed 2004.chm
+Linux Power Tools 2003.chm
+Linux Security Cookbook 2003.chm
+Linux Server Hacks - 100 Industrial-Strength Tips & Tools 2003.chm
+Linux Server Hacks 2003.pdf
+Linux Shell Scripting With Bash 2004.pdf
+Linux System Administration.pdf
+Linux System Poster 2001.pdf
+Linux Timesaving Techniques For Dummies 2004.pdf
+Linux Toys II - 9 Cool New Projects For Home, Office, And Entertainment 2006.pdf
+Linux Transfer for Windows Network Admins 2003.chm
+Linux Transfer for Windows Power Users Getting Started with Linux for the Desktop 2004.chm
+Linux Troubleshooting Bible 2004.chm
+Linux Unwired 2004.chm
+Linux 从入门到精通@1999 (第1版 扫描版).pdf
+Linux+ Certification Bible 2002.pdf
+Linux+ Study Guide 2001.pdf
+Linux+Device+Drivers+3rd+Editio.pdf
+Linux内核安全模块深入剖析.pdf
+Linux内核完全注释 by 赵炯 (z-lib.org).pdf
+Linux就该这么学v0.2版本.pdf
+LINUX设备驱动程序(第3版).pdf
+Linux黑客的python编程之道.pdf
+Liquidity_risk_and_arbitrage_pricing_theory.pdf
+List of Tools for Kali Linux.pdf
+local-algorithm-1(1).pdf
+local-algorithm-1.pdf
+Logic Programming with Prolog by Bramer M. (z-lib.org).pdf
+LTE-Advanced：面向IMT-Advanced的3GPP解决方案.pdf
+LTE-Advanced：面向IMT-Advanced的3GPP解决方案.pdf
+LTE_SAE网络部署实用指南.pdf
+LTE_SAE网络部署实用指南.pdf
+LTE及LTE-Advanced无线协议.pdf
+LTE学习笔记——从无线优化到端到端优化.pdf
+LTE学习笔记——网络优化实践进阶与关键技术.pdf
+LTE完全指南——LTE、LTE-Advanced、SAE、VoLTE和4G移动通信（原书第2版）.pdf
+LTE无线网络覆盖优化与增强实践指南.pdf
+LTE自组织网络（SON）：高效的网络管理自动化.pdf
+LTE自组织网络（SON）：高效的网络管理自动化.pdf
+Lua中文教程.pdf
+M2M通信.pdf
+Mac OS X For Unix Geeks 2003.pdf
+Mac OS X Panther for Unix Geeks 2004.chm
+Machine Learning A Probabilistic Perspective（机器学习：概率视角）, Kevin P. Murphy, MIT, 2012.pdf
+Machine Learning for Hackers（机器学习：实用案例解析）, Drew Conway, O'Reilly, 2012.pdf
+Machine Learning for Hackers. D. Conway  J. M. White.pdf
+Machine Learning in Action（机器学习实战）, Peter Harrington, Manning, 2012.pdf
+Machine Learning in Python：Essential Techniques for Predictive Analysis（Python机器学习：预测分析核心算法）, Michael Bowles, Wiley, 2015.pdf
+Machine_Learning_in_Action.pdf
+Machine_Learning_with_TensorFlow_v10_MEAP.pdf
+Mahler1953-π不是刘维尔数.pdf
+Managing Linux Systems With Webmin System Administration And Module Development 2004.chm
+Mark Burgess：The GNU C Programming Tutorial@2002.pdf
+Mark Pilgrim：深入 Python3.pdf
+Mark Russinovich & David Solomon：Windows Internals@2009 (第5版).pdf
+Mark Russinovich & David Solomon：Windows Internals@2012 (第6版 上册).pdf
+Mark Russinovich & David Solomon：Windows Internals@2012 (第6版 下册).pdf
+Mark Russinovich & David Solomon：深入解析 Windows 操作系统@2007 (第4版 扫描版).pdf
+Mark Summerfield：Programming in Go——Creating Applications for the 21st Century@2012 (第1版).pdf
+Market Risk Analysis Ⅰ：Quantitative Methods in Finance（市场风险分析Ⅰ：金融中的数量方法）, Carol Alexander, John Wiley&Sons, 2008.pdf
+Market Risk Analysis Ⅱ：Practical Financial Econometrics（市场风险分析Ⅱ：金融计量经济学实践）, Carol Alexander, John Wiley&Sons, 2008.pdf
+Market Risk Analysis Ⅲ：Pricing, Hedging and Trading Financial Instruments（市场风险分析Ⅲ：金融工具的定价、对冲和交易）, Carol Alexander, John Wiley&Sons, 2008.pdf
+Market Risk Analysis Ⅳ：Value-at-Risk Models（市场风险分析Ⅳ：风险价值模型）, Carol Alexander, John Wiley&Sons, 2008.pdf
+Martin Fowler 等：重构——改善既有代码的设计@2003 (第1版 侯捷译 扫描版).pdf
+Martingale Methods in Financial Modelling, 2ed（金融模型中的鞅方法 第2版）, Musiela & Rutkovski, Springer, 2005.pdf
+master ML.pdf
+Mastering Machine Learning with scikit-learn（用scikit-learn掌握机器学习）, Gavin Hackeling, Packt Publishing, 2014.pdf
+Mastering Spring Boot 2.0 Build modern, cloud-native, and distributed systems using spring boot .pdf
+Mastering Vim Quickly by Jovica Ilic (z-lib.org).pdf
+Mathematical Logic, 2ed（数理逻辑 第2版）, H.D.Ebbinghaus etc., Springer, 1984.pdf
+Mathematical Methods for Foreign Exchange：A Finacial Engineer's Approach（针对外汇的数学方法：一个金融工程师的方法）, Alexander Liption, World Scientific, 2001.pdf
+Mathematical Techniques in Finance, Tools for Incomplete Markets, 2ed（金融中的数学技术：不完全市场的工具 第2版）, Ales Cerny, Princeton, 2009.pdf
+Mathematical Tools for Understanding Infectious Disease Dynamics by Odo Diekmann Hans Heesterbeek Tom Britton (z-lib.org).pdf
+Mathematics for Business, Science, and Technology：with MATLAB and Excel Computations, 3ed（关于商业，科学和技术的数学：基于Matlab和Excel的计算 第3版）, Steven T.Karris, Orchard, 2007.pdf
+Mathematics of Financial Markets, 2ed（金融市场数学 第2版）, Robert J.Elliott etc., Springer, 2005.pdf
+mathmatic for machine learning.pdf
+MATLAB_Simulink电力系统建模与仿真_第2版.pdf
+MATLAB初学者教程 MATLAB编程-菜鸟入门（清晰版）.pdf
+MatLab工程基础应用教程.pdf
+Matlab应用丛书-Matlab小波分析工具箱原理与应用-董长虹-国防工业出版社-2004.pdf
+Matlab应用教程丛书-Matlab神经网络与应用(第2版)-董长虹-国防工业出版社-2007.pdf
+Matlab开发实例系列图书-MATLAB神经网络30个案例分析-Matlab中文论坛-北京航空航天大学出版社-2010.pdf
+Matlab开发实例系列图书-MATLAB神经网络30个案例分析-第1版勘误.doc
+Matlab微分方程高效解法：谱方法原理与实现.pdf
+MATLAB精品丛书-精通MATLAB神经网络-朱凯＆王正林-电子工业出版社-2010.pdf
+Maurice Bach：The Design of the UNIX Operating System@1986.pdf
+Maurice Bach：UNIX 操作系统设计@2000 (扫描版).pdf
+Max Bramer：Logic Programming with Prolog@2005 (第1版).pdf
+MBA十日读：美国著名商学院课程精要-[美]史蒂文·西尔比格-郑伏虎＆曹建海(译)-中信出版社-1997.pdf
+Mendel Cooper：Advanced Bash-Scripting Guide——An In-Depth Exploration of the Art of Shell Scripting@2012 (文档版本 6.6).pdf
+Metasploit Revealed _ Secrets of the Expert Pentester.pdf
+Method for robust enhancement of P2P network.pdf
+Michael Spivey：An Introduction to Logic Programming through Prolog@1996.pdf
+Michael_Bazzell_Open_Source_Intelligence.pdf
+Microservices in Action by Morgan Bruce, Paulo A. Pereira (z-lib.org).pdf
+Microservices Patterns With examples in Java by Chris Richardson (z-lib.org).pdf
+Migrating to the Solaris Operating System The Discipline of UNIX to UNIX Migrations 2003.chm
+Mind and Motion The Bidirectional Link between Thought and Action by Markus Raab, Joseph G. Johnson and Hauke R. Heekeren (Eds.) (z-lib.org).pdf
+Mobile_Handset_Privacy.pdf
+Modeling Derivatives Applications in Matlab, C＋＋, and Excel（金融衍生品建模：基于Matlab、C＋＋和Excel）, Justin London, FT, 2006.pdf
+Modeling Derivatives in C＋＋（衍生产品Ｃ＋＋建模）, Justin London, Wiley, 2005.pdf
+Modeling Maximum Trading Profits with C＋＋：New Trading and Money Management Concepts（用Ｃ＋＋的最大交易利润建模：新的交易和资金管理概念）, Valerii Salov, Wiley, 2007.pdf
+Modern Graph Theory（现代图论）, Bela Bollobas, Springer, 2002.pdf
+Modern Java in Action Lambda, streams, functional and reactive programming by Raoul-Gabriel Urma Mario Fusco Alan Mycroft (z-lib.org).pdf
+MongoDB 4 Quick Start Guide Learn the skills you need to work with the world’s most popular NoSQL database by Doug Bierer (z-lib.org).pdf
+Monographs in Harmonic Analysis III, Harmonic Analysis：Real-Variable Methods, Orthogonality, and Oscillatory Integrals（调和分析专著III-调和分析：实变方法，正交和震荡积分）, Elias M.Stein, Princeton, 1993.pdf
+Monolith to Microservices Evolutionary Patterns to Transform Your Monolith by Sam Newman (z-lib.org).pdf
+Monte Carlo Methods and Models in Finance and Insurance（蒙特卡罗方法和金融投资中的模型）, Ralf Korn etc., CRC, 2010.pdf
+Monte Carlo Methods in Financial Engineering（金融工程中的蒙特卡罗方法）, Paul Glasserman, Springer, 2004.pdf
+Monte Carlo：Concepts, Algorithms, And Applications（蒙特卡洛：概念，算法和应用）, George S.Fishman, Springer, 1996.pdf
+Moving from Windows to Linux 2004.chm
+Moving To Linux Kiss The Blue Screen Of Death Goodbye 2004.chm
+MP2P网络基于动态分组的超级节点选取.pdf
+Multitool Linux - Practical Uses for Open Source Software(contents missing)2002.chm
+My Life As a Quant：Reflections on Physics and Finance（宽客人生：华尔街的数量金融大师）, Emanuel Derman, Wiley, 2004.pdf
+Mybatis_3中文用户指南.pdf
+MyBatis从入门到精通__刘增辉(著).pdf
+mysql_procedure.txt
+MySQLDBA修炼之道.html.pdf
+Mysql和JDBC和ORM基本思想.pdf
+MySQL必知必会.pdf
+MySQL管理之道：性能调优、高可用与监控（第2版）_html.pdf
+N112016-00264.pdf
+Natural Computing in Computational Finance, Volume 1（计算金融中的自然计算 卷1）, Anthony Brabazon ＆ Michael O'Neill, Springer, 2008.pdf
+Natural Computing in Computational Finance, Volume 2（计算金融中的自然计算 卷2）, Anthony Brabazon ＆ Michael O'Neill, Springer, 2009.pdf
+Natural Computing in Computational Finance, Volume 3（计算金融中的自然计算 卷3）, Anthony Brabazon ＆ Michael O'Neill ＆ Dietmar G.Maringer, Springer, 2010.pdf
+Natural Computing in Computational Finance, Volume 4（计算金融中的自然计算 卷4）, Anthony Brabazon ＆ Michael O'Neill ＆ Dietmar G.Maringer, Springer, 2011.pdf
+Navigability of complex networks.pdf
+NB-IoT物联网技术解析与案例详解.pdf
+NeST A Neural Network Synthesis Tool Based on a.pdf
+Neural Network and Deep Learning-ch.pdf
+Neural Networks and Deep Learning-eng.pdf
+Neural Networks：Algorithms, Applications, and Programming Techniques（神经网络：算法，应用和编程技术）, J.A.Freeman＆D.M.Skapura, Addison-Wesley, 1991.pdf
+NFC设备设计宝典：天线篇.pdf
+NFC设备设计宝典：设计约束篇.pdf
+Nicolai Josuttis：C++ 标准程序库——自修教程与参考手册@2002 (侯捷译 扫描版).pdf
+Nicolai Josuttis：The C++ Standard Library——A Tutorial and Reference@1999 (第1版).chm
+Ni文件列表.xlsx
+nlogn.pdf
+NLTK基础教程：用NLTK和Python库构建机器学习应用.pdf
+nn_solutions_manual_allin1_aug1.pdf
+nndl-book.pdf
+Node.js区块链开发.html.pdf
+Nonlinear Time Series Nonparametric and Parametric Methods（非线性时间序列：非参数与参数方法）, Jianqing Fan etc., Springer, 2002.pdf
+NOVEL TYPE OF PHASE TRANSITION IN A SYSTEM.pdf
+Novell Certified Linux Engineer Novell CLE Study Guide 2004.chm
+NP.pdf
+Numerical Methods in Finance and Economics：A Matlab-Based Inroduction, 2ed（金融和经济学中的数值方法：基于Matlab的导论 第2版）, Paolo Brandimarte, Wiley, 2006.pdf
+Numpy.pdf
+OllyDbg入门完全教程(完美排版).pdf
+On Semi-positivity and Filtered Frobenius Crystals.pdf
+On-Java-8_Zh.pdf
+Onjava8mulu.pdf
+OpenCV入门教程.pdf
+OpenCV计算机视觉编程攻略.第3版.pdf
+OpenFog-Architecture-Overview-WP-2-2016.pdf
+OpenFog-Consortium-Glossary-of-Terms-June-2018.pdf
+OpenFog-Reference-Architecture-Executive-Summary.pdf
+Openfog_preprint.pdf
+OpenFog_Reference_Architecture_2_09_17-FINAL.pdf
+Oracle WebLogic Server 12c Adva - Unknown.pdf
+p13.pdf
+P2P transmission scheduling optimization based on software defined network.pdf
+P2P大规模可信流媒体节点抖动分析与建模.pdf
+P2P技术揭秘+P2P网络技术原理与典型系统开....pdf
+P2P网络中Churn问题研究.pdf
+P2P网络中一种负载均衡的路由模型.pdf
+P2P网络中抑制恶意节点的研究综述.pdf
+P2P网络中搭便车行为分析与抑制机制建模.pdf
+P2P网络中最近节点定位的优化方法研究与实现.pdf
+P2P网络中稳定节点会话序列特征分析.pdf
+P2P网络负载专利.pdf
+P2P网络超级节点选举机制研究.pdf
+p2p负载专利.pdf
+P2P超级点网络可靠性及动态自恢复机制的研究.pdf
+Pattern Recognition and Machine Learning（模式识别与机器学习）, Christopher M.Bishop, Springer, 2006.pdf
+Pattern Recognition and Machine Learning（模式识别与机器学习）, Christopher M.Bishop, Springer, 2006.pdf
+Paul Butcher：七周七并发模型@2015 (扫描版).pdf
+Paul Graham：ANSI Common Lisp (中文版).pdf
+Paul Graham：ANSI Common Lisp@1996.pdf
+Paul Graham：On Lisp (中文版).pdf
+Paul Graham：The Roots of Lisp@2002.pdf
+Paul Wilmott on Quantitative Finance, 2ed（Wilmott数量金融 第2版）, Paul Wilmott, Wiley, 2006.pdf
+PCI_Express_体系结构导读.pdf
+PDF中有扫描版.txt
+Performance Tools and Applications to Networked Systems, Revised Tutorial Lectures, MASCOTS 2003(LNCS2965, Springer, 2004)(ISBN 3540219455)(393s).pdf
+Personal Finance, 10ed（个人理财 第10版）, J.R.Kapoor＆L.R.Dlabay＆R.J.Hughes, McGraw-Hill, 2011.pdf
+Petar Maymounkov & David Mazières：Kademlia——A Peer-to-peer Information System Based on the XOR Metric@2002.pdf
+Peter Seibel：Coders at Work@2009.pdf
+Peter Seibel：实用 Common Lisp 编程@2011 (田春译 扫描版).pdf
+Phil Champagne：区块链启示录——中本聪文集@2018.pdf
+PHP 7 内核剖析 秦朋 2017.10.pdf
+PHP 7 编程实战 (美)Doug Bierer 2017.10.pdf
+PHP_MVC_开发实战.pdf
+PIC单片机入门与实战-张明峰-北京航空航天大学出版社-2004.pdf
+pitching-your-iot-project.pdf
+plsql_tutorial.pdf
+PowerShell 6.0 官方文档中文版.pdf
+Practical malware analysis. M. Sikorski, A. Honig.pdf
+Practical Microservices Architectural Patterns - Event-Based Java Microservices with Spring Boot and Spring Cloud by Binildas Christudas (z-lib.org).pdf
+Practical Unix & Internet Security, 3rd ed 2003.chm
+Pro Spring 5 An In-Depth Guide to the Spring Framework and Its Tools .pdf
+Pro Spring Boot 2 An Authoritative Guide to Building Microservices, Web and Enterprise Applications, and Best Practices.pdf
+Probabilistic Graphical Models：Principles and Techniques（概率图模型：原理与技术）, Daphne Koller, MIT, 2009.pdf
+Probability and Geometry on Groups.pdf
+Probability in Banach Spaces（巴拿赫空间中的概率论）, M.Ledoux＆M.Talagrand , 世界图书出版公司, 1991.pdf
+Probability on groups.pdf
+Professional LAMP - Linux, Apache, MySQL, & PHP5 Web Development 2006.pdf
+Professional Stock Trading：System Design and Automation（专业股票交易：系统设计及自动化）, M.R.Conway ＆ A.N.Behle, Acme Trader, 2002.pdf
+Programming in Scala - Martin Odersky.pdf
+programming in scala.pdf
+Programming Mac OS X A Guide for Unix Developers 2003.pdf
+Programming Rust Fast, Safe Systems Development by Jim Blandy, Jason Orendorff (z-lib.org).pdf
+Programming+in+Lua+4th+Edition.pdf
+protter_on_asset_pricing.pdf
+Puppet实战.(刘宇).pdf
+Python Deep Learning（Python深度学习）, Valentino Zocca etc., Packt, 2017.pdf
+Python for Finance：Analyze Big Financial Data（Python金融大数据分析）, Yves Hilpisch, O‘Reilly, 2015.pdf
+Python+黑魔法指南+v1.0.pdf
+Python3编程：从入门到实践.pdf
+PYTHON_QT_GUI快速编程.pdf
+Python_深度学习实战：75个有关神经网络建模、强化学习与迁移学习的解决方案.pdf
+Python在经济计量统计和数据分析上的应用.pdf
+Python数据科学速查表 - Bokeh.pdf
+Python机器学习及实践：从零开始通往KAGGLE竞赛之路-范淼＆李超-清华大学出版社-2016.pdf
+Python机器学习实践指南-[美]A·T·库姆斯-黄申(译)-人民邮电出版社-2017.pdf
+Python源码剖析：深度探索动态语言核心技术 by 陈儒 (z-lib.org).pdf
+Python灰帽子：黑客与逆向工程师的Python编程之道.pdf
+Python科学计算-张若愚-清华大学出版社-2012.pdf
+Python算法教程-[挪威]M·L·赫特兰-凌杰 等(译)-人民邮电出版社-2016.pdf
+PYTHON自然语言处理中文翻译 NLTK 中文版.pdf
+Python设计模式(第2版)-[印度]C·吉里德尔-韩波(译)-人民邮电出版社-2017.pdf
+Python设计模式深入解析-[荷兰]Sakis Kasampalis-江良志(译)-博硕文化出版-2015.pdf
+Python进阶.pdf
+Python量化交易教程.pdf
+Python金融大数据分析-[德]Yves Hilpisch-姚军(译)-人民邮电出版社-2015.pdf
+Python金融实战-[美]严玉星-张少军＆严玉星(译)-人民邮电出版社-2017.pdf
+Python项目开发实战 第2版.pdf
+PyTorch Recipes_ A Problem-Solution Approach - 2019.pdf
+Qt on Android 核心编程 [安晓辉 著] 2015年版.pdf
+Qt Quick 核心编程 by 安晓辉 (z-lib.org).pdf
+Qt高级编程.pdf
+Quant Job Interview：Questions and Answers（宽客面试问与答）, Mark Joshi etc., Pilot Whale, 2008.pdf
+Quantitative Credit Portfolio Management（量化信用组合管理）, Arik Ben Dor etc., Wiley, 2012.pdf
+Quantitative Equity Portfolio Management：An Active Approach to Portfolio Construction and Management（量化资产组合管理：组合构建和管理的主动方法）,Ludwig B.Chincarini ＆ Daehwan Kim, McGraw-Hill, 2006.pdf
+Quantitative Equity Portfolio Management：Modern Techniques and Applications（量化资产组合管理：现代技术和应用）, Edward E.Qian ＆ Ronald H.Hua ＆ Eric H.Sorensen, CRC, 2007 .pdf
+Quantitative Trading：How to Build Your Own Algorithmic Trading Business（量化交易：如何构建你自己的算法交易）, Ernest P.Chan, Wiley, 2009.pdf
+Quantum Finance：Path Integrals and Hamiltonians for Options and Interest Rates（量子金融：期权和利率中的路径积分和哈密顿量）, Belal E.Baaquie, Cambridge, 2004.pdf
+quick_start.html
+RADIOSS理论基础与工程应用.pdf
+Reactive Streams in Java Concurrency with RxJava, Reactor, and Akka Streams by Adam L. Davis (z-lib.org).pdf
+react学习手册.pdf
+ReadMe.txt
+readme.txt
+real-world-machine-learning-1st-henrik-brink(www.ebook-dl.com).pdf
+Red Hat Enterprise Linux 4 for Dummies 2005.pdf
+Red Hat Enterprise Linux 6 Security Guide@2011.pdf
+Red Hat Enterprise Linux 7 Security Guide@2018.pdf
+Red Hat Fedora Linux 2 All-in-One Desk Reference For Dummies 2004.pdf
+Red Hat Linux Administration - A Beginner's Guide 2003.pdf
+Red Hat Linux Bible - Fedora And Enterprise ed 2003.chm
+Red Hat Linux Fedora For Dummies 2004.chm
+Red Hat Linux Networking And System Administration 2002.pdf
+Red Hat Linux Pocket Administrator 2003.pdf
+Red Hat Linux Security And Optimization 2002.pdf
+Red Hat The Complete Reference Enterprise Linux and Fedora ed 2004.chm
+Redis实战.pdf
+Redis小白入门指南.pdf
+Reducibility_Among_Combinatorial_Problems.pdf
+Regularization Paths for Generalized Linear Models via Coordinate Descent（基于坐标下降法的广义线性模型正规化路径）, Jerome Friedman, 2010.pdf
+reynolds1987.pdf
+RFID_重大工程与国家物联网（第3版）.pdf
+RFID重大工程与国家物联网（第2版）.pdf
+RFID重大工程与国家物联网（第4版）.pdf
+RHCE Red Hat Certified Engineer Linux Study Guide Exam RH302 4 ED 2004.chm
+Richard Stevens & Stephen Rago：UNIX 环境高级编程@2013 (第3版 扫描版).pdf
+Richard Stevens：TCP-IP Illustrated Volume 1——The Protocols (第1版).chm
+Richard Stevens：UNIX Network Programming Volume 1——The Sockets Networking API (第3版).chm
+Risk Management in Banking, 4ed（银行业风险管理 第4版）, Joel Bessis, Wiley, 2015.pdf
+Robert Chassell：An Introduction to Programming in Emacs Lisp@2009 (文档版本 3.10).pdf
+Robert Chassell：GNU Emacs Lisp 编程入门@2001 (扫描版).pdf
+Robert Martin：敏捷软件开发——原则、模式与实践@2003 (扫描版).pdf
+ROBOTC_FOR_LEGO_EV3基础编程与实例.pdf
+robots.txt
+robots.txt
+RocketMQ 开发手册3.2.4.pdf
+ROF光载无线通信：从理论到前沿.pdf
+ROF光载无线通信：从理论到前沿.pdf
+Roger Pressman：Software Engineering——A Practitioner's Approach (第8版).pdf
+Running Linux 4th ed 2003.pdf
+Running Linux, 5th ed 2005.chm
+Rust编程之道 张汉东 2019-1.pdf
+Sam Williams：Free as in Freedom——Richard Stallman's Crusade for Free Software@2002 (第2版).pdf
+Sanjay Ghemawat & Howard Gobioff & Shun-Tak Leung：The Google File System@2003.pdf
+SAS 9 1 Companion for UNIX Environments 2004.chm
+Sass与Compass实战.pdf
+SAS开发经典案例解析.pdf
+Satoshi Nakamoto：Bitcoin——A Peer-to-Peer Electronic Cash System@2008.pdf
+Satoshi Nakamoto：比特币——一种点对点式的电子现金系统.pdf
+Scala Design Patterns - Unknown.pdf
+Scala Programming for Big Data Analytics Get Started With Big Data Analytics Using Apache Spark by Irfan Elahi (z-lib.org).pdf
+Scala函数式编程.pdf
+Scala语言基础与开发实战.pdf
+Scott Meyers：Effective C++——55 Specific Ways to Improve Your Programs and Designs@2005 (第3版).chm
+Scott Meyers：Effective Modern C++——42 Specific Ways to Improve Your Use of C++11 and C++14@2014.pdf
+Scott Meyers：More Effective C++——35 New Ways to Improve Your Programs and Designs@2008.pdf
+Securing Debian Manual@2015 (文档版本 3.17).pdf
+Securing Linux A Survival Guide for Linux Security Version 1.0 2003.chm
+SEI CERT：C Coding Standard@2016.pdf
+SEI CERT：C++ Coding Standard@2016.pdf
+Self-similarity of complex networks and hidden metric spaces.pdf
+SELinux NSAs Open Source Security Enhanced Linux 2004.chm
+Semantic and Location-Aware Based Unstructured P2P Network.pdf
+SEO魔法书.土著游民 .扫描版.pdf
+Serre有限群表示论.pdf
+Setting Up LAMP Getting Linux Apache MySQL and PHP Working Together 2004.pdf
+sgm-seq2seq.html
+share.html
+Shell从入门到精通 (Linux典藏大系).pdf
+shenkey.17.html
+shenkey.18.html
+shenkey.19.html
+shenkey.20.html
+shenkey.21.html
+shenkey.22.html
+shenkey.23.html
+shenkey.24.html
+shenkey.25.html
+shenkey.26.html
+shenkey.27.html
+shenkey.28.html
+shenkey.29.html
+shenkey.30.html
+shenkey.31.html
+shenkey.32.html
+shenkey.33.html
+shenkey.34.html
+shenkey.35.html
+shenkey.36.html
+shenkey.37.html
+shenkey.38.html
+shenkey.html
+SIS_UserManual.pdf
+sitemap.xml
+sitemap.xml
+smile－lecture1.pdf
+smile－lecture2.pdf
+Social_network_analysis.pdf
+socialdynamics_Complex_2011.pdf
+spark in action.pdf
+Spark SQL大数据实例开发教程.pdf
+Spark_SQL大数据实例开发教程.pdf
+Spark内核机制解析及性能调优.pdf
+Spark大数据分析实战.html.pdf
+Spark大数据处理：技术、应用与性能优化.html.pdf
+Spark大数据实例开发教程.pdf
+Spark大数据实例开发教程.pdf
+Spark核心源码分析与开发实战.pdf
+Spatial Networks.pdf
+sporns_2004_The Small World of the Cerebral Cortex.pdf
+Spring Batch in Action by Arnaud Cogoluegnes, Thierry Templier, Gary Gregory, Olivier Bazoud (z-lib.org).pdf
+Spring Batch批处理框架.pdf
+Spring Boot 2 Recipes A Problem-Solution Approach by Marten Deinum (z-lib.org).pdf
+Spring Boot Vue全栈开发实战 王松 2019.1.pdf
+Spring Boot实战.pdf
+Spring Data JPA从入门到精通 张振华 2018.5.pdf
+Spring Data实战.pdf
+Spring Into Linux 2005.chm
+Spring MVC MyBatis开发从入门到项目实战_朱要光.pdf
+Spring MVC学习指南（第2版）.pdf
+Spring Persistence with Hibernate by Paul Fisher, Brian D. Murphy (auth.) (z-lib.org).pdf
+Spring+Cloud与Docker微服务架构实战+第2版+,周立+2018年7月1日.pdf
+Spring+MVC+MYBatis企业应用实战.pdf
+spring-framework-4-reference.pdf
+spring-framework-5教程.pdf
+Spring2.5中文版.chm
+Spring3.0中文版.chm
+Spring3.2中文版.pdf
+spring3x.pdf
+spring4.0.6.chm
+Spring5 in Action by Craig Walls (z-lib.org).pdf
+Spring_Cloud_Data_Flow.pdf
+SpringBoot揭秘：快速构建微服务体系 王福强 2016.5.pdf
+spring技术内幕.pdf
+Spring源码深度解析.pdf
+SQL_Server监控和诊断.pdf
+sql_tutorial.pdf
+SQL入门经典(第5版) .pdf
+Stanley Lippman：C++ Primer@2005 (第4版).chm
+Stanley Lippman：Inside the C++ Object Model@1996.chm
+Statistics and Finance：An Introduction（统计与金融：介绍）, David Ruppert, Springer, 2004.pdf
+Step-By-Step Installation Of A Secure Linux Web, DNS, And Mail Server 2004.pdf
+Stephen Dewhurst：C++ Gotchas——Avoiding Common Problems in Coding and Design@2002.chm
+Stephen Prata：C++ Primer Plus@2005 (第5版).pdf
+Steve McConnell：代码大全@2006 (第2版 扫描版).pdf
+Steven Skiena：The Algorithm Design Manual@2008 (第2版).pdf
+Stochastic Differential Equations, 6ed（随机微分方程 第6版）, Bernt Oksendal, Springer, 2003.pdf
+Stochastic Integration and Differential Equations, 2ed（随机积分和微分方程 第2版）, Philip E.Protter, Springer, 2004.pdf
+Stock Patterns for Day Trading and Swing Trading（日交易和波段交易的股票模式）,Barry Rudd., Traders, 2000.pdf
+Stuart Russell & Peter Norvig：Artificial Intelligence——A Modern Approach@2009 (第3版).pdf
+Subbu Allamaraju：RESTful Web Services Cookbook@2011 (中文版).pdf
+Super group peer selection algorithm in hybrid layered P2P streaming system based on evolutionary game.pdf
+SUSE Linux 10 Bible 2006.pdf
+SUSE Linux 10 Unleashed 2005.chm
+SUSE Linux 2006.chm
+sync.txt
+sync.txt
+sync.txt
+sync.txt
+sync.txt
+sync.txt
+sync.txt
+sync.txt
+SyncFan同步范网站镜像.html
+SyncKey分享站点导航.html
+tags.html
+tags.html
+TCP Sockets编程.pdf
+TCP_rfc793.pdf
+TD-LTE无线网络优化与应用.pdf
+Teach Yourself Linux In 24 Hours 1st ed Bill Ball  Stephen Smoogen 1998.pdf
+Teach Yourself Linux In 24 Hours 2nd ed 1999.pdf
+Teach Yourself Red Hat Fedora 4 All-In-One 2005.chm
+Teach Yourself Unix In 10 Minutes 2nd ed 2005.chm
+Teach Yourself Unix in 24 Hours 1st ed Dave Taylor James C. Armstrong Jr. 1997.pdf
+TELNET_rfc854.pdf
+template.html
+TensorFlow Machine Learning Cookbook（TensorFlow机器学习攻略）, Nick McClure, Packt Publishing, 2017.pdf
+TensorFlow实战-黄文坚＆唐源-电子工业出版社-2017.pdf
+TensorFlow实战Google深度学习框架-才云科技Caicloud-电子工业出版社-2017.pdf
+Tensorflow技术解析与实战-李嘉璇-人民邮电出版社-2017.pdf
+TensorFlow深度学习.pdf
+Text Analytics with Python A Practical Real-World Approach to Gaining Actionable Insights from your Data.pdf
+The Art Of Unix Programming 2004.chm
+The Complete Andriod Manual.pdf
+The Complete Reference - Red Hat Enterprise Linux & Fedora ed 2004.pdf
+The complex architecture of primes and natural numbers.pdf
+The Elements of Statistical Learning：Data Mining, Inference and Prediction, 2ed （统计学习基础：数据挖掘、推断和预测 第2版）, Trevor Hastie etc., Springer, 2008.pdf
+The Elements of Statistical Learning：Data Mining, Inference and Prediction, 2ed （统计学习基础：数据挖掘、推断和预测 第2版）, Trevor Hastie etc., Springer, 2008.pdf
+The Encyclopedia of Trading Strategies（交易策略之百科全书）, Jeffrey Owen Katz etc., McGraw-Hill, 2000.pdf
+The Geometry of the Compactification of the Hurwitz Scheme.pdf
+The Hacker Playbook 2_ Practical Guide To Penetration Testing. Peter Kim.pdf
+The honey badger of BFT protocols.pdf
+The honey badger of BFT protocols.pdf
+The Inverse Conjecture for the Gowers Norm over Finite Fields in Low Characteristic（低特征有限域上高尔斯范数的逆猜想）, Terence Tao（陶哲轩）, Springer, 2011.pdf
+The Little Book That Beats the Market（跑赢市场的一本小书）, Joel Greenblatt, Wiley, 2006.pdf
+The MIT Press Beowulf Cluster Computing With Linux  2nd ed 2003.chm
+The quest for scalable blockchain fabric--Proof-of-work vs. BFT replication.pdf
+The quest for scalable blockchain fabric--Proof-of-work vs. BFT replication.pdf
+The Random-Cluster Model.pdf
+The Random-Cluster.pdf
+The Red Book of Varieties and Schemes, 2ed, Expanded（簇和概形的红宝书 第2版·扩展版）, David Mumford, Springer, 1999.pdf
+The Shellcoder's Handbook——Discovering and Exploiting Security Holes@2004 (第1版).chm
+The Shellcoder's Handbook——Discovering and Exploiting Security Holes@2007 (第2版).pdf
+The Statistical Mechanics of Financial Markets, 3ed（金融市场的统计力学 第3版）, J.Voit, Springer, 2005.pdf
+The Theory of Algebraic Number Fields（代数数域理论）, David Hilbert, Springer, 1998.pdf
+The Volatility Surface：A Practitioner’s Guide（波动率曲面：从业者指南）, Jim Gatheral, Wiley, 2006.pdf
+The+Art+of+Hardware+Architecture+Design+Methods+and+Techniques+for+Digital+Circuits.pdf
+THE-ENERGY-FOG-F.pdf
+The_Young_Persons_Guide.pdf
+thesis.pdf
+TJ O'Connor：Python 绝技——运用 Python 成为顶级黑客 (第1版).pdf
+Tom Demarco & Timothy Lister：人件@2002 (第2版).pdf
+Tom Demarco：最后期限.pdf
+Tomcat权威指南(第2版).pdf
+Top 1000 Java Interview Questions Includes Spring, Hibernate, Microservices, GIT, Maven, JSP, AWS, Cloud Computing.pdf
+tutorials.html
+Typescript手书[撩撩前端].pdf
+Ubuntu 桌面培训@2010.pdf
+Ulrich Drepper：How to Write Shared Libraries@2011.pdf
+Ulrich Drepper：What Every Programmer Should Know about Memory@2007.pdf
+UMTS中的LTE：向LTE-Advanced演进（原书第2版）.pdf
+UMTS中的LTE：向LTE-Advanced演进（原书第2版）.pdf
+UMTS中的WCDMA_–_HSPA演进及LTE（原书第5版）.pdf
+UMTS中的WCDMA_–_HSPA演进及LTE（原书第5版）.pdf
+Understanding Linux Network Internals 2005.chm
+Understanding The Linux Kernel 2nd ed 2002.pdf
+Understanding The Linux Kernel, 1st ed 2000.pdf
+Understanding The Linux Kernel, 2nd ed 2002.chm
+Understanding The Linux Kernel, 3rd ed 2005.chm
+UNIX Administration A Comprehensive Sourcebook for Effective Systems and Network Management 2002.pdf
+Unix Backup And Recovery 1999.pdf
+UNIX Filesystems - Evolution, Design, & Implementation 2003.pdf
+UNIX For Dummies 5th Ed 2004.chm
+Unix for Mac Your visual blueprint to maximizing the foundation of Mac OS X 2003.pdf
+UNIX For OpenVMS Users 3rd ed 2003.chm
+Unix for Oracle DBAs Pocket Reference 2001.pdf
+UNIX in a Nutshell 3rd ed 1999.chm
+Unix in a Nutshell 3rd ed 1999.pdf
+Unix In A Nutshell, 4th ed 2005.chm
+UNIX Network Programming Volume 1 3rd Ed The Sockets Networking API 2004.chm
+UNIX Power Tools 3rd ed 2003.chm
+Unix Shell Programming 3rd ed 2003.chm
+Unix System Administration - A Beginner's Guide 2002.pdf
+Unix Systems Programming Communication, Concurrency, and Threads 2003.chm
+unix unleashed 1994.pdf
+UNIX网络编程_卷2_进程间通信[www.TopSage.com].pdf
+User Mode Linux 2006.chm
+Using WebPageTest Web Performance Testing for Novices and Power Users by Rick Viscomi, Andy Davies, Marcel Duran (z-lib.org).pdf
+UTM - Axler S. - Linear Algebra done right - Springer 1997 2ed - ISBN 0387982590 (261s).pdf
+Venkateswaran：精通 Linux 设备驱动程序开发@2010 (扫描版).pdf
+vi and Vim Editors Pocket Reference Support for every text editing task by Arnold Robbins (z-lib.org).pdf
+Volatility Trading, 2ed（波动率交易 第2版）, Euan Sinclair, Wiley, 2013.pdf
+VoleLicenses.txt
+VSCode快捷键.pdf
+Vue.js v2.x 官方教程.pdf
+Vue.js 教程 V1.0.pdf
+WCDMA信令解析与网络优化.pdf
+Web应用漏洞侦测与防御[撩撩前端].pdf
+whitepaper-fog-vs-edge.pdf
+why-rust.pdf
+Wicked Cool Shell Scripts-101 Scripts for Linux Mac OS X and Unix Systems 2004.chm
+William Clocksin & Christopher Mellish：Programming in Prolog——Using the ISO Standard@2003 (第5版 扫描版).pdf
+William Stallings：Cryptography and Network Security——Principles and Practice@2005 (第4版).pdf
+William Stallings：Cryptography and Network Security——Principles and Practice@2011 (第5版).pdf
+William Stallings：密码编码学与网络安全——原理与实践@2004 (第3版 扫描版).pdf
+Wilmott.Derman.Interview.pdf
+Wilmott数量金融(第1卷.中文版·原书第2版)-[美]Paul Wilmott-郑振龙(译)-机械工业出版社-2015.pdf
+Wilmott数量金融(第2卷.中文版·原书第2版)-[美]Paul Wilmott-郑振龙(译)-机械工业出版社-2015.pdf
+Wilmott数量金融(第3卷.中文版·原书第2版)-[美]Paul Wilmott-郑振龙(译)-机械工业出版社-2015.pdf
+Windows PE权威指南.pdf
+Windows7 安全指南@2010 (扫描版).pdf
+Windows7脚本编程和命令行工具指南 扫描版.pdf
+Windows_10使用详解.pdf
+withdrawn.18.html
+withdrawn.19.html
+withdrawn.20.html
+withdrawn.21.html
+withdrawn.22.html
+withdrawn.23.html
+withdrawn.html
+Z.目录索引.txt
+ZeroC Ice权威指南-Leader-us（吴治辉）-电子工业出版社-2015.pdf
+ZeroC Ice权威指南-Leader-us（吴治辉）-电子工业出版社-2015.pdf
+ZeroMQ 云时代极速消息通信库.pdf
+Zookeeper 分布式过程.pdf
+ZooKeeper.Distributed process coordination.2013.pdf
+★数学物理金融合集书目列表★.txt
+★数学物理金融合集书目列表★.txt
+★数学物理金融合集书目列表★.txt
+★说明★.txt
+《21个项目玩转深度学习：基于TensorFlow的实践详解》.pdf
+《ajax从入门到精通》.(陈华).[PDF]@ckook.pdf
+《Cloud_Native_Go：构建基于Go和React的云原生Web应用与微服务》.pdf
+《DB2+SQL性能调优秘笈》.pdf
+《Django 2.0 入门与实践》_李健_2019-01-01.pdf
+《Elasticsearch集成Hadoop最佳实践》.pdf
+《ELK Stack权威指南（第2版）》.pdf
+《GAN：实战生成对抗网络》_刘梦馨_2018-06-01.pdf
+《Go语言核心编程》_李文塔- AiBooKs.Cc.pdf
+《Hadoop+Spark生态系统操作与实战指南》_余辉.pdf
+《Hadoop深度学习》.pdf
+《Hadoop生态系统》.pdf
+《HTTP抓包实战》_肖佳.pdf
+《Java中文文本信息处理（从海量到精准）》.pdf
+《Java虚拟机并发编程》.pdf
+《Java高并发编程详解_多线程与架构设计》_汪文君.pdf
+《Kotlin实战》.pdf
+《MyBatis技术内幕》.pdf
+《Neo4j 3.x入门经典》_张帜等_2019-02-01.pdf
+《Neo4j全栈开发》.pdf
+《NIO与Socket编程技术指南》_高洪岩.pdf
+《OpenCV算法精解：基于Python与C++》.pdf
+《Python全栈数据工程师养成攻略》.pdf
+《Python神经网络编程》.pdf
+《Qt 5.9 C++开发指南》_王维波等.pdf
+《Solr权威指南 上卷》.pdf
+《Solr权威指南 下卷》.pdf
+《Spark GraphX实战》.pdf
+《Spring 5开发大全》_杨柳卫_2018-10-01.pdf
+《Spring Cloud微服务实战》.pdf
+《Spring Data JPA从入门到精通》.pdf
+《Storm分布式实时计算模式》.pdf
+《Tomcat架构解析》.pdf
+《Web服务器群集》.pdf
+《云原生Java：Spring_Boot、Spring_Cloud与Cloud_Foundry弹性系统设计》_张若飞等译.pdf
+《亿级流量网站架构核心技术_跟开涛学搭建高可用高并发系统》.pdf
+《从芯片到云端：Python物联网全栈开发实践》.pdf
+《信源宝藏》.pdf
+《入行论广释 》上.pdf
+《入行论广释 》下.pdf
+《入行论广释 》中.pdf
+《内容分发网络原理与实践》_唐宏等.pdf
+《函数响应式领域建模》.pdf
+《分布式对象存储——原理_架构及Go语言实现_》.pdf
+《分布式对象技术及其应用（第2版）》.pdf
+《分布式数据库系统：大数据时代新型数据库技术（第2版）》.pdf
+《分布式机器学习_算法、理论与实践》_刘铁岩等_2018_10_08.pdf
+《分布式消息中间件实践 》_倪炜.pdf
+《分布式系统常用技术及案例分析（第2版）》_柳伟卫_2018_12_01.pdf
+《分布式缓存_原理、架构及Go语言实现》_胡世杰_2019_01_01.pdf
+《创业小败局创业公司长演不衰的21种经典死法(案例集)》作者 创业家 .txt
+《可伸缩架构：面向增长应用的高可用》.pdf
+《唤醒迷梦》.pdf
+《图论》(作者)[美]前田度 1985年版.pdf
+《大数据之路：阿里巴巴大数据实践》.pdf
+《大数据技术体系详解：原理、架构与实践》.pdf
+《定解宝灯论释》上.pdf
+《定解宝灯论释》下.pdf
+《容器即服务：从零构建企业级容器集群》.pdf
+《强化学习精要_核心算法与TensorFlow实现》_冯超.pdf
+《推荐系统与深度学习》_黄昕等_2018-12-01.pdf
+《数据驱动：从方法到实践》.pdf
+《文本上的算法深入浅出自然语言处理》.pdf
+《智慧城市：大数据、物联网和云计算之应用》.pdf
+《智能运维从0搭建大规模分布式AIOps系统》_彭冬等.pdf
+《有限群的线性表示》(作者)[法]J·P·塞尔(译者)郝鈵新 科学 1984年2月第1版.pdf
+《机器学习 Go语言实现》_谢文江等译_2018-10-16.pdf
+《构建实时机器学习系统》.pdf
+《架构探险 轻量级微服务架构（上册）》.pdf
+《架构探险：从零开始写分布式服务框架》.pdf
+《架构探险：轻量级微服务架构（下册）》.pdf
+《架构解密：从分布式到微服务》.pdf
+《梦溪笔谈》译注：自然科学部分-[北宋]沉括-中科大(译)-安徽科学技术出版社-1979.pdf
+《深入浅出RxJS》_程墨.pdf
+《深入理解EOS原理解析与开发实战》_李万才等译_2018_12_18.pdf
+《深入理解TensorFlow架构设计与实现原理》_彭靖田、林健、白小龙.pdf
+《深度卷积网络：原理与实践（全彩版）》.pdf
+《深度学习：主流框架和编程实战》.pdf
+《深度学习之TensorFlow入门、原理与进阶实战》_李金洪.pdf
+《深度学习在动态媒体中的应用与实践》.pdf
+《用Mesos框架构建分布式应用》.pdf
+《直观几何》下册(带目录).pdf
+《神经网络与深度学习应用实战》.pdf
+《神经计算原理》.pdf
+《精通以太坊智能合约开发》_熊丽兵.pdf
+《精通数据科学：从线性回归到深度学习》_唐亘.pdf
+《自己动手写Docker》.pdf
+《自己动手写Java虚拟机》.pdf
+《自己动手写分布式搜索引擎》.pdf
+《自己动手写大数据系统》.pdf
+《自己动手设计数据库》.pdf
+《自己动手设计物联网》.pdf
+《自然语言处理技术入门与实战》.pdf
+《血战太平洋（HBO官方完整版）》作者 ［美国］休·安布罗斯 中亚自购 免费分享  heatlevel  agree.txt
+《解密搜索引起技术实战Lucene&Java精华版第三版）》.pdf
+《计算机网络（第7版）》 谢希仁.pdf
+《驾驭文本：文本的发现 组织和处理》.pdf
+《高伸缩性系统：Erlang、OTP大型分布式容错设计》_林建入译.pdf
+《高级交换与路由技术》.pdf
+【北京大学数学丛书8】代数曲线-Griffiths(带目录).pdf
+【弗雷格】弗雷格读本.pdf
+【弗雷格研究】弗雷格的判断理论.pdf
+【数学物理金融合集BTSync同步方法】.txt
+【数学物理金融合集BTSync同步方法】.txt
+【数学物理金融合集BTSync同步方法】.txt
+【数学物理金融合集BTSync密钥】.txt
+【数学物理金融合集BTSync密钥】.txt
+【数学物理金融合集BTSync密钥】.txt
+【数学物理金融合集】下载方法.txt
+【数学物理金融合集】下载方法.txt
+【数学物理金融合集】下载方法.txt
+【数学物理金融合集无说明ed2k链接】(复制批量下载).txt
+【数学物理金融合集无说明ed2k链接】(复制批量下载).txt
+【数学物理金融合集无说明ed2k链接】(复制批量下载).txt
+【数学物理金融合集更新历史】.txt
+【数学物理金融合集更新历史】.txt
+【数学物理金融合集更新历史】.txt
+【数学物理金融合集有说明ed2k链接】.txt
+【数学物理金融合集有说明ed2k链接】.txt
+【数学物理金融合集有说明ed2k链接】.txt
+【样书】高级金融学译丛-衍生证券教程：理论和计算-[美]K·贝克-沈根祥(译)-格致出版社-2009.pdf
+一本书看懂世界经济-[英]约翰·凯伊-陈琇玲(译)-新世界出版社-2010.pdf
+一次读完30本经济学经典-天祺-中国商业出版社-2005.pdf
+一种基于改进推荐信任的P2P网络安全模型.pdf
+一种文件共享系统的P2P网络架构设计.pdf
+一类分层非结构化P2P系统的随机切换模型.pdf
+万万没想到：用理工科思维理解世界-万维钢-电子工业出版社-2014.pdf
+万卷方法-爱上统计学-[美]尼尔·J·萨尔金德-史玲玲(译)-重庆大学出版社-2008.pdf
+三角级数论（上册）陈建功.pdf
+三角级数论（下册）陈建功.pdf
+上海东证期货_20170320_上海东证期货商品期货CTA量化策略周报.pdf
+上海东证期货_20171205_上海东证期货基本面量化之一：国债的重要因子.pdf
+上海东证期货_20171206_上海东证期货局部波动率模型场外期权定价与对冲.pdf
+上海东证期货_20171214_上海东证期货商品组合的风险分析与风险管理.pdf
+上海证券交易所期权高阶文库-动态对冲：管理普通期权与奇异期权-[美]N·塔勒布-熊赟 等(译)-中国财政经济出版社-2016.pdf
+下一代融合网络理论与实践.pdf
+下一代融合网络理论与实践.pdf
+下载失败的请删掉重新添加密钥.txt
+不动点理论及其应用.pdf
+不同P2P网络拓扑结构上进化博弈算法的研究.pdf
+与林老师对话论-经济学方法-林毅夫-北京大学出版社-2005.pdf
+专家系统原理与编程（原书第四版）.pdf
+世界征服者史.pdf
+世界数学名题欣赏-不动点理论-张奠宇＆顾鹤荣-辽宁教育出版社-1995.pdf
+世界数学名题欣赏-哥德尔不完全性定理-朱水林-辽宁教育出版社-1995.pdf
+世界数学名题欣赏-希尔伯特第十问题-胡久秢-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-斐波那契数列-吴振奎-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-无处可微的连续函数-刘文-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-欧几里得第五公设-蒋声-辽宁教育出版社-1988.pdf
+世界数学名题欣赏-歌德巴赫猜想-陈景润＆邵品琮-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-科克曼女生问题-罗见今-辽宁教育出版社-1995.pdf
+世界数学名题欣赏-素数判定与大数分解-孙琦＆旷京华-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-置换多项式及其应用-孙琦＆万大庆-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-费马猜想-姚玉强-辽宁教育出版社-1987.pdf
+世界数学名题欣赏-连续统假设-张锦文＆王雪生-辽宁教育出版社-1989.pdf
+世界数学名题欣赏-黎曼猜想-楼世拓＆邬冬华-辽宁教育出版社-1987.pdf
+世界经济管理文库-经济学（第16版）-[美]保罗·A·萨缪尔森-机械工业出版社-1998.pdf
+世界著名计算机教材精选-人工智能：一种现代的方法（第3版）-[美]S·J·罗素＆P·诺维格-殷建平 等(译)-清华大学出版社-2013.pdf
+世界著名计算机教材精选-图像处理、分析与机器视觉(中文版·第3版)-[美]M·桑卡-清华大学出版社-2011.pdf
+世界著名计算机教材精选-数据挖掘十大算法-[美]吴倍东＆库玛尔-李文波＆舞素研(译)-清华大学出版社-2013.pdf
+世界著名计算机教材精选.txt
+世界资本经典译丛-英美中央银行史-[美]约翰·H.伍德-陈晓霜(译)-上海财经大学出版社-2011.pdf
+世纪人文系列丛书·开放人文-整体性与隐缠序：卷展中的宇宙与意识-[美]戴维·玻姆-王志刚 等(译)-上海科技教育出版社-2013.pdf
+业余无线电丛书-从零起步学电子(第2版)-[美]W·班茨哈夫-王龙(译)-人民邮电出版社-2012.pdf
+东兴证券_20170104_IH-50ETF期权反向套利研究.pdf
+东北证券_20160618_金融工程：基金仓位估测模型之一.pdf
+东北证券_20160623_金融工程之择时：期现回复S型动量指标.pdf
+东北证券_20160715_金融工程：偏度调整的收益率MACD择时信号.pdf
+东北证券_20160725_金融工程：偏度调整的收益率MACD择时信号（二）.pdf
+东北证券_20160804_金融工程：基金仓位估测模型之二--误差修正.pdf
+东北证券_20160923_金融工程：HMM指数择时研究之实战篇.pdf
+东北证券_20161121_鸿蒙初辟，如日方升-东北证券金融工程2016年度报告.pdf
+东北证券_20170111_HMM指数择时研究之理论篇.pdf
+东北证券_20170217_股指期货松绑：流动性、期权、期货影响解读.pdf
+东北证券_20170301_东北证券投资策略报告：当我们谈alpha我们在谈beta.pdf
+东北证券_20170405_东北证券金融工程：风格配置，坚信长期的力量.pdf
+东北证券_20170705_东北证券金融工程2017中期策略报告：体系，FOF自上而下全策略.pdf
+东北证券_20170802_东北证券金工：公募基金2017年中报持仓分析.pdf
+东北证券_20170826_东北证券多因子系列（1）：单因子测试和特征分析.pdf
+东北证券_20170910_东北证券多因子系列（2）：因子筛选.pdf
+东北证券_20171025_东北证券金融工程研究：基于因子筛选的特质波动率研究.pdf
+东北证券_20171107_东北证券金融工程2018年度策略报告：FOF体系＆多因子体系.pdf
+东北证券_20171108_东北证券策略点评报告：机构交易行为视角下的行业轮动.pdf
+东北证券_20171108_东北证券策略点评报告：激宕20年，A股因子收益变迁.pdf
+东北证券_20171128_东北证券多因子系列（4）：行业分类下的单因子组合构建.pdf
+东北证券_20171203_东北证券金融工程研究报告：缩量整固，静待信号.pdf
+东北证券_20171205_东北证券因子优化：动量因子再研究.pdf
+东北证券_20171206_东北证券Alphalens使用教程.pdf
+东方证券_20160107_东方证券2016年金融工程年度策略报告：精细过往，探新未来.pdf
+东方证券_20160121_金工磨刀石系列之（一）：常用股票行业分类方法的比较.pdf
+东方证券_20160217_东方证券因子选股系列研究之五：剔除行业、风格因素后的大类因子检验.pdf
+东方证券_20160219_东方证券因子选股系列研究之六：用组合优化构建更精确多样的投资组合.pdf
+东方证券_20160224_东方证券《事件驱动系列研究之三》：事件效应的准确度量与高效统计检验.pdf
+东方证券_20160408_指数分红历史回顾及展望：分红对期指的影响.pdf
+东方证券_20160512_东方证券因子选股系列研究之七：投机、交易行为与股票收益.pdf
+东方证券_20160525_东方证券动态情景多因子ALPHA模型：《因子选股系列研究之八》.pdf
+东方证券_20160530_东方证券《事件驱动策略研究之四》：寻找贡献真实ALPHA的事件.pdf
+东方证券_20160620_分红对期指的影响——期指最新分红预测.pdf
+东方证券_20160623_选股因子数据的异常值处理和正态转换——《金工磨刀石系列之二》.pdf
+东方证券_20160627_分红对期指的影响——期指最新分红预测.pdf
+东方证券_20160809_国内商品期货市场速览——衍生品系列研究之一.pdf
+东方证券_20160811_日内残差高阶矩与股票收益——东方金工因子选股系列研究之九.pdf
+东方证券_20160812_Alpha因子库精简与优化——《因子选股系列研究之十》.pdf
+东方证券_20160826_50ETF期权与50期货套利收益测——衍生品系列研究之（二）.pdf
+东方证券_20160826_资金规模对策略收益的影响——《因子选股系列研究之十一》.pdf
+东方证券_20161013_金融工程研究国内商品期货常用日内CTA策略测试.pdf
+东方证券_20161021_金融工程研究线性高效简化版冲击成本模型.pdf
+东方证券_20161025_金融工程研究Alpha预测.pdf
+东方证券_20161102_金融工程研究非流动性的度量及其横截面溢价.pdf
+东方证券_20161107_金融工程研究东方机器选股模型Ver1.0.pdf
+东方证券_20161110_金融工程研究非对称价格冲击带来的超额收益.pdf
+东方证券_20161205_金融工程研究在Alpha衰退之前.pdf
+东方证券_20161221_金融工程研究对主动投资有益的量化结论.pdf
+东方证券_20170104_基于单特征因子的隐马尔科夫模型在商品期货上的应用-《衍生品研究系列之四》.pdf
+东方证券_20170110_金融工程研究商品期货套利策略实证.pdf
+东方证券_20170217_金融工程研究动态情景Alpha模型再思考.pdf
+东方证券_20170217_金融工程研究技术类新Alpha因子的批量测试.pdf
+东方证券_20170306_东方证券因子选股系列研究之二十一：组合优化是与非.pdf
+东方证券_20170306_东方证券因子选股系列研究之二十二：中美市场因子选股效果对比分析.pdf
+东方证券_20170409_东方证券因子选股系列研究之二十三：反转因子失效市场下的量化策略应对.pdf
+东方证券_20170425_东方证券因子选股系列研究之二十四：细分行业建模之银行内因子研究.pdf
+东方证券_20170426_东方证券因子选股系列研究之二十五：多因子模型在港股中的应用.pdf
+东方证券_20170503_东方证券沪深300成分股2017年中定期调整预测.pdf
+东方证券_20170514_东方证券金工期指分红动态跟踪：分红对期指的影响.pdf
+东方证券_20170601_东方证券因子选股系列研究之二十六：因子选股与事件驱动的Bayes整合.pdf
+东方证券_20170709_东方证券因子选股系列研究之二十七：预期外的盈利能力.pdf
+东方证券_20170711_东方证券衍生品系列研究之（六）：商品期货中的alpha策略.pdf
+东方证券_20170804_东方证券因子选股系列研究之二十八：用机器学习解释市值，特异市值因子.pdf
+东方证券_20170831_东方证券《因子选股系列研究之二十九》：质优股量化投资.pdf
+东方证券_20170908_东方证券衍生品系列研究之（七）：局部波动率模型期权定价实证研究.pdf
+东方证券_20171026_东方证券因子选股系列研究之二十九：细分行业建模之券商内因子研究.pdf
+东方证券_20171127_东方证券量化因子选股回顾与展望.pdf
+东方证券_20171201_东方证券因子选股系列研究之三十一：风险模型在时间序列上的改进.pdf
+东方证券_20171203_东方证券《因子选股系列研究之三十二》：分析师研报的数据特征与alpha.pdf
+东方证券_20171212_东方证券衍生品系列研究之（八）：局部波动率模型场外期权定价与对冲.pdf
+东方证券_20171213_东方证券衍生品系列研究之（九）：商品市场宏观风险因子模型初探.pdf
+东方证券_20171214_东方证券衍生品系列研究之（十）：商品组合的风险分析与风险管理.pdf
+东航金融·衍生译丛-奇异期权与混合产品：构造、定价与交易的指南-[英]默罕默德·布祖巴＆阿德尔·奥塞兰-李佳彬＆黄钟文(译)-上海财经大学出版社-2014.pdf
+中信建投-20170608-中小公司研究：关注可转债+次新股的投资机会.pdf
+中信建投_20160108_并购主题量化研究系列之一：外延扩张主导市场，创业板必劫后重生.pdf
+中信建投_20160110_中信建投并购主题量化研究系列之一：外延扩张主导市场，创业板必劫后重生.pdf
+中信建投_20160111_衍生品系列专题报告之一：2015年衍生品市场政策总结及交易策略.pdf
+中信建投_20160118_大宗商品价格波动四周期嵌套模型的构建：大宗商品周期研究.pdf
+中信建投_20160202_中信建投多因子跟踪月报：技术面因子延续强势，盈利因子保持稳定.pdf
+中信建投_20160202_金融工程跟金踪融报衍告：多因子跟踪月报技术面因子延续强势，盈利因子保持稳定.pdf
+中信建投_20160217_中信建投金融工程跟踪报告：从潜伏期转战至前线，不容错过的高送转十大金股在此（附股）.pdf
+中信建投_20160329_中信建投金融工程研究：股权激励事件选股，超额收益源自哪里.pdf
+中信建投_20160419_中信建投定增事件选股：超额收益源自哪里4.pdf
+中信建投_20160420_中信建投板块轮动基本面量化系列之三：“量化基本面”理论体系及农林牧渔行业案例.pdf
+中信建投_20160531_中信建投美国道指市盈率估计模型：量化全球大类资产配置体系.pdf
+中信建投_20160624_中信建投基本面量化系列之五：再谈美林时钟模型在中美市场的有效性，投资时钟指路，量化大类资产轮动破局.pdf
+中信建投_20160712_中信建投2016年中期投资策略报告之金融工程：量化基本面体系不断完善，宏观对冲时代新机遇.pdf
+中信建投_20160719_中信建投金融工程：股权激励新老规则差异及影响判断（附股权激励最新十大金股推荐）.pdf
+中信建投_20160804_中信建投“量化行业基本面”每月数据解析及模型跟踪：从价格数据中探寻近期高景气子板块.pdf
+中信建投_20160804_中信建投金融工程深度报告：高管增持事件选股，追踪真正的聪明钱.pdf
+中信建投_20160809_中信建投量化基本面系列研究之六：“量化基本面”理论体系及通信行业案例.pdf
+中信建投_20160826_中信建投金融工程专题：量化视角下的缠论初步解析.pdf
+中信建投_20160828_中信建投A股大盘与行业板块节假日效应研究.pdf
+中信建投_20160831_中信建投员工持股计划：真实ALPHA最高的事件类选股.pdf
+中信建投_20160913_中信建投金融工程研究：基于残差分析的大类资产轮动策略.pdf
+中信建投_20160914_中信建投基于投资时钟理论：股票行业配置.pdf
+中信建投_20161011_中信建投公募FOF新观察：产品、规则、策略全解析.pdf
+中信建投_20161012_中信建投大数据研究体系之择时篇：基于新闻热度的多空策略.pdf
+中信建投_20161028_中信建投市场交易结构报告：低波动市场中的应对策略.pdf
+中信建投_20161106_中信建投高送转策略：反弹抄底哪家强？送您2017年高送转预测名单（模型预测）.pdf
+中信建投_20161123_中信建投“量化行业基本面体系”月度数据点评及模型跟踪.pdf
+中信建投_20161201_中信建投金融工程跟踪报告：沪深300指数成分股调整名单公布，珍惜上车机会.pdf
+中信建投_20161220_中信建投2017年投资策略报告之金融工程篇：美国加息大周期下的中国量化及绝对收益之路8.pdf
+中信建投_20161226_预计市场调整将继续,择时策略净值再创历史新高(12月第4周).pdf
+中信建投_20170126_中信建投金融工程专题报告：2016年，A股收益从何处来？又向何处去？.pdf
+中信建投_20170222_中信建投金融工程跟踪报告：从潜伏期转战至前线，不容错过的2017年第一季度高送转十大金股（附股）.pdf
+中信建投_20170303_中信建投大数据研究之指标构建：机器学习之贝叶斯文本分类算法的实现.pdf
+中信建投_20170307_中信建投金融工程研究：期现价差有所扩大，预计市场调整将延续！.pdf
+中信建投_20170309_中信建投“量化行业基本面”每月数据解析及模型跟踪：继续推荐饲料、粘胶短纤板块，造纸板块建议保持关注.pdf
+中信建投_20170309_中信建投大数据研究之三：新闻情绪选股的多空差策略.pdf
+中信建投_20170310_中信建投金融工程报告：从配置资产到配置风险，融合多策略的资产配置框架.pdf
+中信建投_20170315_中信建投金融工程研究：从残差波动率角度看涨跌-380108.pdf
+中信建投_20170411_中信建投“量化行业基本面体系”月度数据点评及模型跟踪.pdf
+中信建投_2017050_中信建投金融工程：沪深300指数成分股调整，我们需要关注那些股票？.pdf
+中信建投_20170510_中信建投以白酒、家电为案例的量化基本面分析：量化视角看本轮消费板块行情还能走多远.pdf
+中信建投_20170517_中信建投“量化行业基本面体系”月度数据点评及模型跟踪：医药、电子业绩预计持续改善，子版块建议关注中药、家具、饲料.pdf
+中信建投_20170614_中信建投“量化行业基本面体系”月度数据点评及模型跟踪（2017年6月）：医药上月超额收益获得兑现，子版块继续关注中药、家具.pdf
+中信建投_20170614_中信建投金融工程跟踪报告：以史为鉴，美联储议息会后，资产价格何去何从？.pdf
+中信建投_20170619_中信建投金融工程研究：指数分红点数预测.pdf
+中信建投_20170627_中信建投2017年中期投资策略报告之金融工程篇：量化基本面方法论之再探索与实证.pdf
+中信建投_20170711_中信建投金融工程研究：基于Black-Litterman的多策略资产配置策略.pdf
+中信建投_20170714_中信建投2017年上半年因子表现回顾：市场风格切换下的因子有效性探索.pdf
+中信建投_20170721_中信建投基于成分股动量反转效应的均线择时研究：以深次新股指数为例.pdf
+中信建投_20170802_中信建投宏观事件驱动研究之美联储加息缩表：以史为鉴，美联储历次议息会议结果及影响.pdf
+中信建投_20170802_中信建投金融工程研究：深度解析Hurst模型的打开方式.pdf
+中信建投_20170816_中信建投大数据研究之四：基于新闻热度的周期、成长、消费风格轮动配置.pdf
+中信建投_20170821_中信建投“次新股量化精选组合周报（第15期）”：IPO速度维持低位，次新板块大涨.pdf
+中信建投_20170822_中信建投“量化行业基本面体系”月度数据点评及模型跟踪：基础化工、医药等业绩预计持续改善，子版块关注禽链及粘胶短纤.pdf
+中信建投_20170921_中信建投金融工程研究：股东数量变化因子的有效性分析.pdf
+中信建投_20170926_中信建投基本面量化系列研究之八：周期行业基本面量化之钢铁篇.pdf
+中信建投_20171018_中信建投大数据研究之五：大数据、机器学习、深度学习在投资领域应用的方法论概述.pdf
+中信建投_20171019_中信建投“量化行业基本面体系”月度数据点评及模型跟踪：电子元器件、农林牧渔等业绩预计改善，子版块关注粘胶短纤.pdf
+中信建投_20171023_中信建投“次新股量化精选组合周报（第23期）”：次新板块回落，组合稳定跑赢基准.pdf
+中信建投_20171103_中信建投事件驱动策略跟踪系列研究：白马行情下，2017高送转股票如何去选？.pdf
+中信建投_20171106_中信建投行业基本面量化系列研究跟踪：2017Q3消费板块基本面量化跟踪点评.pdf
+中信建投_20171113_中信建投沪深300成分股调整预测名单：事件的超额收益还有吗？.pdf
+中信建投_20171113_中信建投金融工程专题：如何正确理解近期热度极高的低波动率因子.pdf
+中信建投_20171121_中信建投“量化行业基本面”每月数据解析及模型跟踪（2017年11月）：上月行业组合超额收益3.5％，推荐配置医药、电子、农林牧渔.pdf
+中信建投_20171211_中信建投金融工程专题：可转债发行详解，从前世今生到投资机会.pdf
+中信建投_20171228_中信建投“量化行业基本面体系”月度数据点评及模型跟踪：预计医药、电子行业业绩持续景气，继续推荐配置.pdf
+中信证券-20110817-数量交易策略与算法研究—股指 -期货市场CTA交易策略设计及EMA开发.pdf
+中信证券-20120611-基于信息比率优化的动态多因子策略.pdf
+中信证券-20131211-中信证券金融工程2014年投资策略产品与交易创新不断为提升投资绩效增添利器.pdf
+中信证券-20131216-固本开源,广辟蹊径.pdf
+中信证券-20140418-中信证券市场主题量化分析系列：“沪港通”量化主题组合的分析与构建，兼谈与市场创新的共振.pdf
+中信证券-20140507-中信证券量化选股模型系列专题研究之一：在稳定增长中寻找超额收益.pdf
+中信证券-20140528-中信证券量化选股系列专题研究之一：在稳定增长中寻找超额收益.pdf
+中信证券-20140603-中信证券金融工程2014年下半年投资策略：金融衍生品丰富造就投资多元化环境，专业机构深度参与促进市场格局演变.pdf
+中信证券-20140725-中信证券2014年二季度基金资产配置行为分析—中小板,创业板持仓创历史新高,资产多元化配置趋势显著.pdf
+中信证券-20140807-事件研究—破译事件通关密码(PPT).pdf
+中信证券-20140807-听其言不如观其行—市场行为监测体系研究.pdf
+中信证券-20140807-新因子,新框架—审视因子选股逻辑(PPT).pdf
+中信证券-20140807-构建小盘成长量化组合(PPT).pdf
+中信证券-20141008-中信证券基于股指期货的绝对收益策略与金融产品开发.pdf
+中信证券-20141008-中信证券指数化投资与沪港通；开放与融合背景下的指数化投资.pdf
+中信证券-20141015-事件驱动系列专题研究：业绩预增交易策略，于无声处听惊雷.pdf
+中信证券-20141015-事件驱动系列专题研究：增持事件交易策略，多维因子攫收益，首次增持价更高-249567.pdf
+中信证券-20141118-事件驱动系列专题研究：“高送转”预测，围猎次新、定增、解禁股.pdf
+中信证券-20141118-事件驱动系列专题研究：多维筛选，稳健增值.pdf
+中信证券-20141121-事件驱动系列专题研究：沪股通标的与上证180、上证380指数成份股的调整.pdf
+中信证券-20141210-中信证券金融工程2015年投资策略：把握当前机遇、迎接未来挑战.pdf
+中信证券-20141211-中信证券A股市场2015年投资策略（金融工程）：分级基金的投资与交易.pdf
+中信证券-20141211-中信证券金融工程2015年A股市场投资策略：围猎次新、定增、解禁股.pdf
+中信证券-20141216-事件驱动系列专题研究：2015年1月深证系列指数成份股调整，关注流动性较低个股华东医药、立讯精密.pdf
+中信证券-20141222-中信证券金融工程系列会议纪要：“量化投资的未来”精英经理人闭门会.pdf
+中信证券-20150123-事件驱动系列专题研究：红英一树春来早，较早披露年报的个股行情.pdf
+中信证券-20150126-中信证券-中信证券2014年四季度基金资产配置行为分析：行业配置反转倾向依然显著，创业板风险较高.pdf
+中信证券-20150204-事件驱动系列专题研究：2014年报预告，中小、创业板盈利加速.pdf
+中信证券_20110712_对冲策略研究与产品设计_Alpha套利策略运作时间总结与改进.pdf
+中信证券_20110816_量化投资系列研究_行业指数价量联动关系分析与应用.pdf
+中信证券_20120608_数量交易策略与算法研究_大宗交易套利策略研究、产品开发及前景展望.pdf
+中信证券_20120810_对冲策略研究与产品设计_从统计套利到期现对冲_行业中性多策略选股Alpha策略开发.pdf
+中信证券_20151230_事件驱动交易策略专题：主题行情中的赚钱利器，定增策略再回首.pdf
+中信证券_20151230_事件驱动交易策略专题：事件研究框架暨岁末年初的投资机会.pdf
+中信证券_20151230_事件驱动交易策略专题：交易工具在事件投资中的应用案例.pdf
+中信证券_20151230_事件驱动交易策略专题：分级市场中的事件型投资机会研究.pdf
+中信证券_20160126_事件驱动策略跟踪周报：年报预增稳健跑赢，公司增持大幅反弹.pdf
+中信证券_20160412_市场特征与参与者行为监测：风险偏好抬升，但风险收益比已不高.pdf
+中信证券_20160421_另类交易策略主题沙龙：分级A投资价值分析与轮动配置策略.pdf
+中信证券_20160421_另类交易策略主题沙龙：红海拾贝，定增破发后的投资机会.pdf
+中信证券_20160623_中信证券“股指期货功能发挥与投资”报告会：股指期货基差影响因素分析.pdf
+中信证券_20160623_中信证券跨期价差分析与跨期套利研究：“股指期货功能发挥与投资”报告会.pdf
+中信证券_20160705_中信证券股指期货专题研究：跨期价差分析与跨期套利研究.pdf
+中信证券_20160905_中信证券量化选股系列专题：基于价值轮动的上证50增强策略6.pdf
+中信证券_20160909_中信证券期权系列专题研究：期权风险预警指标与波动率相对价值交易策略.pdf
+中信证券_20161107_中信证券事件驱动系列专题研究：迎接年末重头戏，2016“高送转”预测.pdf
+中信证券_20161108_中信证券量化选股系列专题：事件驱动研究框架与轮动逻辑.pdf
+中信证券_20161118_中信证券金融工程2017年投资策略：从量化策略到多策略配置.pdf
+中信证券_20161201_分级套利与期指跨期套利策略研究-量化策略与绝对收益主题系列.pdf
+中信证券_20161201_大资管时代量化对冲的困境与前景-量化策略与绝对收益主题系列.pdf
+中信证券_20161201_期权波动率相对价值交易策略-量化策略与绝对收益主题系列.pdf
+中信证券_20161201_网下新股申购研究狂欢能否持续-量化策略与绝对收益主题系列.pdf
+中信证券_20161207_中信证券2016年末中证、上证指数样本股调整冲击效应分析：重点关注沪深300冲击系数较高个股.pdf
+中信证券_20161215_中信证券2017年初深证系列指数样本股调整冲击效应分析：弱势行情或将强化创业板指数样本股调整效应9.pdf
+中信证券_20161226_中信证券“量化策略与绝对收益”主题系列：通道突破股票的市场表现与交易策略.pdf
+中信证券_20161226_中信证券分级套利与期指跨期套利策略研究.pdf
+中信证券_20161227_中信证券“量化策略与绝对收益”主题系列：大资管时代量化对冲的困境与前景.pdf
+中信证券_20161227_中信证券“量化策略与绝对收益”主题系列：网下新股申购研究，狂欢能否持续？.pdf
+中信证券_20170209_中信证券主题量化系列专题—网下新股申购研究：AB类优势尚存，考验底仓管理.pdf
+中信证券_20170217_中信证券A股衍生品重大事件点评：中金所调整期指交易规则，衍生工具监管开启趋松进程.pdf
+中信证券_20170309_中信证券融资融券市场跟踪：风险偏好指数处于高风险区域.pdf
+中信证券_20170321_中信证券期权系列专题研究：商品期货期权与ETF期权对比分析.pdf
+中信证券_20170324_中信证券分级基金专题研究：分级基金折溢价套利策略.pdf
+中信证券_20170324_中信证券分级基金折溢价套利策略.pdf
+中信证券_20170419_中信证券A股市场策略专题系列：价值的焦虑，白马龙头何去何从.pdf
+中信证券_20170419_中信证券另类交易策略研究：通道突破股票的市场表现与交易策略.pdf
+中信证券_20170519_中信证券主题量化与事件驱动2017年下半年投资策略：寻找确定性，等待柳暗花明.pdf
+中信证券_20170522_中信证券分级基金2017年下半年投资策略：山穷水复OR劫后重生.pdf
+中信证券_20170523_中信证券2017年年中主要宽基指数样本股调整预测：多数核心指数或顶格调整样本，沪深300金融股权重将进一步提升.pdf
+中信证券_20170523_中信证券ETF期权2017年下半年投资策略：揭秘波动率环境，蓄势立体化时代.pdf
+中信证券_20170613_中信证券2017年下半年量化投资策略：处境、布局与当前选择.pdf
+中信证券_20170613_中信证券ETF期权2017年下半年投资策略：揭秘波动率环境，蓄势立体化时代.pdf
+中信证券_20170613_中信证券主题量化与事件驱动2017年下半年投资策略：寻找确定性，等待柳暗花明.pdf
+中信证券_20170613_中信证券分级基金2017年下半年投资策略：山穷水复OR劫后重生？.pdf
+中信证券_20170613_中信证券股指期货市场总结与热点问题分析：基差环境改善，参与价值提升.pdf
+中信证券_20170720_中信证券分级基金周报：折价套利策略今年以来累计收益超过5.pdf
+中信证券_20170728_中信证券2017Q2基金资产配置行为分析：反转特征已趋弱，股票配置需求或将上升.pdf
+中信证券_20170823_中信证券海外ETP专题系列：全球视野下的ETF市场格局与趋势.pdf
+中信证券_20170829_中信证券国内外ETF市场变迁与布局趋势.pdf
+中信证券_20170829_中信证券量化策略专题：量化策略的处境、前景与发展布局-.pdf
+中信证券_20170829_中信证券量化选股系列专题研究：多因子模型构建中的组合优化与风险预算研究.pdf
+中信证券_20170920_中信证券ETF：全球资产配置利器.pdf
+中信证券_20170920_中信证券多因子体系与量化策略：挑战与机遇.pdf
+中信证券_20171108_中信证券2017年年末主要宽基指数样本股调整预测：关注周期股“升档”.pdf
+中信证券_20171116_中信证券金融工程2018年投资策略：主动适应环境，布局长线机会.pdf
+中信证券_20171117_中信证券主题量化投资策略系列专题：公募基金持仓与风格切换的启示.pdf
+中信证券_20171117_中信证券多因子量化选股系列专题研究：多因子模型构建中的组合优化与风险预算研究.pdf
+中信证券_20171122_中信证券金融衍生品与量化策略研讨会：主题量化策略及其择时对冲效果.pdf
+中信证券_20171122_中信证券金融衍生品与量化策略研讨会：从多因子出发的量化对冲策略PPT.pdf
+中信证券_20171122_中信证券金融衍生品与量化策略研讨会：资管再平衡下的量化投资前景.pptx
+中信证券_20171123_中信证券“金融衍生品与量化策略”研讨会：股指期货热点问题统计解析.pdf
+中信证券_20171128_中信证券2017年年末中证、上证指数样本股调整预测效果暨冲击效应分析：预测准确率较高，冲击效应预计与年中接近.pdf
+中信证券_20171218_中信证券多因子量化选股系列专题研究：价值与成长投资逻辑在多因子模型中的应用.pdf
+中信证券_20171219_中信证券主题量化投资策略：基于随机森林的择时对冲方法.pdf
+中信证券_20171225_中信证券海外ETP专题系列研究：海外及A股SMARTBETA产品与策略分析.pdf
+中国方术大辞典 by 陈永正.pdf
+中国科学院研究生教学丛书-代数数论-冯克勤-科学出版社-2000.pdf
+中国计量大学-控制工程-王从栋.pdf
+中外物理学精品书系·前沿系列03-非线性科学与斑图动力学导论-欧阳颀-北京大学出版社-2010.pdf
+中泰证券_20160104_中泰证券多彩分级新思维系列之八：分级A的估值与选择，触目横斜千万朵，赏心只有两三枝.pdf
+中泰证券_20160116_金融工程专题报告：传统技术指标有效性的量化分析.pdf
+中泰证券_20160118_中泰证券传统技术指标有效性的量化分析.pdf
+中泰证券_20160122_中泰证券金融工程专题报告：一月预内言容是目否录靠谱.pdf
+中泰证券_20160706_创新型基金产品研究之一：公募FOF启航：鸟瞰篇.pdf
+中泰证券_20160710_期权研究随笔之三：基于期权波动率和成交量的混合择时策略.pdf
+中泰证券_20160713_创新型基金产品研究之二：Smart Beta策略和产品详解.pdf
+中泰证券_20160805_FOF思考系列之——惯性策略能否用来海选基金.pdf
+中泰证券_20160810_创新型基金产品研究之三：SmartBeta产品的海外经验本土实践.pdf
+中泰证券_20160907_创新型基金产品研究之五-公募FOF启航：产品篇之手把手教你打造目标风险基金.pdf
+中泰证券_20161115_中泰金工高送转股票预测1.pdf
+中泰证券_20161117_SmartBeta择时轮动策略.pdf
+中泰证券_20161217_高分红派息率股票研究与组合(之一).pdf
+中泰证券_20161227_高分红派息率股票研究与组合(之二).pdf
+中泰证券_20170210_做多波动率——分级基金投资策略报告.pdf
+中泰证券_20170210_因子组合配置及场内基金一览.pdf
+中泰证券_20170406_中泰证券时钟：股市之风格轮动.pdf
+中泰证券_20170419_中泰证券量化投资策略报告：债市的风花雪月，中泰时钟.pdf
+中泰证券_20170611_中泰证券上市公司分红问题研究（之一）：股票分红收益率的相关性研究.pdf
+中泰证券_20170611_中泰证券上市公司分红问题研究（之二）：探秘红利政策：基于分红频率视角.pdf
+中泰证券_20170705_中泰证券上市公司分红问题研究（之三）：探秘红利政策：分红比例才是真金白银.pdf
+中泰证券_20170718_中泰证券量化投资策略报告：中泰时钟，股市之行业轮动.pdf
+中科大群论.pdf
+中航证券_20160815_技术分析系列报告No.4：今日敲开牛市大门，量化投资与技术分析~触摸市场脉动.pdf
+中航证券_20161024_用市场成本线确认牛市现状.pdf
+中邮证券_20170311_中邮证券金融工程专题报告：基于均线多头的选股策略.pdf
+中金公司_20160104_事件驱动策略第3期：奇葩的一年一度“高送转”.pdf
+中金公司_20160404_事件驱动策略（7）：发掘A股壳资源.pdf
+中金公司_20160810_海外资产配置为什么,配什么,怎么配.pdf
+中金公司_20161228_风格轮动研究(1)价量视角下的市值风格轮动策略.pdf
+中金公司_20170222_中金公司市场量化观察体系（2）：“二八分化”现象的量化定义及策略应用.pdf
+中金公司_20170615_中金公司解读中国统计指标：概念、方法和含义.pdf
+中金公司_20170818_中金公司量化事件研究系列（1）：布局调研事件组合正当时.pdf
+中金公司_20170825_中金公司国债期货换季移仓专题研究：总结经验，展望未来.pdf
+中金公司_20171211_中金公司量化策略周报（72）：趋势性调整接近尾声.pdf
+中阴救度密法-10045.txt
+主动投资组合管理：创造高收益并控制风险的量化投资方法（原书第2版）-[美]理查德·C·格林诺德 等-李腾 等(译)-机械工业出版社-2014.pdf
+书名.txt
+云存储安全——大数据分析与计算的基石_ 陈兰香.pdf
+云安全深度剖析：技术原理及应用实践.pdf
+云数据中心网络与SDN：技术架构与实现 张晨.pdf
+云时代的流式大数据挖掘服务平台基于元建模的视角 [朱小栋 著] 2015年版.pdf
+云计算：应用开发实践.pdf
+云计算与分布式系统+从并行处理到物联网.pdf
+云计算和大数据时代网络技术揭秘.pdf
+云计算开发与安全.pdf
+云连接与嵌入式传感系统.pdf
+云连接与嵌入式传感系统.pdf
+人人经济学08-鸡尾酒经济学：酒会闲话经济循环-[美]维克多·坎-王汀汀(译)-中信出版社-2009.pdf
+人人都爱经济学(第2版)-王福重-人民邮电出版社-2010.pdf
+人人需要知道的50种哲学思想-[英]本•杜普雷-董晓燕(译)-电子工业出版社-2010.pdf
+人体区域通信——信道建模，通信系统及EMC.pdf
+人体区域通信——信道建模，通信系统及EMC.pdf
+人工智能：一种现代方法（第2版）-[美]S·拉塞尔＆P·诺文-姜哲 等(译)-人民邮电出版社-2010.pdf
+人工智能_复杂问题求解的结构和策略_原书第6版.pdf
+人工智能与符号计算 英文版.pdf
+人工智能中的图表推理.pdf
+人工智能中的深度结构学习.pdf
+人工智能之知识图谱 by it-ebooks (z-lib.org).pdf
+人工智能技术.pdf
+人工神经网络与模糊信号处理-[日]萩原将文 等-马炫(译)-科学出版社-2003.pdf
+人工神经网络导论-张青贵-中国水利水电出版社-2004.pdf
+人类思维中最致命的错误-[美]罗伯特·伯顿-任小红(译)-中国人民大学出版社-2010.pdf
+介绍丛书-视读人工智能-[美]亨利·布莱顿-张锦(译)-安徽文艺出版社-2007.pdf
+从Paxos到Zookeeper_分布式一致性原理与实践（书签版）.pdf
+从微分观点看拓扑（米尔诺）(带标签).pdf
+从无源到有源——电能质量谐波与无功控制.pdf
+从贝叶斯方法谈到贝叶斯网络.pdf
+从量子力学到量子光学：数理进展-范洪义-上海交通大学出版社-2005.pdf
+代数中的反例-胡崇慧-陕西科学技术出版社-1983.pdf
+代数几何Hodge, Pedoe - Methods of Algebraic Geometry(CUP 1953).pdf
+代数几何原理-[美]P·格列菲斯-Xian Xian(译).pdf
+代数几何引论.van.der.Waerden s_q.pdf
+代数学-[美]T·W·亨格福德-冯克勤(译)-湖南教育出版社-1985.pdf
+代码之美(中文版)-[美]奥莱姆-机械工业出版社-2008.pdf
+企业变电站建设与标准化运维管理手册.pdf
+伏击涨停-黑马王子-清华大学出版社-2014.pdf
+伟大的博弈：华尔街金融帝国的崛起(1653-2004)-[美]约翰·S·戈登-祁斌(译)-中信出版社-2005.pdf
+低功率、高分辨率的A-D转换器.pdf
+低速无线个域网：实现基于IEEE_802.15.4的无线传感器网络（原书第3版）.pdf
+低风险投资之路-徐大为-中国经济出版社-2014.pdf
+作为能源的生物质：资源、系统和应用.pdf
+使用说明.txt
+使用须知.txt
+供电技术_第5版.pdf
+侯捷：STL 源码剖析@2002 (扫描版).pdf
+俄罗斯数学教材选译-自然科学问题的数学分析-[俄]B·A·卓里奇-高等教育出版社-2012.pdf
+信号、信息与系统-张秉尧＆孙庆元-山东大学出版社-1986.pdf
+信号与噪声-[美]纳特·西尔弗-胡晓娇 等(译)-中信出版社-2013.pdf
+信号数学处理的数学原理.pdf
+信号流图和系统-赵永昌-科学出版社-1988.pdf
+信号的统计检测与估计理论-李道本-北京邮电大学出版社-1996.pdf
+信息检索：实现和评价搜索引擎 by Stefan Büttcher Charles L.A.Clarke Gordon V. Cormack (z-lib.org).pdf
+信息系统原理.pdf
+信息经济学-Arrow.pdf
+信息论-孟庆生-西安交通大学出版社-1986.pdf
+信息论与编码-姜丹-中国科学技术大学出版社-2001.pdf
+信息论基础 by Thomas M. Cover, Joy A. Thomas (z-lib.org).pdf
+信息论理论基础（第3版）-贾世楼-哈尔滨工业大学出版社-2001.pdf
+候选节点间协同时延最优的机会路由.pdf
+倾向值分析：统计方法与应用-[美]郭申阳-郭志刚(译)-重庆大学出版社-2012.pdf
+偏微分方程的并行算法2000.pdf
+傅立叶分析原理及题解.pdf
+储氢材料：储存性能的表征.pdf
+储能技术及应用.pdf
+像计算机科学家一样思考Python（中文版）-[美]唐尼•A•B-赵普明(译)-人民邮电出版社-2013.pdf
+先进的高压大功率器件——原理、特性和应用.pdf
+光伏产业路线图——北京光伏产业技术路线图研究.pdf
+光伏发电系统的优化--建模、仿真和控制.pdf
+光伏建筑中的能源管理.pdf
+光伏系统工程.pdf
+光伏系统的PSpice建模.pdf
+光大证券-20100729-A股市场活跃度指数EMAX_静待活跃度上升.pdf
+光大证券-20140528-光大证券因子时钟模型：让因子表现有迹可循.pdf
+光大证券-20140830-最好的金融文本挖掘系统实现开源——光大证券量化投资.pdf
+光大证券-20140911-光大证券-苹果,蓝宝石如期回落,广义事件套利显威力——大数据.pdf
+光大证券-20150111-光大证券-光大证券数量化策略报告：“中文云”金融文本量化研究平台在股票期权投资中的应用.pdf
+光大证券-20170616-金工事件研究体系介绍：量化选股之事件驱动.pdf
+光大证券_20100301_股指期货融资融券时代，根据“弹性”做股票.pdf
+光大证券_20110616_2011光大证券中期策略会：面向金融投资的互联网分析体系.pdf
+光大证券_20110616_2011年中期金融工程投资策略专题-光大投资时钟量化框架.pdf
+光大证券_20110616_2011年中期金融工程投资策略专题-宏观因子择时分析方法.pdf
+光大证券_20110616_2011年中期金融工程投资策略专题-量化投资策略的因子选股.pdf
+光大证券_20110714_经典量化择时策略系列二宏观因子模型的择时效应.pdf
+光大证券_20110715_光大投资时钟系列二自上而下的量化框架.pdf
+光大证券_20110725_绝对收益量化投资系列一基于指数调整的套利机会.pdf
+光大证券_20111221_关注度选股因子历史回测.pdf
+光大证券_20120205_量化择时之三：情绪拐点择时.pdf
+光大证券_20120210_市场微观结构之一：冲击成本模拟.pdf
+光大证券_20120508_技术指标系列（二）：ADX平均趋向指标，每年超过20%的绝对收益？.pdf
+光大证券_20120509_技术指标系列（三）：加入“二次确认”的AROON阿隆优化指标.pdf
+光大证券_20120510_技术指标系列（五）：CCI的顺势而为.pdf
+光大证券_20120627_股指期货量化交易策略研究-枢轴突破策略.pdf
+光大证券_20120814_技术指标系列（七）：CMO动量波动指标的运用.pdf
+光大证券_20120821_算法交易：基础理念与系统构建.pdf
+光大证券_20120821_股指期货量化交易策略研究-基于价差交易的高频统计套利01EMA模型.pdf
+光大证券_20120822_多因子研究系列（一）：因子回溯测试的总体框架.pdf
+光大证券_20120823_技术指标系列（九）：EMV指标改进用法识别尖部能力强.pdf
+光大证券_20120828_技术指标系列（十）：综合篇.pdf
+光大证券_20120828_算法交易-VWAP模型.pdf
+光大证券_20120828_股指期货量化交易策略研究-基于价差交易的高频统计套利03CUSCORE模型.pdf
+光大证券_20120903_技术指标高频系列（一）——基于KDJ优化指标的高频交易.pdf
+光大证券_20120906_算法交易—均值方差模型之组合算法.pdf
+光大证券_20120910_数量化投资：体系与策略.pdf
+光大证券_20120911_多因子研究系列（七）：情绪类因子测试.pdf
+光大证券_20120911_多因子研究系列（三）：成长类因子测试.pdf
+光大证券_20120911_多因子研究系列（二）：价值类因子测试.pdf
+光大证券_20120911_多因子研究系列（五）：动量类因子测试.pdf
+光大证券_20120911_多因子研究系列（六）：质量类因子测试.pdf
+光大证券_20120911_多因子研究系列（四）：规模类因子测试.pdf
+光大证券_20120917_量化择时之四：情绪指标多轨线择时策略.pdf
+光大证券_20120918_金融文本挖掘前述——系统、数据、指标.pdf
+光大证券_20120919_基于深层次文本挖掘的策略研究.pdf
+光大证券_20130115_多因子策略1：全市场策略.pdf
+光大证券_20140113_关注度因子2013年全年表现——低关注股票依旧强势.pdf
+光大证券_20140113_情绪指标择时2013年表现.pdf
+光大证券_20140303_“国资改革”概念文本挖掘快报.pdf
+光大证券_20140402_光大量化，且行且珍惜.pdf
+光大证券_20140617_文本挖掘研究回顾一：互联网数据挖掘系统，行为金融新领域.pdf
+光大证券_20140625_文本挖掘研究回顾二：100%胜率的指标是如何炼成的.pdf
+光大证券_20170412_光大证券卖方推票事件驱动策略研究：卖方深度乘势起，多次点评占先机.pdf
+光大证券_20170414_光大证券类固收系列报告之一：打新收益可期，资金流入机构.pdf
+光大证券_20170418_光大证券员工持股计划事件驱动策略研究：员工持股引关注，超额收益再深挖.pdf
+光大证券_20170427_光大证券市场情绪系列报告之一：构建情绪体系，寻找涨跌信号.pdf
+光大证券_20170428_光大证券多因子系列报告之二：因子测试全集.pdf
+光大证券_20170501_光大证券多因子系列报告之三：多因子组合光大Alpha1.0.pdf
+光大证券_20170501_光大证券技术择时系列报告之一：基于阻力支撑相对强度（RSRS）的市场择时.pdf
+光大证券_20170501_光大证券期权研究系列报告之一：期权卖方投资策略初探.pdf
+光大证券_20170605_光大证券技术择时系列报告之二：阻力支撑相对强度（RSRS）择时及行业轮动.pdf
+光大证券_20170609_光大金工事件研究体系介绍：量化选股之事件驱动.pdf
+光大证券_20170614_光大证券期权研究系列报告之一：期权卖方投资策略初探.pdf
+光大证券_20170615_光大证券FOF市场发展与展望：探寻投资策略，迎接公募FOF.pdf
+光大证券_20170615_光大证券技术择时系列研究之二：RSRS择时及行业轮动.pdf
+光大证券_20170619_光大证券资产配置系列报告之一：大类资产配置模型初探.pdf
+光大证券_20170706_光大证券事件研究系列报告之四：新监管下的高送转（附中报预测名单）.pdf
+光大证券_20170725_光大证券FOF专题系列报告之三：量化资产配置与FOF投资.pdf
+光大证券_20170725_光大证券技术指标系列报告之三：阻力支撑相对强度（RSRS）选股.pdf
+光大证券_20170726_光大证券事件研究系列报告之五：多维度、全覆盖.pdf
+光大证券_20170727_光大证券量化资产配置与FOF投资.pdf
+光大证券_20170727_光大证券金工事件因子体系：事件因子选股，多维度、全覆盖.pdf
+光大证券_20170731_光大证券多因子系列报告之四：别开生面，公司治理因子详解.pdf
+光大证券_20170901_光大证券FOF专题系列报告之四：基于动态风险预算的多策略资产配置.pdf
+光大证券_20170901_光大证券多因子系列报告之五：见微知著，成交量占比高频因子解析.pdf
+光大证券_20170904_光大证券衍生品研究系列报告之二：期权期货共振择时.pdf
+光大证券_20170905_光大证券技术指标系列报告之四：基于波动率时序排名的轮动策略.pdf
+光大证券_20171123_光大证券多因子系列报告之七：基于K线最短路径构造的非流动性因子.pdf
+光大证券_20171123_光大证券多因子系列报告之八：高频因子，日内分时成交量蕴藏玄机.pdf
+光大证券_20171123_光大证券对冲基金现状及展望：不拘一格，砥砺前行.pdf
+光大证券_20171129_光大证券衍生品研究系列报告之三：基于布林带择时的期权交易策略优化.pdf
+光大证券_20171228_光大证券技术择时系列研究：RSRS指标择时及行业轮动.pdf
+光学全息及信息处理-于美文-国防工业出版社-1984.pdf
+光学原理(上下合册·原书第5版)-[德]M·波恩＆E·沃耳夫-杨葭荪(译)-科学出版社-1978&1981.pdf
+光波导理论-[澳]A.W.Snyder＆J.D.Snyder-周幼威 等(译)-人民邮电出版社-1991.pdf
+光波导理论-吴重庆-清华大学出版社-2000.pdf
+光电化学太阳能转换系统：分子与电子层面.pdf
+全栈开发之道：MongoDB+Express+AngularJS+Node.js[撩撩前端].pdf
+全相位数字信号处理方法及MATLAB实现.pdf
+全美最新工商管理权威教材系列-财务管理分析（第6版）-[美]罗伯特·C·希金斯-北京大学出版社-2009.pdf
+全面的功能验证：完整的工业流程.1.pdf
+全面的功能验证：完整的工业流程.pdf
+全面详解LTE：MATLAB建模、仿真与实现.pdf
+公司理财(中文版·原书第9版)-[美]斯蒂芬·A·罗斯-机械工业出版社-2012.pdf
+公司理财：精要版(中文版·原书第9版)-[美]斯蒂芬·A·罗斯-机械工业出版社-2012.pdf
+公理学、元数学与哲学-张家龙-上海人民出版社-1983.pdf
+关于有限p_群的若干问题_徐明曜.pdf
+兴业证券-20170618-风险均衡方法及其在目标风险策略中的应用.pdf
+兴业证券_20150315_择时漫谈之大宗商品：风幡皆未动，汝心动耳.pdf
+兴业证券_20160104_兴业证券“宽海拾贝”系列之二：大类因子深度解析之双塔奇兵.pdf
+兴业证券_20160104_兴业证券投资宽角度：价值成长双双低迷，技术因子异军突起.pdf
+兴业证券_20160105_兴业证券期权波动率交易之三：波动率倾斜中的交易机会（上）.pdf
+兴业证券_20160105_兴业证券期权波动率交易之三：波动率倾斜中的交易机会（下）.pdf
+兴业证券_20160110_举牌：事件驱动策略研究系列.pdf
+兴业证券_20160111_兴业证券事件驱动策略研究系列，举牌.pdf
+兴业证券_20160121_兴业证券定量研究：旧去新来，尚能赚否.pdf
+兴业证券_20160121_兴业证券宽海拾贝系列之三：大类因子深度解析之王者归来.pdf
+兴业证券_20160131_兴业证券投资宽角度：避险情绪驱动价值因子再度走强.pdf
+兴业证券_20160214_兴业证券期权与产品设计系列三：期权策略指数及其在基金产品中的应用.pdf
+兴业证券_20160214_兴业证券期权与产品设计系列二：基于Covered+Call的收益增强策略（下）.pdf
+兴业证券_20160301_淡定投分级系列之六：分享地产盛宴，巧借分级投资1.pdf
+兴业证券_20160307_兴业证券“宽海拾贝”系列专题报告：大类因子深度解析与因子择时初探.pdf
+兴业证券_20160307_大类因子深度解析与因子择时初探.pdf
+兴业证券_20160323_专题报告：大宗交易，大机会.pdf
+兴业证券_20160323_专题报告：定增基金的折溢价与投资机会.pdf
+兴业证券_20160420_-兴业证券猎金系列：聪明的Alpha，万剑归宗！（下篇）.pdf
+兴业证券_20160420_兴业证券猎金系列：聪明的Alpha，万剑归宗！（上篇）.pdf
+兴业证券_20160429_兴业研究分级基金系列报告之二：分级A轮动策略.pdf
+兴业证券_20160509_兴业证券猎金系列之十一：兴业盈利预测调整因子.pdf
+兴业证券_20160512_兴业证券宽海拾贝系列之四：风格因子进化论.pdf
+兴业证券_20160517_兴业证券行业轮动系列专题报告之一：基于不同市场情景下的行业轮动策略.pdf
+兴业证券_20160519_兴业证券行业轮动系列专题报告：基于不同市场情境下的行业轮动策略.pdf
+兴业证券_20160520_上证50反向期现套利策略.pdf
+兴业证券_20160520_保本基金研究.pdf
+兴业证券_20160520_场内货币基金及其套利策略介绍.pdf
+兴业证券_20160520_对冲基金的前世今生.pdf
+兴业证券_20160520_货币市场基金评价方法.pdf
+兴业证券_20160520_金融工程专题报告：期权基本交易制度和策略介绍.pdf
+兴业证券_20160601_2016年中期策略-兴财富：基于市场主要矛盾的趋势判断框架.pdf
+兴业证券_20160602_兴业证券定量研究专题报告：定向增发，指数掘金大时代.pdf
+兴业证券_20160602_兴业证券试金石系列之三：Big+Money=Smart+Money？.pdf
+兴业证券_20160602_定量研究专题报告：定向增发，指数掘金大时代.pdf
+兴业证券_20160701_宽海拾贝：细节的力量之标准化与换手控制.pdf
+兴业证券_20160705_试金石系列之四：从股东人数变化真的能洞察主力操作？.pdf
+兴业证券_20160706_择时漫谈之Hurst指数：如何避免投资中的线性思维陷阱？.pdf
+兴业证券_20160710_投资宽角度：价值表现复苏，规模因子七连冠.pdf
+兴业证券_20160713_宽海拾贝：细节的力量之标准化与换手控制.pdf
+兴业证券_20160729_宽海拾贝：细节的力量之标准化与换手控制.pdf
+兴业证券_20160801_A股量化择时之二：预测与对策相结合的择时体系构建.pdf
+兴业证券_20160802_事件驱动策略研究系列——股票更名能否带来投资收益？.pdf
+兴业证券_20160809_定量研究专题报告_资产配置的圣杯：风险均衡模型在FOF中的应用——FOF专题研究之二.pdf
+兴业证券_20160829_试金石系列之五：“一阳穿三线”靠谱吗？.pdf
+兴业证券_20161101_基于Logistic回归的2016年“高送转”预测.pdf
+兴业证券_20161127_投资宽角度：市场再现二八分化，价值因子包揽前十.pdf
+兴业证券_20161220_宽海拾贝：体系的力量之令人头疼的数据管理.pdf
+兴业证券_20170105_CTA策略系列报告之一：顺势而为，趋势为王.pdf
+兴业证券_20170105_宽海拾贝：体系的力量之眼花缭乱的因子定义.pdf
+兴业证券_20170109_猎金系列之十二：挖掘错误估值背后所蕴藏的Alpha.pdf
+兴业证券_20170201_猎金系列之十二：挖掘错误估值背后所蕴藏的Alpha（改进版）.pdf
+兴业证券_20170220_兴业证券大类资产配置中的策略风格研究：动量篇.pdf
+兴业证券_20170305_兴业证券定量研究：成长强势反弹，价值出现回撤.pdf
+兴业证券_20170305_兴业证券瞭望：建信量化事件驱动股票型基金获受理.pdf
+兴业证券_20170307_兴业证券定量研究专题报告：商品期权与期权合约细则对比.pdf
+兴业证券_20170312_兴业证券猎金系列之十三：分析师预测目标价有参考价值吗？.pdf
+兴业证券_20170508_兴业证券量化视角：新规下如何参与定增.pdf
+兴业证券_20170508_兴业证券雪球知股乎系列之一：和关注度因子有个约定.pdf
+兴业证券_20170602_兴业证券事件因子系列报告之一，事件因子化投资框架.pdf
+兴业证券_20170618_兴业证券定量研究：风险均衡方法及其在目标风险策略中的应用.pdf
+兴业证券_20170619_兴业证券雪球知股乎系列二：百万投资组合里的宝贝.pdf
+兴业证券_20170727_兴业证券计算机区块链行业跟踪：初探ICO与火爆的背后.pdf
+兴业证券_20170824_兴业证券宽海拾贝：基于风险的动态多因子模型.pdf
+兴业证券_20170905_兴业证券SmartBeta系列报告之一：他山之石.pdf
+兴业证券_20170910_兴业证券A股市场择时研究之四：面向战术配置的量化择时方法.pdf
+兴业证券_20171009_兴业证券Smart+Beta系列报告之二：方兴未艾.pdf
+兴业证券_20171014_兴业证券雪球知股乎系列三：情绪因子选股正当时.pdf
+兴业证券_20171015_兴业证券投资宽角度：白马股仍受青睐，分析师目标价大幅上调个股值得关注.pdf
+兴业证券_20171019_兴业证券CTA策略系列报告之三：基于库存基本面视角的商品期货投资策略（上）.pdf
+兴业证券_20171031_兴业证券上市公司财务披露质量研究：质量为王.pdf
+兴业证券_20171102_兴业证券基于Logistic回归模型的2017年度“高送转”预测.pdf
+兴业证券_20171105_兴业证券定期报告：白马股依旧强势，分析师预期大幅上调个股值得关注.pdf
+兴业证券_20171114_兴业证券事件驱动策略系列报告：回归之门开启，谁是下一个360.pdf
+兴业证券_20171117_兴业证券基于月度效用的选股因子研究：岁月涤荡万千、月度效应依然.pdf
+兴业证券_20171126_兴业证券投资宽角度：价值因子延续强势，小盘股回撤仍在继续.pdf
+其实你不知道你错得离谱-[美]小理查兹·J·雅-蒋蓉(译)-江苏人民出版社-2015.pdf
+具体数学：计算机科学基础(中文版)-[美]R.L.格雷厄姆-庄心谷(译)-西安电子科技大学出版社.pdf
+典型群,.华罗庚,.万哲先.pdf
+内容分发网络.pdf
+内容算法：把内容变成价值的效率系统_闫泽华.pdf
+冯世灵开题.pdf
+决策用强化与系统性机器学习.pdf
+几何学概论.pdf
+凯恩斯以后-[英]琼·罗宾逊-商务印书馆-1985.pdf
+分层P2P实时流媒体系统中基于演进博弈的超级组对等节点选择算法.pdf
+分布式发电系统中的光伏发电技术(第2版).pdf
+分布式操作系统-原理与实践.pdf
+分布式操作系统原理与实践 (z-lib.org).pdf
+分布式服务框架：原理与实践_李林锋著.pdf
+分布式算法  高清 电子书 下载  pdf  qq 89084755 [(美)Nancy A.Lynch著 舒继武等译][机械工业出版社][2004][527页]sample.pdf
+分布式算法导论 by 泰尔 (z-lib.org).pdf
+分布式算法导论-原书第2版.pdf
+分布式系统：概念与设计（原书第四版）.pdf
+分布式计算(第二版).pdf
+分布式计算的安全原理 by [美]GlenBruce，[美]RobDempsey (z-lib.org).pdf
+分布式计算的安全原理.pdf
+分形和分维引论.pdf
+分析哲学（语言分析的逻辑基础）.pdf
+分级基金与投资策略-刘明军&郑志勇-电子工业出版社-2015.pdf
+创建自己的交易系统-[俄]维·伊·萨芬-毛子成＆黄玫(译)-中国财政经济出版社-2006.pdf
+利用Python进行数据分析（中文版）-[美]麦金尼•W-唐学韬(译)-机械工业出版社-2013.pdf
+前缀碰撞.pdf
+力扣-solution.pdf
+功率变换开关技术（修订版）电力电子的核心理论.pdf
+功率理论与电能质量治理.pdf
+加密解密.pdf
+动力学建模.pdf
+动力学系统辨识与建模-刘君＆夏智勋-国防科技大学出版社-2007.pdf
+动态最优化基础-蒋中一.pdf
+动态结构化P2P网络的负载均衡方案.pdf
+动画【吉卜力·宫崎骏】龙猫 BDrip 720p.xml
+北京大学经济学教材系列-风险管理(第2版)-刘新立-北京大学出版社-2014.pdf
+北京大学计算机科学与技术系教材-数理逻辑(离散数学一分册)-王捍贫-北京大学出版社-1997.pdf
+北京师范大学现代数学丛书-数理逻辑与范畴论应用-王世强＆孟晓青-北京师范大学出版社-1999.pdf
+区块链以太坊DApp开发实战 林冠宏.pdf
+区块链网络构建和应用：基于超级账本Fabric的商业实践.pdf
+区块链项目开发指南.pdf
+十三经译注 周易译注 图片错误较多.txt
+半单李群的整体表示论(冯.诺依曼).PDF
+半单李群的整体表示论(英文版)_美 冯，诺依曼.pdf
+半单纯李群李代数表示论-严志达-上海科学技术出版社-1963.pdf
+半群算子Topics in Operator Semigroups (Shmuel Kantorovitz).pdf
+半鞅与随机分析-何声武＆汪嘉冈-科学出版社-1995.pdf
+华安基金_20160601_探讨黄金的投资框架.pptx
+华安证券_20160817_量化选股之次新股策略研究.pdf
+华安证券_20161228_高送转专题研究(一)除权后超额收益明显,动量市值选股表现优异.pdf
+华安证券_20170324_华安证券定向增发专题研究（一）：基于定增股票池的因子选股.pdf
+华安证券_20170726_华安证券股息率专题研究（一）：高股息率指数增强组合构建.pdf
+华宝证券-20170620-数量化策略跟踪评价报告：行业配置，估值因子有效吗.pdf
+华宝证券_20170221_华宝证券金融工程专题：利用量化择时，优化大类资产配臵.pdf
+华宝证券_20170711_华宝证券数量化策略跟踪评价报告：利用因子轮动，增厚行业配置收益.pdf
+华宝证券_20170720_华宝证券金融工程专题报告：多因子行业配置，动量、波动率与行业景气度.pdf
+华宝证券_20170904_华宝证券金融工程专题报告：基金公司智能基金组合产品梳理、策略构建解析与发展展望.pdf
+华宝证券_20171114_华宝证券数量化策略跟踪评价周报：行业景气度因子表现优异.pdf
+华宝证券_20171116_华宝证券金融工程专题报告：B-L模型的鲁棒性优化及其在大类资产与行业配置中的运用.pdf
+华宝证券_20171206_华宝证券数量化策略跟踪评价周报：PB-ROE继续表现优异，关注周期性行业优质蓝筹个股.pdf
+华宝证券_20171212_华宝证券量化资产配置与组合投资周报：基于一致预期的动态估值指标构建及在A股择时中的运用.pdf
+华宝证券_20171219_华宝证券ETP策略报告：券商A与券商母基组合衍生保本收益策略浅析.pdf
+华宝证券_20171228_华宝证券对BL模型的再探讨：估值效应与风险预算.pdf
+华泰期货_20170825_华泰期货量化专题报告：贝叶斯线性回归在期货交易中的应用.pdf
+华泰期货_20170825_华泰期货量化策略专题报告：CTA量化策略因子系列（一），波动率因子.pdf
+华泰期货_20170919_华泰期货量化期权专题报告：期权隐含波动率运用方法及交易策略介绍.pdf
+华泰期货_20171025_华泰期货量化专题报告：利用循环神经网络预测期货走势.pdf
+华泰期货_20171025_华泰期货量化策略专题报告：CTA量化策略因子系列（三），期限结构因子.pdf
+华泰期货_20171117_华泰期货量化期权专题报告：基于SABR模型的期权波动率曲线套利策略.pdf
+华泰期货_20171124_华泰期货量化专题报告：贝叶斯长短时记忆网络介绍.pdf
+华泰期货_20171124_华泰期货量化策略专题报告：CTA量化策略因子系列（四）策略因子组合与择时.pdf
+华泰期货_20171224_华泰期货2017年商品期权年度报告.pdf
+华泰期货_20171225_华泰期货量化策略年度报告：期限策略携基本面因子共攀高峰，动量策略蛰伏待时.pdf
+华泰证券-20170622-华泰人工智能系列之二：人工智能选股之广义线性模型.pdf
+华泰证券_20160526_华泰证券市场的周期分析系列之三：行业指数频谱分析及配置模型.pdf
+华泰证券_20160606_宏观多因子模型初探：A股收入和利润的定量预测模型.pdf
+华泰证券_20160612_华泰证券宏观多因子模型初探：A股收入和利润的定量预测模型.pdf
+华泰证券_20160626_华泰基本面选股之高股息率模型.pdf
+华泰证券_20160708_小费雪选股法A股实证研究：华泰基本面选股之低市收率模型.pdf
+华泰证券_20160711_基金定投系列专题研究报告之一：基金定投，分析方法与理论基础.pdf
+华泰证券_20160725_风险平价模型实证研究：风险平价模型在大类资产配置及行业配置中的应用.pdf
+华泰证券_20160816_全球金融市场和宏观指标统一周期研究：复杂系统与金融经济周期.pdf
+华泰证券_20160822_基金定投系列专题研究报告之二：基金定投投资标的与时机的选择方法.pdf
+华泰证券_20160830_BL模型行业配置实证研究：Black~Litterman模型在行业配置中的应用.pdf
+华泰证券_20160912_华泰价量择时模型：市场周期在择时领域的应用.pdf
+华泰证券_20160912_市场周期在择时领域的应用：价量择时模型.pdf
+华泰证券_20160921_多因子系列之一：华泰多因子模型体系初探.pdf
+华泰证券_20160922_高股息率选股港股实证分析：长短周期重合见底，港股具备安全边际.pdf
+华泰证券_20160929_多因子系列之二：华泰单因子测试之估值类因子.pdf
+华泰证券_20161009_基金定投系列专题研究报告之三：基金定投马科维茨有效性检验.pdf
+华泰证券_20161031_华泰多因子系列之三：华泰单因子测试之成长类因子.pdf
+华泰证券_20161103_量化择时系列报告：技术指标与周期量价择时模型的结合.pdf
+华泰证券_20161106_华泰证券探索市场系列之一上证综指：上证综指与上证A股增长差异原因分析.pdf
+华泰证券_20161122_基金定投系列专题研究报告之四：布林带与股息率择时定投模型.pdf
+华泰证券_20161206_华泰价值选股之相对市盈率选股.pdf
+华泰证券_20161220_多因子系列之四：单因子测试之动量类因子.pdf
+华泰证券_20170109_多因子系列之五：华泰单因子测试之换手率类因子.pdf
+华泰证券_20170110_华泰FOF与金融创新产品系列研究报告之一：生命周期基金Glide+Path开发实例.pdf
+华泰证券_20170117_网下打新底仓规模测算模型介绍：打新底仓规模测算，约11万亿元.pdf
+华泰证券_20170209_华泰价值选股之FFScore模型：比乔斯基选股模型A股实证研究.pdf
+华泰证券_20170209_研究报告-比乔斯基模型.pdf
+华泰证券_20170211_红利指数与红利因子系列研究报告之一：A股红利指数比较研究.pdf
+华泰证券_20170220_华泰证券金工周期研究系列报告：周期研究对大类资产的预测观点.pdf
+华泰证券_20170302_华泰证券周期模型最新数据与观点：看多全球股票市场，商品势头良好.pdf
+华泰证券_20170312_华泰证券金工周期系列研究：市场周期的量化分解.pdf
+华泰证券_20170313_华泰证券五因子模型A股实证研究：Fama-French+五因子模型实证.pdf
+华泰证券_20170326_华泰证券金工周期系列研究：华泰市场周期量化研究.pdf
+华泰证券_20170327_华泰证券多因子系列之六：华泰单因子测试之波动率类因子.pdf
+华泰证券_20170405_华泰证券价值选股之高股息港股模型：高股息率选股模型港股通实证研究.pdf
+华泰证券_20170419_华泰证券红利指数与红利因子系列研究报告之二：红利因子的有效性研究.pdf
+华泰证券_20170424_华泰证券小费雪选股法港股通实证研究：华泰价值选股之低市收率港股模型.pdf
+华泰证券_20170509_华泰证券金工周期系列研究：金融经济系统周期的确定.pdf
+华泰证券_20170520_华泰证券价值选股之低市收率A股模型Ⅱ：华泰“强强联合”低市收率选股模型.pdf
+华泰证券_20170601_华泰证券人工智能系列之一：人工智能选股框架及经典算法简介.pdf
+华泰证券_20170609_华泰证券价值-成长PEG选股A股实证研究：华泰价值选股之“漂亮50”选股模型.pdf
+华泰证券_20170609_华泰证券价值选股之“漂亮50”选股模型.pdf
+华泰证券_20170613_华泰证券周期择时研究系列：全球多市场择时配置初探.pdf
+华泰证券_20170622_华泰证券人工智能系列之二：人工智能选股之广义线性模型.pdf
+华泰证券_20170719_华泰证券价值选股之相对市盈率港股模型：相对市盈率港股通模型实证研究.pdf
+华泰证券_20170803_华泰证券金工周期研究最新观点：工行历史新高的量化思考.pdf
+华泰证券_20170804_华泰证券人工智能系列之三：人工智能选股之支持向量机模型.pdf
+华泰证券_20170808_华泰证券金工周期研究系列：基于DDM模型的板块轮动探索.pdf
+华泰证券_20170818_华泰证券金工周期系列研究：周期三因子定价与资产配置模型.pdf
+华泰证券_20170822_华泰证券价值选股之现金流因子研究：现金流因子选股策略实证研究.pdf
+华泰证券_20170831_华泰证券人工智能系列之五：人工智能选股之随机森林模型.pdf
+华泰证券_20170911_华泰证券人工智能系列之六：人工智能选股之Boosting模型.pdf
+华泰证券_20170913_华泰证券周期研究对大宗商品的预测观点：大宗商品仍处于牛市初期.pdf
+华泰证券_20170919_华泰证券人工智能系列之七：人工智能选股之Python实战.pdf
+华泰证券_20171107_华泰证券行业轮动系列之一：基于通用回归模型的行业轮动策略.pdf
+华泰证券_20171117_华泰证券生命周期（目标日期）型基金资产配置策略.pdf
+华泰证券_20171121_华泰证券金工周期系列研究：基钦周期的量化测度与历史规律.pdf
+华泰证券_20171123_华泰证券人工智能系列之八：人工智能选股之全连接神经网络.pdf
+华泰证券_20171203_华泰证券金工基金定投深度研究：大成旗下基金2018定投策略研究.pdf
+华泰金工_20170817_人工智能4：人工智能选股之朴素贝叶斯模型.pdf
+华章教材经典译丛-债券市场：分析与策略(原书第8版)-[美]弗兰克·法博齐-李磊宁(译)-机械工业出版社-2017.pdf
+华章经典·金融投资-交易圣经-[澳]布伦特·奔富-郑磊(译)-机械工业出版社-2016.pdf
+华章经典·金融投资-以交易为生（珍藏版）-[美]亚历山大·埃尔德-符彩霞(译)-机械工业出版社-2010.pdf
+华章经典·金融投资-技术分析(原书第5版)-[美]马丁·J·普林格-笃恒＆王茜 (译)-机械工业出版社-2015.pdf
+华章经典·金融投资-期权投资策略(中文版·第4版)-[美]劳伦斯·G·麦克米伦-刘学勤(译)-机械工业出版社-2010.pdf
+华章经典·金融投资-机械式交易系统：原理、构建与实战-[美]小布鲁斯·巴布科克-李汉军 等(译)-机械工业出版社-2017.pdf
+华章经典·金融投资-股市趋势技术分析(原书第9版)-[美]罗伯特·D·爱德华兹 等-郑学勤 等(译)-机械工业出版社-2010.pdf
+华章经管·三棱镜丛书-从牛顿、达尔文到巴菲特：投资的格栅理论(中文版)-[美]罗伯特.G.汉格斯特龙-机械工业出版社-2001.pdf
+华金证券_20170303_华金证券2016年海外ETP市场年度报告.pdf
+协同通信- 物理层、信道模型和系统实现.pdf
+博弈论：矛盾冲突分析-[美]罗杰·B·迈尔森-于寅＆费剑平(译)-中国经济出版社-2001.pdf
+博弈论与经济行为上册_美_John_von_Neumann,美_Oskar_Morgenstern.pdf
+博弈论与经济行为下册_美_John_von_Neumann,美_Oskar_Morgenstern.pdf
+博弈论书籍_詹姆斯莫里斯论文精选_非对称信息下的激励理论.pdf
+博弈论是什么玩意儿-石雨祺-华中科技大学出版社-2012.pdf
+博时基金_20160601_人工智能_简版本.pptx
+原始文件已删：遗失在西方的中国史：伦敦新闻画报记录的晚清1842-1873(套装共3册) 作者 沈弘.txt
+原始文件已删：遗失在西方的中国史：伦敦新闻画报记录的晚清1842-1873(套装共3册) 作者 沈弘.txt
+原帖.txt
+双语译林·壹力文库120-股票大作手回忆录-[美]埃德温·勒费弗-汤前燕(译)-译林出版社-2016.pdf
+双馈式风力发电机组柔性并网运行与控制.pdf
+反入侵的艺术.pdf
+反欺骗的艺术.pdf
+反馈控制理论-[美]J·C·多伊尔 等-慕春棣(译)-清华大学出版社-1991.pdf
+发现之旅43-爱因斯坦：思考的乐趣（第2版）-[法]Franqoise Baliber-陈开基(译)-汉语大词典出版社-2001.pdf
+发现者(上下合册)：人类探索世界和自我的历史-[美]丹尼尔·J·希布斯廷-吕佩英 等(译)-上海译文出版社-2014.pdf
+发电设备中的控制技术.pdf
+另类交易策略系列之一：基于混沌理论的股指期货噪声趋势交易策略.pdf
+另类交易策略系列之七：在标度不变性破缺下洞察资金流向——MFT交易策略.pdf
+另类交易策略系列之三：多项式拟合的股指期货趋势交易(LPTT)策略.pdf
+另类交易策略系列之三十：探寻股指期货跨品种的最优组合.pdf
+另类交易策略系列之三十一：快速趋势识别下的金融期货交易策略.pdf
+另类交易策略系列之三十二：从成份股一致性来衡量市场的趋势.pdf
+另类交易策略系列之九：基于遗传规划的智能交易策略方法.pdf
+另类交易策略系列之二：一类波动收敛突变模式的趋势跟随策略.pdf
+另类交易策略系列之二十：期权对标的指数走势的预测性分析.pdf
+另类交易策略系列之二十一：基于市场情绪平稳度的股指期货日内交易策略.pdf
+另类交易策略系列之二十七：均线交叉策略的另类创新研究.pdf
+另类交易策略系列之二十三：股指期货高频追杀趋势策略.pdf
+另类交易策略系列之二十九：全球商品期货量化交易策略初探.pdf
+另类交易策略系列之二十二：风格动量下的股指期货跨品种套利策略.pdf
+另类交易策略系列之二十五：价量模式匹配股指期货交易策略.pdf
+另类交易策略系列之二十八：再论RSI指标在股指期货日内交易中的使用.pdf
+另类交易策略系列之二十六——境外中概股股指期货对于A股市场择时研究.pdf
+另类交易策略系列之二十四——观日内趋势，察行业轮动，品风格套利.pdf
+另类交易策略系列之五：基于缠中说禅之分型通道趋势交易系统.pdf
+另类交易策略系列之八：基于时域分形的相似性匹配日内低频交易策略（SMT）.pdf
+另类交易策略系列之六：基于GFTD的期指日内程序化交易策略.pdf
+另类交易策略系列之十：基于遗传算法的期指日内交易系统.pdf
+另类交易策略系列之十一：日内突破模式及其资金管理的多重比较研究.pdf
+另类交易策略系列之十七：深度学习股指期货日内交易策略.pdf
+另类交易策略系列之十三：基于统计语言模型（SLM）的择时交易研究.pdf
+另类交易策略系列之十九：带反转的加强版EMDT交易策略.pdf
+另类交易策略系列之十二：基于遗传规划多维变量的股指期货交易策略.pdf
+另类交易策略系列之十五：识别趋势震荡之神器MESA.pdf
+另类交易策略系列之十八：厚尾分布下的随机区间突破策略.pdf
+另类交易策略系列之十六：波段形态识别模型(WPRM)及期指交易策略应用.pdf
+另类交易策略系列之十四：经验模态分解下的日内趋势交易策略.pdf
+另类交易策略系列之四：基于日内波动极值的股指期货趋势跟随系统.pdf
+可再生能源并网：电网的间歇性、不确定性和灵活性的管理实践.pdf
+可再生能源系统设计.pdf
+可再生能源系统高级变流技术及应用.pdf
+可变目标C编译器 设计与实现 by Christopher W. Fraser David R. Hanson (z-lib.org).pdf
+可怕的错觉：人人都会犯的致命错误-曾艾可-企业管理出版社-2009.pdf
+可持续电力系统的建模与控制：面向更为智能和绿色的电网.pdf
+可替代能源：来源和系统.pdf
+可重构无线电系统的网络架构和标准.pdf
+可重构无线电系统的网络架构和标准.pdf
+史上最简单的问题解决手册-[瑞典]麦克·克罗格鲁斯＆罗曼·塞普勒-胡玮珊(译)-中国青年出版社-2013.pdf
+吉规模集成电路互连工艺及设计.pdf
+同构JavaScript应用开发.pdf
+吴军：数学之美 (第1版).pdf
+周期休眠轮询耦合拓扑优化的WSN节点覆盖算法.pdf
+哈布斯堡王朝__翱翔欧洲700年的双头鹰.pdf
+哥德尔证明(中文版)-欧内斯特.内格尔＆詹姆士.R.纽曼.pdf
+商业智能深入浅出_第2版——大数据时代下的架构规划与案例.pdf
+商业银行私有云设计与实现.pdf
+囚徒的困境_冯·诺伊曼、博弈论和原子弹之谜_Prisoner's_Dilemma_威廉姆·庞德斯通_CHS_扫描版.pdf
+固体氧化物燃料电池的动态建模与预测控制.pdf
+固定收益分析(第2版)-[美]弗兰克·J·法伯兹-张敦力＆赵纯祥(译)-东北财经大学出版社-2011.pdf
+国信证券_20150727_价值选股-主动低估与被低估.pdf
+国信证券_20160119_国信证券单向波动差值择时模型周报：指数转多信号，RPS偏低须注意.pdf
+国信证券_20160307_金融工程专题研究：分级基金A份额轮动策略之定折波动.pdf
+国信证券_20160321_国信证券单向波动率差值择时之三：基于成分股波动率差值指数择时.pdf
+国信证券_20160321_国信证券单向波动率差值择时之二：RPS分级靠档减少交易频率.pdf
+国信证券_20160321_国信证券金融工程专题研究：指数均值回复现象研究及其指数轮动策略.pdf
+国信证券_20160429_国信证券金融工程专题研究：又是一年红包季，把握高送转收益.pdf
+国信证券_20160527_国信证券金融工程专题研究：QFII资金投资风格分析.pdf
+国信证券_20160530_国信证券单向波动率差值研究：单向波动差值实现绝对收益.pdf
+国信证券_20160531_国信证券机器学习专题研究：Adaboost算法下的多因子选股.pdf
+国信证券_20160531_国信证券机器学习专题研究：SVM算法选股以及Adaboost增强.pdf
+国信证券_20160531_国信证券金融工程专题研究：利用机器学习实现组合优化.pdf
+国信证券_20160829_金融工程专题研究：使用估值指标进行股债配置.pdf
+国信证券_20160829_金融工程专题研究：基于上、下行beta风险的选股策略研究.pdf
+国信证券_20160909_国信技术面量化选股系列：价格路径对收益的影响.pdf
+国信证券_20161205_金融工程专题研究：基于k-means聚类的多因子特征检验.pdf
+国信证券_20161220_金融工程专题研究：各类资产配置方法：量化优选配比.pdf
+国信证券_20170103_大盘股的成交量脉冲事件研究.pdf
+国信证券_20170106_长期反转池中挖掘“价值股”.pdf
+国信证券_20170227_国信证券金融工程专题研究：多因子框架下的基金风格分解与报告期检验.pdf
+国信证券_20170228_国信证券金工报告：基于收益动量和成交额反转的行业配置模型.pdf
+国信证券_20170306_国信证券金融工程专题研究：基于收益动量和成交额反转的行业配置模型.pdf
+国信证券_20170515_国信证券单向波动差值择时之五：基于幅度过滤等方式的交易频率改进.pdf
+国信证券_20170524_国信证券金融工程专题研究：递归神经网络RNN，长短期记忆细胞（LSTM）的多因子预测.pdf
+国信证券_20170525_国信证券金融工程专题研究：白马股量化选股模型.pdf
+国信证券_20170802_国信证券金融工程数量化投资月报：七月行业配置模型延续良好表现，多头组合4胜1负.pdf
+国信证券_20170811_国信证券金融工程专题研究：递归神经网络RNN—自适应计算次数（ACT）的RNN增强.pdf
+国信证券_20170818_国信证券数量化投资：沪深300结构化增强.pdf
+国信证券_20170821_国信证券金融工程专题行业配置系列：在alpha和绝对收益策略中应用行业配置的三个思路.pdf
+国信证券_20171123_国信证券金融工程专题：指数投资系列，基于股票分化度的指数趋势策略.pdf
+国信证券_20171124_国信证券金融工程专题研究：不同时间周期下行业量化轮动配置.pdf
+国信证券_20171124_国信证券金融工程专题研究：递归神经网络RNN，维度叠加与可微分神经计算机.pdf
+国信量化模型1号，追求稳健绝对收益.docx
+国元证券_20160513_国元证券金融工程专题报告：定向增发预案公告日投资机会.pdf
+国元证券_20161214_可转债与可交换债专题研究报告.pdf
+国元证券_20170814_国元证券量化选股专题：可转债正股投资组合，探寻可转债正股投资的量化因子.pdf
+国元证券_20170925_国元证券量化选股专题二：可转债正股投资组合，事件效应下的投资机遇.pdf
+国外名校最新教材精选-模拟CMOS集成电路设计-[美]毕查德·拉扎维-陈贵灿 等(译)-西安交通大学出版社-2002.pdf
+国外实用金融统计丛书-金融学与经济学中的数值方法：基于MATLAB编程（原书第2版）-[意]保罗勃兰迪马特-郑志勇 等(译)-机械工业出版社-2016.pdf
+国外电子与通信教材系列-信息论与编码理论(中文版·第2版)-[美]R·J·麦克伊利斯-电子工业出版社-2004.pdf
+国外电子与通信教材系列-数字图像处理(中文版·第3版)-[美]R·C·冈萨雷斯-电子工业出版社-2011.pdf
+国外电子与通信教材系列-数字图像处理：Matlab版(中文版)-[美]R·C·冈萨雷斯-电子工业出版社-2005.pdf
+国外电子与通信教材系列-特征提取与图像处理（第2版）-[英]Mark S.Nixon 等-实英＆杨高波(译)-电子工业出版社-2010.pdf
+国外电子与通信教材系列-统计信号处理基础：估计与检测理论-[美]斯蒂文·M·凯-电子工业出版社-2006.pdf
+国外经典教材·计算机科学与技术-机器视觉算法与应用(双语版)-[德]C·斯蒂格 等-杨少荣 等(译)-清华大学出版社-2008.pdf
+国外经济学教材库-国际经济学（第十一版）-[美]托马斯·A·普格尔＆彼得·H·林德特-李克宁(译)-经济科学出版社-2001.pdf
+国外经济学教材库-微观经济学：高级教程(中文版.第3版)-[美]哈尔.瓦里安-经济科学出版社-1997.pdf
+国外计算机科学教材系列-支持向量机导论-[英]N·克里斯特安尼-李国正 等(译)-电子工业出版社-2004.pdf
+国外计算机科学教材系列-统计学习基础：数据挖掘、推理与预测-[美]T·黑斯蒂 等-电子工业出版社-2004.pdf
+国外计算机科学教材系列-计算机视觉：一种现代方法-[美]D·A·福赛思 等-林学訚 等(译)-电子工业出版社-2004.pdf
+国家电网公司十八项电网重大反事故措施（修订版）考试题库.pdf
+国泰君安-20170607-“中小盘”2017年中期投资策略：寻找未来龙头，继续业绩为王.pdf
+国泰君安-20170607-2017年中期投资策略：分布式驱动，龙马的扩散与切换.pdf
+国泰君安-20170607-2017年中期投资策略研讨会：经济、金融周期制衡货币边际收紧，经济前高后低.pdf
+国泰君安-20170615-中小盘增发并购2017中期投资策略：严监管3.0时代，定增回归投资本质.pdf
+国泰君安-20170615-数量化专题之九十三：基于短周期价量特征的多因子选股体系.pdf
+国泰君安_20160118_国泰君安数量化专题之六十七：择时新视角，捕捉趋势中的绝对收益.pdf
+国泰君安_20160118_数量化专题之六十七：择时新视角，捕捉趋势中的绝对收益.pdf
+国泰君安_20160301_国泰君安数量化专题之六十八：如何将阿尔法因子转化为超额收益（上）.pdf
+国泰君安_20160307_数量化专题之六十九-基于均线择时的保本基金设计.pdf
+国泰君安_20160309_2016年春季策略研讨_商誉 & 事件驱动投资近期表现.pptx
+国泰君安_20160309_2016年春季策略研讨_基于均线择时的保本基金设计.pptx
+国泰君安_20160309_2016年春季策略研讨_如何将阿尔法因子转化为超额收益.pptx
+国泰君安_20160309_2016年春季策略研讨_择时新视角：捕捉趋势中的绝对收益.pptx
+国泰君安_20160309_2016年春季策略研讨_量化择时之由连续到离散.pptx
+国泰君安_20160318_上市公司行为研究系列一：基于股东集体增减持行为的市场拐点探究.pdf
+国泰君安_20160413_并购重组那些事儿3：产业并购基金，下一个事件金矿.pdf
+国泰君安_20160504_国泰君安数量化专题之七十：基于MACD的价格分段研究2.0.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——事件驱动策略的因子化特征.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——基于均线的价格分段体系.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——基于奇异谱分析的均线择时增强.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——基于微观市场结构的择时策略.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——市场走势量化分析.pdf
+国泰君安_20160505_国泰君安金融工程2016中期策略会——预期理论在事件投资中的应用.pdf
+国泰君安_20160517_国泰君安数量化专题之七十二：融资融券标的调整事件研究.pdf
+国泰君安_20160519_2016年中金融工程投资策略_基于微观市场结构的择时策略.pdf
+国泰君安_20160519_国泰君安金融工程投资策略：基于微观市场结构的择时策略.pdf
+国泰君安_20160524_国泰君安金融工程投资策略：基于投资者行为的择时策略.pdf
+国泰君安_20160530_国泰君安数量化专题之七十三：事件驱动策略的因子化特征.pdf
+国泰君安_20160531_国泰君安数量化专题之七十四：价格走势观察之基于均线的分段方法.pdf
+国泰君安_20160602_金融工程2016中期沙龙_MACD背离情况研究初探.pdf
+国泰君安_20160602_金融工程2016中期沙龙_事件驱动策略的因子化特征.pdf
+国泰君安_20160602_金融工程2016中期沙龙_价格走势观察之基于均线的价格分段.pdf
+国泰君安_20160602_金融工程2016中期沙龙_基于大数据挖掘的主题投资策略.pdf
+国泰君安_20160602_金融工程2016中期沙龙_基于奇异谱分析的均线择时增强.pdf
+国泰君安_20160602_金融工程2016中期沙龙_技术分析交流简略版.pdf
+国泰君安_20160602_金融工程2016中期沙龙_预期理论在事件投资中的应用.pdf
+国泰君安_20160623_国泰君安数量化专题之七十五：基于奇异谱分析的均线择时研究.pdf
+国泰君安_20160705_国泰君安数量化专题：基于文本挖掘的主题投资策略.pdf
+国泰君安_20160705_国泰君安数量化专题之七十六：基于文本挖掘的主题投资策略9.pdf
+国泰君安_20160730_主题的形成及其生命周期研究.pdf
+国泰君安_20160730_基于MACD的价格分段研究3.0.pdf
+国泰君安_20160730_基于奇异谱择时的FOF动量策略.pdf
+国泰君安_20160730_基于机器学习的牛股精选.pdf
+国泰君安_20160730_拐点预测之级别错位研究.pdf
+国泰君安_20160730_超额收益与风险管理.pdf
+国泰君安_20160730_量化选基金——打开基金隐形交易的”黑匣子“.pdf
+国泰君安_20160801_技术分析交流简略版.pdf
+国泰君安_20160801_金融工程研究体系与方法探讨.pdf
+国泰君安_20160803_国泰君安数量化专题之七十八：拐点预测之级别错位研究.pdf
+国泰君安_20160909_国泰君安数量化专题之七十九：基于机器学习的牛股精选.pdf
+国泰君安_20160912_国泰君安数量化专题之八十：基于MACD的价格分段研究3.0-983786.pdf
+国泰君安_20160923_国泰君安数量化专题之八十一：基于主题影响力因子的投资策略.pdf
+国泰君安_20160927_国泰君安数量化专题之八十二：基于奇异谱择时的FOF动量策略.pdf
+国泰君安_20160929_国泰君安数量化专题之八十三：基于MACD价格分段的阻力与支撑研究.pdf
+国泰君安_20161118_国泰君安投资和交易：价格，交易量和波动率.pdf
+国泰君安_20161223_国泰君安数量化专题之八十四：短期股价走势的预测信息（1），神秘的尾盘30分钟.pdf
+国泰君安_20170106_国泰君安数量化专题之八十五：基金收益率分解及其在FOF选基中的应用.pdf
+国泰君安_20170111_国泰君安数量化专题之八十六：个股盘中异动，短期股价走势的预测信息.pdf
+国泰君安_20170206_中小盘IPO专题_打新基金偏好银行，追求底仓风险可控.pdf
+国泰君安_20170210_国泰君安数量化专题之八十八：主题热点对市场择时的启示.pdf
+国泰君安_20170212_国泰君安次新股开板投资攻略.pdf
+国泰君安_20170314_国泰君安2017年春季金融工程投资策略：基金收益率分解及其在FOF选基中的应用.pdf
+国泰君安_20170316_国泰君安数量化专题之九十一：W型市场底部研究.pdf
+国泰君安_20170420_国泰君安基于W型底部的投资策略：市场择时.pdf
+国泰君安_20170516_国泰君安数量化专题之九十二：基于动态模分解的价格模式挖掘.pdf
+国泰君安_20170607_国泰君安金融工程2017年中期策略：基于短周期价量特征的多因子选股体系.pdf
+国泰君安_20170616_泰君安数量化专题之九十三：基于短周期价量特征的多因子选股体系.pdf
+国泰君安_20170704_国泰君安数量化专题之九十四：回撤控制下的最优化大类资产配置策略.pdf
+国泰君安_20170705_国泰君安数量化专题之九十五：基于信息冲击视角的盈余公告效应研究.pdf
+国泰君安_20170706_国泰君安数量化专题之九十六：板块及行业指数价格分段研究.pdf
+国泰君安_20170711_国泰君安数量化专题之九十七_：基于深度组合的选股策略.pdf
+国泰君安_20170718_国泰君安数量化专题之九十八：基于前景理论的选股策略.pdf
+国泰君安_20170718_国泰君安金融工程研究报告：大盘已经处于顶部区域.pdf
+国泰君安_20170721_国泰君安银行委外视角下的产品选择：公募篇.pdf
+国泰君安_20170820_国泰君安数量化专题之一百：行业轮动中“确定性”的规律及投资机会.pdf
+国泰君安_20170823_国泰君安数量化专题之一百零一：缠论中的笔在MACD价格分段中的应用.pdf
+国泰君安_20170831_国泰君安数量化专题之一百零二：基于弹簧模型的量价分析.pdf
+国泰君安_20170901_国泰君安数量化专题之一百零三：基于二维收益分解的选股策略.pdf
+国泰君安_20170920_国泰君安数量化专题之一百零五：盈余质量检验及其投资策略构建.pdf
+国海证券_20160630_因子预测能力初探.pdf
+国海证券_20160724_国海研究量化Alpha选股策略.pdf
+国海证券_20161024_策略研究_+主题策略周报：高送转主题进行时，量化精选高送转预期标的海.pdf
+国海证券_20161130_2017年策略报告_利率上行，通胀走高.pdf
+国海证券_20161205_多因子模型系列报告之三：新瓶装旧酒因子焕新颜.pdf
+国金证券-20160801_技术分析：天道人和下的自我选择.pdf
+国金证券-20170608-“特色小镇”专题：“特色小镇”模式几何，叠加“PPP、雄安新区”成风口.pdf
+国金证券_20150827_国金证券江恩理论简介一：角度线、时间周期、波动法则.pdf
+国金证券_20160101_量化选股：甄别异动，助力飞翔.pptx
+国金证券_20160105_国金证券数量化专题报告：平台突破形态研究.pdf
+国金证券_20160105_国金证券量化大数据研究之一：微信公众号研究.pdf
+国金证券_20160105_国金证券量化选股之：甄别“异动”，助力飞翔.pdf
+国金证券_20160426_5年200倍的打板策略？涨停板相关研究.pdf
+国金证券_20160505_国金证券江恩理论简介二：再谈周期.pdf
+国金证券_20160505_国金证券金融工程专题报告：股市底部特征研究.pdf
+国金证券_20160801_金融工程专题报告_次新股投资全攻略.pdf
+国金证券_20160901_金融工程专题报告_--穿越牛熊的技术分析形态选股初探.pdf
+国金证券_20161121_股票投资策略报告_“高送转”专题报告--“高送转”逻辑、特征以及核心组合.pdf
+国际最佳数学征解问题分析.pdf
+国际电气工程先进技术译丛-模糊控制器设计理论与应用-[克罗地亚]Z·科瓦希奇-机械工业出版社-2014.pdf
+图像检测与分割方法及其应用.pdf
+图灵原创-啊哈！算法-啊哈磊-人民邮电出版社-2014.pdf
+图灵数学·统计学丛书-应用随机过程：概率模型导论(第11版)-[英]S·M·罗斯-龚光鲁(译)-人民邮电出版社-2016.pdf
+图灵数学·统计学丛书01-金融数学：衍生产品定价引论-[英]M·巴克斯特＆A·伦尼-叶中行＆王桂兰＆林建忠(译)-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书02-偏微分方程数值解(第2版)-[英]K·W·莫顿-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书03-流形上的微积分：高等微积分中的一些经典定理的现代化处理(双语版)-[美]M·斯皮瓦克-齐民友＆路见可(译)-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书04-实用非参数统计(第3版)-[美]W·J·康诺华-崔恒建(译)-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书05-概率论及其应用(第1卷·第3版)-[美]威廉·费勒-胡迪鹤(译)-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书06-金融数学教程-[英]A·埃瑟里奇-张寄洲(译)-人民邮电出版社-2006.pdf
+图灵数学·统计学丛书06-金融数学教程【配套英文版】-[英]A·埃瑟里奇-剑桥大学出版-2002.pdf
+图灵数学·统计学丛书08-概率论基础教程(第7版)-[美]S·M·罗斯-郑忠国(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书09-概率统计（第4版）【英文版暂代】-[美]莫里斯·H·德格鲁特-Addison·Wesley出版-2012.pdf
+图灵数学·统计学丛书10-应用数值线性代数-[美]J·W·戴梅尔-王国荣(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书10-应用数值线性代数【英文版暂代】-[美]J·W·戴梅尔-SIAM出版-1997.pdf
+图灵数学·统计学丛书11-统计模拟(第4版)【英文版暂代】-[美]S·M·罗斯-Elsevier学术出版-2006.pdf
+图灵数学·统计学丛书12-线性代数及其应用(原书第3版)【华章数学译丛】-[美]戴维·C·莱-机械工业出版社-2005.pdf
+图灵数学·统计学丛书13-图论导引-[美]加里·查坦德-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书14-随机过程初级教程(第2版)-[美]塞缪尔·卡林-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书15-分形几何：数学基础及其应用(中文版.第2版)-[英]肯尼斯·福克纳-曾文曲(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书16-实分析习题集(第2版)-[美]C·D·阿里普兰蒂斯-朱来义等(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书17-应用随机过程：概率模型导论(第9版)-[英]S·M·罗斯-龚光鲁(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书17-应用随机过程：概率模型导论(第9版)【英文版暂代】-[英]S·M·罗斯-Elsevier学术出版-2007.pdf
+图灵数学·统计学丛书18-概率论及其应用(第2卷·第2版)-[美]威廉·费勒-郑元禄(译)-人民邮电出版社-2007.pdf
+图灵数学·统计学丛书19-微分方程，动力系统与混沌导论(第2版)-[美]莫里斯·W·赫希-甘少波(译)-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书19-微分方程，动力系统与混沌导论(第2版)【英文版暂代】-[美]莫里斯·W·赫希-Elsevier学术出版-2004.pdf
+图灵数学·统计学丛书20-微积分入门I：一元微积分-[日]小平邦彦-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书21-微积分入门II：多元微积分-[日]小平邦彦-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书22-运筹学导论：初级篇(第8版)-[美]H·A·塔哈-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书23-数论导引(第5版)-[英]G·H·哈代-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书24-近世代数概论(上册·第4版)【老版暂代】-[美]G·伯克霍夫.pdf
+图灵数学·统计学丛书24-近世代数概论(下册·第4版)【老版暂代】-[美]G·伯克霍夫.pdf
+图灵数学·统计学丛书24-近世代数概论(第5版)-[美]G·伯克霍夫-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书25-从微分观点看拓扑【老版暂代】-[美] 约翰·W·米尔诺-熊金城(译)-上海科学技术出版社-1983.pdf
+图灵数学·统计学丛书26-陶哲轩实分析-[澳]陶哲轩-王昆扬(译)-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书27-不等式（第2版）-[英]G·H·哈代-越民义(译)-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书28-运筹学导论：高级篇(第8版)-[美]H·A·塔哈-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书29-拉克斯《线性代数及其应用（第2版）》 习题解答.pdf
+图灵数学·统计学丛书29-线性代数及其应用（第2版）-[美]彼得·D·拉克斯-傅莺莺等(译)-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书29-线性代数及其应用（第2版）【英文版暂代】-[美]彼得·D·拉克斯-Wiley出版-2007.pdf
+图灵数学·统计学丛书30-损失模型：从数据到决策(第2版)-[美]斯图尔特·A·克卢格曼-吴岚(译)-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书30-损失模型：从数据到决策(第2版)【英文版暂代】-[美]斯图尔特·A·克卢格曼-Wiley出版-2004.pdf
+图灵数学·统计学丛书31-实验设计与分析(第6版)-[美]道格拉斯·C·蒙哥马利-人民邮电出版社-2008.pdf
+图灵数学·统计学丛书33-金融时间序列分析(中文版.第2版)-[美]蔡瑞胸（Ruey.S.Tsay）-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书34-线性代数应该这样学(第2版)-[美]S·阿克斯勒-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书34-线性代数应该这样学(第2版)课后答案.pdf
+图灵数学·统计学丛书35-纯数学教程（纪念版）-[英]G·H·哈代-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书36-复分析：可视化方法-[美]T·尼达姆-齐民友(译)-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书37-计算统计（第2版）【最新英文版】-[美]G·H·吉文斯-Wiley出版-2013.pdf
+图灵数学·统计学丛书37-计算统计-[美]Geof H.Givens-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书38-金融工程原理-[美]萨利赫·N·内夫茨-陈典发(译)-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书39-数值分析导论(第3版)-[美]肯达尔·艾金逊-王国荣等(译)-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书40-概率导论（第2版）-[美]迪米特尔·P·博赛克斯-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书41-数值分析-[美]蒂莫西·索尔-人民邮电出版社-2009.pdf
+图灵数学·统计学丛书42-概率论基础教程(原书第8版)-[美]S·M·罗斯-郑忠国＆詹从赞(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书43-基础拓扑学(中文版)-[美]M·A·阿姆斯特朗-孙以丰(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书44-随机过程-[日]伊藤·清-刘璋温(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书45-数学分析八讲（第3版）【老版暂代】-[苏]Α·Я·辛钦-王会林＆齐民友(译)-武汉大学出版社-1998.pdf
+图灵数学·统计学丛书46-哈代数论（第6版）-[英]G·H·哈代-张明尧＆张凡(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书47-泛函分析-[美]彼得·D·拉克斯-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书47-泛函分析【配套英文版】-[美]彼得·D·拉克斯-Wiley出版-2002.pdf
+图灵数学·统计学丛书48-实用微积分（第3版）-[美]D·休斯·哈利特 等-朱来义 等(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书48-实用微积分（第4版）【英文版暂代】-[美]D·休斯·哈利特-Wiley出版-2010.pdf
+图灵数学·统计学丛书49-普林斯顿微积分读本-[美]A·班纳-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书49-普林斯顿微积分读本【配套英文版】-[美]A·班纳-普林斯顿大学出版-2007.pdf
+图灵数学·统计学丛书50-线性代数及其应用导论-[美]汤姆·M·阿波斯托尔-沈灏(译)-人民邮电出版社-2010.pdf
+图灵数学·统计学丛书51-多元统计分析导论（第3版）【英文版暂代】-[美]T·W·安德森-Wiley出版-2010.pdf
+图灵数学·统计学丛书52-伊藤清概率论-[日]伊藤·清-闫理坦(译)-人民邮电出版社-2011.pdf
+图灵数学·统计学丛书52-矩阵计算（第3版）【英文版暂代】-[美]G·H·戈卢布-约翰霍普金斯大学出版-1996.pdf
+图灵数学·统计学丛书52-矩阵计算【老版暂代】-[美]G·H·戈卢布-袁亚湘(译)-科学出版社-2001.pdf
+图灵数学·统计学丛书53-应用随机过程：概率模型导论(第10版)-[英]S·M·罗斯-龚光鲁(译)-人民邮电出版社-2011.pdf
+图灵数学·统计学丛书53-应用随机过程：概率模型导论(第10版)【英文版暂代】-[英]S·M·罗斯-Elsevier学术出版-2010.pdf
+图灵数学·统计学丛书53-应用随机过程：概率模型导论(第10版)答案.pdf
+图灵数学·统计学丛书55-金融时间序列分析(第3版)-[美]蔡瑞胸(Ruey S.Tsay)-王远林等(译)-人民邮电出版社-2012.pdf
+图灵新知-60秒学物理学常识：《科学美国人》专栏文集-[美]Brian Clegg-王耀武(译)-人民邮电出版社-2012.pdf
+图灵新知-e的故事：一个常数的传奇-[以]E·马奥尔-周昌智＆毛兆荣(译)-人民邮电出版社-2010.pdf
+图灵新知-三角之美：边边角角的趣事-[以]E·马奥尔-曹雪林＆边晓娜(译)-人民邮电出版社-2010.pdf
+图灵新知-代数的历史：人类对未知量的不舍追踪-[美]J·德比希-冯速(译)-人民邮电出版社-2010.pdf
+图灵新知-令你苦思冥想的数学趣题-[美]P·温克勒-兰光强＆孙立群(译)-人民邮电出版社-2009.pdf
+图灵新知-你不可不知的50个数学知识-[英]T·克里利-王悦(译)-人民邮电出版社-2010.pdf
+图灵新知-你不可不知的50个物理知识-[美]J·贝克-马潇潇(译)-人民邮电出版社-2010.pdf
+图灵新知-信息简史-[美]詹姆斯·格雷克-高博(译)-人民邮电出版社-2013.pdf
+图灵新知-像科学家一样思考：运用科学方法解决日常问题-[加]Don K Mak-张云(译)-人民邮电出版社-2011.pdf
+图灵新知-全世界优等生都在做的经典物理趣题：像物理学家一样思考-[瑞典]G·格里瓦勒-董明(译)-人民邮电出版社-2009.pdf
+图灵新知-勾股定理：悠悠4000年的故事-[以]E·马奥尔-冯速(译)-人民邮电出版社-2010.pdf
+图灵新知-历史上最伟大的10个方程-[美]R·P·克里斯-马潇潇(译)-人民邮电出版社-2010.pdf
+图灵新知-历史上最美的10个实验-[美]G·约翰逊-王悦(译)-人民邮电出版社-2010.pdf
+图灵新知-引力是什么：支配宇宙万物的神秘之力-[日]大栗博司-逸宁(译)-人民邮电出版社-2015.pdf
+图灵新知-强力与弱力：破解宇宙深层的隐匿魔法-[日]大栗博司-逸宁(译)-人民邮电出版社-2016.pdf
+图灵新知-影响数学发展的20个大问题-[英]Tony Crilly-王耀武(译)-人民邮电出版社-2012.pdf
+图灵新知-影响物理发展的20个大问题-[美]M·布鲁克斯-王耀杨(译)-人民邮电出版社-2012.pdf
+图灵新知-微积分的历程：从牛顿到勒贝格-[美]W·邓纳姆-李伯民 等(译)-人民邮电出版社-2010.pdf
+图灵新知-怎样解题：数学竞赛攻关宝典（第2版）-[美]P·蔡茨-李胜宏(译)-人民邮电出版社-2010.pdf
+图灵新知-思考的乐趣：Matrix67数学笔记-顾森-人民邮电出版社-2012.pdf
+图灵新知-揭示宇宙奥秘的13个常数-[美]J·D·斯坦-程玺(译)-人民邮电出版社-2012.pdf
+图灵新知-数学万花筒：五光十色的数学趣题和逸事-[英]I·斯图尔特-张云(译)-人民邮电出版社-2010.pdf
+图灵新知-数学小神探-[美]L·哈休特＆K·H·霍夫曼(绘)-辛再甫(译)-人民邮电出版社-2009.pdf
+图灵新知-数学沉思录：古今数学思想的发展与演变-[美]M·李维-黄征(译)-人民邮电出版社-2010.pdf
+图灵新知-数学那些事儿：思想、发现、人物和历史-[美]W·邓纳姆-冯速(译)-人民邮电出版社-2011.pdf
+图灵新知-漫画生命史话-[美]M·舒尔茨-王乐珩＆周宁(译)-人民邮电出版社-2011.pdf
+图灵新知-睡眠的科学：生命入睡、苏醒的机制与奥秘-[日]樱井武-甘箐箐(译)-人民邮电出版社-2015.pdf
+图灵新知-罗素的故事-[希]A·多西亚蒂斯＆C·H·帕帕蒂米图-傅志宏(译)-人民邮电出版社-2011.pdf
+图灵新知-误区：思维中常犯的6个基本错误-[美]T·基达-张云(译)-人民邮电出版社-2011.pdf
+图灵新知-超弦理论：探究时间、空间及宇宙的本原-[日]大栗博司-逸宁(译)-人民邮电出版社-2015.pdf
+图灵新知-身边的电子学：36个有趣的电子小实验-[美]C·普拉特-伊华杰＆王莲(译)-人民邮电出版社-2011.pdf
+图灵新知-这也能想到？巧妙解答无厘头问题-[美]L·温斯坦-何儒＆黄倩(译)-人民邮电出版社-2010.pdf
+图灵新知-迷茫的旅行商：一个无处不在的计算机算法问题-[美]W·J·库克-隋春宁(译)-人民邮电出版社-2013.pdf
+图灵电子与电气工程丛书-16位单片机C语言编程：基于PIC24-[意]Lucio Di Jasio-李中华 等(译)-人民邮电出版社-2010.pdf
+图灵电子与电气工程丛书-32位单片机C语言编程：基于PIC32-[意]Lucio Di Jasio-张鼎 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-3G技术与UMTS网络（第2版）-[芬]H·卡拉宁 等-彭木根 等(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-8051微控制器（第4版）-[加]I.Scott MacKenzic 等-张瑞峰 等(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-FPGA设计实战-[英]Peter Wilson-杜生海 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-LED驱动电路设计-[美]Steve Winder-谢运祥＆王晓刚(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-PIC嵌入式系统开发-[英]Tim Wilmshurst-陈小文 等(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-PIC技术宝典-[美]Muhammad Ali Mazidi 等-李中华 等(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-PIC项目实战-[赛浦]Dogan Ibrahim-李中华 等(译)-人民邮电出版社-2010.pdf
+图灵电子与电气工程丛书-PLC教程（第3版）-[美]Frank D.Petruzella-侯世英 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-TD-SCDMA及其增强和演进技术-王亚峰 等-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-WCDMA设计与优化手册-[美]Christophe Chevallier 等-杨鸿文 等(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-传感器技术手册-[美]Jon S.Wilson-林龙信 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-半导体制造基础-[美]Gary S.May 等-代永平 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-天线理论与设计（第2版）-[美]Warren L.Stutzman 等-朱守正＆安同一(译)-人民邮电出版社-2006.pdf
+图灵电子与电气工程丛书-实用射频技术手册（第4版）-[英]Ian Hickman-张弘 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-实用开关电源设计-[美]Ron Lenk-王正仕＆张军明(译)-人民邮电出版社-2006.pdf
+图灵电子与电气工程丛书-实用模拟电路设计-[美]Marc T.Thompson-张乐峰 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-工程电磁兼容-[印度]V.Prasad Kodali-陈淑凤 等(译)-人民邮电出版社-2006.pdf
+图灵电子与电气工程丛书-应用电磁学基础（第4版）-[美]Fawwaz T.Ulaby-尹华杰(译)-人民邮电出版社-2006.pdf
+图灵电子与电气工程丛书-开关电容电路：从入门到精通-刘明亮-尹华杰(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-开关电源仿真：PSpice和SPICE3应用-[美]Steven M.Sandler-尹华杰(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-开关电源入门-[美]Raymond A.Mack,Jr.-谢运祥 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-开关电源手册（第2册）-[美]Keith Billings-张占松 等(译)-人民邮电出版社-2006.pdf
+图灵电子与电气工程丛书-开关电源故障诊断与排除-[美]Sanjaya Maniktala-王晓刚 等(译)-人民邮电出版社-2011.pdf
+图灵电子与电气工程丛书-数字电路和数字系统：实验与课程设计实训教程-[英]Keith Jack-杨征 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-无线通信基础-[美]David Tse 等-李锵 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-智能传感器设计-[美]Creed Huddleston-张鼎 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-模拟电路故障解决-[美]Robert A.Pease-毛陆虹 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-电子电气工程师必知必会-[美]Darren Ashby-尹华杰 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-电磁兼容导论(第2版)-[美]Clayton R.Paul-闻映红 等(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-电路基础（第3版）-[美]Charles K.Alexander 等-关欣 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-简明数字信号处理-姚剑清-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-精通开关电源设计-[美]Sanjaya Maniktala-王志强(译)-人民邮电出版社-2008.pdf
+图灵电子与电气工程丛书-自动控制原理与设计（第5版）-[美]Gene F.Franklin 等-李中华＆张雨浓(译)-人民邮电出版社-2007.pdf
+图灵电子与电气工程丛书-视频技术手册（第5版）-[英]Keith Jack-杨征 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-运算放大器应用技术手册-[美]Walt Jung 等-张乐峰 等(译)-人民邮电出版社-2009.pdf
+图灵电子与电气工程丛书-运算放大器权威指南（第2版）-[美]Bruce Carter-姚剑清(译)-人民邮电出版社-2010.pdf
+图灵电子与电气工程丛书-锁相环技术（第3版）-[美]Floyd M.Gardner-姚剑清(译)-人民邮电出版社-2007.pdf
+图灵程序计算机科学丛书-计算机科学概论（第10版）-[美]J.Glenn Brookshear--刘艺＆肖成海＆马小会(译)-人民邮电出版社-2009.pdf
+图灵程序设计丛书-图解密码技术-[日]结城浩-周自恒(译)-人民邮电出版社-2015.pdf
+图灵程序设计丛书_Elasticsearch服务器开发_第2版.pdf
+图灵程序设计丛书_HTTPS权威指南：在服务器和Web应用上部署SSL／TLS和PKI.pdf
+图灵程序设计丛书_七周七语言：理解多种编程范型.pdf
+图灵程序设计丛书_去中心化应用：区块链技术概述.pdf
+图灵程序设计丛书_挑战编程技能：57道程序员功力测试题.pdf
+图灵计算机科学丛书-具体数学：计算机科学基础(第2版)-[美]Ronald L.Graham 等-张明尧 等(译)-人民邮电出版社-2013.pdf
+图灵计算机科学丛书-数据挖掘导论(中文版·完整版)-[美]陈封能-范明等(译)-人民邮电出版社-2011.pdf
+图解新型蓄电池技术基础.pdf
+图解深度学习 by 山下隆义 (z-lib.org).pdf
+图解电子技术快速入门-门宏-人民邮电出版社-2002.pdf
+图论与网络流.pdf
+图论及其应用-孙惠泉-科学出版社-2004.pdf
+图说动画规律-[日]尾泽直志-陈丽佳 等(译)-中国青年出版社-2006.pdf
+地区电网无功补偿与电压无功控制.pdf
+基于4G系统的移动服务技术.pdf
+基于4G系统的移动服务技术.pdf
+基于Chord的P2P网络副本一致性维护策略.pdf
+基于Chord结构化P2P网络路由算法的改进.pdf
+基于DHT的P2P系统负载均衡算法.pdf
+基于dsPIC的无线通信系统设计.pdf
+基于Excel和VBA是高级金融建模-[英]玛丽·杰克逊＆迈克·斯汤顿-朱世武＆何剑波(译)-中国人民大学出版社-2006.pdf
+基于P2P技术的网格系统模型的设计与实现.pdf
+基于SAS系统的金融计算-朱世武-清华大学出版社-2004.pdf
+基于SDN的P2P传输调度优化研究.pdf
+基于信誉的增强P2P网络服务稳定性的激励机制 (1).pdf
+基于信誉的增强P2P网络服务稳定性的激励机制.pdf
+基于分层象限空间的P2P超级节点拓扑构造.pdf
+基于分形与自适应数据融合的P2P botnet检测方法.pdf
+基于多重属性的P2P网络节点重要性度量方法.pdf
+基于小世界现象的P2P网络搜索研究.pdf
+基于排队时延主动探测的多路传输拥塞控制.pdf
+基于数据冗余性的近似计算技术.pdf
+基于时间序列的P2P网络综合信任模型研究.pdf
+基于时间触发通信的机载网络可靠性.pdf
+基于最优节点选择机制的P2P网络信誉模型.pdf
+基于流量统计的P2P网络关键节点识别.pdf
+基于片上去耦电容的配电网络（原书第2版）.pdf
+基于片上去耦电容的配电网络（原书第2版）.pdf
+基于特征模型的智能自适应控制-吴宏鑫 等-中国科学技术出版社-2008.pdf
+基于用户需求的内容分发P2P网络资源定位搜索模型研究.pdf
+基于簇结构的P2P网络路由优化与信任模型研究.pdf
+基于统计学习P2P节点选择机制的研究与实现.pdf
+基于节点兴趣的非结构化P2P网络拓扑结构研究.pdf
+基于节点兴趣的非结构化P2P网络搜索机制的研究.pdf
+基于节点兴趣非结构化P2P网络搜索机制研究.pdf
+基于节点局部信息与需求的非结构P2P网络搜索机制研究.pdf
+基于蚁群优化的移动P2P网络路由选择算法.pdf
+基于链路稳定性预测的Ad_Hoc网络路由算法研究_沙毅.pdf
+声学成像技术及工程应用.pdf
+声学显微镜与超分辨率成像理论及应用.pdf
+复杂网络理论及其应用.pdf
+外汇市场技术分析：从市场波动及交易者心理中获利的经典技巧-[美]鲍里斯·斯克斯伯格-冯亮＆徐晓琳(译)-广东经济出版社-2009.pdf
+多元统计数据分析：理论、方法、实例-任若恩＆王惠文-国防工业出版社-1997.pdf
+多处理器编程的艺术-.pdf
+多处理器编程的艺术.pdf
+多智能体机器学习：强化学习方法.pdf
+多资产投资：现代投资组合管理实践-[英]Y·拉斯汀-孙静 等(译)-电子工业出版社-2015.pdf
+多跳无线网络干扰节点目标定位方法仿真_张勇.pdf
+大中型储能电池的研究进展.pdf
+大型园区网络建设与管理.pdf
+大型燃气-蒸汽联合循环发电设备与运行：机务分册.pdf
+大型燃气-蒸汽联合循环发电设备与运行：电气分册.pdf
+大型网站系统与JAVA中间件实践（高清版）.pdf
+大型网站系统与JAVA中间件实践.pdf
+大学数学科学丛书22-随机微分方程-胡适耕 等-科学出版社-2008.pdf
+大投机家的证券心理学-[匈]安德烈·科斯托拉尼-林琼娟(译)-重庆出版社-2007.pdf
+大数乘积.pdf
+大数据：互联网大规模数据挖掘与分布式处理.pdf
+大数据与机器学习：实践方法与行业案例.html.pdf
+大数据存储：MongoDB实战指南（异步图书） by 郭远威 [郭远威] (z-lib.org).pdf
+大数据技术丛书-Python数据分析与挖掘实战-张良均 等-机械工业出版社-2015.pdf
+大数据挖掘：系统方法与实例分析.pdf
+大数据时代：生活、工作与思维的大变革-[英]维克多·迈尔·舍恩伯格 等-盛样燕(译)-浙江人民出版社-2012.pdf
+大数据架构和算法实现之路：电商系统的技术实战_html.pdf
+大数据架构详解：从数据获取到深度学习.pdf
+大数据治理 [（美）桑尼尔·索雷斯 著] 2014年版.pdf
+大数据算法.pdf
+大数据金融丛书-量化投资：以MATLAB为工具(第2版)-李洋＆郑志勇-电子工业出版社-2016.pdf
+大癫狂：非同寻常的大众幻想与群众性癫狂-[英]查尔斯·麦基-程浩(译)-电子工业出版社-2013.pdf
+大规模Linux集群架构最佳实践：如何管理上千台服务器_html.pdf
+大规模分布式存储系统：原理解析与架构实战.pdf
+大规模锂离子电池管理系统.pdf
+大道至简：标准模板库(C++ STL)精解-闫常友-机械工业出版社-2015.pdf
+天风证券-20170621-因子的事件化研究.pdf
+天风证券-20170621-量化择时框架、仓位管理与市场展望：趋势、估值、背离、风险偏好.pdf
+天风证券_20161216_定期报告_全市场多因子模型最新组合.pdf
+天风证券_20170213_专题报告_量化CTA策略概述.pdf
+天风证券_20170306_天风证券定增系列之一：定增节点收益全解析.pdf
+天风证券_20170306_天风证券潜伏系列之二：潜伏ST摘帽.pdf
+天风证券_20170307_天风证券市场情绪一览.pdf
+天风证券_20170309_天风证券商品期货CTA专题报告（二）：日间趋势策略初探.pdf
+天风证券_20170309_天风证券定增系列之二：基于自适应破发回复的定增选股策略.pdf
+天风证券_20170321_天风证券商品期货CTA专题报告（三）：策略的趋势过滤.pdf
+天风证券_20170416_专题报告-预知业绩能有多少超额收益？.pdf
+天风证券_20170525_天风证券主力合约换月移仓事件策略：国债期货跨期价差交易.pdf
+天风证券_20170608_天风证券海外文献推荐.pdf
+天风证券_20170612_天风证券量化选股模型：戴维斯双击！.pdf
+天风证券_20170619_天风证券国债期货组合趋势策略：以损定量，顺势加仓.pdf
+天风证券_20170621_天风证券因子的事件化研究.pdf
+天风证券_20170622_天风证券研究报告：量化择时框架、仓位管理与市场展望，趋势、估值、背离、风险偏好.pdf
+天风证券_20170706_天风证券FOF专题研究（一）：银华中小盘精选偏股混合型基金.pdf
+天风证券_20170718_天风证券FOF专题研究（二）：国泰估值优势偏股混合型基金.pdf
+天风证券_20170822_天风证券海外文献推荐.pdf
+天风证券_20170903_天风证券金工专题报告：国债期货套期保值实证.pdf
+天风证券_20170906_天风证券金工专题报告：海外文献推荐第15期.pdf
+天风证券_20170908_天风证券金工专题报告：剩余价值模型下的估值因子在A股中的实证.pdf
+天风证券_20170914_天风证券金融工程：利用组合优化构建投资组合.pdf
+天风证券_20170915_天风证券金融工程：业绩为王策略跟踪.pdf
+天风证券_20170918_天风证券海外文献推荐.pdf
+天风证券_20170918_天风证券金工专题报告：基于半衰主成分风险平价模型的全球资产配置策略研究.pdf
+天风证券_20170918_天风证券金工专题报告：基于风格因子视角的FOF投资策略研究.pdf
+天风证券_20170921_天风证券金工专题报告：基于动态风险控制的组合优化模型.pdf
+天风证券_20171010_天风证券海外文献推荐第17期.pdf
+天风证券_20171011_天风证券金工点评报告：基于Probit模型的2017年度高送转预测.pdf
+天风证券_20171024_天风证券信用利差的选择性对冲：国债期货套期保值实证.pdf
+天风证券_20171025_天风证券海外文献推荐.pdf
+天风证券_20171027_天风证券金工定期报告：业绩为王策略跟踪.pdf
+天风证券_20171030_天风证券金工专题报告：因子正交全攻略，理论、框架与实践.pdf
+天风证券_20171031_天风证券海外文献推荐.pdf
+天风证券_20171103_天风证券2017年12月沪深重点指数样本股调整预测.pdf
+天风证券_20171107_天风证券金工点评报告：红利投资有效性研究.pdf
+天风证券_20171109_天风证券海外文献推荐.pdf
+天风证券_20171110_天风证券金工定期报告：业绩为王策略跟踪.pdf
+天风证券_20171114_天风证券海外文献推荐.pdf
+天风证券_20171116_天风证券金工专题报告：协方差矩阵的常用估计和评价方法.pdf
+天风证券_20171117_天风证券资产配置策略研究之二：引入衰减加权和趋势跟踪的主成分风险平价模型研究.pdf
+天风证券_20171120_天风证券海外文献推荐.pdf
+天风证券_20171128_天风证券潜伏系列之五：胜率超40％的重组预测模型.pdf
+天风证券_20171129_天风证券海外文献推荐第23期.pdf
+天风证券_20171205_天风证券海外文献推荐.pdf
+天风证券_20171211_天风证券金工专题报告：对比效应对超预期事件的增强策略.pdf
+天风证券_20171214_天风证券海外文献推荐.pdf
+太瓦级太阳能光伏：绊脚石和机会.pdf
+太阳电池物理基础.pdf
+太阳能光伏发电系统.pdf
+太阳能光伏并网发电及其逆变控制（第2版）.pdf
+太阳能制氢的能量转换、储存及利用系统——氢经济时代的科学和技术.pdf
+太阳能制造：光伏组件的环境设计概念.pdf
+太阳能技术知识读本.pdf
+太阳能热利用.pdf
+太阳能热发电站.pdf
+太阳能照明.pdf
+太阳能物理.pdf
+失灵：为什么看来可靠的模型最终都会失效-[美]伊曼纽尔·德曼-陶亮(译)-中信出版社-2013.pdf
+奇异期权(原书第2版)-[美]张光平-马晓娟 等(译)-机械工业出版社-2014.pdf
+奥利弗·萨克斯_错把妻子当帽子美奥利弗·萨克斯_黄文涛译_中信出版社2010.pdf
+好奇者的经济学-[美]罗伯特·索洛-戴建生-叶心可(译)-漓江出版社-2015.pdf
+如何做一个程序员.pdf
+如何成为电子工程师从书系列(第01篇)-常用资料.pdf
+如何成为电子工程师从书系列(第02篇)-电磁学与电路基础.pdf
+如何成为电子工程师从书系列(第03篇)-电子材料.pdf
+如何成为电子工程师从书系列(第04篇)-电子元器件.pdf
+如何成为电子工程师从书系列(第05篇)-模拟电路.pdf
+如何成为电子工程师从书系列(第06篇)-数字电路.pdf
+如何成为电子工程师从书系列(第07篇)-微波技术,天线与电波传播.pdf
+如何成为电子工程师从书系列(第08篇)-广播,电视与声像技术.pdf
+如何成为电子工程师从书系列(第09篇)-通信,雷达,导航与电子对抗.pdf
+如何成为电子工程师从书系列(第10篇)-电力电子技术.pdf
+如何成为电子工程师从书系列(第11篇)-电子测量与电子仪器.pdf
+如何成为电子工程师从书系列(第12篇)-机械量的电子测量.pdf
+如何成为电子工程师从书系列(第13篇)-电子计算机.pdf
+如何成为电子工程师从书系列(第14篇)-自动控制与控制仪表.pdf
+如何成为电子工程师从书系列(第15篇)-电子技术在机械制造方面的应用.pdf
+如何成为电子工程师从书系列(第16篇)-医疗电子技术.pdf
+如何成为电子工程师从书系列(第17篇)-电子产品的工艺,结构与可靠性.pdf
+如有问题请联系我(2018年4月4日).txt
+字体.txt
+存储器IC的应用技巧.pdf
+学习Go语言.pdf
+安信证券_20110126 基于有效因子的多因子选股模型，潘凡.pdf
+安信证券_20170329_安信证券事件驱动系列专题报告：把握高管增持事件投资机会.pdf
+安信证券_20170412_安信证券事件驱动系列专题报告：高送转预测（逻辑回归VS随机森林）.pdf
+安信证券_20170421_安信证券事件驱动系列专题报告：指数成分股调整预测.pdf
+安信证券_20170429_安信证券价值中枢系列报告一：从技术分析看黄金走势及市场价值.pdf
+安信证券_20170507_安信证券价值中枢系列报告四：中证白酒指数价值中枢分析及展望.pdf
+安信证券_20170508_安信证券恒生指数技术分析全视角及展望.pdf
+安信证券_20170509_安信证券金融工程定期报告：短期指标修复，中期仍看好估值白马.pdf
+安信证券_20170515_安信证券次新股与主题股：次新股短暂企稳，继续关注雄安概念.pdf
+安信证券_20170626_安信证券主题报告：次新股与主题股，关注同时兼具成长股和价值股属性个股.pdf
+安信证券_20170808_安信证券金融工程主题报告：次新股与主题股，关注创业板的超跌反弹机会.pdf
+安信证券_20170912_安信证券金融工程主题报告：当我谈风险平价时我在谈什么-984089.pdf
+安信证券_20170927_安信证券纳入事件驱动的多因子选股策略.pdf
+安信证券_20170927_安信证券金融工程主题报告：聪明的风险预算.pdf
+安信证券_20171017_安信证券基于时序动量的大类资产配置模型：风险再平衡.pdf
+安信证券_20171031_安信证券金工FOF和量化配臵研究之四：三因子ES再平衡策略.pdf
+安信证券_20171130_安信证券平安大华沪深300ETF换股策略.pdf
+安信证券_20171130_安信证券金工FOF和量化配置研究之五：配置型FOF全仿真攻略.pdf
+安全技术大系-Python绝技：运用Python成为顶级黑客-[美]TJO'Connor-崔孝晨 等(译)-电子工业出版社-2016.pdf
+完美软件开发：方法与逻辑.pdf
+宏观经济学（第18版）-[美]保罗·A·萨缪尔森-人民邮电出版社-2008.pdf
+宏观经济学(第8版)-[美]迈克尔·帕金-张军(译)-人民邮电出版社-2008.pdf
+实变函数与泛函分析概要+（第三版）+第一册作者郑维行+王声望编.pdf
+实感交互：人工智能下的人机交互技术.pdf
+实数的构造理论.pdf
+实时数字信号处理——基于TMS320c6x_DSK平台的Matlab到C.pdf
+实时数字信号处理——基于TMS320c6x_DSK平台的Matlab到C.pdf
+实现吉比特传输的60GHz无线通信技术.pdf
+实现吉比特传输的60GHz无线通信技术.pdf
+实用Linux_Shell编程.pdf
+实用多元统计分析(第6版)-[美]理查德·A·约翰逊＆迪安·W·威克恩-陆璇＆叶俊(译)-清华大学出版社-2008.pdf
+实用开锁技术大全.DOC
+实用机器学习-孙亮＆黄倩-人民邮电出版社-2017.pdf
+实用机器学习.pdf
+实用经济学-活学活用博弈论-[美]J·D·米勒-戴至中(译)-机械工业出版社-2011.pdf
+宽客：华尔街顶级数量金融大师的另类人生-[美]斯科特·帕特森-译科＆卢开济(译)-万卷出版公司-2011.pdf
+宽客人生：从物理学家到数量金融大师的传奇-[美]伊曼纽尔·德曼-韩冰洁 等(译)-机械工业出版社-2015.pdf
+宽客人生：华尔街的数量金融大师(中文版)-[美]伊曼纽尔·德曼-张戬(译)-中信出版社-2007.pdf
+密码学C、C++语言实现-原书第2版.pdf
+密码故事：人类智力的另类较量-[英]西蒙·辛格-朱小蓬＆林金钟(译)-百花文艺出版社-2012.pdf
+对等网络的抖动特性研究综述.pdf
+对话李克正教授：为什么学习代数几何.pdf
+小型网络组网技术.pdf
+小波十讲(中文版)-[美]Ingrid.Daubechies-国防工业出版社-2004.pdf
+嵌入式系统设计——嵌入式信息物理系统基础（原书第2版）.pdf
+嵌入节点运动轨迹预测算法的ETX路由判据.pdf
+川财证券_20151229_看图说话系列专题报告之技术分析框架：预测涨跌看价格，趋势确立看资金.pdf
+川财证券_20160626_他山之石·海外精译系列第74期：美国经济现状的供给侧分析.pdf
+工业4.0通信与识别技术的实战技巧.pdf
+工业关键系统的形式化方法：应用综述.pdf
+工业机器人及其应用.pdf
+工厂供配电技术.pdf
+工商管理精要-兼并与收购-[美]P·S·萨德沙纳姆-中信出版社-1998.pdf
+工商管理经典译丛-商务与经济统计技术（第11版）-[美]道格拉斯·A·林德 等-易丹辉 等(译)-中国人民大学出版社-2005.pdf
+工商管理经典译丛-商务统计学（第5版）-[美]戴维·M·莱文-黄耀峰(译)-中国人民大学出版社-2010.pdf
+工商管理经典译丛·会计与财务系列-会计学原理(中文版·原书第19版)-[美]约翰·J·怀尔德-中国人民大学出版社-2011.pdf
+工商管理经典译丛·财务与金融管理系列-货币市场与资本市场(中文版)-[美]彼得.S.罗斯-中国人民大学出版社.pdf
+工程中的控制论-[苏]А·Г·伊瓦赫年柯-欧阳景正＆涂其栵(译)-科学出版社-1966.pdf
+工程控制论(上下册)(修订版)-钱学森&宋健-科学出版社-1983.pdf
+工程控制论-钱学森-科学出版社-1958.pdf
+市场的伦理-[英]约翰·米德克罗夫特-王首贞＆王巧贞(译)-复旦大学出版社-2012.pdf
+希尔伯特空间.pdf
+常微分方程-数学名著译丛 常微分方程（阿诺尔德）.pdf
+常微分方程与动力系统.pdf
+常微分方程手册.pdf
+常微分方程概貌.pdf
+常用数据挖掘算法总结及Python实现.pdf
+常识推理AI.pdf
+平安保险2020年-10w.xlsx
+平新乔讲义系列-微观经济学十八讲-平新乔-北京大学出版社-2001.pdf
+平行历史.pdf
+并行程序设计（第二版）.pdf
+并行程序设计原理.pdf
+并行算法导论.pdf
+并行编程模式.pdf
+并行计算导论.pdf
+广义函数Ⅰ：广义函数及其运算-[苏]И·М·盖尔芳特＆Г·Е·希洛夫-科学出版社-1984.pdf
+广义函数Ⅱ：基本函数和广义函数的空间-[苏]И·М·盖尔芳特＆Г·Е·希洛夫-科学出版社-1985.pdf
+广义函数Ⅲ：微分方程理论的若干问题-[苏]И·М·盖尔芳特＆Г·Е·希洛夫-科学出版社-1983.pdf
+广义函数Ⅳ：调和分析的某些应用，装备希尔伯特空间-[苏]И·М·盖尔芳特＆Г·Е·希洛夫-科学出版社-1965.pdf
+广义相对论和微分几何(陈省身).pdf
+广发证券-20170610-广发动态估值数据库：一张图看懂A股估值水平.pdf
+广发证券-20170613-并购重组政策对A股的影响分析：创业板业绩将逐步回归内生增长.pdf
+广发证券-20170711-广发证券深度学习研究报告之三：深度学习新进展，Alpha因子再挖掘.pdf
+广发证券_20160112_广发证券主动量化投资专题研究之（一）：机器人投顾财富管理的新蓝海.pdf
+广发证券_20160112_广发证券另类交易策略系列之三十：探寻股指期货跨品种的最优组合.pdf
+广发证券_20160112_广发证券量化交易策略周报：2015收官CTA策略全年表现优异.pdf
+广发证券_20160127_多因子Alpha系列报告之（二十六）：牛股归因下的风格动量策略.pdf
+广发证券_20160131_主动量化投资专题研究之（二）：全球机器人投顾产品研究.pdf
+广发证券_20160229_广发证券技术分析那点事儿.pdf
+广发证券_20160310_谷歌AlphaGo大战李世石点评：AlphaGo攻克围棋，人工智能角力资本市场.pdf
+广发证券_20160317_广发证券主动量化投资专题研究之（三）：海内外机器人投顾监管研究.pdf
+广发证券_20160318_广发证券FICC业务系列报告之三：商品期货跨市场套利解决方案.pdf
+广发证券_20160324_广发证券互联网大数据挖掘之七：基于大数据挖掘的SMART_BETA策略.pdf
+广发证券_20160325_广发证券产品创新专题报告系列之十二：SMART_BETA深度解.pdf
+广发证券_20160331_广发证券产品创新专题报告系列之十四：基于主流风格追踪的Smart Beta策略31.pdf
+广发证券_20160401_广发证券产品创新专题报告系列之十三：低风险高收益的低波动率策略.pdf
+广发证券_20160413_国债期货量化交易策略研究：FICC业务系列报告之四.pdf
+广发证券_20160506_广发证券量化资产配置研究之二：趋势追踪下的TAA资产配置模型.pdf
+广发证券_20160519_广发证券互联网大数据挖掘系列专题之（八）：多维数据下的大数据择时策略研究.pdf
+广发证券_20160601_事件驱动与风格组合的智能替换策略.pptx
+广发证券_20160601_商品价差波动分析与趋势交易.pptx
+广发证券_20160601_快速趋势识别下的金融期货交易策略.pptx
+广发证券_20160601_择时研究与大类资产配置.pptx
+广发证券_20160601_精益求精：基于动量反转敏感度系数筛选的优化策略.pptx
+广发证券_20160601_震荡环境下的投资策略：“Alpha因子”+“ETF”期权双增强.pptx
+广发证券_20160606_FOF系列专题之一：海内外FOF简介，从耶鲁模式看FOF资产配置方案.pdf
+广发证券_20160612_商品价差波动分析与趋势交易.pdf
+广发证券_20160612_金融工程专题报告：事件驱动与风格组合的智能替换策略.pdf
+广发证券_20160613_择时研究与大类资产配置.pdf
+广发证券_20160613_精益求精基于动量反转敏感度系数筛选的优化策略.pdf
+广发证券_20160613_震荡环境下的投资策略：“Alpha因子”+“ETF”期权双增强.ppt
+广发证券_20160711_大宗商品牛市中的商品配置不投资.pdf
+广发证券_20160718_Fintech改变金融~海外市场经验.pdf
+广发证券_20160724_FOF系列专题之二：详解不同目标下的FOF资产配置方案.pdf
+广发证券_20160725_多因子Alpha系列报告之二十八：基于因子及事件的智能替换策略.pdf
+广发证券_20160807_Fintech改变金融~中国市场经验.pdf
+广发证券_20160822_CTA新领域：期权量化交易策略研究.pdf
+广发证券_20160822_专题报告：商品指数基金的海外发展与本土实践.pdf
+广发证券_20160822_专题报告：稳中求进风险平价在行业、Alpha因子配置中的应用.pdf
+广发证券_20160822_两类FOF配置思路：指数化相对收益 及 绝对收益.pdf
+广发证券_20160822_两类FOF配置思路：指数化相对收益及绝对收益.pdf
+广发证券_20160822_商品指数基金的海外发展与本土实践.pdf
+广发证券_20160822_基于大数据挖掘的概念轮动策略-互联网大数据挖掘系列专题之(九).pdf
+广发证券_20160822_成长王道，从三次牛市中挖掘牛股之线索.pdf
+广发证券_20160822_稳中求进：风险平价在行业、Alpha因子配置中的应用.pdf
+广发证券_20160926_另类交易策略系列之三十二：从成份股一致性来衡量市场的趋势.pdf
+广发证券_20160928_FOF系列专题之三：两类FOF配置思路，指数化相对收益及绝对收益.pdf
+广发证券_20160930_产品创新专题报告系列之十六：商品指数基金的海外发展与本土实践.pdf
+广发证券_20160930_另类交易策略系列之三十一：快速趋势识别下的金融期货交易策略.pdf
+广发证券_20161019_产品创新专题报告之十七：量化基金正当时.pdf
+广发证券_20161125_新股申购专题报告之十八.pdf
+广发证券_20161204_金融工程专题报告：择时选股与大类资产配置策略.pdf
+广发证券_20161207_2017年择时选股与大类资产配置策略（PPT）.pdf
+广发证券_20161229_2017年绝对收益策略展望：从量化对冲、CTA再到大类配置.pdf
+广发证券_20161229_从量化对冲、CTA再到大类配置-2017年绝对收益策略展望.pdf
+广发证券_20170210_业绩报告点评：如何在年报快报与一季报预告中挑选标的.pdf
+广发证券_20170210_量化择时研究及最新观点.pdf
+广发证券_20170212_专题报告：基于大数据挖掘的行业轮动策略研究.pdf
+广发证券_20170212_专题报告：基于持股关系的股票组合增强策略.pdf
+广发证券_20170212_基于国内宏观事件的ETF期权交易策略.pdf
+广发证券_20170213_专题报告：大类资产配置方法下的基金优选FOF策略.pdf
+广发证券_20170214_面向择时不交易：起跑，在趋势形成之前.pdf
+广发证券_20170302_广发证券个股配对思想在因子策略中的应用.pdf
+广发证券_20170315_广发证券互联网大数据挖掘系列专题之（十）：基于大数据挖掘的行业轮动策略.pdf
+广发证券_20170322_广发证券期权研究系列之二十七：基于国内宏观事件的ETF期权交易策略.pdf
+广发证券_20170323_广发证券量化资产配置研究之三：基于预期不确定性优化.pdf
+广发证券_20170326_广发证券2017网下打新专题报告之一：2017年一季度网下打新综述以及机构打新策略构建.pdf
+广发证券_20170327_广发证券择时、选股不大类资产配置.pdf
+广发证券_20170330_广发证券多因子Alpha系列报告之三十：个股配对思想在因子策略中的应用.pdf
+广发证券_20170405_广发证券加息概率的量化测算方法：利率上行不等于加息周期的开启.pdf
+广发证券_20170407_广发证券CTA产品及策略一季度回顾与展望：期货管理策略：看得见的绝对收益.pdf
+广发证券_20170414_广发证券FOF系列专题之四：基于基金精选的FOF组合策略.pdf
+广发证券_20170414_广发证券量化资产配置研究之四：大类资产配置体系，基于宏观因子.pdf
+广发证券_20170420_广发证券TD系列研究之三：广发TD幅度膨胀指标，在动量中寻找突破.pdf
+广发证券_20170423_广发证券行业突破下的股债配置策略：趋势的力量.pdf
+广发证券_20170505_广发证券产品创新专题报告之十八：期指新常态下的量化对冲产品展望.pdf
+广发证券_20170516_广发证券量化资产配置研究之五：基于行业趋势的股债配置策略.pdf
+广发证券_20170523_广发证券柯洁AlphaGo人机对战点评：人机巅峰对决，人工智能技术解析.pdf
+广发证券_20170603_广发证券大类资产配置：深挖价值因子潜能.pdf
+广发证券_20170603_广发证券行为金融因子研究之一：资本利得突出量CGO与风险偏好.pdf
+广发证券_20170604_广发证券TD技术分析方法：趋势中把握波段的广发TD线.pdf
+广发证券_20170604_广发证券大类资产配置：布局宏观因子带来的确定性机会.pdf
+广发证券_20170604_广发证券深度学习新进展：ALPHA因子的再挖掘.pdf
+广发证券_20170605_广发证券交易性择时策略研究之十：德州扑克AI算法在量化择时不交易中的应用.pdf
+广发证券_20170607_广发证券港股通淘金：ALPHA因子何处寻？.pdf
+广发证券_20170621_广发证券产品创新专题报告之十九：ETF新观察，供给与需求的发展.pdf
+广发证券_20170624_广发证券三季度量化观点：择时、风格与大类资产配置.pdf
+广发证券_20170630_广发证券互联网大数据挖掘系列专题之（十一）：基于舆情的大类资产配臵模型.pdf
+广发证券_20170703_广发证券交易性择时策略研究之十一：广发TD线，在趋势中把握波段.pdf
+广发证券_20170706_广发证券交易性择时策略研究之十二：虚拟遗憾最小化应用于量化择时与交易.pdf
+广发证券_20170711_广发证券深度学习研究报告之三：深度学习新进展，Alpha因子再挖掘.pdf
+广发证券_20170820_广发证券人工智能在量化投资领域的实践与展望.pdf
+广发证券_20170828_广发证券产品创新系列专题之二十：公募开放式基金发展及未来机会.pdf
+广发证券_20170828_广发证券大类资产配置测算平台介绍.pdf
+广发证券_20170829_广发证券金融工程专题报告：低风险基金优中选优.pdf
+广发证券_20170830_广发证券基于期权波动率曲面匹配的择时策略.pdf
+广发证券_20170831_广发证券大类资产配置：从配置风险出发构建组合.pdf
+广发证券_20170904_广发证券A股多维情绪指标集不从位管理.pdf
+广发证券_20170904_广发证券趋势策略的深度学习增强.pdf
+广发证券_20170904_广发证券金融工程专题报告：基于多期限的选股策略研究.pdf
+广发证券_20170907_广发证券量化资产配置研究之七：从配置风险出发构建组合.pdf
+广发证券_20170913_广发证券FOF系列专题之五：低风险基金优中选优.pdf
+广发证券_20170925_广发证券A股多维情绪指标集与仓位管理.pdf
+广发证券_20171011_广发证券2017年四季度量化风格展望：顺势而为，价值蓝筹仍有配置空间！.pdf
+广发证券_20171011_广发证券CTA产品及策略三季度回顾与展望.pdf
+广发证券_20171026_广发证券深度学习研究报告之四：趋势策略的深度学习增强.pdf
+广发证券_20171110_广发证券量化资产配置研究之八：多角度看商品资产配置价值.pdf
+广发证券_20171208_广发证券量化视角下的A股市场观点.pdf
+广发证券_20171219_广发证券2018年CTA产品与策略展望：继续推荐商品趋势策略.pdf
+广发证券_20171227_广发证券2018年量化风格展望：坚守“蓝筹”主线，关注中盘“性价比”.pdf
+应用数学丛书(第3批)-群论-冯克勤-1992.pdf
+应用数学丛书-集合论-程极泰-国防工业出版社-1985.pdf
+应用统计学丛书-金融工程中的蒙特卡罗方法-[美]P·格拉瑟曼-范韶华孙武军(译)-高等教育出版社-2013.pdf
+应用统计学丛书-金融市场中的统计模型和方法-黎子良＆邢海鹏-高等教育出版社-2009.pdf
+应用逻辑（原书第二版）.pdf
+废弃物能源化——发展和变迁经济中机遇与挑战.pdf
+康德的数学哲学.pdf
+弗雷格哲学论著选辑.pdf
+张量分析简明教程(张若京) .pdf
+强盗银行家：能源、金融与精英统治的世界-[美]约瑟夫·P·法雷尔-章程＆章莉(译)-译林出版社-2014.pdf
+当代世界学术名著·经济学系列-经济学是如何忘记历史的：社会科学中的历史特征问题(中文版)-[英]杰弗里·M·霍奇逊-中国人民大学出版社-2007.pdf
+当代世界学术名著·经济学系列-计算智能导论(中文版·第2版)-[南非]A·P·英吉布雷切特-谭营(译)-清华大学出版社-2010.pdf
+当代世界学术名著·经济学系列-赢者的诅咒：经济生活中的悖论与反常现象-[美]理查德·H·泰勒-陈宇峰 等(译)-中国人民大学出版社-2006.pdf
+当代心理科学名着译丛.-.超越IQ.-.人类智力的三元理论.[美].斯腾伯格.(2000).pdf
+当代心理科学名着译丛.-.超越模块性.-.认知科学的发展.[英].史密斯.(2001).pdf
+当代经济学教学参考书系-合作的微观经济学：一种博弈论的阐释(中文版)-[美]何维·莫林-上海人民出版社-2010.pdf
+当代经济学译库-集体行动的逻辑(中文版)-[美]曼瑟·奥尔森-上海人民出版社-2014.pdf
+当代西方经济学经典译丛-收入分配理论-[美]马丁·布朗芬布伦纳-方敏 等(译)-华夏出版社-2009.pdf
+当代金融名著译丛-投资管理学（第2版）-[美]弗兰克·J·法博齐-经济科学出版社-1999.pdf
+当代金融名著译丛-现代企业财务管理（第11版）-[美]詹姆斯·C·范霍恩＆小约翰·M·瓦霍维奇-郭浩(译)-经济科学出版社-2002.pdf
+当代金融名著译丛-资本市场：机构与工具-[美]弗兰克·J·法博齐-经济科学出版社-1998.pdf
+当代金融名著译丛-金融体系中的投资银行-[美]理查斯·B.吉斯特-郭浩(译)-经济科学出版社-1998.pdf
+当代金融名著译丛-金融工程学（修订版）-[英]洛伦兹·格利茨-经济科学出版社-2003.pdf
+当经济学遇上生物学和心理学-[美]迈克尔·舍默-闾佳(译)-中国人民大学出版社-2009.pdf
+形式语言与自动机导论（原书第三版）.pdf
+形式逻辑.pdf
+形式逻辑与数理逻辑比较研究.pdf
+微型计算机原理及应用.pdf
+微服务架构与实践(王磊著)完整版.pdf
+微机原理与接口技术.pdf
+微波毫米波安防遥感技术.pdf
+微观经济学（第18版）-[美]保罗·A·萨缪尔森-人民邮电出版社-2008.pdf
+微观金融学及其数学基础(第2版)-绍宇＆刁羽-清华大学出版社-2008.pdf
+德马克指标-[英]珀尔-李辉(译)-东方出版社-2011.pdf
+心理学精品教材译丛-心理统计：日常生活中的统计推理(原书第3版)-[美]杰弗里·O·贝内特-封文波(译)-机械工业出版社-2013.pdf
+心理学译丛·学术系列-动机与人格（第3版）-[美]亚伯拉罕·马斯洛-许金声 等(译)-中国人民大学出版社-2007.pdf
+快速傅里叶变换：算法与应用.pdf
+快速傅里叶变换：算法与应用.pdf
+怎样读芯片数据手册.pdf
+怎样选择小盘成长股：在各种类型市场中的投资获利之道-[美]伊恩·怀亚特-季传峰(译)-地震出版社-2015.pdf
+思想实验：人类对世界和自身最大胆的假想教程-苏芯-江苏人民出版社-2012.pdf
+想象：创造力的艺术与科学-[美]乔纳·莱勒-简学＆邓雷群(译)-浙江人民出版社-2014.pdf
+意外：如何预测全球政治中的突发事件与未知因素-[美]弗朗西斯·福山-辛平(译)-中国社会科学出版社-2014.pdf
+戈衍三.  一些经典数学问题的另类解算.  2007.pdf
+成功的电信服务设计——设计与实现的全面指南.pdf
+成功的电信服务设计——设计与实现的全面指南.pdf
+我的WafBypass之道（SQL注入篇）.pdf
+所有文件仅供无偿交流学习使用，请在下载后24小时内删除.txt
+打开量化投资的黑箱-[美]里什·纳兰-郭剑光(译)-机械工业出版社-2012.pdf
+打开高频交易的黑箱-[美]迈克尔·德宾-谈效俊 等(译)-机械工业出版社-2013【缺161页后的部分】.pdf
+托伊布纳数学手册（德文版·第1卷）【缺】-[德]埃伯哈德·蔡德勒-Teubner出版-1996.txt
+批处理在提高Windows管理效率中的神奇应用.(邹县芳,胡昆鹏).pdf
+把fonts文件夹复制到kindle根目录.txt
+把时间当作朋友-李笑来-电子工业出版社-2009.pdf
+投资学（原书第9版）-[美]兹维·博迪-汪昌云 等(译)-机械工业出版社-2012.pdf
+投资者大脑使用手册-[美]理查德·彼德森-王正林＆王权(译)-中国青年出版社-2009.pdf
+拆掉思维里的墙：原来我还可以这样活-古典-中国书店-2010.pdf
+拓扑学与几何学基础讲义Singer(带目录).pdf
+拓扑学初步.pdf
+招商证券-20170606-2017下半年政策类主题投资策略展望之一.pdf
+招商证券_20160107_招商证券定向增发系列研究之三：定增推迟与倒挂发行中的另类观察.pdf
+招商证券_20160118_事招商证券件驱动周报：年报提前和调研组合本周有所调整.pdf
+招商证券_20160311_基于同质性分析的行业特征研究：从波动分解角度剖析超额收益来源.pdf
+招商证券_20160314_招商证券基于同质性分析的行业特征研究：从波动分解角度剖析超额收益来源.pdf
+招商证券_20160627_金融工程_基于分时形态识别与匹配上证50指数期货上证50ETF期权日内价格关系研究.pdf
+招商证券_20160818_金融工程_基于分时形态识别与匹配上证50指数期货上证50ETF期权日内价格关系研究.pdf
+招商证券_20160821_金融工程_以分层识别模型跟踪市场风险结构变化基于同质性分析的市场及风格描述.pdf
+招商证券_20161017_金融工程_招金词酷-金融文本挖掘的分词工具.pdf
+招商证券_20161018_金融工程_基于同质性分析的市场及风格描述.pdf
+招商证券_20161101_金融工程_招金词酷金融文本挖掘的分词工具.pdf
+招商证券_20170106_定向增发系列研究之五基于定增破发抄底的策略研究.pdf
+招商证券_20170106_定向增发系列研究之四待发定增底价倒挂的事件驱动选股策略婷.pdf
+招商证券_20170226_招商证券大宗交易的市场特征研究.pdf
+招商证券_20170710_招商证券金融工程专题研究：年报业绩预警，短期效应为主.pdf
+招商证券_20171017_招商证券因子模型系列1：基于增量信息逐层解释的因子模型框架搭建.pdf
+招商证券_20171122_招商证券因子模型系列之一：基于增量信息逐层解释的因子模型框架搭建.pdf
+接地设计与工程实践.pdf
+控制论基础-[苏]А·Я·列尔涅尔-刘定一(译)-科学出版社-1980.pdf
+控制论基础.pdf
+控制论导论-W·R·唉什比-张理京(译)-科学出版社-1965.pdf
+控制论引论-卢志恒-北京师范大学出版社-1994.pdf
+控制论浅述-[苏]H·格林尼斯基-甘子玉(译)-科学出版社-1963.pdf
+控制论的哲学原理-[苏]尼·伊·茹科夫-徐世京(译)-上海译文出版社-1981.pdf
+推开金融之窗-李国平-经济日报出版社-2009.pdf
+推背.图.60像.手钞本.永乐四年.1406.姚广孝序.pdf
+推背.图.袁天罡.李淳风.附另一残缺版本推背.图.彩绘钞本.刘伯温.pdf
+操作系统原理  于世东.pdf
+操作系统实现之路.pdf
+改进型Chord_利用结点会话时间的差异性提高P2P系统的稳定性_胡鹏.pdf
+敏捷开发实践－我们这样实践Scrum－201003.pdf
+数字信号处理（第3版）-姚天任＆江太辉-华中科技大学出版社-2013.pdf
+数字信号处理及其应用.pdf
+数字信徒：来自赌场的商业智慧-[美]马恺文-宋宏宇(译)-南海出版公司-2011.pdf
+数字图像与视频处理.pdf
+数字系统自动设计实用教程-刘明业-高等教育出版社-2004.pdf
+数学：确定性的丧失-(美)M·克莱因.pdf
+数学与泛型编程：高效编程的奥秘.html.pdf
+数学名著译丛-数学物理方法I-[德]R__柯朗＆D__希尔伯特-科学出版社-2011.pdf
+数学基础引论.pdf
+数学天书的证明.pdf
+数学家妙谈股市(中文版)-[美]约翰.艾伦.保罗斯-李月平(译)-机械工业出版社-2005.pdf
+数学小丛书——智慧之花01_等周问题与夫妇入座问题－丁石孙.pdf
+数学的原理(中文版)-[英]B.罗素.pdf
+数据之巅：大数据革命,历史、现实与未来-涂子沛-中信出版社-2014.pdf
+数据包络分析-魏权龄-科学出版社-2004.pdf
+数据可视化之美：通过专家的眼光洞察数据-[美]J·斯蒂尔-祝洪凯(译)-机械工业出版社-2011.pdf
+数据库与事务处理.pdf
+数据库基础——英文版.pdf
+数据库系统实现(第二版).pdf
+数据库系统概念  原书第6版.pdf
+数据库索引设计与优化.pdf
+数据挖掘与分析  概念与算法.pdf
+数据架构与商业智能.pdf
+数据科学与工程技术丛书-Python机器学习-[美]塞巴斯蒂安·拉施卡-高明 等(译)-机械工业出版社-2017.pdf
+数据科学与工程技术丛书-数据科学导论：Python语言实现-[意]阿尔贝托·博斯凯蒂＆卢卡·马萨罗-于俊伟＆靳小波(译)-机械工业出版社-2016.pdf
+数据科学与工程技术丛书-预测分析建模：Python与R语言实现-[美]托马斯·W·米勒-程豪(译)-机械工业出版社-2016.pdf
+数据算法  Hadoop Spark大数据处理技巧.pdf
+数据路由与交换技术_穆维新.pdf
+数理哲学导论(中文版)-[英]罗素-晏成书(译)-商务印书馆-1982.pdf
+数理经济学的基本方法(第4版)-[美]蒋中一＆[加]凯尔文·温赖特-刘学＆顾佳峰(译)-北京大学出版社-2006.pdf
+数理逻辑(中文版.原书第2版)-A.G.汉密尔顿-华东师范大学出版社-1986.pdf
+数理逻辑-周晓聪.pdf
+数理逻辑及其应用-朱保平-北京理工大学出版社-1998.pdf
+数理逻辑基础(原书第3版)-[德]希尔伯特＆阿克曼.pdf
+数理逻辑基础：一阶逻辑与一阶理论.pdf
+数理逻辑导论-莫绍揆-上海科学技术出版社-1965.pdf
+数理逻辑引论-王宪均-北京大学出版社-1982.pdf
+数理逻辑教程-莫绍揆-华中工学院出版社-1982.pdf
+数论中的三角和法 维诺格拉朵夫.pdf
+数论在近似分析中的应用 华罗庚.pdf
+数论基础(维诺格拉陀夫).pdf
+数论导引-华罗庚-科学出版社-1957.pdf
+数量化股票投资：技术与策略-[美]弗兰克·J·法博兹-赵胜民 等(译)-厦门大学出版社-2015.pdf
+数量经济学系列丛书-协整理论与波动模型：金融时间序列分析及应用(第2版)-张世英＆樊智-清华大学出版社-2009.pdf
+整数与多项式 冯克勤 余红兵.pdf
+文件目录.txt
+斯坦福大学-深度学习基础教程.pdf
+新世纪万有文库(第5辑)·外国文学书系-科学与方法-[法]昂利·彭加莱-辽宁教育出版社-2001.pdf
+新型量子逻辑确定性逻辑的超越 [于海飞 著] 2013年版.pdf
+新电工手册(上下册)-李正吾-安徽科学技术出版社-2000.pdf
+新知文库-大背叛：科学中的欺诈-[美]霍勒斯·弗里兰·贾德森-张铁梅＆徐国强(译)-三联书店-2011.pdf
+新编Android应用开发从入门到精通.pdf
+新能源发电与控制技术_第3版.pdf
+新能源发电技术.pdf
+新能源并网发电系统的低电压穿越.pdf
+新能源手册（原书第2版）.pdf
+新金融系列-非理性繁荣(第2版)-[美]罗伯特·J·希勒-李心丹 等(译)-中国人民大学出版社-2007.pdf
+方正证券_20160106_方正证券50ETF期权杠杆专题研究报告：不在沉默中灭亡，但在喧嚣中爆发.pdf
+方正证券_20160201_方正证券50ETF期权交易分析：市场风起云涌，“四两千斤”迎风破浪.pdf
+方正证券_20160201_方正证券期权研究专题报告：期指贴水成常态，期权合成来套利.pdf
+方正证券_20160406_异动罗盘，寻一只特立独行的票：“特立独行”异动股票的事件研究.pdf
+方正证券_20160506_期权时间价值专题研究：一寸光阴一寸金，期权可买寸光阴.pdf
+方正证券_20160512_方正证券金融工程研究：夜空中最亮的星，十字星形态的选股研究.pdf
+方正证券_20160601_全市场破发策略指数介绍.pdf
+方正证券_20160601_同舟共赢：大股东解禁事件研究.pdf
+方正证券_20160601_夜空中最亮的星：十字星形态的选股研究.pdf
+方正证券_20160601_异动罗盘：寻一只特立独行的票.pdf
+方正证券_20160708_套利者 or 被套利者——停牌影响跟踪报告.pdf
+方正证券_20160907_持仓量的奥义：从交易行为到CTA策略.pdf
+方正证券_20160930_停牌套利操作指南.pdf
+方正证券_20161025_凤鸣朝阳：股价日内模式中蕴藏的选股因子.pdf
+方正证券_20161104_随波而动，踏浪前行-期权波动率交易专题研究报告.pdf
+方正证券_20170116_十字星选股策略：绩效回顾.pdf
+方正证券_20170211_量化金股：聪明钱的精选组合.pdf
+方正证券_20170214_情绪温度计：趋同度择时的新视角.pdf
+方正证券_20170219_“有温度的量化择时”系列研报（二）：情绪温度计，ETF情绪跟踪体系专题报告.pdf
+方正证券_20170301_方正证券绩效月报：跟踪聪明钱策略.pdf
+方正证券_20170303_方正证券十字星选股策略：绩效回顾.pdf
+方正证券_20170307_方正证券趋同度跟踪报告：趋同度指数骤降，持续看空中小创.pdf
+方正证券_20170309_方正证券指数期货基差跟踪报告：市场分化，各合约贴水加深.pdf
+方正证券_20170329_方正证券指数期货基差跟踪报告：市场总体向好，贴水持续收窄.pdf
+方正证券_20170404_方正证券商品期权专题报告：期货标的知多少？美式行权待何时？.pdf
+方正证券_20170412_方正证券CTA专题研究：蜘蛛网爱国债期货.pdf
+方正证券_20170416_方正证券“有温度的量化择时”系列研报：ETF情绪跟踪体系跟踪周报.pdf
+方正证券_20170501_方正证券CTA专题研究：蜘蛛网拥抱商品期货.pdf
+方正证券_20170514_方正证券50ETF期权交易分析：市场行情分化，后市仍待观察.pdf
+方正证券_20170514_方正证券择时雷达系列周报第12期：温和偏多，市场初步企稳，短期资金流动性回升.pdf
+方正证券_20170514_方正证券期权专题研究：SKEW指数，捕捉市场黑天鹅.pdf
+方正证券_20170515_方正证券“有温度的量化择时”系列研报：ETF情绪跟踪体系跟踪周报.pdf
+方正证券_20170701_方正证券APM因子绩效回顾（2017上）：凤鸣朝阳，余音不绝.pdf
+方正证券_20170727_方正证券资产管理扬帆起航：量化基金何时好.pdf
+方正证券_20170807_方正证券50ETF期权多因子模型（一）：期权三棱镜，四两如何拨千斤.pdf
+方正证券_20170813_方正证券“聆听高频世界的声音”系列研究（六）：本福特的启示，从分钟成交量看机构痕迹.pdf
+方正证券_20170815_方正证券蜘蛛网研究心得：最美CTA信号.pdf
+方正证券_20170822_方正证券期权三棱镜：曲线为何不重叠.pdf
+方正证券_20170825_方正证券资产管理扬帆起航系列报告（七）：主动基金，长于择时，善于选股.pdf
+方正证券_20170828_方正证券蜘蛛网研究心得：择时对冲的潜力.pdf
+方正证券_20170914_方正证券“聆听高频世界的声音”系列研究（七）：枯树生花，基于日内模式的动量因子革新.pdf
+方正证券_20170917_方正证券50ETF期权多因子模型（三）：期权三棱镜，如何能买寸光阴.pdf
+方正证券_20170918_方正证券CTA专题研究：基于平稳过程的CTA策略增强框架.pdf
+方正证券_20170920_方正证券本福特的应用：解读财务报表的可信度.pdf
+方正证券_20170921_方正证券揭开股息率的面纱：预期高股息选股.pdf
+方正证券_20170925_方正证券资产管理扬帆起航系列报告（八）：杠杆ETF的幸福指数.pdf
+方正证券_20171104_方正证券50ETF期权多因子模型（四）：期权三棱镜，因子择时策略轮动.pdf
+方正证券_20171121_方正证券“市场行为的宝藏”系列研究（一）：行业轮动的黄金律，日内动量与隔夜反转.pdf
+方正证券_20171124_方正证券“市场行为的宝藏”系列研究（二）：抢跑者的脚步声，基于价量互动的选股因子.pdf
+方正证券_21060708_跟踪聪明钱：从分钟行情数据到选股因子.pdf
+旅行商.pdf
+无人机技术概论.pdf
+无人机简史.pdf
+无穷维随机分析引论-黄志远＆严加安-科学出版社-1997.pdf
+无线Ad_Hoc_和传感器网络——协议、性能及控制.pdf
+无线传感器及执行器网络.pdf
+无线传感器网络——原理、设计和应用.pdf
+无线室内分布系统实战必读.pdf
+无线电能传输技术及其应用.pdf
+无线神经接口的超低功耗集成电路设计.pdf
+无线网络架构与演进趋势.pdf
+无线自组织网络和传感器网络安全.pdf
+日内交易策略：谷物期货交易实战指南-[英]戴维·班尼特-张意忠(译)-万卷出版公司-2010.pdf
+是什么阻碍了你的思考-肖祥银-中国华侨出版社-2013.pdf
+晋王羲之书般若波罗蜜多心经(大众抄经本).pdf
+普华经管-像经济学家一样思考-[美]罗格•A•阿诺德-人民邮电出版社-2009.pdf
+智能交通系统及其技术应用_第2版.pdf
+智能传感器：医疗、健康和环境的关键应用.pdf
+智能传感器：医疗、健康和环境的关键应用.pdf
+智能信息融合与目标识别方法.pdf
+智能变电站二次设备调试实用技术.pdf
+智能控制系统：模煳逻辑、专家系统、神经网络控制-王耀南-湖南大学出版社-1996.pdf
+智能摄像机.pdf
+智能电网——欧美的应用与实践.pdf
+智能电网——融合可再生、分布式及高效能源.pdf
+智能电网——设计与分析基础.pdf
+智能电网：基础设施、相关技术及解决方案.pdf
+智能电网与能源网融合技术.pdf
+智能电网中的传导电磁干扰.pdf
+智能电网中的风光储关键技术.pdf
+智能电网中蓄电池储能技术及其价值评估.pdf
+智能电网可再生能源系统设计.pdf
+智能电网名词解释.pdf
+智能电网技术与应用.pdf
+智能电网用户端系统解决方案汇编（2012版）.pdf
+智能系统与技术丛书-面向机器智能的TensorFlow实践-[美]山姆·亚伯拉罕 等-段菲＆陈澎(译)-机械工业出版社-2017.pdf
+暂缺书单.txt
+曲面拓扑学-格拉曼(带目录).pdf
+更新日志.txt
+更新日志.txt
+最优停止理论-[美]周元燊-上海科学技术出版社-1983.pdf
+最优控制：理论与应用-解学书-清华大学出版社-1986.pdf
+最优控制理论-L·D·伯克维茨-上海科学技术出版社-1985.pdf
+最优控制理论基础-[苏]P.B.格姆克列里兹-复旦大学出版社-1988.pdf
+最优控制的数学理论-王康宁-国防工业出版社-1995.pdf
+最优控制系统的微分方程理论.pdf
+最优控制计算方法.pdf
+最优系统控制-[美]塞奇.怀特-水利电力出版社-1985.pdf
+最优设计中的新计算法-邹海-新时代出版社-1982.pdf
+最优设计的数学方法-程极泰-国防工业出版社-1981.pdf
+最优阵列处理技术-[美]Harry L.Van Trees-汤俊 等(译)-清华大学出版社-2008.pdf
+最初にお読み下さい.txt
+最大化你的投资收益：成功基金投资的十大黄金准则-[比]L·科克-易旸(译)-复旦大学出版社-2013.pdf
+最简单的图形与最复杂的信息：如何有效建立你的视觉思维.pdf
+有限置换群.pdf
+有限群和紧群的表示论(丘维声).pdf
+有限群和紧群的表示论-丘维声-北京大学出版社-1997.pdf
+有限群导引（上册）.pdf
+有限群的线性表示（J.P.塞尔）.pdf
+有限群的线性表示.pdf
+期权定价的数学模型和方法(第1版)-姜礼尚-高等教育出版社-2003.pdf
+未命名 1.docx
+未来能源：对我们地球更佳的、可持续的和无污染的方案.pdf
+本资源密钥B2YZTLQJYCRWAM4LJLWBZWH7EEYU25J3T.txt
+机器学习(精致排版中文版)-[美]T·M·米歇尔-曾华军等(译).pdf
+机器学习-周志华-清华大学出版社-2016.pdf
+机器学习：实用案例解析(中文版)-[美]D·康威-陈开江等(译)-机械工业出版社-2013.pdf
+机器学习实践指南：案例应用解析-麦好-机械工业出版社-2014.pdf
+机器学习导论.pdf
+机器学习算法原理与编程实践_郑捷著_电子工业出版社.pdf
+机器智能：人工心理.pdf
+机器智能：人工情感.pdf
+机器智能：人脸工程.pdf
+机构投资的创新之路(最新版)-[美]大卫·F·史文森-张磊 等(译)-中国人民大学出版社-2010.pdf
+机械交易系统-[美]理查德·L·威斯曼-广东经济出版社-2007.pdf
+机电控制工程系列教材-控制工程基础(第3版)-董景新等-清华大学出版社-2008.pdf
+李代数及其表示理论导引-[美]J.E.汉弗莱斯-陈志杰(译)-上海科学技术出版社-1981.pdf
+构建基于IPv6和移动IPv6的物联网：向M2M通信的演进.pdf
+某些对称群和交错群的新刻画.pdf
+柔性交流输电系统（第2版）.pdf
+柔性电力系统中的电力电子技术——电力电子技术在电力系统中的应用.pdf
+椭圆函数论纲要(阿希泽尔)(带目录).pdf
+概率图模型：原理与技术-[美]D·科勒＆[以色列]N·弗里德曼-王飞跃＆韩素青(译)-清华大学出版社-2015.pdf
+概率图模型学习理论及其应用-赵悦-清华大学出版社-2012.pdf
+概率的哲学理论(中文版)-[英]唐纳德·吉利斯-中山大学出版社-2012.pdf
+模式分类 （原书第2版）.pdf
+模式识别（第2版）-边肇祺-清华大学出版社-1999.pdf
+模式识别与机器学习-[英]C.M.Bishop-马春鹏(译)-非正式译本-2014.pdf
+模式识别与机器学习.pdf
+模形式导引论 潘承洞 潘承彪.pdf
+模态逻辑与哲学.pdf
+模糊数学原理及应用 第四版 杨纶标 .pdf
+模论.pdf
+母函数-史济怀.pdf
+民生证券_20160114_事件驱动研究之一年报披露时间研究：积极布局年报“早班车”组合及“末班车”组合.pdf
+民生证券_20160115_民生证券事件驱动研究之一：年报披露时间研究，积极布局年报“早班车”组合及“末班车”组合.pdf
+民生证券_20170224_民生证券CTA策略巡礼：从趋势到套利.pdf
+民生证券_20171024_民生证券人工智能系列之一：机器学习量化投资实战指南.pdf
+民生证券_20171211_民生证券金融工程2018年年度策略：A股市场风格因子的运行特征及逻辑.pdf
+气体绝缘输电线路.pdf
+氢与氢能.pdf
+求解约束优化问题的改进帝企鹅优化算法.pdf
+汇编语言(第3版) .pdf
+汇编语言编程艺术（清晰版）.pdf
+汉译大众精品文库-资本的秘密-[秘鲁]赫尔南多·德·德索托-王晓东(译)-江苏人民出版社-2000.pdf
+汉译经济学文库-信用风险：定价、度量和管理-[美]达雷尔·达菲＆肯尼思·J·辛格尔顿-许勤 等(译)-上海财经大学出版社-2009.pdf
+汉译经济学文库-金融随机分析(I)：二叉树资产定价模型(修订版)-[美]史蒂文·E·施里夫-陈启宏＆陈迪华(译)-上海财经出版社-2015.pdf
+汉译经济学文库-金融随机分析(II)：连续时间模型(中文版)-[美]S.E.Shreve-上海财经出版社-2008.pdf
+汉译经济学文库-金融随机分析(II)：连续时间模型(修订版)-[美]史蒂文·E·施里夫-陈启宏＆陈迪华(译)-上海财经出版社-2015.pdf
+河北省风电装备产业技术路线图——河北省风电产业科技管理创新实践.pdf
+波动率交易：期权量化交易员指南(原书第2版)-[美]尤安·辛克莱-王琦(译)-机械工业出版社-2017.pdf
+洗脑的历史：祸害世界三千年的极端思想控制术解析-傅志彬-达观出版事业有限公司-2014.pdf
+海上风力发电技术.pdf
+海上风电成本建模：安装与拆除.pdf
+海上风电机组可靠性、可利用率及维护.pdf
+海通国际_20171129_海通国际FICC系列研究之七：基于海内外期货持仓报告的CTA交易策略（上）.pdf
+海通证券-20170606-策略研究：减持新规下的另类投资机会.pdf
+海通证券_20110621_2011半年会数量化研究观点荟萃-海通数量化研究之套利策略.pdf
+海通证券_20110621_2011半年会数量化研究观点荟萃-海通数量化研究之量化投资体系.pdf
+海通证券_20110921_数量化投资策略-沪深300指数Alpha策略.pdf
+海通证券_20111202_A股市场风险预测及波动率结构跟踪报告.pdf
+海通证券_20111202_相关性选股策略：在全市场和部分行业上的跟踪及2011年11月末样本更新.pdf
+海通证券_20111202_行业估值跟踪及风险分析——多数行业绝对估值低估，可关注商贸行业估值修复机会.pdf
+海通证券_20111214_事件驱动策略之三：指数样本股调整交易机会研究——关注历史成交量较小的调入调出样本股.pdf
+海通证券_20111221_年度策略报告-海通数量化研究-相对收益策略.pdf
+海通证券_20111221_年度策略报告-海通数量化研究之绝对收益策略.pdf
+海通证券_20111226_事件驱动策略之四-ETF事件套利研究.pdf
+海通证券_20120104_事件驱动策略跟踪报告：指数样本股调整策略——12月份组合费后绝对收益19%，日胜率100%.pdf
+海通证券_20120604_相关性选股策略：在全市场和部分行业上的跟踪及2012年5月末样本更新.pdf
+海通证券_20120615_中期策略报告-基本面量化预测和市场特征分析的有效结合.pdf
+海通证券_20120615_中期策略报告-量化选股之事件驱动策略.pdf
+海通证券_20120628_量化择时-度量市场“恐惧与贪婪”的量化择时指标.pdf
+海通证券_20120704_2012年6月指数样本股调整投资策略--21个交易日获得18.22%的绝对收益.pdf
+海通证券_20120726_量化选股-从极值角度进行选股因子有效性的确认.pdf
+海通证券_20120806_A股市场风险预测及波动率结构跟踪报告.pdf
+海通证券_20120828_行业内股票业绩弹性分析：钢铁行业上的实证.pdf
+海通证券_20120830_他山之石.pdf
+海通证券_20121022_因子极值效应研究之二-现金流量市值比因子的极值效应.pdf
+海通证券_20121205_策略报告-工欲善其事，必先利其器——选股因子深度解析.pdf
+海通证券_20121207_他山之石.pdf
+海通证券_20130104_量化择时-通过产业资本增减持数据构建的量化择时指标.pdf
+海通证券_20130121_他山之石系列五.pdf
+海通证券_20130226_他山之石.pdf
+海通证券_20130325_选股因子研究系列二-因子模型的尾部相关性研究.pdf
+海通证券_20130326_他山之石.pdf
+海通证券_20130425_他山之石.pdf
+海通证券_20130628_中期策略报告-衍生产品及量化组合管理策略介绍.pdf
+海通证券_20130702_他山之石.pdf
+海通证券_20130726_他山之石.pdf
+海通证券_20130828_他山之石.pdf
+海通证券_20131028_多因子选股模型的有效与失效.pdf
+海通证券_20131111_他山之石实证系列之一：从持股变动挖掘股票情绪信息.pdf
+海通证券_20131209_他山之石系列之十五.pdf
+海通证券_20131217_海通证券年度策略报告衍生产品及量化组合管理策略介绍.pdf
+海通证券_20131224_他山之石实证系列之二：基金持有人具有选基能力吗？.pdf
+海通证券_20131227_海通证券量化策略研究高估值,你是否师出有名.pdf
+海通证券_20140110_他山之石系列十六.pdf
+海通证券_20140129_他山之石本土实证之三：聚焦被“忽视”的超预期.pdf
+海通证券_20140214_他山之石系列十七.pdf
+海通证券_20140224_他山之石本土实证系列之四：ATR是一个更好的趋势确认指标吗.pdf
+海通证券_20140324_他山之石系列十八.pdf
+海通证券_20140402_海通证券事件驱动策略之十一：事件驱动组合止损机制设计.pdf
+海通证券_20140409_他山之石系列十九.pdf
+海通证券_20140417_海通证券量化资产配置：板块持仓测算在创业板风格轮动中的应用.pdf
+海通证券_20140508_海通证券AK行业轮动策略：结构性行情必杀技.pdf
+海通证券_20140515_海通证券指数投资研究系列（一）：为什么市值加权组合并非最优选择？.pdf
+海通证券_20140515_海通证券指数投资研究系列（三）：跟踪误差的一类线性模型.pdf
+海通证券_20140515_海通证券指数投资研究系列（二）：沪深300“领口”加权指数.pdf
+海通证券_20140515_海通证券指数投资研究系列（二）：沪深300领口加权指数.pdf
+海通证券_20140516_他山之石系列二十.pdf
+海通证券_20140520_海通证券事件驱动之十二：重要股东持股结构变化蕴含的信息分析.pdf
+海通证券_20140520_海通证券多因子选股系列：极值视角下的多因子选股策略.pdf
+海通证券_20140520_海通证券定增事件投资：甄别市场，把握买点.pdf
+海通证券_20140526_海通证券量化选股研究：融资融券对个股收益的影响研究，融资推动股价明显，融券作用有限.pdf
+海通证券_20140528_海通证券缠论简介及实践反思.pdf
+海通证券_20140624_他山之石系列二十一.pdf
+海通证券_20140624_海通证券半年策略报告：量化策略研究成果介绍.pdf
+海通证券_20140723_他山之石——Bridgewater经济运行准则.pdf
+海通证券_20141008_海通证券多因子选股系列：从串联到并联，单因子多策略组合.pdf
+海通证券_20141008_海通证券潜伏利好之一：潜伏利好之业绩预增.pdf
+海通证券_20141008他山之石本土实证系列之五：过去26周最高价及其出现时间的动量效应.pdf
+海通证券_20141009_股指期货日内突破策略实证分析.pdf
+海通证券_20141014_他山之石系列之二十四.pdf
+海通证券_20141103_海通证券成长策略选股跟踪结：海通成长组合今年五期跟踪全超基准沪深300，年内涨幅已达47.pdf
+海通证券_20141104_海通证券定量策略研究：2014年12月沪深重点指数样本股调整预测.pdf
+海通证券_20141104_海通证券行业ETF系列报告：美国行业ETF发展的启示.pdf
+海通证券_20141111_他山之石本土实证系列之六：券商分析师覆盖变化对个股的影响.pdf
+海通证券_20141114_他山之石系列之二十五.pdf
+海通证券_20141201_海通证券2015年金融工程与产品研究：期指日内反转交易与多策略组合分析.pdf
+海通证券_20141201_海通证券2015年金融工程与产品研究：波段划分、趋势策略分析与诊断.pdf
+海通证券_20141201_海通证券2015年金融工程与产品研究：高送转投资全攻略.pdf
+海通证券_20141202_海通证券2015年金融工程与产品研究：《再谈分级基金》.pdf
+海通证券_20141202_海通证券2015年金融工程与产品研究专题策略.pdf
+海通证券_20141210_海通证券选股因子研究系列：上市公司薪酬那些事.pdf
+海通证券_20141216_海通证券无效市场拾荒者系列之一：经济先行指标的滞后效应.pdf
+海通证券_20141217_海通证券量化策略评价系列之二：运气还是能力，选股有效性的评价.pdf
+海通证券_20141218_潜伏利好之高送转预案前投资机会.pdf
+海通证券_20141219_他山之石系列二十六.pdf
+海通证券_20150127_他山之石系列二十七.pdf
+海通证券_20150205_海通证券潜伏利好之四：时点数据修正后的定增收益全分析.pdf
+海通证券_20150209_海通证券事件驱动系列之十四：上市公司融资行为分析.pdf
+海通证券_20150213_他山之石系列二十八.pdf
+海通证券_20150227_海通证券选股因子系列研究（十）：基于机构持股信息的PORTABLE_ALPHA策略增强.pdf
+海通证券_20160126_他山之石系列之三十九.pdf
+海通证券_20160128_金融工程专题报告：投资者行为与反转效应.pdf
+海通证券_20160215_金融工程专题报告：机构投资者为何要进行资产配置.pdf
+海通证券_20160329_金融工程专题报告：他山之石系列之四十一.pdf
+海通证券_20160407_庖丁解因子~估值类因子有效性分析.pdf
+海通证券_20160426_事件驱动策略之十六：ST扭亏.pdf
+海通证券_20160526_海通证券他山之石系列之四十三.pdf
+海通证券_20160606_海通证券选股因子系列研究（十一）：LEVEL2行情选股因子初探.pdf
+海通证券_20160607_海通证券金融工程专题报告：基于PMI指标的行业轮动策略.pdf
+海通证券_20160616_事件驱动选股策略研究成果介绍.pdf
+海通证券_20160621_海通证券2016年中期金融工程策略：事件驱动机会推荐.pdf
+海通证券_20160622_海通证券金融工程专题报告：风险平价（RISKPARITY）策略在FOF中的应用1.pdf
+海通证券_20160623_海通证券金融工程专题报告：常见选股因子在行业间的有效性分析.pdf
+海通证券_20160628_海通证券选股因子系列研究（十二）：“量”与“价”的结合.pdf
+海通证券_20160701_海通证券金融工程快报点评：2016年中报高送转股票预测.pdf
+海通证券_20160708_海通证券金融工程专题报告：风险平价（RISKPARITY）策略在FOF中的应用3.pdf
+海通证券_20160711_基于股票短期动量效应的投资策略.pdf
+海通证券_20160719_海通证券选股因子系列研究十三：因子大讲坛.pdf
+海通证券_20160803_海通证券绝对收益策略系列研究之二：商品期货套利策略.pdf
+海通证券_20160805_海通证券金融工程专题报告：风险平价（RISKPARITY）策略在FOF中的应用5.pdf
+海通证券_20160809_海通证券选股因子系列研究（十四）：交易行为的波动和股票预期收益.pdf
+海通证券_20160815_海通证券风险平价（RISK_PARITY）策略在FOF中的应用4.pdf
+海通证券_20160817_海通证券金融工程专题报告：从行业中性角度看组合中的行业配置.pdf
+海通证券_20160830_海通证券选股因子系列研究（十六）：选股因子空头收益的转化.pdf
+海通证券_20160914_海通证券基于因子剥离的FOF择基逻辑系列二：ALPHA稳定性的两个维度.pdf
+海通证券_20160928_海通证券选股因子系列研究（十五）：“博彩型”股票的预期收益.pdf
+海通证券_20161101_海通证券2016年年报高送转股票预测（组合更新）.pdf
+海通证券_20161116_海通证券金融工程专题报告：次新股运行规律及投资策略.pdf
+海通证券_20161122_海通证券金融工程年度报告：年度量化策略业绩展示及投资机会.pdf
+海通证券_20161128_海通证券年度量化策略业绩展示及投资机会.pdf
+海通证券_20161231_海通证券“革故鼎新”之海通量化年终总结1：A股市场，年年岁岁花相似.pdf
+海通证券_20161231_海通证券“革故鼎新”之海通量化年终总结2：2016年量化选股策略回顾.pdf
+海通证券_20161231_海通证券“革故鼎新”之海通量化年终总结3：2016年期权市场总结与回顾.pdf
+海通证券_20161231_海通证券“革故鼎新”之海通量化年终总结4：2016年期货市场-风起云涌.pdf
+海通证券_20161231_海通证券“革故鼎新”之海通量化年终总结5：FoF管理中的量化方法.pdf
+海通证券_20161231_海通证券量化多因子组合2.0.pdf
+海通证券_20170103_海通证券“革故鼎新”之海通量化年终总结4：2016年期货市场，风起云涌.pdf
+海通证券_20170103_海通证券“革故鼎新”之海通量化年终总结5：FOF管理中的量化方法.pdf
+海通证券_20170119_海通证券选股因子系列研究（十七）：选股因子的正交.pdf
+海通证券_20170123_海通证券金融工程专题报告：市值因子的非线性特征.pdf
+海通证券_20170125_海通证券因子视角的资产配置系列一：高相关资产配置中的因子降维与组合优化.pdf
+海通证券_20170126_海通证券因子视角的资产配置系列二：高相关资产配置中的因子预算.pdf
+海通证券_20170214_海通证券金融工程专题报告：从最大化复合因子单期IC角度看因子权重.pdf
+海通证券_20170215_海通证券金融工程专题报告：多因子择时初探.pdf
+海通证券_20170217_海通证券金融工程快报点评：中金所股指期货交易规则调整点评.pdf
+海通证券_20170223_海通证券FICC系列研究之一：海内外CTA基金的发展与现状.pdf
+海通证券_20170227_海通证券金融工程专题报告：“双面”波动率，波动率因子的分解与截面收益.pdf
+海通证券_20170227_海通证券金融工程快报点评：2017年3月富时中国A50指数成分股调整预测.pdf
+海通证券_20170302_海通证券金融工程专题报告：价量新因子测试.pdf
+海通证券_20170309_海通证券FICC系列研究之二：基于动量和期限结构的商品期货策略.pdf
+海通证券_20170327_海通证券期权系列研究（七）：豆粕白糖商品期权指南.pdf
+海通证券_20170328_海通证券事件驱动策略之十七：业绩反转之绝对收益.pdf
+海通证券_20170328_海通证券大类资产配置及模型研究（一）：风险预算模型.pdf
+海通证券_20170328_海通证券选股因子系列研究（十八）：价格形态选股因子.pdf
+海通证券_20170331_海通证券金融工程：量化多因子模型在港股通中的应用.pdf
+海通证券_20170409_海通证券量化研究新思维（一）：对选股因子择时.pdf
+海通证券_20170409_海通证券金融工程专题报告：动量策略及收益率高阶矩在行业轮动中的应用.pdf
+海通证券_20170411_海通证券2016年A股年报高股息企业预测.pdf
+海通证券_20170414_海通证券金融工程专题报告：因子视角下的事件驱动策略收益.pdf
+海通证券_20170425_海通证券因子视角的资产配置系列三：风险资产与SMART_BETA.pdf
+海通证券_20170504_海通证券量化研究新思维（二）：P_VS_Q，金融工程两大分支的异同.pdf
+海通证券_20170505_海通证券FICC系列研究之三：多品种期货策略中的权重分配.pdf
+海通证券_20170505_海通证券选股因子系列研究（十九）：高频因子之股票收益分布特征.pdf
+海通证券_20170508_海通证券因子视角的资产配臵系列四：大类资产中的风格因子与SMARTBETA.pdf
+海通证券_20170511_海通证券金融工程专题报告：高股息企业投资攻略.pdf
+海通证券_20170515_海通证券量化基金的风格识别与FOF应用：基于因子剥离的FOF择基逻辑系列三.pdf
+海通证券_20170531_海通证券价值投资系列之一：便宜是否值得买？.pdf
+海通证券_20170602_海通证券大类资产配置及模型研究（二）：资产长期收益率的预测与战略资产配置.pdf
+海通证券_20170602_海通证券金融工程专题：分析师主要要素变动共振事件.pdf
+海通证券_20170606_海通证券大类资产配置及模型研究（三）：中国版全天候策略.pdf
+海通证券_20170607_海通证券2017年中期金融工程投资策略：《多因子组合的因子风险管理》.pdf
+海通证券_20170607_海通证券2017年金融工程中期策略：从“ALPHA_加_BETA”的角度分析量化产品业绩表现.pdf
+海通证券_20170612_海通证券选股因子系列研究（二十）：基于条件期望的因子择时框架.pdf
+海通证券_20170619_海通证券FICC系列研究之四：基于协整和O-U过程的黄金套利策略.pdf
+海通证券_20170619_海通证券金融工程：指数分红预测及对期指的影响.pdf
+海通证券_20170627_海通证券选股因子系列研究（二十一）：分析师一致预期相关因子.pdf
+海通证券_20170704_海通证券选股因子系列研究（二十二）：分析师覆盖度与股票预期收益.pdf
+海通证券_20170706_海通证券基于因子剥离的FOF择基逻辑系列四：债券基金的风格归因与因子剥离初探.pdf
+海通证券_20170710_海通证券金融工程专题报告：“关注盈利指标”是短期风格还是长期趋势.pdf
+海通证券_20170717_海通证券基于因子剥离的FOF择基逻辑系列五：债券基金的七因子剥离再探与FOF应用.pdf
+海通证券_20170718_海通证券价值投资系列之二：历史盈利对股票收益预测的影响.pdf
+海通证券_20170718_海通证券金融工程快报点评：市值风格切换剧烈，因子择时展露锋芒.pdf
+海通证券_20170725_海通证券量化研究新思维（三）：与BETA为敌.pdf
+海通证券_20170726_海通证券大类资产配臵及模型研究（四）：2017，全球对冲基金的新纪元？.pdf
+海通证券_20170726_海通证券选股因子系列研究（二十三）：历史财务信息对股票收益的预测能力.pdf
+海通证券_20170814_海通证券金融工程专题报告：引入风险管理后的多因子选股框架与指数增强策略.pdf
+海通证券_20170818_海通证券“量辨”第一期：中国经济下行风险犹存，利差曲线与中国经济增速的相关性分析.pdf
+海通证券_20170818_海通证券FICC系列研究之五：商品期货因子挖掘与组合构建再探究.pdf
+海通证券_20170828_海通证券选股因子系列研究（二十四）：基于拟合优度和波动率调整的因子溢价估计.pdf
+海通证券_20170831_海通证券大类资产配臵及模型研究（五）：BLACK-LITTERMAN模型的直观理解.pdf
+海通证券_20170904_海通证券学术研究中的财务异象与本土实证（一）：盈利能力.pdf
+海通证券_20170910_海通证券选股因子系列研究（二十五）：高频因子之已实现波动分解-532478.pdf
+海通证券_20171009_海通证券大类资产配置模型及研究（六）：积极的风险均衡（ACTIVE_RISK_PARITY）策略.pdf
+海通证券_20171009_海通证券选股因子系列研究（二十六）：因子加权、正交和择时的若干性质.pdf
+海通证券_20171016_海通证券量化研究新思维（四）：动量崩溃.pdf
+海通证券_20171018_海通证券选股因子系列研究（二十七）：分位数回归在多因子选股中的应用.pdf
+海通证券_20171019_海通证券金融工程专题报告：分析师荐股报告是否具有超额收益.pdf
+海通证券_20171027_海通证券选股因子系列研究（二十八）：一致预期质量分析-514634.pdf
+海通证券_20171102_海通证券2017年年报高送转股票预测.pdf
+海通证券_20171102_海通证券金融工程专题报告学术研究中的财务异象与本土实证（二）：盈利质量.pdf
+海通证券_20171103_海通证券FICC系列研究之六：多品种趋势策略中的仓位管理方法.pdf
+海通证券_20171114_海通证券基于因子剥离的FOF择基逻辑系列七：多元因子剥离体系的模型优化之收缩估计.pdf
+海通证券_20171114_海通证券基于因子剥离的FOF择基逻辑系列六：多元因子剥离体系的模型优化之特征选择.pdf
+海通证券_20171117_海通证券因子投资与SMART_BETA研究（一）：风险加权指数（RISK-BASED_INDEXATION）.pdf
+海通证券_20171123_海通证券量化研究新思维（五）：宏观对冲研究1，全球宏观对冲策略基础.pdf
+海通证券_20171123_海通证券量化研究新思维（六）：宏观对冲研究2，长达半个世纪的宏观动量.pdf
+海通证券_20171124_海通证券金融工程快报点评：2017年12月富时中国A50指数成分股调整预测.pdf
+海通证券_20171128_海通证券金融工程专题报告FICC系列研究之七：基于海内外期货持仓报告的CTA交易策略（上）.pdf
+海通证券_20171210_海通证券基于因子剥离的FOF择基逻辑系列八：CTA基金的风格归因与因子剥离初探.pdf
+海通证券_20171213_海通证券2018年金融工程投资策略：量化投资的转折与机遇.pdf
+海通证券_20171218_海通证券基于因子剥离的FOF择基逻辑系列九：因子剥离体系下的债券基金久期估测构想.pdf
+海通证券_20171220_海通证券浅谈量化选基的局限性.pdf
+海通证券_20171225_海通证券选股因子系列研究（三十）：因子择时模型改进与择时指标库构建.pdf
+海通证券_20171226_海通证券大类资产配置及模型研究（七）：FABER的战术资产配置策略在中国市场上的应用.pdf
+海通证券_20171226_海通证券行业预期数据的应用分析.pdf
+海通证券第五届数量化投资策略研讨会报告集.pdf
+海龟交易法则-[美]柯蒂斯·费思-中信出版社-2008.pdf
+涌现-从混沌到有序约翰·霍兰.pdf
+深入java servlet网络编程.pdf
+深入NoSQL.pdf
+深入React技术栈.pdf
+深入剖析Linux内核与设备驱动.pdf
+深入浅出 HTTPS从原理到实战.pdf
+深入浅出Hibernate - Unknown.pdf
+深入浅出MyBatis技术原理与实战.pdf
+深入浅出Windows 10通用应用开发.林政.2016.pdf
+深入浅出以太坊.pdf
+深入浅出数据分析-[美]M·米尔顿-李芳(译)-电子工业出版社-2010.pdf
+深入理解 TypeScript by 书栈(BookStack.CN) (z-lib.org).pdf
+深入理解JAVA内存模型.pdf
+深入理解Java虚拟机_JVM高级特性与最佳实践_第3版_周志明.pdf
+深入理解Kafka：核心设计与实践原理 朱忠华.pdf
+深入理解PHP内核.chm
+深入理解Spark：核心思想与源码分析.html.pdf
+深入理解Spring Cloud与微服务构建.pdf
+深入理解并行编程V1.0.pdf
+深入理解机器学习：从原理到算法_以Shai_Shalev_Shwartz_&_加Shai_Ben_David.pdf
+深度剖析HadoopHDFS.html.pdf
+深度学习：方法及应用-邓力＆俞栋＆谢磊-机械工业出版社-2016.pdf
+深度学习：方法及应用.pdf
+深度学习PyTorch.pdf
+深度学习【奠基性著作】-[美]伊恩·古德费洛＆[加]约书亚·本吉奥＆[加]亚伦·库维尔-20170904.pdf
+深度学习【奠基性著作】-[美]伊恩·古德费洛＆[加]约书亚·本吉奥＆[加]亚伦·库维尔-最新版在线阅读.txt
+深度学习与R语言.pdf
+深度学习导论及案例分析-李玉鑑＆张婷-机械工业出版社-2016.pdf
+深度学习的数学.pdf
+深度实践OpenStack：基于Python的OpenStack组件开发.pdf
+深度实践Spark机器学习.html.pdf
+深度探索嵌入式操作系统：从零开始设计、架构和开发_html.pdf
+混沌加密算法与HASH函数构造研究.pdf
+清华大学哲学教材系列-逻辑基础-王路-人民出版社-2004.pdf
+清华大学计算机系列教材-数理逻辑与集合论(第2版)-石纯一＆王家骎-清华大学出版社-2000.pdf
+清华大学计算机系列教材-数理逻辑与集合论：精要与题解(第2版)-王宏＆杨明-清华大学出版社-2001.pdf
+清华版·经管译林5-莫顿·米勒论金融衍生工具(中文版)-[美]默顿.米勒-清华大学出版社-1999.pdf
+渗透测试神器Cobalt Strike使用教程.pdf
+渤海证券_20160406_量化策略专题报告：多品种分级基金折溢价套利策略解析.pdf
+渤海证券_20160923_商品期货跨品种择时套利策略.pdf
+渤海证券_20160929_上市公司重要股东密集增减持的市场效应与择时研究——投资者结构与行为分析系列（一）.pdf
+渤海证券_20161223_障碍期权的动态,delta对冲策略研究-场外期权专题报告之二.pdf
+渤海证券_20161229_全球场外期权概况-场外期权专题报告.pdf
+渤海证券_20161229_初识量化趋势交易体系-金融工程CTA策略专题报告之一.pdf
+渤海证券_20161229_量化体系之农产品板块子策略-金融工程CTA策略专题报告之二.pdf
+渤海证券_20161229_量化体系之化工板块子策略-金融工程CTA策略专题报告之三.pdf
+渤海证券_20161230_量化体系之黑色板块子策略-金融工程CTA策略专题报告之四.pdf
+渤海证券_20170117_债券信用评级专题研究.pdf
+渤海证券_20170328_渤海证券金融工程CTA策略专题报告之五：量化体系之组合测试.pdf
+渤海证券_20170330_渤海证券场外期权专题报告系列之三：商品场外期权的对冲策略研究.pdf
+渤海证券_20170331_渤海证券场外期权专题报告：基于对冲波动率的动态选择改善delta对冲策略.pdf
+渤海证券_20170710_渤海证券金融工程CTA策略专题报告之六：日内交易策略与趋势体系完善.pdf
+渤海证券_20170929_渤海证券基于均线系统的商品期货趋势策略研究之二.pdf
+渤海证券_20170929_渤海证券期权套利专题报告之一：利用高频数据初探期权与50ETF套利机会.pdf
+渤海证券_20170929_渤海证券金融工程CTA策略专题报告之七：海龟交易系统测试.pdf
+渤海证券_20171011_渤海证券多因子模型研究之一：单因子测试.pdf
+渤海证券_20171030_渤海证券2017年年报高送转预期股票池：把握年报高送转预热行情.pdf
+渤海证券_20171228_渤海证券金融工程专题报告：基于均线系统的商品期货趋势策略之三.pdf
+渤海证券_20171229_渤海证券期权套利专题报告之二：期权与IH套利机会的挖掘.pdf
+渤海证券_20171229_渤海证券金融工程CTA策略专题报告之八：以道氏理论为基础的顺势、整理体系.pdf
+漫步华尔街(中文版·原书第9版)-[美]伯顿·G·麦基尔-张伟(译)-机械工业出版社-2010.pdf
+激光原理（第6版）-周炳琨 等-国防工业出版社-2009.pdf
+激励理论（第一卷）：委托代理模型_法_Jean_Jacques_Laffont,法_David_Martimort.pdf
+灰帽黑客 正义黑客的道德规范 渗透测试 攻击方法和漏洞分析技术 第4版.pdf
+灵魂机器的时代：当计算机超过人类智能时-[美]雷·库兹韦尔-上海译文出版社-2002.pdf
+炒股的智慧：在华尔街炒股为生的体验(第4版)-陈江挺-中国社会科学出版社-2016.pdf
+热能与动力工程测试技术_第3版.pdf
+熵.pdf
+燃料电池模拟、控制和应用.pdf
+燃气轮机运行值班员习题集.pdf
+爱因斯坦文集.pdf
+爱建证券_20160405_量化策略研究之一：基于高低点突破，高低点反转，头肩顶反转的研究.pdf
+爱建证券_20160707_量化策略研究之二：六根K线击败市场.pdf
+爱建证券_20161010_高频选股因子梳理以及新因子探索.pdf
+爱建证券_20161031_多因子系列之一：多因子模型梳理探索.pdf
+爱建证券_20161128_多因子系列之二，成长类因子初测.pdf
+物流公共信息平台建设与运营模式.pdf
+物理学中的群论基础(带书签).pdf
+物联网RFID多领域应用解决方案.pdf
+物联网与传感器技术.pdf
+物联网中服务信息质量优化管理仿真研究_夏钰红.pdf
+物联网关键技术及系统应用_第2版.pdf
+物联网实验教程.pdf
+物联网应用启示录——行业分析与案例实践.pdf
+物联网技术_第2版.pdf
+物联网技术应用开发.pdf
+物联网技术综合实训教程.pdf
+物联网的开发与应用实践.pdf
+物联网组成原理.pdf
+物联网通信安全及解决方案.pdf
+物联网通信技术(项目教学版) 冯暖.pdf
+状态变量分析导论.pdf
+状态空间分析导论(上下册)-[美]L.K.蒂莫西＆B.E.博纳-人民教育出版社-1981.pdf
+环境能源发电：太阳能、风能和海洋能.pdf
+环球科学精编本(2007-2008).pdf
+现代商务统计Excel版（第2版）-[美]D·R·安德森-张慧卉(译)-清华大学出版社-2007.pdf
+现代宏观经济学：起源、发展和现状-[英]布莱恩·斯诺登＆霍华德·R.文-佘江涛等(译)-江苏人民出版社-2009.pdf
+现代应用数学手册：分析与方程卷-清华大学出版社-2006.pdf
+现代应用数学手册：概率统计与随机过程卷-清华大学出版社-1999.pdf
+现代应用数学手册：现代应用分析卷-清华大学出版社-1998.pdf
+现代应用数学手册：离散数学卷-清华大学出版社-2002.pdf
+现代应用数学手册：计算与数值分析卷-清华大学出版社-2005.pdf
+现代应用数学手册：运筹学与最优化理论卷-清华大学出版社.pdf
+现代控制理论基础.pdf
+现代控制理论基础：例题与习题-尤昌德-电子科技大学出版社-1991.pdf
+现代数字信号处理-姚天任＆孙洪-华中理工大学出版社-1999.pdf
+现代数学基础丛书008-有限群构造(上册)-张远达-科学出版社-1982.pdf
+现代数学基础丛书058-有限群导引(下册)-徐明曜-科学出版社-1999.pdf
+现代数学基础丛书080-排队论基础-孙荣恒＆李建平-科学出版社-2002.pdf
+现代数学基础丛书103-椭圆曲线公钥密码导引-祝跃飞＆张亚娟-科学出版社-2006.pdf
+现代数学译丛01-椭圆曲线及其在密码学中的应用：导引-[德]A·恩格-吴铤＆董军武＆王明强(译)-科学出版社-2007.pdf
+现代文化丛书-科学的价值-[法]朱尔斯·亨利·彭加莱-光明日报出版社-1988.pdf
+现代晶体学1 晶体学基础 对称性和结构晶体学方法-中国科学技术大学出版社.pdf
+现代晶体学2 晶体的结构-中国科学技术大学出版社.pdf
+现代电力电子学中的瞬态分析.pdf
+现代电气控制及PLC应用技术（第3版）-王永华-北京航空航天大学出版社-2013.pdf
+现代贝叶斯统计学-吴喜之-中国统计出版社-2000.pdf
+现代通信应用实践.pdf
+现代逻辑科学导论(上册)-王雨田-中国人民大学出版社-1988.pdf
+现代逻辑科学导论(下册)-王雨田-中国人民大学出版社-1988.pdf
+现代金融风险管理：衍生金融工具的使用与风险管理技术的应用-邬瑜骏-南京大学出版社-2007.pdf
+现代高压电器技术（第2版）.pdf
+现场总线与工业以太网及其应用技术.pdf
+现场总线技术_第3版.pdf
+理性的边界：博弈论与各门行为科学的统一_美_Herbert_Gintis.pdf
+琢石成器：Windows环境下32位汇编语言程序设计（第3版）.pdf
+生成对抗网络入门指南_史丹青_2018-10-18.pdf
+生物医学传感技术.pdf
+用Python做科学计算-HYRY Studio-2010.pdf
+用Python进行自然语言处理-[美]S·伯德＆E·克莱恩＆E·洛佩尔-陈涛 等(译)-人民邮电出版社-2014.pdf
+用scikit-learn掌握机器学习（案例译文版）.pdf
+用于制造固体氧化物燃料电池的钙钛矿型氧化物.pdf
+用户网络行为画像》.pdf
+申万宏源-20170609-有中国特色的价值投资方法：基本面的趋势投资.pdf
+申万宏源-20171215_申万宏源量化策略：不同风格区分方法下的成长、价值选股研究.pdf
+申万宏源_20160115_事件驱动型选股策略之九：如何把握年报披露下的投资机会.pdf
+申万宏源_20160119_申万宏源金工一周回顾及展望：事件组合跑赢中证500指数1.84，期权活跃度继续上升.pdf
+申万宏源_20160201_股权激励计划事件驱动研究——事件驱动研究系列之二ppt.pdf
+申万宏源_20160217_申万宏源事件研究系列报告之二：股权激励计划事件驱动研究.pdf
+申万宏源_20160317_申万宏源事件驱动型选股策略之十一：实战告诉你，应该这样筛选壳资源！.pdf
+申万宏源_20160323_申万宏源事件研究系列报告之三：破发股票投资机会研究.pdf
+申万宏源_20160323_申万宏源全球资产配置的中国映射（PPT）.pdf
+申万宏源_20160323_申万宏源金融工程：巧用仓位调整进行回撤管理.pdf
+申万宏源_20160323_申万宏源金融工程：市场情绪指数及其运用，从市场情绪中挖掘投资信号.pdf
+申万宏源_20160325_申万宏源大师系列成长投资篇之一：福斯特.佛莱斯积极成长选股策略.pdf
+申万宏源_20160420_事件驱动型选股策略之十二：谁是下一个“高颜值”壳资源.pdf
+申万宏源_20160504_申万宏源事件研究系列报告之四：把握时点，掘金定增.pdf
+申万宏源_20160516_心平气和，寻找价值成长——金融工程成都论坛策略观点.pptx
+申万宏源_20160601_申万宏源A股进入MSCI指数的数据分析：短期影响有限、关注长期改变.pdf
+申万宏源_20160614_《Master》大师系列第二季2016Q2：寻找Alpha成长因子.pdf
+申万宏源_20160614_商品期货产品开发与策略研究.pptx
+申万宏源_20160614_夏季会议-大师系列-成长股选择.pptx
+申万宏源_20160614_夏季会议-寻找强势股-欧奈尔杯状K线择时.pptx
+申万宏源_20160614_期权市场回顾与策略展望.pptx
+申万宏源_20160614_申万宏源寻找强势股：欧奈尔基本面+杯状K线择时.pdf
+申万宏源_20160614_申万金工事件研究系列报告之五：证金、举牌高送转.pdf
+申万宏源_20160614_相对强弱、分析师预期与行业轮动.pdf
+申万宏源_20160614_相对强弱、分析师预期与行业轮动.pptx
+申万宏源_20160614_研究、投资牛股的方法与投资策略  （申万宜春交流）.ppt
+申万宏源_20160614_聚焦事件投资，网站叕做升级_王小川.pptx
+申万宏源_20160614_股灾后的学习与总结（青岛交流）.ppt
+申万宏源_20160614_证金、举牌&高送转——申万金工事件系列报告之五.pptx
+申万宏源_20160614_跳好下一曲变奏交谊舞--下半年类固收市场展望.ppt
+申万宏源_20160615_申万宏源大师系列_成长投资篇之二：罗伯特·巴卡雷纳成长型投资法.pdf
+申万宏源_20160615_申万宏源大师系列成长投资篇之三：考夫曼基金新上市股投资法.pdf
+申万宏源_20160621_申万宏源事件研究系列报告之六：高送转全解析.pdf
+申万宏源_20160831_拓宽投资领域，挖掘绝对收益--商品期货跨品种套利策略研究(1).ppt
+申万宏源_20160901_技术指标测试大全——微卡片1——介绍.pdf
+申万宏源_20160901_技术指标测试大全之七—Bollinger.pdf
+申万宏源_20160901_技术指标测试大全之三—ADX.pdf
+申万宏源_20160901_技术指标测试大全之三十— Money Flow Index.pdf
+申万宏源_20160901_技术指标测试大全之三十一— Triple Exponentially Smoothed Average.pdf
+申万宏源_20160901_技术指标测试大全之三十七— Ppv.pdf
+申万宏源_20160901_技术指标测试大全之三十三— True Strength Index.pdf
+申万宏源_20160901_技术指标测试大全之三十九— Chaikin oscillator.pdf
+申万宏源_20160901_技术指标测试大全之三十二— Relative Strength Index.pdf
+申万宏源_20160901_技术指标测试大全之三十五— Williams Overbought&Oversold Index.pdf
+申万宏源_20160901_技术指标测试大全之三十八— Pivot.pdf
+申万宏源_20160901_技术指标测试大全之三十六— MEJT.pdf
+申万宏源_20160901_技术指标测试大全之三十四— Force.pdf
+申万宏源_20160901_技术指标测试大全之九—Commodity Channel Index.pdf
+申万宏源_20160901_技术指标测试大全之二—AC.pdf
+申万宏源_20160901_技术指标测试大全之二十— Directional Movement Index.pdf
+申万宏源_20160901_技术指标测试大全之二十一— Ease of Movement.pdf
+申万宏源_20160901_技术指标测试大全之二十七— Psychological line.pdf
+申万宏源_20160901_技术指标测试大全之二十三— Keltner Channel.pdf
+申万宏源_20160901_技术指标测试大全之二十九— Price and Volume Trend.pdf
+申万宏源_20160901_技术指标测试大全之二十二— Island Reversal.pdf
+申万宏源_20160901_技术指标测试大全之二十五— Moving Average Envelopes.pdf
+申万宏源_20160901_技术指标测试大全之二十八— Dual Thrust.pdf
+申万宏源_20160901_技术指标测试大全之二十六— Mass.pdf
+申万宏源_20160901_技术指标测试大全之二十四— Key Reversal.pdf
+申万宏源_20160901_技术指标测试大全之五—Aroon.pdf
+申万宏源_20160901_技术指标测试大全之八—Accumulation Swing Index.pdf
+申万宏源_20160901_技术指标测试大全之六—Awesome Oscillator.pdf
+申万宏源_20160901_技术指标测试大全之十—Breakout of Bar.pdf
+申万宏源_20160901_技术指标测试大全之十一—Bias.pdf
+申万宏源_20160901_技术指标测试大全之十七— Moving Average Convergence and Divergence.pdf
+申万宏源_20160901_技术指标测试大全之十三—Chaikin Money Flow.pdf
+申万宏源_20160901_技术指标测试大全之十九— Demarker.pdf
+申万宏源_20160901_技术指标测试大全之十二—Consecutive Break.pdf
+申万宏源_20160901_技术指标测试大全之十五— Moving Average.pdf
+申万宏源_20160901_技术指标测试大全之十八— Momentum Index.pdf
+申万宏源_20160901_技术指标测试大全之十六— Leadlag.pdf
+申万宏源_20160901_技术指标测试大全之十四— Commodity Selection Index.pdf
+申万宏源_20160901_技术指标测试大全之四—Alligator.pdf
+申万宏源_20160901_技术指标测试大全之四十— Stop and Reverse.pdf
+申万宏源_20160907_申万宏源金工事件研究合集：这些年，那些事（下）.pdf
+申万宏源_20160907_申万宏源金工事件研究合集介绍：这些年，那些事.pdf
+申万宏源_20160908_申万宏源寻找不一样的ALPHA：遗传算法和遗传规划.pdf
+申万宏源_20160908_申万宏源模型比较和风险测算：量化视角下的大类资产配置.pdf
+申万宏源_20160909_申万宏源大师系列成长投资篇之四：从估值和业绩分解的角度分析成长股投资策略.pdf
+申万宏源_20160918_申万宏源大师系列成长投资篇之五：詹姆斯欧斯拉格GARP投资法.pdf
+申万宏源_20160926_申万宏源大师系列成长投资篇之六：查尔斯亨德森大型成长股投资法.pdf
+申万宏源_20161019_申万宏源金工报告精华回顾：重温申万金工的经典报告.pdf
+申万宏源_20161104_申万宏源2016年3季度指数型基金季报分析：三季度分级A全面溢价，行业ETF与债券指数基金成为申报新热点.pdf
+申万宏源_20161104_申万宏源事件研究系列报告之六：关注年报高送转（附最新预测名单）.pdf
+申万宏源_20161115_申万宏源2016年12月主要指数调整预测及指数效应分析：买卖要趁早.pdf
+申万宏源_20161202_申万宏源兼谈FOF构建中的市场风格识别：解密大小盘轮动之LOGISTIC模型.pdf
+申万宏源_20170223_申万宏源多指标分化度择时框架与行业择时初探：开放的择时体系.pdf
+申万宏源_20170302_申万宏源舆情、事件、技术指标监控系统上线：大繁化简，见微知著.pdf
+申万宏源_20170302_相对量价视角下的风格轮动研究.pdf
+申万宏源_20170303_申万宏源相对量价视角下的风格轮动研究.pdf
+申万宏源_20170306_申万宏源量化在主动投资中一些运用.pdf
+申万宏源_20170509_申万宏源2017年6月主要指数调整预测及指数效应分析：老板电器等股票可能进入沪深300.pdf
+申万宏源_20170601_申万宏源风险预算模型下的基金组合构建：配置风险，优选基金.pdf
+申万宏源_20170602_申万宏源稳健收益与相对收益交易策略：基于流行病学研究方法.pdf
+申万宏源_20170607_申万宏源趋势因子：动量与反转效应的结合.pdf
+申万宏源_20170824_申万宏源量化策略：技术打分模型在择时、风格和行业轮动上的应用.pdf
+申万宏源_20170828_申万宏源小盘股风格的数据分析及走势展望：外延增长进入证伪阶段.pdf
+申万宏源_20170908_申万宏源量化策略：择时与仓位管理，构造类绝对收益组合.pdf
+申万宏源_20170919_申万宏源业绩预警事件驱动研究：继往开来，事说新语.pdf
+申万宏源_20171011_申万宏源上市公司财务造假预测模型研究.pdf
+申万宏源_20171015_申万宏源回归算法与截面动量在风格投资中的应用.pdf
+申万宏源_20171017_申万宏源全球资产配置“五星模型”每周聚：超级政治周来临.pdf
+申万宏源_20171109_申万宏源2017年12月主要指数调整预测：浙商证券、申通快递等股票可能进入沪深300.pdf
+电力传输系统和智能电网.pdf
+电力半导体器件原理与应用.pdf
+电力变电站工程(原书第3版).pdf
+电力安全员培训教材.pdf
+电力市场下的电压安全成本分析.pdf
+电力拖动基础_第2版.pdf
+电力电子技术MATLAB仿真实践指导及应用.pdf
+电力电子技术在电力系统中的应用.pdf
+电力系统分析_第2版.pdf
+电力系统分析中的计算方法（原书第2版）.pdf
+电力系统次同步振荡及其抑制方法.pdf
+电力系统的扰动分析.pdf
+电力系统稳定与控制(原书第3版).pdf
+电力系统经济型故障限流技术.pdf
+电力系统继电保护原理及应用.pdf
+电力系统自动装置_第2版.pdf
+电力系统高级预测技术和发电优化调度.pdf
+电力线通信技术与实践.pdf
+电力线通信技术与实践.pdf
+电力设备局部放电检测技术及应用.pdf
+电动汽车融入现代电网.pdf
+电厂燃料设备检修技术.pdf
+电压源换流器在电力系统中的应用.pdf
+电机与拖动基础_第3版.pdf
+电机与拖动实验及学习指导_第2版.pdf
+电池储能系统调频技术.pdf
+电网储能技术.pdf
+电网自动电压控制（AVC）技术及案例分析.pdf
+电能效率：技术与应用.pdf
+疯狂经济学：让一条鲨鱼身价过亿的学问-[英]唐·汤普森-谭平(译)-南海出版公司-2013.pdf
+白话大数据与机器学习-高扬＆卫峥＆尹会生-机械工业出版社-2016.pdf
+百度金融_20160601_机器学习在投资中的应用.pptx
+百战成精：沪深股市专业投资原理完整版-花荣-经济管理出版社-2011.pdf
+目录.txt
+直流工程关键设备高压技术监督及试验.pdf
+直观几何（希尔伯特）上册.pdf
+直观几何（希尔伯特）下册.pdf
+看透SpringMVC：源代码分析与实践.html.pdf
+矢量场论与张量分析.pdf
+知识图谱：方法、实践与应用.pdf
+矩阵论(带书签).pdf
+矩阵论.pdf
+短距离无线系统的可靠通信.pdf
+短距离无线系统的可靠通信.pdf
+研究生教学用书-GPS导航原理与应用-王惠南-科学出版社-2003.pdf
+研究生教学用书-图论及其应用（第2版）-徐俊明-中国科学技术大学出版社-2004.pdf
+研究生教学用书-应用信息论基础-朱雪龙-清华大学出版社-2000.pdf
+研究生教学用书-微波与光电子学中的电磁理论（第2版）-张克潜＆李德杰-电子工业出版社-2001.pdf
+研究生教学用书-微波与高速电路理论（第2版）-李征帆＆毛军发-上海交通大学出版社-2004.pdf
+研究生教学用书-数字信号处理：理论、算法与实现（第2版）-胡广书-清华大学出版社-2003.pdf
+研究生教学用书-机器人动力学与控制-霍伟-高等教育出版社-2005.pdf
+研究生教学用书-现代控制理论与工程-王积伟＆陆一心＆吴振顺-高等教育出版社-2003.pdf
+研究生教学用书-现代电力系统分析-王锡凡＆方万良＆杜正春-科学出版社-2003.pdf
+研究生教学用书-现代电路理论-邱关源-高等教育出版社-2001.pdf
+研究生教学用书-电磁波时域有限差分方法（第2版）-葛德彪＆闫玉波-西安电子科技大学出版社-2005.pdf
+研究生教学用书-线性系统理论（第2版）-郑大钟-清华大学出版社-2002.pdf
+研究生教学用书-随机过程及其应用（第2版）-陆大絟-清华大学出版社-2012.pdf
+研究生教学用书-随机过程及其应用（第3版）-刘次华-高等教育出版社-2004.pdf
+研究生教学用书-非线性控制系统理论与应用（第2版）-胡跃明-国防工业出版社-2005.pdf
+研究生教学用书-高等激光物理学（第2版）-李福利-高等教育出版社-2006.pdf
+研究生教学用书-高等电力网络分析（第2版）-张伯明＆陈寿孙＆严正-清华大学出版社-2007.pdf
+研究生数学教学系列-矩阵论-戴华-科学出版社-2001.pdf
+硬件架构的艺术++数字电路的设计方法与技术+[（印）阿罗拉著][机械工业出版社].pdf
+社交大数据挖掘.pdf
+祖鲁法则：如何选择成长股-[英]吉姆·斯莱特-刘静(译)-浙江人民出版社-2013.pdf
+神经科学、心理学与宗教：人性的迷幻与现实-[英]马尔科姆·吉夫斯&[美]沃伦·布朗-教育科学出版社-2014.pdf
+神经网络与深度学习讲义-邱锡鹏-20151217.pdf
+神经网络模式识别及其实现-[美]Abhijit S.Pandya 等-徐勇 等(译)-电子工业出版社-1999.pdf
+神经网络稳态解与差分方程周期解 [王根强 编] 2012年版.pdf
+神经网络编程实战_Java语言实现（原书第2版）_html.pdf
+科学与信仰译丛-神的心灵：理性世界的科学基础(中文版)-[英]保罗·戴维斯-王祖哲(译)-山东人民出版社-2012.pdf
+科学发现的逻辑-[英]波普尔-查汝强＆邱仁宗(译)-科学出版社-1986.pdf
+科学的价值-[法]朱尔斯·亨利·彭加莱.pdf
+科学的旅程(插图版)-[美]雷·斯潘根贝格 等-郭奕玲 等(译)-北京大学出版社-2008.pdf
+科技哲学与科技管理丛书-科学知识图谱：方法与应用-方则渊-人民出版社-2008.pdf
+积分几何学引论（任德麟）.pdf
+移动云计算：无线、移动及社交网络中分布式资源的开发利用.pdf
+移动云计算：无线、移动及社交网络中分布式资源的开发利用.pdf
+移动云计算：无线、移动及社交网络中分布式资源的开发利用.pdf
+移动回传.pdf
+移动宽带多媒体网络－－4G技术、模型和工具.pdf
+移动宽带多媒体网络－－4G技术、模型和工具.pdf
+移动通信原理与技术.pdf
+移动通信系统.pdf
+移动通信轻松入门.pdf
+程序员实用算法.pdf
+程序员密码学.pdf
+程序员必知的硬核知识大全.pdf
+程序员的算法趣题.pdf
+程序员面试金典(第5版)-中文版.pdf
+程序设计语言编译原理(陈火旺第三版).pdf
+竞争与合作：与诺贝尔经济学家谈经济学和政治学-[美]詹姆斯·艾尔特 等-万鹏飞 等(译)-北京大学出版社-2011.pdf
+笔记1.pdf
+笔记2.pdf
+笔记3.pdf
+笔记4.pdf
+笔记5.pdf
+第01章-OD的各个窗口介绍.pdf
+第02章-数制系统.pdf
+第03章-寄存器.pdf
+第04章-汇编指令.pdf
+第05章-数学指令.pdf
+第06章-比较和条件跳转指令.pdf
+第07章-call,ret.pdf
+第08章-循环,字符串指令和寻址方式.pdf
+第09章-基本概念.pdf
+第10章 隐马尔科夫模型.pptx
+第10章-断点.pdf
+第11章 条件随机场.pptx
+第11章-硬件断点与条件断点.pdf
+第12章-消息断点.pdf
+第13章 无监督学习概论.pptx
+第13章-硬编码序列号寻踪-Part1.pdf
+第14章 聚类方法.pptx
+第14章-硬编码序列号寻踪-Part2.pdf
+第15章 奇异值分解.pptx
+第15章-硬编码序列号寻踪-Part3.pdf
+第16章 主成分分析.pptx
+第16章-序列号生成算法分析-Part1.pdf
+第17章 潜在语义分析.pptx
+第17章-序列号生成算法分析-Part2.pdf
+第18章  概率潜在语义分析.pptx
+第18章-序列号生成算法分析-Part3.pdf
+第19章  马尔科夫链蒙特卡洛法.pptx
+第19章-OllyDbg反调试之IsDebuggerPresent.pdf
+第1章 机器学习和统计学习.pptx
+第20章  潜在狄利克雷分布.pptx
+第20章-OllyDbg反调试之检测OD进程名.pdf
+第21章 PageRank算法.pptx
+第21章-OllyDbg反调试之检测OD进程名,窗口类名,窗口标题名.pdf
+第22章 无监督学习方法总结.pptx
+第22章-OllyDbg反调试之UnhandledExceptionFilter,ZwQueryInformationProcess.pdf
+第23章-OllyDbg反调试之ProcessHeap,NTGlobalFlag,OutputDebugStringA.pdf
+第24章-OllyDbg反调试之综合练习.pdf
+第25章-异常处理.pdf
+第26章-Visual Basic程序的破解-Part1.pdf
+第27章-Visual Basic程序的破解-Part2.pdf
+第28章-Visual Basic程序的破解-Part3.pdf
+第29章-P-CODE-Part1.pdf
+第2和12章 感知机和统计学习方法总结.pptx
+第30章-P-CODE-Part2.pdf
+第31章-脱壳简介.pdf
+第32章-OEP寻踪.pdf
+第33章-神马是IAT,如何修复.pdf
+第34章-手脱UPX,修复IAT.pdf
+第35章-手脱ASPack V2.12.pdf
+第36章-IAT重定向.pdf
+第37章-论IAT重定向之修复.pdf
+第38章-手脱Yoda's Crypter v1.3.pdf
+第39章-何谓stolen bytes.pdf
+第3号《不动点类理论(第2版)》(作者)江泽涵 科学 1986年3月第2版.pdf
+第3章 k-近邻算法.pptx
+第40章-OllyDbg脚本的编写.pdf
+第41章-神马是AntiDump.pdf
+第42章-ACProtect V1.09脱壳(寻找OEP,绕过硬件断点的检测,修复Stolen code).pdf
+第43章-ACProtect V1.09脱壳(编写脚本修复IAT).pdf
+第44章-ACProtect V1.09脱壳(修复AntiDump).pdf
+第45章(补充章节)-ReCrypt v0.80脱壳(续).pdf
+第45章-ReCrypt v0.80脱壳.pdf
+第46章-Patrick的CrackMe-Part1.pdf
+第47章-Patrick的CrackMe-Part2.pdf
+第48章-PeSpin V1.3.04脱壳-Part1.pdf
+第49章-PeSpin V1.3.04脱壳-Part2.pdf
+第4章 贝叶斯分类器.pptx
+第50章-再谈ReCrypt v.0.80脱壳(调戏OutputDebugString).pdf
+第51章-ASProtect v2.3.04.26脱壳-Part1.pdf
+第52章-ASProtect v2.3.04.26脱壳-Part2.pdf
+第53章-TPPpack脱壳.pdf
+第54章-EXECryptor v2.2.50.a脱壳-Part1.pdf
+第55章-EXECryptor v2.2.50.a脱壳-Part2.pdf
+第56章-EXECryptor v2.2.50.b脱壳.pdf
+第57章-EXECryptor v2.2.50.c.d.e.f.g脱壳.pdf
+第58章-EXECryptor v2.2.50.h脱壳.pdf
+第5章 决策树.pptx
+第6章 Logistic回归.pptx
+第7章 SVM及核函数.pptx
+第8章 adaboost.pptx
+第9章 EM算法.pptx
+第一创业_20170317_第一创业大宗商品与股市股市商品联动性研究系列一.pdf
+第一创业_20170420_第一创业商品专题报告系列二：美联储加息利空国内商品？那可不一定.pdf
+第一创业_20170706_第一创业量化专题报告系列一：原油下半年步入下跌周期，基于滤波法的分析.pdf
+第一创业_20170801_第一创业量化专题报告系列二：大宗商品周期分析，有色与谷物将进入下跌周期.pdf
+第一创业_20170913_第一创业量化专题报告系列四：房地产周期与大类资产联动.pdf
+第一本Docker书 PDF电子书下载 带书签目录 完整版.pdf
+第一本DOCKER书(修订版)-[澳]J·特恩布尔-李兆海 等(译)-人民邮电出版社-2016.pdf
+第三代移动网络中的多播通信：服务、机制、性能.pdf
+第三代移动网络中的多播通信：服务、机制、性能.pdf
+第三届全国海底光缆通信技术研讨会论文集.pdf
+策略为先：重构普通投资者的投资体系-刘鹏程-中国铁道出版社-2015.pdf
+策略博弈_美_阿维纳什·K·迪克西特,苏珊·斯克丝.pdf
+策略投资-王成＆韦笑-地震出版社-2012.pdf
+简单的逻辑学-[美]D·Q·迈克伦尼-赵明燕(译)-中国人民大学出版社-2007.pdf
+算术探索-[德]高斯-潘承彪＆张明尧(译)-哈尔滨工业大学出版社-2011.pdf
+算法交易：制胜策略与原理-[美]欧内斯特·陈-高闻酉＆黄蕊(译)-机械工业出版社-2017.pdf
+算法导论@2013 (第3版 扫描版).pdf
+算法帝国-[美]克里斯托弗·斯坦纳-李筱莹(译)-人民邮电出版社-2014.pdf
+算法竞赛宝典：（第二部）基础算法艺术-张新华-清华大学出版社-2016.pdf
+算法设计与分析基础(第3版)-[美]A·莱维汀-潘彦(译)-清华大学出版社-2015.pdf
+管理员亲启-等待上传_conflict-20171021-150306.txt
+管理科学系列-金融市场与金融机构(中文版.第4版)-[美]弗雷德里克.米什金-北京大学出版社-2006.pdf
+类电子书说明.txt
+粗糙集理论与方法.pdf
+精通Django：Django 1.8 LTS全解.pdf
+精通LINUX设备驱动开发_Cropped.pdf
+精通LINUX设备驱动开发_宋宝华.pdf
+精通MATLAB科学计算.pdf
+精通Metasploit渗透测试.第2版.pdf
+精通Python网络爬虫 核心技术、框架与项目实战 ,韦玮.pdf
+精通Spring+MVC+4+Geoffroy+Warin.pdf
+系统灵敏度理论导论.pdf
+素数定理的初等证明 潘承洞 潘承彪.pdf
+紧黎曼曲面引论（伍鸿熙）(带目录).pdf
+纳什均衡与博弈论：纳什博弈论及对自然法则的研究-[美]汤姆·齐格弗里德-洪雷 等(译)-化学工业出版社-2009.pdf
+纳米CMOS电路和物理设计.pdf
+纳米封装——纳米技术与电子封装.pdf
+纳米技术与能源.pdf
+线性代数与矩阵论(第2版)-许以超-高等教育出版社.pdf
+线性代数的几何意义-任广千＆谢聪＆胡翠芳-西安电子科技大学出版社-2015.pdf
+线性模型参数的估计理论-陈希孺 -科学出版社-2010.pdf
+线性神经网络控制的电力变流器与交流电气传动.pdf
+线性系统理论（第2版）-段广仁-哈尔滨工业大学出版社-2004.pdf
+线性系统理论-段广仁-哈尔滨工业大学出版社-1996.pdf
+组合数学算法与分析(上).pdf
+终极算法：机器学习和人工智能如何重塑世界-[美]佩德罗·多明戈斯-黄芳萍(译)-中信出版社-2017.pdf
+终端安全风险管理.pdf
+经典原版书库-代数学-[美]I.Martin Isaacs-机械工业出版社-2003.pdf
+经济与金融经典入门教材译丛-投资学基础：估值与管理(第3版)-[澳]查尔斯·J·科拉多-白雪＆胡波(译)-北京大学出版社-2007.pdf
+经济为什么会崩溃：鱼、美元与经济学-[美]彼得·D·希夫 等-胡晓娇 等(译）-中信出版社-2011.pdf
+经济学（第18版）-[美]保罗·A·萨缪尔森-人民邮电出版社-2008.pdf
+经济学300年（修订版）-何正斌-湖南科学技术出版社-2007.pdf
+经济学：私人与公共选择(原书第12版)-[美]卢瑟尔·S·索贝尔 等-机械工业出版社-2009.pdf
+经济学的思维方式：经济学导论(中文版·修订第12版)-[美]保罗·海恩-史晨(译)-世界图书出版公司-2011.pdf
+经济学的结构：数学分析的方法（第3版）-[美]Eugene Silberberg 等-张妍 等(译)-清华大学出版社-2003.pdf
+经济学精选教材译丛-经济思想史（第7版）-[美]斯坦利·L·威廉＆兰迪·L·格兰特-邱晓燕 等(译)-北京大学出版社-2008.pdf
+经济学讲义：颠覆传统经济学26讲（上）-李俊慧-中信出版社-2012.pdf
+经济学讲义：颠覆传统经济学26讲（下）-李俊慧-中信出版社-2012.pdf
+经济教材译丛-以Excel为决策工具的商务统计（原书第5版）-[美]D·M·莱文-机械工业出版社-2009.pdf
+经济物理学导论：金融中的相关性与复杂性(中文版)-[美]罗萨里奥.N.曼特尼亚-中国人民大学出版社-2005.pdf
+经济理论中的最优化问题-[英]A·K·狄西特-曾朝阳 等(译)-中国展生出版社-1986.pdf
+经济科学译丛-《经济学》小品和案例-[美]斯蒂格利茨-中国人民大学出版社-1998.pdf
+经济科学译丛-企业组织理论-[法]泰勒尔-中国人民大学出版社-1997.pdf
+经济科学译丛-动态最优化基础-[美]蒋中一-曹乾(译)-中国人民大学出版社-2015.pdf
+经济科学译丛-博弈论-[美]朱·弗登伯格-中国人民大学出版社-2002.pdf
+经济科学译丛-博弈论-[美]朱·弗登伯格-中国人民大学出版社-2010.pdf
+经济科学译丛-发展经济学（第4版）-[美]吉利斯-中国人民大学出版社-1998.pdf
+经济科学译丛-宏观经济学(第3版)-[美]斯蒂芬·D·威廉森-郭庆旺(译)-中国人民大学出版社-2009.pdf
+经济科学译丛-宏观经济学（第4版）-[美]N·格里高利·曼昆-中国人民大学出版社-2000.pdf
+经济科学译丛-宏观经济学(第5版)-[美]罗伯特·巴罗-中国人民大学出版社-2001.pdf
+经济科学译丛-宏观经济学（第6版）-[美]N·格里高利·曼昆-中国人民大学出版社-2009.pdf
+经济科学译丛-宏观经济学（第7版）-[美]N·格里高利·曼昆-中国人民大学出版社-2011.pdf
+经济科学译丛-宏观经济学(第7版)-[美]多恩布什-中国人民大学出版社-2000.pdf
+经济科学译丛-投资学精要（上册·第7版）-[美]兹维·博迪-中国人民大学出版社-2010.pdf
+经济科学译丛-投资学精要（下册·第7版）-[美]兹维·博迪-中国人民大学出版社-2010.pdf
+经济科学译丛-斯蒂格利茨《经济学》（第2版）学习指导-[美]劳伦斯·马丁-中国人民大学出版社-2000.pdf
+经济科学译丛-横截面与面板数据的计量经济分析（第2版·上册)-[美]杰弗里·M·伍德里奇-胡棋智 等(译)-中国人民大学出版社-2016.pdf
+经济科学译丛-横截面与面板数据的计量经济分析（第2版·下册)-[美]杰弗里·M·伍德里奇-胡棋智 等(译)-中国人民大学出版社-2016.pdf
+经济科学译丛-激励理论（第1卷）：委托·代理模型-[法]让·雅克·拉丰-中国人民大学出版社-2002.pdf
+经济科学译丛-经济学(上下册·第2版)-[美]斯蒂格利茨-中国人民大学出版社-2000.pdf
+经济科学译丛-经济学(上下册·第3版)-[美]斯蒂格利茨-中国人民大学出版社-2005.pdf
+经济科学译丛-经济学中的分析方法-[美]高山晟-中国人民大学出版社-2001.pdf
+经济科学译丛-经济学原理(上)-[美]曼昆-梁小民(译)-三联书店·北京大学出版社-2001.pdf
+经济科学译丛-经济学原理(下)-[美]曼昆-梁小民(译)-三联书店·北京大学出版社-2001.pdf
+经济科学译丛-经济理论和方法史（第4版）-[美]小罗伯特·B·埃克伦德-中国人民大学出版社-2000.pdf
+经济科学译丛-计量经济分析（第5版·上册）-[美]威廉·H·格林-费剑平(译)-中国人民大学出版社-2007.pdf
+经济科学译丛-计量经济分析（第5版·下册）-[美]威廉·H·格林-费剑平(译)-中国人民大学出版社-2007.pdf
+经济科学译丛-计量经济分析（第6版·上册）-[美]威廉·H·格林-张成思(译)-中国人民大学出版社-2010.pdf
+经济科学译丛-计量经济分析（第6版·下册）-[美]威廉·H·格林-张成思(译)-中国人民大学出版社-2010.pdf
+经济科学译丛-计量经济学基础（第5版·上册）-[美]达摩达尔·N·古扎拉蒂＆唐·C·波特-费剑平(译)-中国人民大学出版社-2011.pdf
+经济科学译丛-计量经济学基础（第5版·下册）-[美]达摩达尔·N·古扎拉蒂＆唐·C·波特-费剑平(译)-中国人民大学出版社-2011.pdf
+经济科学译丛-计量经济学导论（第3版)-[美]詹姆斯·H·斯托克＆马克·M·沃森-张涛 等(译)-中国人民大学出版社-2014.pdf
+经济科学译丛-计量经济学导论：现代观点(中文版)-[美]J.M.伍德里奇-中国人民大学出版社-2003.pdf
+经济科学译丛-计量经济学导论：现代观点（第5版）-[美]杰弗里·M·伍德里奇-张成思 等(译)-中国人民大学出版社-2015.pdf
+经济科学译丛-财政学（第4版）-[美]哈维·S·罗森-中国人民大学出版社-2000.pdf
+经济科学译丛-货币金融学（第4版）-[美]弗雷德里克·S·米什金-中国人民大学出版社-1998.pdf
+经济科学译丛-货币金融学（第6版）-[美]弗雷德里克·S·米什金-刘毅(译)-中国人民大学出版社-2005.PDF
+经济科学译丛-货币金融学（第9版）-[美]弗雷德里克·S·米什金-郑艳文＆荆国勇(译)-中国人民大学出版社-2010.pdf
+经济科学译丛-金融学(中文版.第2版)-[美]兹维·博迪＆罗伯特·C·莫顿-中国人民大学出版社-2009.pdf
+经济科学译丛·财政学系列-公共部门经济学(第2版)-[美]鲍德威·威迪逊-中国人民大学出版社-2000.pdf
+经济科学译库-中级微观经济学：理论与应用 (第10版)-[美]沃尔特·尼克尔森-中国人民大学出版社-2012.pdf
+经济解释（卷1·神州增订版）：科学说需求-张五常-中信出版社-2010.pdf
+经济解释（卷2·神州增订版）：收入与成本 供应的行为（上）-张五常-中信出版社-2011.pdf
+经济解释（卷3）：制度的选择-张五常-花千树出版社公司-2009.pdf
+经济解释（卷4）：五常经济学-张五常-花千树出版社公司-2006.pdf
+经济解释：一本通俗的经济学常识读物（合4卷·文字版）-张五常.pdf
+经济计量预测与预测模型入门-[美]劳伦斯·克莱因＆理杳德·杨-秋同＆胡崇能(译)-中国社会科学出版社-1982.pdf
+经济魔杖：50位大经济学家如何影响和改变世界历-欧文 等-中国社会出版社-1997.pdf
+经管译丛-经济学：基本原理与热点问题（第2版）-[美]罗伯特·C·盖尔-张芬 等(译)-武汉大学出版社-2007.pdf
+经验模态分析与小波分析及其应用-郑祖光＆刘莉红-气象出版社-2010.pdf
+结构化P2P网络中的负载均衡技术研究.pdf
+结构金融导论-[美]弗兰克·J·法伯兹 等-钱峰＆沈颖郁(译)-东北财经大学出版社-2011.pdf
+统一无穷理论 [何华灿，何智涛 著] 2011年版.pdf
+统计与真理：怎样运用偶然性-[美]C·R·劳-科学出版社-2004.pdf
+统计学习方法-李航-清华大学出版社-2012.pdf
+统计学习方法.pdf
+统计学方法与数据分析引论（上册·原书第5版）-[美]R·L·奥特＆M·朗格内克-张忠占(译)-科学出版社-2003.pdf
+统计学方法与数据分析引论（下册·原书第5版）-[美]R·L·奥特＆M·朗格内克-张忠占(译)-科学出版社-2003.pdf
+统计学经典译丛（人大版）暂缺书单.txt
+统计学经典译丛-商务与经济统计学（第12版）-[美]詹姆斯·麦克拉夫-易丹辉(译)-中国人民大学出版社-2015(样书).pdf
+统计学经典译丛-行为统计学基础(中文版·第9版)-[美]理查德·P·鲁尼恩-王星(译)-中国人民大学出版社-2007.pdf
+统计建模与Ｒ软件(上册)-薛毅-清华大学出版社-2006.pdf
+统计建模与Ｒ软件(下册)-薛毅-清华大学出版社-2006.pdf
+统计渐近论基础-勒康-科学出版社-1993.pdf
+统计编程的框架与R语言统计分析基础-谢益辉-中国人民大学统计学院-2007.pdf
+维梅尔的帽子：从一幅画看全球化贸易的兴起-[加]卜正民-刘斌(译)-文汇出版社-2010.pdf
+绿色网络.pdf
+绿色网络.pdf
+编码：隐匿在计算机软硬件背后的语言.pdf
+编程原本 by Alexander Stepanov, Paul McJones (z-lib.org).pdf
+编程语言实现模式 by Terence Parr (z-lib.org).pdf
+编程随想：太子党关系网络.pdf
+编译与反编译技术实战.pdf
+编译原理(龙书) 第二版.pdf
+编译器工程 by (美)酷伯 (z-lib.org).pdf
+编译器设计 (第二版) by Keith Cooper  Linda Torczon (z-lib.org).pdf
+缠中说禅：市场哲学的数学原理：教你炒股票108课及部分解盘和配图.pdf
+缠中说禅：教你炒股票(重排版).pdf
+网易数据库密码是baidu.txt
+网格计算技术-Grid Computing Technology-徐志伟-date-O-A2028144.pdf
+网络性能分析原理与应用.pdf
+网络性能分析原理与应用.pdf
+网络操作系统教程——Windows_Server2008管理与配置.pdf
+网络是怎样连接的.pdf
+网络社会危机传播原理 任福兵 华东理工大学 2017.3.pdf
+网络科学-原理与应用.pdf
+网络编码基础与应用.pdf
+网络编码基础与应用.pdf
+网络编码基础与应用.pdf
+罗织经.pdf
+美团技术后台篇.pdf
+美团机器学习实践 by 美团算法团队 (z-lib.org).pdf
+美国陆军开源情报（OSINT）分析师手册_秘密行动、被动监视.pdf
+群和它的图象表示-[美]I·格拉斯曼＆W·迈格努斯-科学普及出版社-1981.pdf
+群表示论的新途径-陈金全-上海科学技术出版社-1984.pdf
+群论(上册.第3版)-[俄]А.Курош-1987.pdf
+群论(下册.第3版)-[俄]А.Курош-1987.pdf
+群论.pdf
+群论1(苏联).pdf
+群论基础.pdf
+群论引论(美国).pdf
+群论引论-[英]W·莱德曼-高等教育出版社-1987.pdf
+聊天机器人：入门、进阶与实战.html.pdf
+联盟区块链P2P网络和共识机制的研究与实现.pdf
+联讯证券_20161104_布局2016年年报“高送转”行情.pdf
+股市天经之一：量柱擒涨停-黑马王子-四川人民出版社-2009.pdf
+股市天经之二：量线捉涨停-黑马王子-四川人民出版社-2010.pdf
+股票：长线法宝-[美]杰里米·J·希格尔-吴全昊(译)-海南出版社-2001.pdf
+能源互联网与能源转换技术.pdf
+能源服务网络中的分布式能源模拟.pdf
+能量产生、转换、储存、节能与耦联.pdf
+能量有效的无线传感器网络动态任务调度算法.pdf
+脑机穿越：脑机接口改变人类未来-[巴西]米格尔·尼科莱利斯-黄珏苹＆郑悠然(译)-浙江人民出版社-2015.pdf
+自主式传感器系统的能量收集——设计、分析以及实践应用.pdf
+自动机理论、语言和计算导论 第三版 by Hoperoft. J. E. (z-lib.org).pdf
+自动网络管理系统.pdf
+自守形式与L-函数简明六章英文2012年版.pdf
+自己动手做大数据系统.张魁(带书签文字版).pdf
+自己动手做大数据系统.张魁(带书签文字版).pdf
+自己动手写Docker 陈显鹭 2017.7.pdf
+自然的经济史-[美]海尔特·J·弗尔迈伊-王志毅(译)-浙江大学出版社-2012.pdf
+自然语言处理原理与技术实现.pdf
+自然语言处理实践：聊天机器人技术原理与应用.pdf
+自组织P2P网络分布式合作激励机制研究现状.pdf
+自组织多级超级节点拓扑构造方法.pdf
+自进化AI.pdf
+节点-直径上界.pdf
+节点轮换的传感器网络生存期优化算法 (1).pdf
+节点轮换的传感器网络生存期优化算法.pdf
+英汉太阳能词典.pdf
+薄膜太阳电池及其光伏电站.pdf
+虚拟化技术实践指南——面向中小企业的高效、低成本解决方案.pdf
+虚拟机系统与进程的通用平台.pdf
+虚拟网络——下一代互联网的多元化方法.pdf
+虚拟网络——下一代互联网的多元化方法.pdf
+行为和实验经济学经典译丛-决策、不确定性和大脑：神经经济学-[美]保罗·格莱姆齐-贺京同(译)-中国人民大学出版社-2010.pdf
+行为和实验经济学经典译丛-经济学理论与认知科学：微观解释(中文版)-[美]唐·罗斯-贾拥民(译)-中国人民大学出版社-2010.pdf
+衍生品设计与金融创新实务丛书-利率衍生品设计原理与应用：案例分析-陈松男-机械工业出版社-2014.pdf
+衍生品设计与金融创新实务丛书-固定收益证券与衍生品：原理与应用-陈松男-机械工业出版社-2014.pdf
+衍生品设计与金融创新实务丛书-结构式金融产品设计与应用：案例分析(一)-陈松男-机械工业出版社-2014.pdf
+西南证券_20160519_基于沪深300成分股分红的期现套利策略研究.pdf
+西南证券_20160519_西南证券事件驱动系列：基于沪深300成分股分红的期现套利策略研究.pdf
+西南证券_20160707_《基金中基金指引（征求意见稿）》点评：开启公募FOF时代大门.pdf
+西南证券_20161205_股指期货展期对冲策略研究——基于跨期价差变化量的视角.pdf
+西南证券_20170123_定增主题基金投资价值分析.pdf
+西南证券_20170918_西南证券混合风险指标：风险度量方法探讨.pdf
+西南证券_20171221_西南证券基于方向波动率的选股因子研究.pdf
+西藏度亡經--蓮花生大師.pdf
+西门子工业网络通信技术详解.pdf
+西门子工业通信工程应用技术.pdf
+西门子工业通信网络组态编程与故障诊断.pdf
+覆冰与污秽绝缘子.pdf
+解忧杂货店》（日）东野圭吾 中亚正版来了！  recommend  heatlevel  agree.txt
+解析数论基础（卡拉楚巴著）(带目录).pdf
+解析深度学习：语音识别实践-[美]俞栋＆邓力-俞凯 等(译)-电子工业出版社-2016.pdf
+解析深度学习：语音识别实践-[美]俞栋＆邓力-俞凯 等(译)-电子工业出版社-2016.pdf
+解读量化投资：西蒙斯用公式打败市场的故事-忻海-机械工业出版社-2009.pdf
+解读量化投资之秘-何诚颖-中国财政经济出版社-2013.pdf
+詳解TCP連線的狀態與關閉方式及Winserver系統下的TCP引數優化_51CTO - MdEditor.pdf
+计算与认知：认知科学的基础-[加]泽农·W·派利夏恩-任晓明(译)-中国人民大学出版社-2007.pdf
+计算智能中的仿生学：理论与算法.pdf
+计算智能中的仿生学：理论与算法.pdf
+计算智能理论与方法 [张雷，范波 编著] 2013年版.pdf
+计算机与部分其他种类书籍资源.txt
+计算机安全学.pdf
+计算机控制及系统仿真.pdf
+计算机控制技术.pdf
+计算机相关书籍20200917.txt
+计算机科学丛书-人工智能：复杂问题求解的结构和策略(中文版·原书第6版)-[美]G·F·卢格-机械工业出版社-2009.pdf
+计算机科学丛书-人工智能：智能系统指南(中文版·原书第3版)-[澳]M·尼格尼维斯基-陈薇等(译)-机械工业出版社-2012.pdf
+计算机科学丛书-数值方法和Matlab实现与应用-[美]Gerald.Recktenwald-伍为国＆万群(译)-机械工业出版社-2004.pdf
+计算机科学丛书-数据挖掘：实用机器学习技术(中文版·原书第2版)-[新西兰]I·H·威滕-董琳等(译)-机械工业出版社-2006.pdf
+计算机科学丛书-数据挖掘：概念与技术(中文版·原书第3版)-[美]韩家炜-范明等(译)-机械工业出版社-2012.pdf
+计算机科学丛书-机器学习(中文版)-[美]T·M·米歇尔-曾华军等(译)-机械工业出版社-2003.pdf
+计算机科学丛书-机器学习导论(中文版)-[土耳其]E·阿培丁-范明等(译)-机械工业出版社-2009.pdf
+计算机科学丛书-神经网络与机器学习(中文版·原书第3版)-[加]S·海金-申富饶等(译)-机械工业出版社-2011.pdf
+计算机科学丛书-神经网络原理（原书第2版）-[日]Simon Haykin-叶世伟＆史忠植(译)-机械工业出版社-2004.pdf
+计算机科学丛书-离散数学导学-[英]Andrew.Simpson-冯苏(译)-机械工业出版社-2005.pdf
+计算机科学丛书-算法分析导论-[美]R·塞奇威克-冯舜玺 等(译)-机械工业出版社-2006.pdf
+计算机科学丛书-算法导论(中文版·原书第3版)-[美]T·H·科尔曼-机械工业出版社-2013.pdf
+计算机科学丛书-计算复杂性.pdf
+计算机科学丛书-面向计算机科学的数理逻辑：系统建模与推理(中文版.原书第2版)-[德]Michael.Huth＆[英]Mark.Ryan-机械工业出版社-2007.pdf
+计算机系统要素：从零开始构建现代计算机.pdf
+计算机系统设计：片上系统.pdf
+计算机系统设计：片上系统.pdf
+计算机组成原理_刘超.pdf
+计算机组成原理与汇编语言程序设计.pdf
+计算机编程入门索引.mht
+计算机网络：一种开源的设计实现方法.pdf
+计算机网络教程-自顶向下方法.pdf
+计算电磁学-王秉中-科学出版社-2002.pdf
+计量经济模型与经济预测（第4版）-[美]罗伯特·S·平狄克 等-钱小军 等(译)-机械工业出版社-1999.pdf
+认知、大脑和意识：认知神经科学引论（美）伯纳德·J.巴斯.pdf
+认知视角下的无线传感器网络.pdf
+认知视角下的无线传感器网络.pdf
+认识金融：货币、资本和投资-[美]凯伦·D·哈尔彭-苏丽文(译)-人民邮电出版社-2011.pdf
+让你大吃一惊的科学-最后的幸存者：史上最真实的75个疯狂实验-[美]亚历克斯·伯泽-欧冠宇(译)-上海科技教育出版社-2013.pdf
+论不定方程-陈建和-湖南师范大学出版社-2013.pdf
+论坛教程.html
+论坛程序本地快速下载.html
+论金融市场的有效性-余宇新-上海人民出版社-2013.pdf
+设计原本：计算机科学巨匠Frederick P.Brooks的反思(经典珍藏)-[美]F·P·布鲁斯-高博 等(译)-机械工业出版社-2013.pdf
+访问兴趣相似性P2P网络模型.pdf
+证券组合定量管理：构建与管理证券组合的积极策略-[美]路德维希·B·钦塞瑞尼＆金大焕-韩立岩 等(译)-中国财政经济出版社-2011.pdf
+诡辩与真相：经济学入门(中文版)-[美]托马斯·索维尔-上海译文出版社-2011.pdf
+语义网基础教程.pdf
+语言与机器计算机科学理论导论（原书第三版）.pdf
+说明.txt
+说明.txt
+诺贝尔经济学奖获奖者著作丛书-赤字中的民主-[美]布坎南＆瓦格纳-北京经济学院出版社-1988.pdf
+贝叶斯思维：统计建模的PYTHON学习法-[美]A·B·唐尼-许杨毅(译)-人民邮电出版社-2015.pdf
+贝叶斯方法：概率编程与贝叶斯推断-[加]卡梅隆·戴维森·皮隆-辛愿 等(译)-人民邮电出版社-2017.pdf
+贝叶斯统计学——原理、模型及应用.pdf
+贝叶斯网引论-张连文＆郭海彭-科学出版社-2006.pdf
+贝叶斯网络结构学习与推理研究.pdf
+财务报表分析：理论、框架、方法与案例-黄世忠-中国财政经济出版社-2007.pdf
+财务报表分析与证券定价（第2版）-[美]斯蒂芬·H·佩因曼-刘力＆陆正飞(译)-中国财政经济出版社-2005.pdf
+财务管理基础(第13版)-[美]詹姆斯·C·范霍恩-刘曙光 等(译)-清华大学出版社-2009.pdf
+财经学术文库-新制度经济学-[美]埃瑞克·G·菲吕博顿＆鲁道夫·瑞切特-上海财经大学出版社-1998.pdf
+货币战争(全四部)-宋鸿兵.pdf
+货币时间价值与投资规划常用符号与公式.pdf
+货币通论-[英]约翰·梅纳德·凯恩斯-人民日报出版社-2009.pdf
+费保俊_Fei, Baojun - 相对论与非欧几何 _Xiang dui lun yu fei Ou ji he-Ke xue chu ban she (2005).pdf
+费马大定理.pdf
+贾柯勃逊·抽象代数学(卷1)-基本概论(中文版)-[美]N.贾柯勃逊-科学出版社.pdf
+贾柯勃逊·抽象代数学(卷2)-线性代数(中文版)-[美]N.贾柯勃逊-科学出版社.pdf
+贾柯勃逊·抽象代数学(卷3)-域论及伽罗瓦理论(中文版)-[美]N.贾柯勃逊-科学出版社.pdf
+资本市场的混沌与秩序（第2版）-[美]埃德加·E·彼得斯-王小东(译)-经济科学出版社-1999.pdf
+资本的游戏(第2版)-房西苑-机械工业出版社-2012.pdf
+资金管理经典名著-量化交易与资金管理-[美]弗雷德·杰姆-周旋(译)-华中科技大学出版社-2012.pdf
+赌场式交易策略：构建高胜算程序化交易系统-[美]理查德·L·威斯曼-机械工业出版社-2013.pdf
+走出思维的迷宫：中外著名哲学悖论解析-黄沐怡-金城出版社-2008.pdf
+走向数学丛书05-计算密码学-卢开澄-湖南教育出版社-1992.pdf
+走向数学丛书6-拉姆塞理论.pdf
+超图 有限集的组合学.pdf
+超图可视化方法研究综述.pdf
+超弦理论导论_Elias Kiritsis.pdf
+超爆魔鬼经济学-[美]史蒂文·列维特＆斯蒂芬·郝伯纳-曾贤明(译)-中信出版社-2010.pdf
+超级智能：路线图、危险性与应对策略-[英]尼克·波斯特洛姆-张体伟＆张玉青(译)-中信出版社-2015.pdf
+超级电容器：材料、系统及应用.pdf
+超越数理论.pdf
+超预测.pdf
+超高压交流地下电力系统的性能和规划.pdf
+超高压远距离输电.pdf
+跟我动手学S7-300_400_PLC.pdf
+跟老男孩学Linux运维：Web集群实战.html.pdf
+跨境电商：速卖通开店、推广、运营及管理指南.pdf
+路由和交换技术 沈鑫剡.pdf
+车载系统和安全的数字信号处理.pdf
+车辆、航海、航空、航天运载工具电力系统.pdf
+软件品质之完美管理——实战经典.pdf
+软件研发成本度量规范释义.pdf
+软件研发成本度量规范释义_第2版.pdf
+轻量级微服务架构（上册）.pdf
+轻量级微服务架构（下册）.pdf
+输配电工程（原书第3版）.pdf
+辞海丛书-复杂性思维：物质、精神和人类的计算动力学-[德]克劳斯·迈因策尔-曾国屏＆苏俊斌(译)-上海辞书出版社-2013.pdf
+过程控制工程.pdf
+迈向Angular 2：基于TypeScript的高性能SPA框架[撩撩前端].pdf
+运筹学基础及应用（第4版）-胡运权-高等教育出版社-2004.pdf
+近代鞅论-胡迪鹤＆甘师信-武汉大学出版社-1993.pdf
+进化算法与混合动力系统优化.pdf
+连续时间金融(修订版·上)-[美]罗伯特·C·默顿-郭多祚(译)-中国人民大学出版社-2012.pdf
+连续时间金融(修订版·下)-[美]罗伯特·C·默顿-郭多祚(译)-中国人民大学出版社-2012.pdf
+连续时间金融模型的非参数统计分析-陈萍 等-科学出版社-2014.pdf
+递归函数论-莫绍揆.pdf
+通俗经济学-[美]托马斯·索维尔-唐任伍＆王宏新(译)-机械工业出版社-2012.pdf
+通俗高维几何学.pdf
+通信保密技术 [朱峰 编著] 2014年版.pdf
+通信工程专业英语.pdf
+通信新读——从原理到应用.pdf
+通信系统高电压保护.pdf
+通过计算来学习光学：使用MathCad、Matlab、Mathematica和Maple的建模案例(英文版·第2版)-[美]K.D.Mōller-Springer出版-2007.pdf
+逻辑哲学论.pdf
+遗失笔记 1.pdf
+遗失笔记 2.pdf
+遗失笔记 3.pdf
+遗失笔记 4.pdf
+那些古怪又让人忧心的问题-[美]兰道尔·门罗-朱君玺(译)-北京联合出版公司-2015.pdf
+配电实用技术_第2版.pdf
+配电系统.pdf
+配电网保护（原书第3版）.pdf
+配电自动化系统实用技术.pdf
+酷玩经济学-[美]尤伦·鲍曼＆格兰迪·克莱恩-闾佳(译)-中国人民大学出版社-2011.pdf
+重新发现市场：一部市场的自然史-[美]约翰·麦克米兰-余江(译)-中信出版社-2014.pdf
+量价分析：量价分析创始人威科夫的盘口解读方法-[英]安娜·库林-肖凤娟(译)-中国青年出版社-2016.pdf
+量化投资：策略与技术（修订版）-丁鹏-电子工业出版社-2012.pdf
+量化投资与对冲基金丛书-机器学习在量化投资中的应用研究-汤凌冰-电子工业出版社-2014.pdf
+量化投资与对冲基金丛书-波动率交易-[美]尤安·辛克莱-姚军(译)-上海交通大学出版社-2013.pdf
+量化投资与对冲基金丛书-网格交易法：数学+传统智慧战胜华尔街-林方佳-电子工业出版社-2013.pdf
+量化投资与对冲基金丛书-量化投资：以MATLAB为工具-李洋＆郑志勇-电子工业出版社-2015.pdf
+量化投资与对冲基金丛书-量化投资：数据挖掘技术与实践（MATLAB）-卓金武＆周英-电子工业出版社-2015.pdf
+量化投资的文艺复兴之道：基于群体行为金融的量化投资思想和方法-路阳-光明日报出版社-2013.pdf
+量化投资的转折：分析师的良知-王铁琪-中国时代经济出版社-2012.pdf
+量化投资策略：如何实现超额收益Alpha-[美]理查德·托托里罗-上海交通大学出版社-2013.pdf
+量子信息论物理原理和某些进展_张永德.pdf
+量子光学-郭光灿-高等教育出版社-1990.pdf
+金斧子_20170331_金斧子2017年2季度资产配置报告.pdf
+金融学：课后答案(英文版·第2版)-[美]兹维·博迪＆罗伯特·C·莫顿.pdf
+金融学中的数学-史树中-高等教育出版社-2006.pdf
+金融学基础（中国版）-[美]卡伦·D·哈尔彭-电子工业出版社-2007.pdf
+金融学精选教材译丛-国际财务管理(第9版)-[美]杰夫·马杜拉-张俊瑞 等(译)-北京大学出版社-2010.pdf
+金融学精选教材译丛-跨国金融与财务（第11版）-[美]戴维·K·艾特曼-北京大学出版社-2009.pdf
+金融学经典文献通论：微观金融卷-陈雨露＆汪昌云-中国人民大学出版社-2006.pdf
+金融市场与公司战略（英文版·第2版）-[美]M.Grinblatt＆S.Titman-清华大学出版社-2002.pdf
+金融市场技术分析：交易方法与应用大全(中文版)-[美]约翰.墨菲-上海人民出版社-2002.pdf
+金融市场的统计分析-张尧庭-广东师范大学出版社-1998.pdf
+金融投资入门系列-外汇交易从入门到精通-[美]约翰·季格森-中农大期货衍生品研究中心培训部(译)-人民邮电出版社-2013.pdf
+金融数量分析：基于MATLAB编程(第3版)-郑志勇-北京航空航天大学出版社-2014.pdf
+金融期货与期权丛书-定价未来：撼动华尔街的量化金融史-[美]乔治·G·斯皮罗-王彩虹(译)-机械工业出版社-2014.pdf
+金融期货与期权丛书-暗池：高频交易及人工智能大盗颠覆金融世界的对决-[美]斯科特·帕特森-孙豪 等(译)-机械工业出版社-2015.pdf
+金融期货与期权丛书-期权投资策略(原书第5版)-[美]劳伦斯·G·麦克米伦-王琦(译)-机械工业出版社-2014.pdf
+金融物理学导论-周炜星-上海财经大学出版社-2007.pdf
+金融的解释-王福重-中信出版社-2014.pdf
+金融瞭望译丛-量化交易：如何建立自己的算法交易-[加]欧内斯特·陈-商诺奇＆谢彦(译)-东北财经大学出版社-2014.pdf
+金融知识堂-统计套利-[美]安德鲁·波尔-机械工业出版社-2011.pdf
+金融科技丛书-量化投资：以Python为工具-蔡立耑-电子工业出版社-2017.pdf
+金融经济学十讲-史树中.pdf
+金融衍生产品：定价与风险管理-[美]罗伯特·W·科布＆詹姆斯·A·奥夫戴尔-商有光(译)-北京大学出版社-2014.pdf
+金融衍生品系列丛书-金融衍生品习题集-中国期货业协会-中国财政经济出版社-2013.pdf
+金融计量学：从初级到高级建模技术-[德]S·T·维特夫 等-曲春青(译)-东北财经大学出版社-2012.pdf
+金融证券经典译丛-债券市场：分析和策略（第4版）-[美]弗兰克·J·法博齐-百家出版社-2002.pdf
+金融资产价格波动与风险控制-张宗新-复旦大学出版社-2005.pdf
+金融风险管理实务丛书-信用风险管理：对冲工具与定价模型的实务运用-陈松男-机械工业出版社-2014.pdf
+金融风险管理实务丛书-金融风险管理：避险策略与风险值-陈松男-机械工业出版社-2014.pdf
+金融风险管理师手册(第2版)-[美]菲利普·乔瑞-张陶伟＆彭永江(译)-中国人民大学出版社-2004.pdf
+金融风险管理手册-陈毅恒＆王海婴(著)-李冬昕＆郭培俊(译)-机械工业出版社-2016.pdf
+钓愚：操纵与欺骗的经济学.pdf
+铅酸蓄电池工艺学概论_第2版.pdf
+铅酸蓄电池科学与技术.pdf
+铜锌锡硫薄膜太阳电池：电化学方法合成和表征.pdf
+银河证券_20160104_银河证券金融工程：国泰指数基金投资策略研究6.pdf
+银河证券_20160107_银河证券金融工程热点点评：熔断的发生背景及择时观点7.pdf
+银河证券_20160114_基于沪深300指数期权的复制.pdf
+银河证券_20160118_银河证券金融工程报告：基于沪深300指数期权的复制6.pdf
+银河证券_20160118_银河证券金融工程报告：资产配置，以配置的角度来择时.pdf
+银河证券_20160122_并购整合量化研究之（一）：事件驱动.pdf
+银河证券_20160125_个股特征研究策略之一：基于个股领先方向性的大盘择时策略.pdf
+银河证券_20160128_-量化选股：基于机构调研的选股策略.pdf
+银河证券_20160129_银河证券基于机构调研的选股策略.pdf
+银河证券_20160317_银河证券β趋势控制策略（二）：大宗商品的投资方式.pdf
+银河证券_20160324_事件驱动量化策略系列：高管增持事件投资机会分析.pdf
+银河证券_20160412_β趋势控制策略（三）：拐点的仓位控制.pdf
+银河证券_20160418_事件驱动量化策略系列：员工持股大幅度跑赢，事件组合皆为强势.pdf
+银河证券_20160425_银河证券量化选股：基于大数据的成交量波动选股研究.pdf
+银河证券_20160429_银河证券事件驱动量化策略：高管增持事件投资机会分析.pdf
+银河证券_20160506_银河证券基于公募基金仓位测算的市场择时策略.pdf
+银河证券_20160509_-银河证券基于个股持续性的指数增强策略：个股特征研究策略之二.pdf
+银河证券_20160601_2016年中期策略报告会.pdf
+银河证券_20160613_事件驱动量化策略系列：业绩链策略超额收益稳定，高管增持遭遇小幅回撤.pdf
+银河证券_20160614_实用的选股与交易策略.pdf
+银河证券_20160706_金融工程-衍生品投机：β趋势控制策略(四)_提取震荡行情的回报.pdf
+银河证券_20160706_银河金工fof白皮书——fof发展、监管、设计、投资全解析.pdf
+银河证券_20160802_银河金工fof专题之二——详解生命周期基金.pdf
+银河证券_20160805_金融工程报告—事件类异常收益量化分析.pdf
+银河证券_20160808_银河金工fof专题之三-行业轮动fof投资策略.pdf
+银河证券_20160822_金融工程-fof研究：银河金工fof+专题之四“相图”调整法-指数增强fof投资策略.pdf
+银河证券_20160824_fof系列报告之五——资产配置的风险平价理论.pdf
+银河证券_20160829_银河金工fof系列之六——基金优选策略.pdf
+银河证券_20160831_金融工程-衍生品投机：β趋势控制策略(五)_震荡策略的设计与因子分析.pdf
+银河证券_20160912_银河金工-分红派息事件类策略：基于低股息低派息个股的指数增强策略.pdf
+银河证券_20160926_金融工程-基于大数据的全业绩报告链策略改进.pdf
+银河证券_20161013_金融工程-绝对收益：cta个股——通过交易获取绝对收益.pdf
+银河证券_20161017_金融工具套利策略分析—定增+发行可交换债券的套利模式.pdf
+银河证券_20161026_银河金工fof系列之七——fof风险管理与回撤控制.pdf
+银河证券_20161104_金融工程-衍生产品设计：β趋势控制策略(六)_非等权配置的定投策略.pdf
+银河证券_20161121_事件驱动量化策略系列：又是一年的高转送.pdf
+银河证券_20161121_金融工程-事件驱动量化周报：定增持续跑赢，员工持股回撤.pdf
+银河证券_20161130_银河金工fof系列之八——固定收益类基金投资策略.pdf
+银河证券_20170109_银河金工fof系列之九——量化fof产品方案及投资策略.pdf
+银河证券_20170116_绝对收益策略：β趋势控制策略(七)_趋势与震荡的階段式策略.pdf
+银河证券_20170123_银河金工fof系列之十——基金风格识别.pdf
+银河证券_20170215_金融工程-主动量化之一：成长股定价体系中的绝对收益思路.pdf
+银河证券_20170322_银河证券波幅异动择时策略（一）：策略的特性与优势.pdf
+银河证券_20170330_银河证券经典模型系列之一：基于Beneish模型的A股指数增强策略.pdf
+银河证券_20170407_银河证券BL模型在资产配置的运用.pdf
+银河证券_20170413_银河证券主动量化之二：G25业绩透支指数.pdf
+银河证券_20170721_银河证券波幅异动择时策略（二）：商品的投资组合.pdf
+银河证券_20170802_银河证券金工FOF系列：固定收益基金投资方法及三季度投资思路.pdf
+银河证券_20170806_银河证券事件类策略之三：重要股东增减持事件的研究.pdf
+银河证券_20170906_银河证券主动量化：个股绝对收益之恒瑞医药.pdf
+银河证券_20170906_银河证券量化策略：大小盘风格轮动，基于公募基金的偏好.pdf
+银河证券_20170908_银河证券主动量化：个股绝对收益之横店东磁.pdf
+银河证券_20170918_银河证券金融工程报告：个股绝对收益之顺络电子（3）.pdf
+银河证券_20171108_银河证券事件类策略之四：基于增持次数马氏距离的指数择时策略.pdf
+银河证券_20171116_银河证券β趋势控制策略（八）：再论商品的β趋势控制策略.pdf
+银河证券_20171117_银河证券股指期货：回顾贴水爬出深坑的过程、原因、投资误区.pdf
+银行信息安全技术与管理体系.pdf
+银行数据中心基础设施建设与运维管理.pdf
+链接：商业、科学与生活的新思维(十周年纪念版)-[美]艾伯特·拉斯洛·巴拉巴西-沈华伟(译)-浙江人民出版社-2013.pdf
+锁相环(PLL)电路设计与应用.pdf
+锁相环技术(第3版).pdf
+长城证券_20160328_金融工程深度报告：量化择时系列之移动平均线入市初探.pdf
+长城证券_20160527_长城证券金融工程深度报告：量化择时之技术分析指标择时初探.pdf
+长城证券_20170714_长城证券基金量化决策模拟组合实证.pdf
+长江证券-20161130_金融工程产品组合报告.pdf
+长江证券_20160117_量化事件冲击的日常组合构建：基于多事件的综合评估体系.pdf
+长江证券_20160118_长江证券基于多事件的综合评估体系：量化事件冲击的日常组合构建.pdf
+长江证券_20160129_长江证券金融工程专题报告：再议股权质押警报是否已拉响？.pdf
+长江证券_20160219_专题报告：用好质押杠杆这把双刃剑.pdf
+长江证券_20160314_长江证券A股系统风险防范与管理工具.pdf
+长江证券_20160315_资金流向见端倪.pdf
+长江证券_20160506_-长江证券事件驱动：事件驱动策略的SmartBeta化.pdf
+长江证券_20160520_长江证券基于资金流向选股：“SmartMoney”策略.pdf
+长江证券_20160523_多因子模型系列报告之一：模型理论随想和纯因子组合构建.pdf
+长江证券_20160603_个股情绪指标构建~基于新闻关注度.pdf
+长江证券_20160603_长江证券金融工程专题报告：个股情绪指标构建，基于新闻关注度.pdf
+长江证券_20160605_长江证券负基差对冲策略：没有正基差就做不了alpha？.pdf
+长江证券_20160612_非常之境，不在于险远.pdf
+长江证券_20160626_基于行业交叉覆盖的选股策略.pdf
+长江证券_20160627_学院派择时系列(一)：多空博弈下的基差溢价效应.pdf
+长江证券_20160629_FOF管理之如何选择ETF基金.pdf
+长江证券_20160707_价值投资新纪元.pdf
+长江证券_20160731_金融工程产品组合报告.pdf
+长江证券_20160818_独具慧眼or万众瞩目——分析师调研行为解析.pdf
+长江证券_20160822_专题报告：择时视角多周期与多维度.pdf
+长江证券_20160822_利用纯因子组合检验因子有效性(会议PPT).pdf
+长江证券_20160822_利用纯因子组合进行因子投资(会议PPT).pdf
+长江证券_20160822_择时视角：多周期与多频率.pdf
+长江证券_20160822_模型理论随想和纯因子组合构建(会议PPT).pdf
+长江证券_20160822_资金、市场和行业——基于“Smart+Money”策略配置.pdf
+长江证券_20160823_基于盈利预测的选股及增强.pdf
+长江证券_20160823_筹码分布中的Alpha：交易行为的非对称性选股.pdf
+长江证券_20160829_与震荡做朋友：Parrondo悖论和波动率捕获(会议PPT).pdf
+长江证券_20160904_筹码分布中的Alpha：交易行为的非对称性选股.pdf
+长江证券_20161023_多因子模型系列报告之二——利用纯因子组合检验因子有效性.pdf
+长江证券_20161026_多因子模型系列报告之三——利用纯因子组合进行因子投资.pdf
+长江证券_20161202_事件驱动系列报告六——基于Probit模型的高送转预测.pdf
+长江证券_20161207_大类资产配置之基于风险平价模型的收益增强策略.pdf
+长江证券_20161210_次新股：买点选择与因子构建.pdf
+长江证券_20161220_关系图谱分析与网络中心度选股策略.pdf
+长江证券_20161220_基于风险平价模型的收益增强策略.pdf
+长江证券_20161220_年报季——预期与超预期.pdf
+长江证券_20161221_2017年度行情展望.pdf
+长江证券_20161221_长江金工多因子平台介绍.pdf
+长江证券_20161230_用资金数据来做预测-基于Smart Money行业配置策略(下).pdf
+长江证券_20161230_资金、市场和行业-基于Smart Money行业配置策略(上).pdf
+长江证券_20170105_事件驱动系列报告七——年报季，业绩与预期.pdf
+长江证券_20170111_运用C#实现算法交易.pdf
+长江证券_20170122_基于网络的动量选股策略.pdf
+长江证券_20170208_基于因子spread的因子估值体系与因子轮动策略.pdf
+长江证券_20170212_FOF之基金持仓的相关稳定性研究.pdf
+长江证券_20170216_期指松绑之后：基差将向何处去？.pdf
+长江证券_20170310_长江证券金工高频识途系列（一）：基于买入行为构建情绪因子.pdf
+长江证券_20170327_长江证券股指期货专题报告：2017年指数分红预测与基差监控.pdf
+长江证券_20170404_长江证券股指期货：2017年指数分红与基差监控小工具.pdf
+长江证券_20170419_长江证券大类资产配置之机器学习应用于股票资产的趋势预测.pdf
+长江证券_20170420_长江证券分析师行为解析之低位首次覆盖.pdf
+长江证券_20170430_长江证券红利因子的探索：行业优选下的股息率选股策略.pdf
+长江证券_20170522_长江证券指数评测：中关村A股综合指数投资价值分析.pdf
+长江证券_20170604_长江证券因子轮动系列（二）：宏观周期与因子投资时钟.pdf
+长江证券_20170605_长江证券风格轮动：基于成分股动量的大小盘轮动策略.pdf
+长江证券_20170612_长江证券指数评测：富时中国A50指数投资价值分析.pdf
+长江证券_20170618_长江证券A股流动性跟踪框架系列之二：股票市场流动性指数构建.pdf
+长江证券_20170724_长江证券陆港通系列（一）：外资动向中的Alpha.pdf
+长江证券_20170727_长江证券基金二季报分析：超额收益因子层面分解及重仓的股票、行业收益率持续性验证.pdf
+长江证券_20170727_长江证券机器学习白皮书系列之一：监督学习的方法介绍及金融领域应用实例.pdf
+长江证券_20170730_长江证券公告事件挖掘之澄清公告中的交易机会.pdf
+长江证券_20170808_长江证券公告挖掘系列（二）：入选制造业单项冠军.pdf
+长江证券_20170903_长江证券红利因子系列（二）：DDM模型与股债轮动策略.pdf
+长江证券_20170906_长江证券龙虎榜事件（一）：指数增强策略.pdf
+问道量化投资：用MATLAB来敲门-金斯伯格＆王正林-电子工业出版社-2012.pdf
+闵氏几何与狭义相对论 [黄献民 著] 2013年版.pdf
+阿尔弗雷德·塔斯基：语言哲学和逻辑哲学.pdf
+阿里9年双11：互联网技术超级工程.pdf
+阿里9年技术.pdf
+阿里工程师的自我修养.pdf
+阿里巴巴Java开发手册（终极版）.pdf
+阿里巴巴Java开发手册v1.7.0嵩山版-20200803.pdf
+附件_已撤种资源.html
+院士专家巡讲团报告集(第6辑)-科学与中国-路甬祥主编-北京大学出版社-2007.pdf
+院士科普书系-说话的科学技术-马大猷-清华＆暨南大学出版社-2004.pdf
+随机微分方程及其在数理金融中的应用-蒲兴成＆张毅-科学出版社-2010.pdf
+随机性：无限王国中的规则与随机性.pdf
+随机过程-[美]Sheldon＆M.Ross.pdf
+随机逼近-陈翰馥＆朱允民-上海科学技术出版社-1996.pdf
+集体智慧编程-[美]T·西格兰-莫映＆王开福(译)-电子工业出版社-2009.pdf
+集合论与数学基础.pdf
+集合论导引（第三版，英文版，Introduction to Set Theory，K[1]. Hrbacek、T. Jech 着）.pdf
+集合论导引-朱梧槚＆肖奚安-大连理工大学出版社-2008.pdf
+集成光学-[美]T·塔米尔-梁民基＆张福初(译)-科学出版社-1982.pdf
+集群存储专利.pdf
+雪球岛系列-指数基金投资指南-银行螺丝钉-中信出版社-2015.pdf
+雪球系列丛书-超额收益：价值投资在中国的最佳实践-刘哲(502的牛)-中国铁道出版社-2016.pdf
+零排放动力循环.pdf
+零欧姆电阻的作用.pdf
+零死角玩转STM32—F103霸道.pdf
+零死角玩转STM32—F429挑战者.pdf
+零起点学Linux系统管理.pdf
+雷·库兹韦尔：The Singularity Is Near——When Humans Transcend Biology@2005.pdf
+電子書PDF資源.txt
+需要在右键首选项中打开覆盖任何已修改的文件.txt
+非标准分析与随机分析-金治明＆刘普寅-国防科技大学出版社-1997.pdf
+非电量电测技术（第2版）-严钟豪＆谭祖根-机械工业出版社-2006.pdf
+非电量电测技术（第2版）-吴道悌-机械工业出版社-2006.pdf
+非线性泛函分析（郭大钧着）.pdf
+非线性科学丛书 符号动力系统（周作领）(带书签).pdf
+非经典数理逻辑与近似推理王国俊.pdf
+非结构化P2P网络下的空间范围查询.pdf
+面向公共安全的宽带移动通信：通往LTE技术之路.pdf
+面向公共安全的宽带移动通信：通往LTE技术之路.pdf
+面向模式的软件架构模式系统 卷1.pdf
+鞅与随机微分方程-王力-科学出版社-2015.pdf
+韦伊 代数几何基础.pdf
+韦伊 代数簇的算术.PDF
+韦伊 关于代数群和其次空间.PDF
+风之能源——小型风电系统实用指南.pdf
+风俗论.pdf
+风力发电工程指南.pdf
+风力发电并网及其动态影响.pdf
+风力发电并网运行的无功管理.pdf
+风力发电技术与工程应用.pdf
+风力发电机的原理与控制.pdf
+风力发电机组技术与应用.pdf
+风力发电机组理论与设计.pdf
+风力发电机组的控制技术_第3版.pdf
+风力发电机组设计、制造及风电场设计、施工.pdf
+风力发电机组设计导则.pdf
+风力发电系统——技术与趋势.pdf
+风力发电系统.pdf
+风力发电系统优化控制.pdf
+风力发电系统的功率变换与控制.pdf
+风力机技术.pdf
+风力机技术及其设计.pdf
+风电场工程.pdf
+风电场并网稳定性技术.pdf
+风电场运维与风力发电机维护及保养.pdf
+风电并网：联网与系统运行.pdf
+风电并网：联网与系统运行_（原书第2版）.pdf
+风电系统电能质量和稳定性对策.pdf
+风能气象学.pdf
+风能系统——实现安全可靠运行的优化设计与建设.pdf
+风能转换技术进展.pdf
+风资源评估：风电项目开发实用导则.pdf
+香农信息论中译版(带目录).pdf
+香料漂流记 孜然、骆驼、旅行商队的全球化之旅.pdf
+马丁·普林格技术分析(精华版)-[美]马丁·普林格-王雪化(译)-中国人民大学出版社-2011.pdf
+高压直流输电——功率变换在电力系统中的应用.pdf
+高性能级联型多电平变换器原理及应用.pdf
+高效可再生分布式发电系统.pdf
+高效晶硅太阳电池技术—设计、制造、测试、发电.pdf
+高温超导技术在电力装备中的应用.pdf
+高等代数常用方法.pdf
+高等数理统计-茆诗松＆王静龙＆濮晓龙-高等教育出版社-1998.pdf
+高等电力网络分析-张伯明＆陈寿孙-清华大学出版社-1996.pdf
+高级微观经济学：产业组织理论、拍卖和激励理论-[德]艾尔玛·沃夫斯岱特-范翠红(译)-上海财经大学出版社-2003.pdf
+高级系统动力学-王其藩-清华大学出版社-1995.pdf
+高级编译器设计与实现 by （美）马其尼克赵克佳沈志宇 (z-lib.org).pdf
+高级计量经济学及Stata应用(第2版)-陈强-高等教育出版社-2014.pdf
+高级资产定价理论-马成虎-中国人民大学出版社-2009.pdf
+高级金融学译丛（格致出版） 暂缺书单.txt
+高级金融学译丛-信用风险：建模估值和对冲-[美]托马斯·R·比莱茨基-唐齐鸣(译)-格致出版社-2011.pdf
+高级金融学译丛-信用风险定价模型：理论与实务(第2版)-[德]贝尔恩德·施密德-张树德(译)-格致出版社-2014.pdf
+高级金融学译丛-固定收益建模-[丹麦]克劳斯·芒克-陈代云(译)-格致出版社-2015.pdf
+高级金融学译丛-数理金融基准分析法-[澳]埃克哈德.普拉滕-陈代云(译)-格致出版社-2010.pdf
+高级金融学译丛-财务金融建模-用Excel工具（第3版）-[美]西蒙·本尼卡-邵建利(译)-格致出版社-2010.pdf
+高胜算交易策略：股票、期货、外汇市场的进出场策略-[美]罗伯特·C·迈纳-张意忠(译)-万卷出版公司-2010.pdf
+高胜算操盘(中文版)-[美]马塞尔·林克-广东经济出版社-2010.pdf
+高观点下的初等数学1-【德】菲利克斯·克莱因.pdf
+高观点下的初等数学2-【德】菲利克斯·克莱因.pdf
+高观点下的初等数学3-【德】菲利克斯·克莱因.pdf
+高速数字电路设计.pdf
+高速电路设计与仿真分析：Cadence实例设计详解.pdf
+高速电路设计实践.pdf
+高频交易-[美]艾琳·奥尔德里奇-谈效俊 等(译)-机械工业出版社-2011.pdf
+鬼神学词典.pdf
+鬼谷子本经阴符七术.pdf
+魔鬼经济学：揭示隐藏在表象之下的真实世界-[美]史蒂芬•列维特-广东经济出版社-2006.pdf
+麦克拉夫商务与经济统计学（原书第10版）-[美]詹姆斯·麦克拉夫-易丹辉 等(译)-中国人民大学出版社-2009.pdf
+黎曼曲面.pdf
+黎曼积分的概念.pdf
+黑天鹅：如何应对不可预知的未来(升级版)-[美]纳西姆·尼古拉斯·塔勒布-万丹＆刘宁(译)-中信出版社-2011.pdf
+黑客反汇编揭秘：第二版_高清带超详细书签目录.pdf
+黑客大曝光：无线网络安全（原书第2版）.html.pdf
+黑客工具全攻略.pdf
+黑客攻防与无线安全从新手到高手（超值版）网络安全技术联盟.pdf
+黑客社会工程学攻击档案袋.pdf
+黑帽Python编程（英文）.pdf
+齐次可列马尔可夫过程-侯振挺＆郭青峰-科学出版社-1978.pdf
