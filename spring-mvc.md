@@ -4,7 +4,9 @@
 
 [TOC]
 
-==本文使用spring mvc为版本5.3.7==
+==本文使用spring mvc的版本为5.3.7==
+
+==软件世界迭代迅速，尽量使用新版本，大致使用方法不会变，具体变化可查看源码找找对应的新方法==
 
 ### 1. WEB的主要运行流程
 
@@ -969,5 +971,5 @@ public void onStartup(ServletContext servletContext) throws ServletException {
 
 
 
-
+**==阅读完之后，可接着看看Mybatis的使用，毕竟二者经常放在一起使用==**
 
