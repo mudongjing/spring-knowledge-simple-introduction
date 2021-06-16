@@ -929,6 +929,42 @@ public class SessionCheckInterceptor  implements HandlerInterceptor {
 
 #### 6.2 过滤器
 
+过滤器本身是servlet自大的功能，不是spring额外实现的功能，自然不是调度器能够管理的，如果需要配置，也需要在之前的`MyWebAppInitializer`类中配置。
+
+配置过滤器我这里有两种方法，先介绍简单的：
+
+```java
+@Component//声明为Bean，spring就会自动注册
+@WebFilter(urlPatterns = "/filter/*")
+//servlet自带的注解，这里一个*就可以了，两个*反而没什么用
+//当然WebFilter还有其它功能，如果真的有需要，可以看看源码中是否有自己需要的
+public class SessionFilter  extends HttpFilter {
+    @Override
+    protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
+        res.sendRedirect("完整的uri");//原本请求转化为重定向到其它地址
+        chain.doFilter(req,res);//不能少，这是让整个请求流程继续的命令，否则无法继续执行了
+    }
+}
+```
+
+上述就是非常简单有效的方法，如果希望复杂点，可以在`MyWebAppInitializer`类中进行配置。
+
+```java
+@Override
+public void onStartup(ServletContext servletContext) throws ServletException {
+    String filterName = "myfilter";//自定义一个名字
+    FilterRegistration.Dynamic filterRegistration =
+        servletContext.addFilter(filterName, new SessionFilter());
+    									//此时我们的过滤器的类就不要加那些注解了
+    filterRegistration.addMappingForUrlPatterns(
+        EnumSet.of(DispatcherType.REQUEST), false,
+        "/filter/*");
+    //其中isMatchAfter是说明是否在ServletContext声明的说有过滤器完成映射后在进行操作
+    //简单说就是是否愿意吃剩饭，这里当然是不愿意了，虽然就注册了一个过滤器
+    super.onStartup(servletContext);//别忘了，继续进行启动
+}
+```
+
 
 
 
