@@ -327,9 +327,47 @@ public interface UserMapper {
 
 ~~另外，如果读者觉得xml文件前面的内容非常复杂且不易记忆，如果是使用IDEA的话，可以将基本的内容放入模板中，至于怎么搞定模板，可自行查询~~
 
+> 现在我们得到了基本需要的数据库查询功能（当然了，不够自己再加），
 
 
 
 
 
+
+
+
+
+### 附录
+
+#### mybais自带的别名列表
+
+| 别名       | 映射的类型 |
+| :--------- | :--------- |
+| _byte      | byte       |
+| _long      | long       |
+| _short     | short      |
+| _int       | int        |
+| _integer   | int        |
+| _double    | double     |
+| _float     | float      |
+| _boolean   | boolean    |
+| string     | String     |
+| byte       | Byte       |
+| long       | Long       |
+| short      | Short      |
+| int        | Integer    |
+| integer    | Integer    |
+| double     | Double     |
+| float      | Float      |
+| boolean    | Boolean    |
+| date       | Date       |
+| decimal    | BigDecimal |
+| bigdecimal | BigDecimal |
+| object     | Object     |
+| map        | Map        |
+| hashmap    | HashMap    |
+| list       | List       |
+| arraylist  | ArrayList  |
+| collection | Collection |
+| iterator   | Iterator   |
 
