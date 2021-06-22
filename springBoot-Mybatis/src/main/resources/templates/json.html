@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GSON</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<div class="ui container" >
+    <table class="ui compact celled definition table" style="margin-top:50px !important;" >
+        <thead>
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>User_id</th>
+            <th>User_name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="collapsing">
+                <div class="ui fitted slider checkbox">
+                    <input type="checkbox"> <label></label>
+                </div>
+            </td>
+            <td th:text="${myuser.id}">f</td>
+            <td th:text="${myuser.userId}">f</td>
+            <td th:text="${myuser.userName}">f</td>
+        </tr>
+        <tr>
+            <td class="collapsing">
+                <div class="ui fitted slider checkbox">
+                    <input type="checkbox"> <label></label>
+                </div>
+            </td>
+            <td>Jamie Harington</td>
+            <td>January 11, 2014</td>
+            <td>jamieharingonton@yahoo.com</td>
+        </tr>
+
+        </tbody>
+        <tfoot class="full-width">
+        <tr>
+            <th></th>
+            <th colspan="4">
+                <div class="ui right floated small primary labeled icon button">
+                    <i class="user icon"></i> Add User
+                </div>
+                <div class="ui small button">
+                    Approve
+                </div>
+                <div class="ui small  disabled button">
+                    Approve All
+                </div>
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+    <div class="ui container">
+        <form class="ui form" action="/insertUser"method="post">
+                <input type="text" name="userId" >
+                <input type="text" name="userName" >
+            <button class="ui button" type="submit">提交</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

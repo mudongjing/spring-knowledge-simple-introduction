@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GSON</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.10/semantic.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+<div class="ui success message" th:unless="${#strings.isEmpty(message)}">
+    <i class="close icon">
+        <div class="header">
+            <p th:text="${message}"></p>
+            <p th:text="${userobject}"/>
+        </div>
+    </i>
+</div>
+
+<div class="ui container" >
+    <table class="ui compact celled definition table" style="margin-top:50px !important;" >
+        <thead>
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>User_id</th>
+            <th>User_name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user :${userList} ">
+            <td class="collapsing">
+                <div class="ui fitted slider checkbox">
+                    <input type="checkbox"> <label></label>
+                </div>
+            </td>
+            <td th:text="${user.id}">f</td>
+            <td th:text="${user.userId}">f</td>
+            <td th:text="${user.userName}">f</td>
+        </tr>
+        </tbody>
+        <tfoot class="full-width">
+        <tr>
+            <th></th>
+            <th colspan="4">
+                <div class="ui right floated small primary labeled icon button">
+                    <i class="user icon"></i> Add User
+                </div>
+                <div class="ui small button">
+                    Approve
+                </div>
+                <div class="ui small  disabled button">
+                    Approve All
+                </div>
+            </th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+$(".message.close").on('click',function(){
+    $(this).closest(".message").transition("fade");
+})
+</script>
+
+</body>
+</html>
