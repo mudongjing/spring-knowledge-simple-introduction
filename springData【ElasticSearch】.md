@@ -528,6 +528,133 @@ private RestHighLevelClient restHighLevelClient=null;//与ES的连接
 
 
 
+### 6. SpringData
+
+在IDEA中以spring initializer 创建项目，中间需要引入依赖 springweb和spring data 的ES（在Nosql目录中）依赖。【主要是基于springBoot】
+
+自动生成的文件中有`application.properties`，愿意用的话就用，我是改成`application.yml`
+
+```yaml
+spring:
+  elasticsearch:
+    rest:
+      uris: http://ip:9200
+```
+
+就这样简简单单，自动就可以连接ES，省去我们大量的工作。
+
+类似我们操作mysql时一样，ES中的文档，也就是类似记录的内容，由于包含着各个列名或称之为字段的对应的值，可以视为一个对象的各种属性，因此我们也需要为对应的ES创建一个对应的类。
+
+```java
+@Data//对应的依赖是lombok
+@AllArgsConstructor
+@NoArgsConstructor//上述两个注解自动实现了各种类内部的getter/setter以及有参和无参构造
+@Document(indexName = "sy1",createIndex = true)//这里我们设置的时一个新的索引，还没有创建，因此，可以让createIndex为true，表明会创建一个索引，默认也是true,否则false就好了
+@Setting(shards = 5,replicas = 0)//原本这些信息也是可以放在@Document中设置的， 但是后来被废弃，转移位置了
+public class User implements Serializable {
+    @Id
+    private Integer userId;//被指定为id，对应到ES就是_id
+    @Field(type= FieldType.Text,analyzer = "ik_max_word")//这里指定分词，以及分词的设置
+    private String userName;
+    @Field(type=FieldType.Double)
+    private Double deposit;//自定义的用户的余额
+    @Field(type=FieldType.Keyword)//这里表示这个字段没必要分词，参与查询
+    private String IdCard;//用户的身份证号
+}
+```
+
+
+
+我们主要使用的是配备的`ElasticsearchRestTemplate`，额外的，还有一个类似我们以前操作Mybatis是的定义mapping接口指定内部方法实现的操作。
+
+这里简单说明一下对应的接口方法
+
+```java
+@Repository//这里就类似以前对于mybatis的操作，定义接口，内部的方法对应着不同的操作语句
+public interface UserRepository extends ElasticsearchRepository<User,Integer> {
+    //直接用注解说明方法的作用了，内部使用的ES的语法
+    @Query("{\"match:\":{\"userId\":{\"query\":\"?0\"}}}")
+    User findByUserId(Integer id);
+}
+```
+
+我们在test目录下，直接使用测试方法
+
+```java
+@SpringBootTest
+public class DemoApplicationTests {
+    @Autowired
+    private UserRepository userRepository;
+    @Test
+    public void testRepository(){
+        User user=userRepository.findByUserId(1);//使用我们自定义的方法
+        System.out.println(user);
+        //需要的话，可以自定义多个不同的方法
+    }
+}
+```
+
+而`ElasticsearchRestTemplate` 的使用如下
+
+```java
+@SpringBootTest
+public class DemoApplicationTests {
+    @Autowired
+    private ElasticsearchRestTemplate  elasticsearchRestTemplate;
+    @Test
+    public void testRest(){
+        List<User> list=new ArrayList<>();
+        list.add(new User(1,"我的名字",56.03,"23456"));
+        list.add(new User(2,"又一个名字",57.05,"34567"));
+        list.add(new User(3,"我的又一个名字",59.07,"45678"));
+        elasticsearchRestTemplate.save(list);//添加记录，如果对应的id存在，就是更新
+        //删除之类的方法也可自己尝试
+        //elasticsearchRestTemplate可以进行增删改查的方法基本来自接口DocumentOperations
+
+        //下面介绍搜索
+        NativeSearchQueryBuilder nativeSearchQueryBuilder=new NativeSearchQueryBuilder();
+        NativeSearchQuery query=nativeSearchQueryBuilder.withQuery(
+                QueryBuilders.multiMatchQuery("我的","userName")).build();
+        //”我的“对应是查询内容，后面的”userName"指定查询的字段
+        SearchHits<User> searchHits = elasticsearchRestTemplate.search(query, User.class);
+        //返回的是搜索结果
+        searchHits.forEach(System.out::println);//这是循环输出的一个lambda表达方式
+        //上述的query指定了我们要查询的条件，如果删除也要指定特定的内容，也可以使用上述的那个query
+    }
+
+    //查询结果分页排序，主要就是添加个withPageable，withSort之类的
+    @Test
+    public void pagesortquery(){
+        NativeSearchQueryBuilder nativeSearchQueryBuilder=new NativeSearchQueryBuilder();
+        NativeSearchQuery query=nativeSearchQueryBuilder.withQuery(
+                QueryBuilders.multiMatchQuery("我的","userName"))
+                .withPageable(PageRequest.of(0,5))//指明第几页，前几个
+                .withSort(SortBuilders.scoreSort().order(SortOrder.ASC))//指定按分数排序，正序排列
+                //.withSort(SortBuilders.fieldSort("指定的字段名")) //如果需要按某个字段的大小排列，排序默认是倒序的
+                //上述值针对或分页或排序的，如果我全都要，也有简约的
+                //.withPageable(PageRequest.of(0,5, Sort.Direction.ASC,"deposit"))
+                //上述的语句合并了分页和排序，这里指定是按照用户的deposit字段排，后面还可以写其它字段，将依次进行排序
+                //最后说明一下高亮操作,默认高亮操作是斜体
+                //.withHighlightFields(new HighlightBuilder.Field("userName"))
+                .withHighlightBuilder(new HighlightBuilder().field("userName").preTags("<font color=yellow>").postTags("</font>"))//自定义高亮格式
+                .build();
+        SearchHits<User> searchHits = elasticsearchRestTemplate.search(query, User.class);
+        for (SearchHit<User> userSearchHit : searchHits){
+            System.out.println("userId" + userSearchHit.getId());
+            System.out.println("score" + userSearchHit.getScore());
+            System.out.println("scoreValues" + userSearchHit.getSortValues());
+            System.out.println("结果内容content" + userSearchHit.getContent());//内部包含所有结果对应的文档信息
+            List<String> username=userSearchHit.getHighlightField("userName");//提取高亮的内容
+            username.forEach(System.out::println);
+        }
+    }
+}
+```
+
+
+
+
+
 
 
 
