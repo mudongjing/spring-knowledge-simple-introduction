@@ -174,7 +174,7 @@ public static void closeChnnelAndconnection(Channel channel,Connection connectio
                   routingKey:指定队列名，也不一定就得是上面声明的那个队列
                   props:其它关于消息的设置,没有可以设置为null,此时我们的设置是要求发送的信息被持久化
                   body:最后是消息内容，且类型为byte[]
-               */
+           */
           RabbitConnection.closeChnnelAndconnection(channel,connection);//关闭
       } catch (IOException e) {
           e.printStackTrace();
@@ -223,6 +223,8 @@ public static void closeChnnelAndconnection(Channel channel,Connection connectio
 
 #### 4.2 多消费者
 
+![示例图片](https://www.rabbitmq.com/img/tutorials/exchanges.png)
+
 这属于官网的Work Queues情况，就是一个队列被多个消费者使用，我们在上述的代码基础，多运行几个消费者的main方法就是了。
 
 默认下，如果autoack设为true，rabbitmq将采用轮询的方式向这些消费者依此传递消息，导致每个消费者分到的消息基本上相同的，这是因为消息自动确认，导致系统认为所有的消费者都能以同样的速度快速执行，就平均分配了。如果不同消费者的性能不同，这一方案显然是不可行的。
@@ -239,7 +241,7 @@ public class ConsumerExample {
         final Channel channel=connection.createChannel();
         channel.queueDeclare("first",true,false,
                 false,null);
-        channel.basicQos(1);//要求一个通道依此只能处理一条消息
+        channel.basicQos(1);//要求一个通道一次只能处理一条消息
         channel.basicConsume("first",false,new DefaultConsumer(channel){
             @SneakyThrows
             @Override
@@ -247,7 +249,7 @@ public class ConsumerExample {
                                        AMQP.BasicProperties properties,
                                        byte[] body) throws IOException {
                 System.out.println(consumer_name+"---"+
-                                   new String(body)+"\n---------");
+                                   new String(body)+"\n---------");//打印每条消息的结果
                 //进行手动确认，如果没有这个语句，前面的消息则会一直处于为为确认状态
                 channel.basicAck(envelope.getDeliveryTag(),false);
                 /*
@@ -290,12 +292,183 @@ public class ProviderMulti {
             channel.basicPublish("","first",
                     MessageProperties.PERSISTENT_TEXT_PLAIN,
                     new String("随便写点"+i).getBytes());
-            Thread.sleep(1200);
+            Thread.sleep(1500);//隔1.5秒发送一条
         }
         RabbitConnection.closeChnnelAndconnection(channel,connection);
     }
 }
 ```
+
+#### 4.3 多队列
+
+- 订阅/发布
+
+  首先写一个消息提供者的类
+
+  ```java
+  @SneakyThrows
+  @Test
+  public void sendmessage(){
+      Connection connection= RabbitConnection.createConnect();
+      Channel channel=connection.createChannel();
+  
+      //这里指明对应的一个交换机，如果不存在，他会自动创建一个
+      //后面的fanout是指明交换机的类型，前面就提及过，交换机有着不同的类型
+      /*
+              direct:最简单也是默认的，在传输消息时，我们之前是以routingKey参数指定队列名，
+              	   但实际这个参数没这么简单，在队列绑定时，它可以用于作为绑定键，以后的匹配可以用到
+              topic:用来匹配多个队列，且队列名符合`x.y`的格式，即内部用`.`分隔开,
+                    关键在于routingKey此时就变成已成匹配模式，`*`匹配任意一个单词，`#`匹配0个或多个
+                    如`#.suibian.*.*`
+              fanout:相当于广播，直接将消息发送给绑定的所有队列,此时routingKey是无用的
+              headers:类似topic的匹配方式，只是这里的匹配是消息头,在通道声明时，有一个arguments的参					  数，那里可以用map类型指定各种变量和对应的值，就是header,
+                      而在发送消息时，另一个方法
+                      basicPublish(String exchange, String routingKey, boolean 										 mandatory,BasicProperties props, byte[] body)
+                      其中的BasicProperties就对应着header,
+                      于是，这就要求消息的头与对应的队列的arguments指定的头是相同的才行
+           */
+      //此外，rabbitmq本身就已经为我们的虚拟主机创建了对应的fanout类型交换机，但我们这里就任性地创建一个
+      channel.exchangeDeclare("newEx","fanout");
+      String queueName = channel.queueDeclare().getQueue();//这是一个临时队列
+      // 当完成任务后，就自动删除，也就是autoDelete为true
+      System.out.println(queueName);//随机生成一个队列，
+      // 往这里输入的消息，之后其它绑定到该交换机的队列均会收到消息
+      channel.queueBind(queueName,"newEx","");
+      channel.basicPublish("newEx","",null,"一条发布的消息".getBytes());
+      RabbitConnection.closeChnnelAndconnection(channel,connection);
+  }
+  ```
+
+  写一个消费者的模板类
+
+  ```java
+  public class ConsumerMulQueExample {
+      @SneakyThrows
+      public void example(final String consumer_name){
+          Connection connection= RabbitConnection.createConnect();
+          Channel channel=connection.createChannel();
+  
+          //这里将绑定指定的交换机，其实这里也可以继续使用channel.exchangeDeclare("newEx","fanout");
+          //这个方法则侧重于多个交换机的场景，
+          /*
+              destination:指定消息目的地的交换机，就是我们此时创建的
+              source:就是消息来源对应的交换机，此时也就是目的地自己
+              routingKey:此时还是没用的参数
+           */
+          //channel.exchangeBind("newEx","newEx","");
+          channel.exchangeDeclare("newEx","fanout");
+          String queueName = channel.queueDeclare().getQueue();
+          System.out.println(queueName);//不同消费者都拥有一个自己独特的队列，
+          // 但每个队列都会收到相同的消息，供对应的消费者使用
+          //如果不使用这种随机队列的方式，读者则需要额外为不同消费者创建对应不同的队列
+          channel.queueBind(queueName,"newEx","");
+  
+          //消费也是老样子，
+          //读者可能会说了，这样子好像没什么区别，就加了个交换机，还没什么用
+          //实际上，这一操作，官网上称之为 订阅/发布 模式，
+          // 我们虽然只发送了一条消息，都是如果多个消费者建立了此类连接，这一条消息可以被多个消费者消费
+          channel.basicConsume(queueName,true,new DefaultConsumer(channel){
+              @Override
+              public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                  System.out.println(consumer_name+new String(body)+"\n---------");
+              }
+          });
+          //RabbitConnection.closeChnnelAndconnection(channel,connection);
+      }
+  }
+  ```
+
+  对应的两个实际的消费者类【当然可以写好几个】
+
+  ```java
+  public class ConsumerMulQue_1 {
+      public static void main(String[] args){
+          new ConsumerMulQueExample().example("consumerMulQue_1");}}
+  public class ConsumerMulQue_2 {
+      public static void main(String[] args){
+          new ConsumerMulQueExample().example("consumerMulQue_2");}}
+  ```
+
+> 前面介绍了交换机的不同类型，其中也介绍了对应的direct和topic类型，下面就简要的说明一下这两种类型的匹配如何使用
+
+- Routing
+
+  这里要求对应的交换机时direct类型。
+
+  先写消息生产者的类
+
+  ```java
+  @SneakyThrows
+  @Test
+  public void sendMessage(){//生产者将消息发送给指定的交换机，并附带对应的路由值
+      //之后到哪个队列，则交由消费者决定
+      Connection connection= RabbitConnection.createConnect();
+      Channel channel=connection.createChannel();
+      channel.exchangeDeclare("Ex_direct","direct");
+      String[] routingkey={"A_Key","B_Key"};//这里我们随便定义一个键值
+      Arrays.asList(routingkey).forEach(s -> {
+          try { channel.basicPublish("Ex_direct",s,null,
+                                     new String("指定了一个键值 "+s).getBytes());
+              } catch (IOException e) { e.printStackTrace(); } });
+      RabbitConnection.closeChnnelAndconnection(channel,connection);
+  }
+  ```
+
+  消费者的模板类
+
+  ```java
+  public class ConsumerRoutingExample {
+      @SneakyThrows
+      public void example(final String consumer_name, String[] routingkeys) {
+          Connection connection= RabbitConnection.createConnect();
+          Channel channel=connection.createChannel();
+          channel.exchangeDeclare("Ex_direct","direct");
+          String queueName = channel.queueDeclare().getQueue();
+          //可以绑定多个路由值，当交换机内存在对应路由值的消息，则将纳入到这个队列中
+          Arrays.asList(routingkeys).forEach( s -> {
+              try { channel.queueBind(queueName,"Ex_direct",s); }
+              catch (IOException e) { e.printStackTrace(); }});
+          channel.basicConsume(queueName,true,new DefaultConsumer(channel){
+              @SneakyThrows
+              @Override
+              public void handleDelivery(String consumerTag, Envelope envelope, 											AMQP.BasicProperties properties, byte[] body) {
+                  System.out.println(consumer_name+new String(body));}});
+  	}
+  }
+  ```
+
+  消费者
+
+  ```java
+  public class ConsumerRouting_1 {
+      public static void main(String[] args){
+          new ConsumerRoutingExample().example("consumer_1",
+                  new String[]{"A_Key","B_Key"});
+      }
+  }
+  public class ConsumerRouting_2 {
+      public static void main(String[] args){
+          new ConsumerRoutingExample().example("consumer_2",
+                  new String[]{"B_Key"});
+      }
+  }
+  ```
+
+- Topic
+
+  
+
+#### 4.4 远程调用
+
+
+
+#### 4.5 发布者确认
+
+
+
+### 5. SpringBoot下的使用
+
+
 
 
 
