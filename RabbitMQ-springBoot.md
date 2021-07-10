@@ -348,15 +348,15 @@ public class ProviderMulti {
           Connection connection= RabbitConnection.createConnect();
           Channel channel=connection.createChannel();
   
-          //这里将绑定指定的交换机，其实这里也可以继续使用channel.exchangeDeclare("newEx","fanout");
+          //这里将绑定指定的交换机，其实这里也可以继续使用												  channel.exchangeDeclare("newEx","fanout");
           //这个方法则侧重于多个交换机的场景，
           /*
               destination:指定消息目的地的交换机，就是我们此时创建的
               source:就是消息来源对应的交换机，此时也就是目的地自己
               routingKey:此时还是没用的参数
            */
-          //channel.exchangeBind("newEx","newEx","");
-          channel.exchangeDeclare("newEx","fanout");
+          channel.exchangeBind("newEx","newEx","");
+          //channel.exchangeDeclare("newEx","fanout");
           String queueName = channel.queueDeclare().getQueue();
           System.out.println(queueName);//不同消费者都拥有一个自己独特的队列，
           // 但每个队列都会收到相同的消息，供对应的消费者使用
@@ -393,6 +393,8 @@ public class ProviderMulti {
 
 - Routing
 
+  ![示例图片](https://www.rabbitmq.com/img/tutorials/direct-exchange.png)
+
   这里要求对应的交换机时direct类型。
 
   先写消息生产者的类
@@ -422,6 +424,7 @@ public class ProviderMulti {
       public void example(final String consumer_name, String[] routingkeys) {
           Connection connection= RabbitConnection.createConnect();
           Channel channel=connection.createChannel();
+          //这里我们由恢复使用声明的方式绑定，无它，写的内容少
           channel.exchangeDeclare("Ex_direct","direct");
           String queueName = channel.queueDeclare().getQueue();
           //可以绑定多个路由值，当交换机内存在对应路由值的消息，则将纳入到这个队列中
@@ -456,6 +459,57 @@ public class ProviderMulti {
 
 - Topic
 
+  ![topic示例图片](https://www.rabbitmq.com/img/tutorials/python-five.png)
+  
+  前面也提到过了，topic同样时一种匹配机制，只是可以使用通配符，前提是单词之间以`.`分隔。
+  
+  `*` 匹配1个单词。`#`可以匹配0或多个单词。
+  
+  而具体的代码实现与之前的许多模式类似，其中消息生产者只需要做些简单的修改
+  
+  ```java
+  channel.exchangeDeclare("Ex_topic","topic");//随便写个交换机名
+  String[] routekeys={"Atopic.Btopic","Atopic.Btopic.Ctopic"};//随便写
+  //同样这里只需要发送到交换机即可
+  Arrays.asList(routekeys).forEach(s-> {
+      try { channel.basicPublish("Ex_topic",s,null,
+                                 new String("使用了topic--"+s).getBytes());}
+      catch (IOException e) { e.printStackTrace(); } });
+  
+  ```
+  
+  而消费者模板的代码也需要修改为，
+  
+  ```java
+  public class ConsumerTopicExample {
+      @SneakyThrows
+      public void example(final String consumer_name,String[] routes){
+          Connection connection= RabbitConnection.createConnect();
+          Channel channel=connection.createChannel();
+          channel.exchangeDeclare("Ex_topic","topic");
+          String queueName=channel.queueDeclare().getQueue();
+          Arrays.asList(routes).forEach(s -> {
+          	try { channel.queueBind(queueName,"Ex_topic",s); }
+          	catch (IOException e) { e.printStackTrace(); } });
+      	channel.basicConsume(queueName,true,new DefaultConsumer(channel){
+          	@Override
+          	public void handleDelivery(String consumerTag, Envelope envelope, 							AMQP.BasicProperties properties, byte[] body) throws IOException {
+                  System.out.println(consumer_name+new String(body));}});
+      }
+  }
+  ```
+  
+  消费者，
+  
+  ```java
+  public class ConsumerTopic_1 {
+      public static void main(String[] args){
+          new ConsumerTopicExample().example("consumerTopic_1",new String[]																				{"Atopic.*"});}}
+  public class ConsumerTopic_2 {
+      public static void main(String[] args){
+          new ConsumerTopicExample().example("consumerTopic_2",new String[]{"*.#"});}}
+  ```
+  
   
 
 #### 4.4 远程调用
