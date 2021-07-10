@@ -239,8 +239,7 @@ public class ConsumerExample {
     public void example(final String consumer_name,final int sleep_time){
         Connection connection= RabbitConnection.createConnect();
         final Channel channel=connection.createChannel();
-        channel.queueDeclare("first",true,false,
-                false,null);
+        channel.queueDeclare("first",true,false,false,null);
         channel.basicQos(1);//要求一个通道一次只能处理一条消息
         channel.basicConsume("first",false,new DefaultConsumer(channel){
             @SneakyThrows
@@ -408,7 +407,7 @@ public class ProviderMulti {
       Channel channel=connection.createChannel();
       channel.exchangeDeclare("Ex_direct","direct");
       String[] routingkey={"A_Key","B_Key"};//这里我们随便定义一个键值
-      Arrays.asList(routingkey).forEach(s -> {
+      Arrays.asList(routingkey).forEach(s -> {//数组转化为队列，lambda表达式遍历
           try { channel.basicPublish("Ex_direct",s,null,
                                      new String("指定了一个键值 "+s).getBytes());
               } catch (IOException e) { e.printStackTrace(); } });
@@ -509,22 +508,315 @@ public class ProviderMulti {
       public static void main(String[] args){
           new ConsumerTopicExample().example("consumerTopic_2",new String[]{"*.#"});}}
   ```
-  
-  
 
 #### 4.4 远程调用
 
+![示例图片](https://www.rabbitmq.com/img/tutorials/python-six.png)
 
+从图中就可以发现，这已经不是简单的消息存放的操作了，应该说，我们之前的操作都是纯粹的消息中间件的工作。
+
+而这里则是利用消息中间件的作用完成工作，由于一些功能是服务端特有的，因此客户端需要发送消息请求服务端完成某些工作以提供响应的信息。那么正常情况下，客户端肯定需要和服务端中的相关服务建立关系，以发送任务并获取结果。这样的话，耦合度太高。【当然了，如果解耦了也没什么好处就别用了，一切以实际场景为主】
+
+于是，我们需要创建一个请求队列，客户端们的请求消息将纳入其中，服务端也从这里提取任务。而每个客户端为了获取结果则需要为自己创建一个唯一的回调队列，用于获取返回的消息。
+
+官网的教程页面内，对相应的客户端和服务端都有对应的代码示例文件，例如对应的客户端示例文件[RPCClient.java ](https://github.com/rabbitmq/rabbitmq-tutorials/blob/08d574812fa0f2c5b84a8562bc13df123f29c458/java/RPCClient.java#L12)，读者可以直接看看官方的示例代码。我们下文简化了许多。
+
+那么我们的代码，先定义一个服务端的类，其中需要指明请求队列，并定义用于提供服务的方法，
+
+```java
+//这里是我们将要使用的请求队列的名字
+    private static final String RPC_QUEUE_NAME = "rpc_queue";
+    //首先定义一个用于提供服务的方法，当然可以多定义几个，只要客户端传送的消息能够指定把不同的服务即可
+    private static String responseCall(String message){
+        String reslut="你已经来过服务器了"+message+"!!!";
+        return reslut;
+    }
+    @SneakyThrows
+    public static void main(String[] args){
+        Connection connection= RabbitConnection.createConnect();
+        Channel channel=connection.createChannel();
+        channel.queueDeclare(RPC_QUEUE_NAME,false,false,false,null);
+        //channel.queuePurge(RPC_QUEUE_NAME); // 如果该请求队列是已有的，可能内部有其它剩余的消息，可以使用该方法清理
+        channel.basicQos(1);//指明服务器每次能传递的消息最大数量，如果是0反而代表没有限制
+        Object monitor=new Object();//用与后面的同步锁
+        //之前我们进行消费的 basicConsume都是使用的DefaultConsumer,这里也可以使用
+        //但是官方的示例代码使用了 DeliverCallback ，我们也尝试一下
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {//这是用lambda的方式实现一个接口，接口必须只有一个方法
+            AMQP.BasicProperties replyProps = new AMQP.BasicProperties
+                    .Builder()
+                    .correlationId(delivery.getProperties().getCorrelationId())//指明该请求对应的唯一值，方便客户端判断结果对应的是哪个请求
+                    .build();
+            String response = "";
+            try {
+                String message = new String(delivery.getBody(), "UTF-8");//获取请求内容
+                response += responseCall(message);//完成服务
+            } catch (RuntimeException e) { System.out.println(" [.] " + e.toString());
+            } finally {
+                //接下来就是将结果发送到指定的队列中
+                /*
+                    对应的参数是，
+                    exchange:这里我们没有设置交换机，
+                    routingKey:这里的getReplyTo()返回客户端传送过来的回调队列的名字
+                    BasicProperties:这里就是指明结果的各种信息
+                    body[]:消息主体
+                 */
+                channel.basicPublish("", delivery.getProperties().getReplyTo(), replyProps, response.getBytes("UTF-8"));
+                //手动发送确认，因为我们的请求队列没有设置为自动确认。
+                /*
+                    deliveryTag；对应的是消息是否确实获取到
+                    mutiple:对应的是是否用于确认多条消息的确认，这里的false表明一条一条地确认
+                 */
+                channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+                // RabbitMq的消费者工作线程 通知  RPC 服务器 拥有者的线程
+                synchronized (monitor) { monitor.notify(); }
+            }
+        };
+        //消费请求队列中的消息
+        //最后的参数，使用了lambda表达式没有做具体的实现，只是对应的位置需要有一个CancelCallback的对象
+        //在下面的 发布者确认模式 中我们还会了解到一个ConfirmCallback
+        channel.basicConsume(RPC_QUEUE_NAME, false, deliverCallback, (consumerTag -> { }));
+        // 等待并时刻准备着消费客户端发来的消息.
+        while (true) {
+            synchronized (monitor) {
+                try { monitor.wait(); } catch (InterruptedException e) { e.printStackTrace(); }
+            }
+        }
+    }
+```
+
+而客户端的类，一方面需要自己创建一个回调队列，另一方面需要与请求队列建立联系，并且发送请求的相关信息，否则服务端怎么知道结果和哪个客户端对应，而客户端有需要知道结果是对应的哪个请求的
+
+```java
+//指明请求队列的名字
+    private String requestQueueName = "rpc_queue";
+    @Test
+    @SneakyThrows
+    public void call(){//实际使用时，这个是作为主函数的调用方法，内部包含消息的参数，这里是方便测试
+        String message="请求服务消息";
+        String result=null;
+        Connection connection= RabbitConnection.createConnect();
+        Channel channel=connection.createChannel();
+        final String corrId = UUID.randomUUID().toString();//为消息准备一个唯一值，随便那什么方法生成，只要保证唯一就行
+        String replyQueueName = channel.queueDeclare().getQueue();//用于作为回调队列的名字
+
+        /*
+        属性设置的常用内容：
+            delivery_mode（投递模式）：将消息标记为持久的（值为2）或暂存的（除了2之外的其他任何值）。第二篇教程里接触过这个属性，记得吧？
+            content_type（内容类型）:用来描述编码的 mime-type。例如在实际使用中常常使用 application/json 来描述 JOSN 编码类型。
+            reply_to（回复目标）：通常用来命名回调队列。
+            correlation_id（关联标识）：用来将RPC的响应和请求关联起来。
+        */
+        AMQP.BasicProperties props = new AMQP.BasicProperties
+                .Builder()
+                .correlationId(corrId)//指定消息的唯一值
+                .replyTo(replyQueueName)//指定结果进入的回调队列
+                .build();
+        channel.basicPublish("", requestQueueName, props, message.getBytes("UTF-8"));
+        //用于接收结果,容量是一个
+        final BlockingQueue<String> response = new ArrayBlockingQueue<>(1);
+
+        //消费回调队列中的结果
+        String ctag = channel.basicConsume(replyQueueName, true, (consumerTag, delivery) -> {
+            if (delivery.getProperties().getCorrelationId().equals(corrId)) {
+                response.offer(new String(delivery.getBody(), "UTF-8")); }}, consumerTag -> {});
+        result = response.take();
+        channel.basicCancel(ctag);//取消队列的订阅关系
+        RabbitConnection.closeChnnelAndconnection(channel,connection);
+        System.out.println(result);
+    }
+```
 
 #### 4.5 发布者确认
 
+这一模式是用于保证消息都确实被消费者获取，前面我们已经使用过手动确认，要求服务器返回相应的回应。但是我们当然还是希望有更方便的方式、更丰富的功能完成相关的操作。
 
+这个模式，则主要是要求当前的通道转变为这样的发布者确认模式，当发布了消息后，可以通过指定的方法等待服务器的回应，回应可以是成功，也可能是拒绝接收消息，当指定的时间内未收到回应，则认为失败，将重新发布消息。具体的操作，可以是每条消息都等待回应，也可以是一批消息，还可以是异步处理。
+
+同样的，可以看一下官方的示例代码，下面，我们将基于官方的代码做一些简化，
+
+```java
+public class Confirms {
+    static final int MESSAGE_COUNT = 50_000;
+    private static Connection connection=RabbitConnection.createConnect();
+    @Test
+    public  void publishMessagesIndividually() throws Exception {//仅发布一条消息
+        Channel channel = connection.createChannel();
+        String queue = UUID.randomUUID().toString();
+        channel.queueDeclare(queue, false, false, true, null);
+        channel.confirmSelect();//声明为发布者确认模式
+        long start = System.nanoTime();//记录时间而已
+        for (int i = 0; i < MESSAGE_COUNT; i++) {
+            String body = String.valueOf(i);
+            channel.basicPublish("", queue, null, body.getBytes());
+
+            //等待直到自最后一次调用以来发布的所有消息已经被回应，这里包括成功和失败（当然不是不回应的失败）;
+            // //如果在给定的时间内为回应，则抛异常
+            channel.waitForConfirmsOrDie(5_000);
+        }
+        long end = System.nanoTime();//记录一下整个的时间而已
+        System.out.format("Published %,d messages individually in %,d ms%n", MESSAGE_COUNT, Duration.ofNanos(end - start).toMillis());
+    }
+    @Test
+    public void publishMessagesInBatch() throws Exception {//发布一个批次的消息
+        Channel channel = connection.createChannel();
+        String queue = UUID.randomUUID().toString();
+        channel.queueDeclare(queue, false, false, true, null);
+        channel.confirmSelect();
+        int batchSize = 100;//表明一个批次的消息量为100
+        int outstandingMessageCount = 0;
+        long start = System.nanoTime();
+        for (int i = 0; i < MESSAGE_COUNT; i++) {
+            String body = String.valueOf(i);
+            channel.basicPublish("", queue, null, body.getBytes());
+            outstandingMessageCount++;
+            if (outstandingMessageCount == batchSize) {//达到一个批次的量了
+                channel.waitForConfirmsOrDie(5_000);//等待之前的消息有回应
+                outstandingMessageCount = 0;
+            }
+        }
+        if (outstandingMessageCount > 0) {//剩余的不够一批次
+            channel.waitForConfirmsOrDie(5_000);
+        }
+        long end = System.nanoTime();
+        System.out.format("Published %,d messages in batch in %,d ms%n", MESSAGE_COUNT, Duration.ofNanos(end - start).toMillis());
+    }
+    @Test
+    public void handlePublishConfirmsAsynchronously() throws Exception {//异步
+        Channel channel = connection.createChannel();
+        String queue = UUID.randomUUID().toString();
+        channel.queueDeclare(queue, false, false, true, null);
+        channel.confirmSelect();
+        ConcurrentNavigableMap<Long, String> outstandingConfirms = new ConcurrentSkipListMap<>();//这里new的是一个跳表，不知道的读者可以了解一下（当然与下面的代码没有具体关系）
+        ConfirmCallback cleanOutstandingConfirms = (sequenceNumber, multiple) -> {
+            if (multiple) {//这里表示可以删除多个
+                //headMap是指返回表中对应键值小于sequenceNumber的记录，后面的参数为 inclusive，如果为true，则表示可以是小于等于。
+                ConcurrentNavigableMap<Long, String> confirmed = outstandingConfirms.headMap(sequenceNumber, true);
+                confirmed.clear();
+            } else { //这里表示只能删除一个
+                outstandingConfirms.remove(sequenceNumber);
+            }
+        };
+
+        /*
+            两个参数均是ConfirmCallback类型，
+            前者为 ackCallback：意味成功，就直接删除原有的消息了
+            后者为 nackCallback：意味失败，则做一些表示，如下面输出哪个消息失败了，再执行删除
+         */
+        //到这里，基本为后面的具体操作，做了规划
+        channel.addConfirmListener(cleanOutstandingConfirms, (sequenceNumber, multiple) -> {
+            String body = outstandingConfirms.get(sequenceNumber);
+            System.err.format(
+                    "Message with body %s has been nack-ed. Sequence number: %d, multiple: %b%n",
+                    body, sequenceNumber, multiple
+            );
+            cleanOutstandingConfirms.handle(sequenceNumber, multiple);
+        });
+        long start = System.nanoTime();
+        for (int i = 0; i < MESSAGE_COUNT; i++) {
+            String body = String.valueOf(i);
+            outstandingConfirms.put(channel.getNextPublishSeqNo(), body);
+            channel.basicPublish("", queue, null, body.getBytes());
+        }
+
+        //如果60秒后，消息没有全部得到回应，就抛异常
+        if (!waitUntil(Duration.ofSeconds(60), () -> outstandingConfirms.isEmpty())) {
+            throw new IllegalStateException("All messages could not be confirmed in 60 seconds");
+        }
+        long end = System.nanoTime();
+        System.out.format("Published %,d messages and handled confirms asynchronously in %,d ms%n", MESSAGE_COUNT, Duration.ofNanos(end - start).toMillis());
+    }
+
+    public boolean waitUntil(Duration timeout, BooleanSupplier condition) throws InterruptedException {
+        int waited = 0;
+        //不到60秒，而且消息还有剩余（只要有剩余，就说明消息没有全部得到回应），
+        while (!condition.getAsBoolean() && waited < timeout.toMillis()) {//这里对应的是60秒的毫秒数
+            Thread.sleep(100L);// 避免频繁循环，本来异步操作就是想慢慢等的，不急的
+            waited = +100;//当等待的时间超过了60秒，就跳出循环
+        }
+        return condition.getAsBoolean();
+    }
+}
+```
 
 ### 5. SpringBoot下的使用
 
+使用了SpringBoot后，上述的操作都会变得非常简单，我们这里仅列出消息中间件的操作，其它模式，读者基本可以自己摸索出来。
 
+需要的依赖有`spring-boot-starter-amqp`, `spring-boot-starter-web`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。
 
+- Hello World
 
+  生产者
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class ProviderHello {
+      @Autowired
+      private RabbitTemplate rabbitTemplate;
+      @Test
+      public void sendMessage(){
+          //hello就是指定的队列，后面的参数就是消息内容，这里不用我们转化为byte[]
+          rabbitTemplate.convertAndSend("hello","一条消息");
+      }
+  }
+  ```
+
+  ```java
+  @SpringBootApplication
+  public class DemoApplication {//这是创建项目自动生成的，名字随意，主要作为项目的入口
+      public static void main(String[] args) {
+          SpringApplication.run(DemoApplication.class, args);
+      }
+  }
+  ```
+
+  消费者
+
+  ```java
+  //单纯有前面的生产者，运行时没有效果的，只有存在消费者，才能真正创建对应的队列
+  @Component
+  @RabbitListener(queuesToDeclare = @Queue("hello"，,durable = "false"))//表示这是一个消费者，并指明消费的队列名
+  //这里的@Queue,内部可以指明队列的各种属性，更多的可以查看源码，默认属性是true
+  //并且，这个注解也是可以放在方法上的，因此可以在一个类中配置针对多个队列的消费
+  public class ConsumerHello {
+      @RabbitHandler
+      public void consumer(String message){//这里它自动就从队列中获取消息内容
+          System.out.println("消费者 "+message);
+      }
+  }
+  ```
+
+- Work Queues
+
+  生产者
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class ProviderWork {
+      @Autowired
+      RabbitTemplate rabbitTemplate;
+      @Test
+      public void sendMessage(){
+          rabbitTemplate.convertAndSend("work","work模式内容");
+      }
+  }
+  ```
+
+  消费者
+
+  ```java
+  @Component
+  public class ConsumerWork {
+      @RabbitListener(queuesToDeclare = @Queue(value="work",durable = "false"))
+      public void consume(String message){
+          System.out.println("work消费者"+message);
+      }
+  }
+  ```
+
+  
 
 
 
