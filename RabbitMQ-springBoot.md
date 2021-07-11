@@ -654,8 +654,8 @@ public class Confirms {
             String body = String.valueOf(i);
             channel.basicPublish("", queue, null, body.getBytes());
 
-            //等待直到自最后一次调用以来发布的所有消息已经被回应，这里包括成功和失败（当然不是不回应的失败）;
-            // //如果在给定的时间内为回应，则抛异常
+          //等待直到自最后一次调用以来发布的所有消息已经被回应，这里包括成功和失败（当然不是不回应的失败）;
+          //如果在给定的时间内为回应，则抛异常
             channel.waitForConfirmsOrDie(5_000);
         }
         long end = System.nanoTime();//记录一下整个的时间而已
@@ -675,7 +675,7 @@ public class Confirms {
             channel.basicPublish("", queue, null, body.getBytes());
             outstandingMessageCount++;
             if (outstandingMessageCount == batchSize) {//达到一个批次的量了
-                channel.waitForConfirmsOrDie(5_000);//等待之前的消息有回应
+                channel.waitForConfirmsOrDie(5_000);//等待之前的消息有回应，时限设置为5秒
                 outstandingMessageCount = 0;
             }
         }
@@ -745,7 +745,7 @@ public class Confirms {
 
 ### 5. SpringBoot下的使用
 
-需要的依赖有`spring-boot-starter-amqp`, `spring-boot-starter-web`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。【其中测试时，如果没有写对应的消费者，单纯地运行生产者是没有任何作用的】
+需要的依赖有`spring-boot-starter-amqp`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。【其中测试时，如果没有写对应的消费者，单纯地运行生产者是没有任何作用的】
 
 - Hello World
 
@@ -917,9 +917,75 @@ public class Confirms {
   }
   ```
 
+- RPC
+
+  与之前稍有不同的是，我们这里需要先定义一个config类，指定对应的交换机、请求队列，以及将二者绑定起来。
+
+  config类，
+
+  ```java
+  @Configuration
+  public class Tut6Config {//这里作为设置类
+  	@Bean
+  	public DirectExchange exchange() {//指定交换机的名字
+  		return new DirectExchange("tut.rpc");}//一个direct类型的交换机
+  	@Bean
+  	public Queue queue() {//指定请求队列
+  		return new Queue("tut.rpc.requests");}
+  	@Bean
+  	public Binding binding(DirectExchange exchange, Queue queue) {
+  		return BindingBuilder.bind(queue).to(exchange).with("rpc");
+  		//将交换机与请求队列绑定在一起
+      }
+  }
+  ```
+
+   客户端类，
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class Tut6Client {
+  	@Autowired
+  	private RabbitTemplate template;
+  	@Autowired
+  	private DirectExchange exchange;
+  	@Test
+  	//@Scheduled(fixedDelay = 1000, initialDelay = 500) ，类似与定时器可以按指定间隔启动
+  	public void send() {
+  		String response = (String) template.
+  				convertSendAndReceive(exchange.getName(),
+  					"rpc", //这里就对应着设置类中绑定队列时附带的路由值，相当于使用Routing模式
+  					"一条远程命令");
+  		System.out.println(response);
+  	}
+  }
+  ```
+
+  服务端
+
+  ```java
+  @Component
+  public class Tut6Server {
+  	//这里就是一直监听着指定的请求队列
+  	@RabbitListener(queues = "tut.rpc.requests")// @SendTo("tut.rpc.replies") used when the client doesn't set replyTo.
+      //返回的类型也是随意的
+  	public String call(String message) {//自动获取消息的内容，这里也可以指定其它类型
+  		String result=responseCall(message);
+  		return result;
+  	}
+  	private  String responseCall(String message){//对应负责服务的方法
+  		String reslut="你已经来过服务器了--"+message+"!!!";
+  		return reslut;
+  	}
+  }
+  ```
+
+- Publisher Confirms
+
+  发布者确认这一模式，官方没有官方的示例代码，可以查看一下[程序员内点事](https://juejin.cn/post/6844904205438681095)的博客。
+
   
-
-
 
 
 
