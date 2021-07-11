@@ -745,7 +745,7 @@ public class Confirms {
 
 ### 5. SpringBoot下的使用
 
-需要的依赖有`spring-boot-starter-amqp`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。【其中测试时，如果没有写对应的消费者，单纯地运行生产者是没有任何作用的】
+需要的依赖有`spring-boot-starter-amqp`,`spring-boot-starter-web`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。【其中测试时，如果没有写对应的消费者，单纯地运行生产者是没有任何作用的】
 
 - Hello World
 
