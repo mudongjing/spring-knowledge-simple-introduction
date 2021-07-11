@@ -1,0 +1,15 @@
+org\example\multiconsumers\ConsumerExample.class
+org\example\multiQueues\routing\ConsumerRoutingExample$1.class
+org\example\multiconsumers\Consumer_1.class
+org\example\multiQueues\multiConsumers\ConsumerMulQue_1.class
+org\example\multiconsumers\Consumer_2.class
+org\example\multiQueues\routing\ConsumerRoutingExample.class
+org\example\multiQueues\ConsumerMulQueExample.class
+org\example\multiQueues\ConsumerMulQueExample$1.class
+org\example\multiQueues\routing\ConsumerRouting_1.class
+org\example\RabbitConnection.class
+org\example\simple\ConsumerMain$1.class
+org\example\multiconsumers\ConsumerExample$1.class
+org\example\App.class
+org\example\multiQueues\multiConsumers\ConsumerMulQue_2.class
+org\example\simple\ConsumerMain.class

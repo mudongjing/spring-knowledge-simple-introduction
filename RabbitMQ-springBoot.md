@@ -167,7 +167,10 @@ public static void closeChnnelAndconnection(Channel channel,Connection connectio
   
           //这是实际进行消息发布的方法
           channel.basicPublish("","first",MessageProperties.PERSISTENT_TEXT_PLAIN,
-                               								"随便写点".getBytes());
+       														"随便写点".getBytes());
+          //这里我们发现消息全都需要转化为byte[]类型，而我们的消息内容可以是任意类型，比如json或其它
+          //只要消费者可以识别出来就好
+          
           /*
                   上述的参数，对应如下
                   exchange:指定交换机，但我们现在还不需要
@@ -223,7 +226,7 @@ public static void closeChnnelAndconnection(Channel channel,Connection connectio
 
 #### 4.2 多消费者
 
-![示例图片](https://www.rabbitmq.com/img/tutorials/exchanges.png)
+![示例图片](https://www.rabbitmq.com/img/tutorials/python-two.png)
 
 这属于官网的Work Queues情况，就是一个队列被多个消费者使用，我们在上述的代码基础，多运行几个消费者的main方法就是了。
 
@@ -302,8 +305,10 @@ public class ProviderMulti {
 
 - 订阅/发布
 
-  首先写一个消息提供者的类
+  ![](https://www.rabbitmq.com/img/tutorials/exchanges.png)
 
+  首先写一个消息提供者的类
+  
   ```java
   @SneakyThrows
   @Test
@@ -339,7 +344,7 @@ public class ProviderMulti {
   ```
 
   写一个消费者的模板类
-
+  
   ```java
   public class ConsumerMulQueExample {
       @SneakyThrows
@@ -378,7 +383,7 @@ public class ProviderMulti {
   ```
 
   对应的两个实际的消费者类【当然可以写好几个】
-
+  
   ```java
   public class ConsumerMulQue_1 {
       public static void main(String[] args){
@@ -740,9 +745,7 @@ public class Confirms {
 
 ### 5. SpringBoot下的使用
 
-使用了SpringBoot后，上述的操作都会变得非常简单，我们这里仅列出消息中间件的操作，其它模式，读者基本可以自己摸索出来。
-
-需要的依赖有`spring-boot-starter-amqp`, `spring-boot-starter-web`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。
+需要的依赖有`spring-boot-starter-amqp`, `spring-boot-starter-web`, 另外不是必须的，只是我们使用测试，别忘了junit。而springboot也有自己对应的测试依赖，`spring-boot-starter-test`, `spring-rabbit-test`。【其中测试时，如果没有写对应的消费者，单纯地运行生产者是没有任何作用的】
 
 - Hello World
 
@@ -808,19 +811,113 @@ public class Confirms {
 
   ```java
   @Component
+  @RabbitListener(queuesToDeclare = @Queue(value="work",durable = "false",autoDelete = "false"))
   public class ConsumerWork {
-      @RabbitListener(queuesToDeclare = @Queue(value="work",durable = "false"))
+      @RabbitHandler
+      public void consume1(String message){
+          System.out.println("work消费者1"+message);
+      }
+      @RabbitHandler
+      public void consume2(String message){
+          System.out.println("work消费者2"+message);
+      }
+  }
+  ```
+
+- Publish/Subscribe
+
+  生产者，
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class ProviderPublish {
+      @Autowired
+      RabbitTemplate rabbitTemplate;
+      @Test
+      public void sendMessage(){
+          //交换机为subscribe
+          rabbitTemplate.convertAndSend("subscribe","","publish的内容");
+      }
+  }
+  ```
+
+  消费者
+
+  ```java
+  @Component
+  public class ConsumerSubscribe {
+      @RabbitListener(bindings = {@QueueBinding(value=@Queue,//这里没有指定名字，代表随机生成
+                                 exchange =@Exchange(value="subscribe",type="fanout"))})
       public void consume(String message){
-          System.out.println("work消费者"+message);
+          System.out.println("consume--"+message);
+      }
+  }
+  ```
+
+- Routing
+
+  生产者，
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class ProviderRouting {
+      @Autowired
+      RabbitTemplate rabbitTemplate;
+      @Test
+      public void sendMessage(){
+          //交换机为routings
+          rabbitTemplate.convertAndSend("routings","A_Key","一条routing消息");
+      }
+  }
+  ```
+
+  消费者，
+
+  ```java
+  @Component
+  public class ConsumerRouting {
+      @RabbitListener(bindings = {@QueueBinding(value=@Queue,
+              exchange = @Exchange(value="routings"),//因为默认type就是direct，这里不需要再写
+              key = {"A_Key"})})
+      public void consume(String message){
+          System.out.println("Routing消费者--"+message);
+      }
+  }
+  ```
+
+- Topic
+
+  生产者
+
+  ```java
+  @SpringBootTest(classes = DemoApplication.class)
+  @RunWith(SpringRunner.class)
+  public class ProviderTopic {
+      @Autowired
+      RabbitTemplate rabbitTemplate;
+      @Test
+      public void sendMessage(){
+          rabbitTemplate.convertAndSend("topics","A_Key.B_Key","一条topic内容");
+      }
+  }
+  ```
+
+  消费者
+
+  ```java
+  @Component
+  public class ConsumerTopic {
+      @RabbitListener(bindings = @QueueBinding(value=@Queue,
+              exchange = @Exchange(value="topics",type="topic"),key={"A_Key.*"}))
+      public void consume(String message){
+          System.out.println("consumetopic--"+message);
       }
   }
   ```
 
   
-
-
-
-
 
 
 

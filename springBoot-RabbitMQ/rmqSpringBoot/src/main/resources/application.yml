@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: rmqSpringboot
+  rabbitmq:
+    host: ip
+    port: 5672
+    username: 用户名
+    password: 密码
+    virtual-host: 你的虚拟主机名
+    #完善上述的信息，springboot就会自动生成一个RabbitTemplete的类的对象，
+    #建立连接之类的工作也不需要我们完成，
+    #直接注入RabbitTemplete的示例就可以进行各种操作
+
+    #以下是关于发布者确认的
+    publisher-confirm-type: correlated # 发送者开启 confirm 确认机制
+    publisher-returns: true # 发送者开启 return 确认机制
+    listener:
+      simple:
+        acknowledge-mode: manual # 设置消费端手动 ack
+        retry:
+          enabled: true # 是否支持重试
