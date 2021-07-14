@@ -18,7 +18,7 @@ flowchart TD;
     
     subgraph service [服务层]
         h;cf
-        cf-->h
+        cf---->h
         cf-->y
         y-->z
         z-.->|结果|h
@@ -96,7 +96,7 @@ B+树建立的索引树，非叶子节点占据的空间非常小，如果索引
 >
 > 其实也是可以的。但并不太普遍适用。
 >
-> 首先，系统从磁盘读取数据是按页为单位读取，一页是4kB，如果对应的页不再一起，可能还需要在磁盘上搜索到其它地方获取，因此，单纯的读取数据也不是那么单纯。为了减少磁盘查找页的时间，就尽量不去依此提取太多的页。这要求，节点的大小是4kB的整数倍。
+> 首先，系统从磁盘读取数据是按页为单位读取，一页是4kB，如果对应的几个页不在一起，可能还需要在磁盘上搜索到其它地方获取,甚至其它页读取失败，此时，单纯的读取数据就不那么单纯了。为了减少磁盘查找页的时间，就尽量不去依此提取太多的页。这要求，节点的大小是4kB的整数倍。
 >
 > 就算我们将索引常驻在内存中，避免了磁盘的各种因素。如果用户的主键是随机数，那么节点中的索引需要频繁地改动，若这个数据量巨大，千万条数据在一个节点里来回波动，这也是巨大的效率损失。
 >
@@ -136,17 +136,231 @@ alert table 表名 add INDEX `自定义索引名` (`列名1`, `列名2`, `等等
 
 #  日志
 
+这里介绍的日志大多数是与InnoDB有关的。
+
 ## log
+
+如果读者之前有了解过一点Redis的知识，应该会记得Redis中为了保证数据的安全，会定期的保存当前数据的快照，另外一种方式则是保存从开始到当前所有的操作，通过运行一遍操作就可以得到当前的结果。
+
+mysql同样有这样的机制，而且有同样的两种方式：Binlog称为逻辑日志（是二进制日志），Redolog称为重做日志（物理日志）。
+
+### bin log
+
+这个日志是所有引擎通用的。主要记录哪些对数据库有改动的语句，像select之类的是不会记录的。因为我们把一开始的所有改动的语句执行一遍就可以得到当前的数据，所以，bin log文件是没有大小限制的，并且是不断在文件尾部追加新内容。
+
+```mysql
+show variables like 'log_bin';#查看自己是否开启了binlog
+```
+
+
+
+所有的变动操作都需要先写入这些日志文件，最后在挑选实际对数据库做实际的改动。
+
+> 比如，我们适用delete删除数据，这一操作是先写入日志，但不一定数据的磁盘文件中就已经删除了，即使删除了，通过bin log文件，也可以返回到删除之前的状态。【当删除的内容很多时，则可能觉得速度慢，这就是一方面并不断调整数据库的内容结构，另一方面还需要写入日志】
+>
+> 但是，如果使用truncate命令来清空表，速度就非常快，一个原因就在于它是不写日志的，导致无法回溯。
+
+由于bin log内容是二进制，我们需要使用`mysqlbinlog `命令来查看内容。
+
+```bash
+mysqlbinlog  --base64-output=decode-rows -v 对应的日志文件 
+# base64等命令 是进一步解码文件 ，不写也大致能看出来主要内容
+```
+
+```mysql
+show global variables like "%log_bin%";#查看日志的文件目录
+
+#也可以在mysql中简单看一下日志文件记录的情况
+show binary logs;#显示当前使用的日志文件，可能有多个
+show master status\G;#当前被写入的日志文件
+show binlog events in '日志文件名' \g #显示文件内部包含的事务情况
+```
+
+----------------------
+
+我们这里在数据库my_test_base中创建了一个my_test的表，mysqlbinlog查看的部分日志内容表示为
+
+```bash
+# at 444                                                                            #210714 15:32:10 server id 1  end_log_pos 670 CRC32 0x33b4cc30  Query   thread_id=14    exec_time=0     error_code=0    Xid = 72              
+use `my_test_base`/*!*/;                                                            
+SET TIMESTAMP=1626247930/*!*/;                                                     /*!80013 SET @@session.sql_require_primary_key=0*//*!*/;                            
+create table my_test(id int unsigned auto_increment,name varchar(255),primary key (id)) engine=InnoDB default charset=utf8
+/*!*/;  
+```
+
+show binlog events查看的部分内容表示为
+
+```bash
+| Log_name      | Pos | Event_type | Server_id | End_log_pos | Info |             
+| binlog.000012 | 444 | Query      | 1         |670          | use `my_test_base`; create table my_test(id int unsigned auto_increment,name varchar(255),primary key (id)) engine=InnoDB default charset=utf8 /* xid=72 */ |      
+```
+
+可以发现还是mysqlbinlog显示的内容稍微丰富一些。其中444，670对应的是在日志文件中的字节数位置。
+
+```bash
+#210714 15:32:10 //对应的是时间 2021-07-14 15：32：10
+SET TIMESTAMP=1626247930/*!*/; //这个就是时间戳
+```
+
+现在我们就会发现表示指定的事务既可以使用对应的字节数，也可以用对应的时间，比如，
+
+```mysql
+mysqlbinlog 日志名 --start-position 起始字节数，如444 --stop-position 结束字节数，如670 | mysql -u 用户名 -D 数据库名 -p 密码;
+# 或者
+mysqlbinlog 日志名 --start-datetime 起始时间，如 "2021-07-14 15：32：10" --stop-datetime 结束时间 | mysql -u 用户名 -D 数据库名 -p 密码;
+```
+
+### redo log
+
+这一日志负责的是记录磁盘中数据页的物理修改，不单纯是某几行的修改。当机器崩溃，我们需要用这个日志恢复到崩溃前的状态。
+
+> 前面介绍了，读取磁盘数据最小单位是页，那么写入数据也是按页为单位写入的。
+>
+> redo就是记录这些页被修改的情况。
+
+至于该日志的持久化，有WAL（Write Ahead Log）的做法，即修改修改数据库的磁盘数据前，先把内容写到日志中，再写数据库。
+
+> 【因为数据库的操作更复杂，日志结构简单，写起来方便，总之先把新记录持久化再说】。
+
+> redo log磁盘中的文件一般只有两个，而且有固定大小，对它的修改是在两个文件中循环写入，
+>
+> `innodb_log_files_in_group`可以设置实际的文件数量
+
+而日志的持久化之前也不是那么单纯的内存传递过来，内存中redo log还有一块飞地，用于存储内容，等磁盘这里工作不忙了，再传递给系统缓冲区，最终写到磁盘中，称为落盘。也只有落盘后，mysql的事务提交才会显示成功。
+
+> 到了系统缓冲区也不一定就当场写到磁盘中，为了保证安全性，InnoDB会额外调用 fsync操作，确保缓冲区的内容往磁盘写。
+>
+> 重做日志没有打开 O_DIRECT选项。【O_DIRECT选项是在Linux系统中的选项，使用该选项后，对文件进行直接IO操作，不经过文件系统缓存，直接写入磁盘)】
+>
+> `innodb_flush_log_at_trx_commit`参数，可控刷盘的策略
+>
+> - 0：表示事务提交时不进行写入redo log操作，这个操作仅在master thread 中完成，而在master thread中每1秒进行一次重做日志的fsync操作，因此实例 crash 最多丢失1秒钟内的事务。（master thread是负责将缓冲池中的数据异步刷新到磁盘，保证数据的一致性）
+>
+> - 1：（默认）表示事务提交时必须调用一次 `fsync` 操作，最安全的配置，保障持久性
+> - 2：则在事务提交时只做 **write** 操作，只保证将redo log buffer写到系统的页面缓存中，不进行fsync操作，因此如果MySQL数据库宕机时 不会丢失事务，但操作系统宕机则可能丢失事务
+
+上述的工作主要是保证日志尽可能被持久化，可能我们commit了好几次，实际的数据库对应的磁盘的页并没有改变，而是要由checkpoint机制判断当前的时机是否合适，才能决定更新磁盘页。
+
+>修改日志文件主要是在文件尾部追加，对于磁盘写内容而言是在连续的地址修改，更方便。
+>
+>而数据库对应的数据可能一次涉及多个页，这其中又可能涉及到数据库中表的索引的修改，总之，涉及的修改更复杂，远不是直接写入数据的事情。
+>
+>为了避免数据库更新带来的IO和其它因素的干扰，我们自然希望数据库的更新少一点。尤其是对一个页频繁的操作，我们IO数据库100次，和最后IO一次的效果是一样的。
+
+```mermaid
+flowchart TD;
+qu1(读取指定数据);pan{数据在内存?};qu2(从磁盘读取指定数据__是按页为单位读进来);
+duqu(CPU读取数据);xie(更新数据或写入新数据_还未commit);geng(数据更新到内存中);
+buffer(数据更新写入redo_log_buffer中);bin(对应的binlog的内容写入到系统缓冲区中);
+commit(commit_提交事务);xit(redo_log_buffer写入系统缓存);redofsync(调用fsync后_写入redolog文件中_返回commit成功);binfsync(将binlog系统缓冲区的内容写到磁盘中);check(checkpoint检查时机);shuju(更新数据实际所在的页);
+qu1-->pan
+pan -- 否 --> qu2
+qu2-->duqu
+pan -->|是| duqu
+duqu-->xie
+xie-->geng
+geng-->buffer
+buffer-->bin
+bin-->commit
+commit-->xit
+xit--> binfsync 
+binfsync -->redofsync
+redofsync-->check
+check-->shuju
+
+style qu1 fill:#0460c4,color:#fff
+style xie fill:#0460c4,color:#fff
+style commit fill:#0460c4,color:#fff
+style check fill:#0460c4,color:#fff
+```
+
+- mini-transaction
+
+  前面提到了，操作的一个数据可能对应着多个页。因为redo log的记录就是以页为单位，这样原本的一个原子操作的sql语句，实际对应着多个redo log的原子记录，而我们需要额外考虑的就是，如何保证这些redo log记录能够原子化地加载的磁盘中的日志文件中。
+
+  即，如果redo log对应的记录保存不完整，那么其它写入的记录也是无效的，且要求有序性。这就是mini-transaction需要做的工作。【如果记录失败，那所有当前录入的记录都不要写入】
+
+  因为这些操作可能对应着不同的页，或是一个页中的不同位置，那我们就细化出多个小操作对应这些不同位置的操作，就对应着不同的mini-transaction。这样的化话，所有的redo log的原子操作基本上都会同时完成工作。
+
+  每个mini-transaction都有自己的一个可变的内存缓冲区，当操作完成后，这些缓冲区再并发转移到真正日志的缓冲区，这里进一步地保证这些原子操作同时完成，且能够按照指定的循序进行加载，避免某些操作有较大的延迟而无法同时写入或顺序错乱。
+
+  > 每个mini-transaction可以知道自己缓冲区的大小，一次确定下一个mini-transaction的起始位置。
+
+  ```mermaid
+  flowchart TD;
+  redo1[原子操作1];redo2[原子操作2];
+  rf1[缓冲区1];rf2[缓冲区2];
+  subgraph mini [mini-transaction]
+  
+      subgraph mini1 [mini-transaction_1]
+  		redo1-->buffer1
+      end
+      subgraph mini2 [mini-transaction_2]
+  		redo2-->buffer2
+      end
+  end
+  buffer1-->|拷贝|rf1
+  buffer2-->|拷贝|rf2
+  subgraph rebuf [Redo_log_buffer]
+  	rf1 ;rf2;
+  end
+  subgraph refile [Redo_log_file]
+  	文件1;文件2;
+  end
+  rebuf-->refile
+  ```
+
+- Block
+
+### undo log
 
 
 
 ## MVCC
 
+事务的隔离性就是有这一机制实现的。
+
 
 
 # 锁
 
+锁，总体上只有两种：共享锁和排他锁。共享也就是读取的操作，排他自然是写操作。
 
+> 被设置为共享锁，则可以被很多进程、线程读取，但不允许写。被设置了排他锁，自然不允许其它任何用户使用。
+
+- 此外又引申出意向锁【作用于表】，如果表被标记为意向共享锁，那么其它试图占用整个表进行写入的进程则无法占用。如果被标记为意向排他锁，自然谁也无法占用该表。
+
+  > 如果一个进程正在读取表中的某一行，那此时就可以把表标记为意向共享锁，或者正在写入某一行，也可以标记为意向排他锁。总之，都是为了快速地判断当前表是否可以被直接占用。
+  >
+  > 如果没有这样的意向表，那么占用一个表就需要一行行地判断是否有无法接受的占用，效率极为低下。
+
+- 之后，又按照锁能控制的范围划分出表锁、页锁、行锁。【顾名思义】
+
+  ```mysql
+  LOCK TABLES 表名1 write, 表名2 read; -- 表的读写锁
+  UNLOCK TABLES; -- 解除所有表的锁
+  ```
+
+  其它的对于行的加锁使用
+
+  ```mysql
+  select [选择出一些行] lock in share mode; -- 加共享锁
+  select [选择出一些行] for update; -- 加排他锁
+  ```
+
+  - 其中行锁又有一些变种，如记录锁、间隙锁、次键锁【InnoDB默认行锁算法】
+
+    行锁可以是一行也可以是多行，而记录锁只能是一行。【MyISAM不支持行锁】
+
+    间隙锁是指
+
+- 此外，mysql 还有一种全局读锁，可用于进行全局备份
+
+  ```mysql
+  Flush tables with read lock;
+  ```
+
+  
 
 # 集群
 
@@ -196,21 +410,73 @@ alert table 表名 add INDEX `自定义索引名` (`列名1`, `列名2`, `等等
 
 
 
+# 附录
 
+## 事件类型
 
+<table>
+	<thead><tr><th>事件类型</th><th>说明</th></tr></thead>
+	<tbody>
+	<tr><td>UNKNOWN_EVENT</td><td>此事件从不会被触发，也不会被写入binlog中；发生在当读取binlog时，不能被识别其他任何事件，那被视为UNKNOWN_EVENT</td></tr>
+	<tr><td>START_EVENT_V3</td><td>每个binlog文件开始的时候写入的事件，此事件被用在MySQL3.23 – 4.1，MYSQL5.0以后已经被 FORMAT_DESCRIPTION_EVENT 取代</td></tr>
+	<tr><td>QUERY_EVENT</td><td>执行更新语句时会生成此事件，包括：create，insert，update，delete；	</td></tr>
+	<tr><td>STOP_EVENT</td><td>当mysqld停止时生成此事件</td></tr>
+	<tr><td>ROTATE_EVENT</td><td>当mysqld切换到新的binlog文件生成此事件，切换到新的binlog文件可以通过执行flush logs命令或者binlog文件大于 <code>max_binlog_size</code> 参数配置的大小；</td></tr>
+	<tr><td>INTVAR_EVENT</td><td>当sql语句中使用了AUTO_INCREMENT的字段或者1436753函数；此事件没有被用在binlog_format为ROW模式的情况下</td></tr>
+	<tr><td>LOAD_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL 3.23版本中使用	</td></tr>
+	<tr><td>SLAVE_EVENT</td><td>未使用</td></tr>
+	<tr><td>CREATE_FILE_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL4.0和4.1版本中使用</td></tr>
+	<tr><td>APPEND_BLOCK_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL4.0版本中使用</td></tr>
+	<tr><td>EXEC_LOAD_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL4.0和4.1版本中使用</td></tr>
+	<tr><td>DELETE_FILE_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL4.0版本中使用</td></tr>
+	<tr><td>NEW_LOAD_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL4.0和4.1版本中使用</td></tr>
+	<tr><td>RAND_EVENT</td><td>执行包含RAND()函数的语句产生此事件，此事件没有被用在binlog_format为ROW模式的情况下</td></tr>
+	<tr><td>USER_VAR_EVENT</td><td>执行包含了用户变量的语句产生此事件，此事件没有被用在binlog_format为ROW模式的情况下</td></tr>
+	<tr><td>FORMAT_DESCRIPTION_EVENT</td><td>描述事件，被写在每个binlog文件的开始位置，用在MySQL5.0以后的版本中，代替了START_EVENT_V3</td></tr>
+	<tr><td>XID_EVENT</td><td>支持XA的存储引擎才有，本地测试的数据库存储引擎是innodb，所有上面出现了XID_EVENT；innodb事务提交产生了QUERY_EVENT的BEGIN声明，QUERY_EVENT以及COMMIT声明，如果是myIsam存储引擎也会有BEGIN和COMMIT声明，只是COMMIT类型不是XID_EVENT</td></tr>
+	<tr><td>BEGIN_LOAD_QUERY_EVENT</td><td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL5.0版本中使用</td></tr>
+	<tr>
+<td>EXECUTE_LOAD_QUERY_EVENT</td>
+<td>执行LOAD DATA INFILE 语句时产生此事件，在MySQL5.0版本中使用</td>
+</tr>
+<tr>
+<td>TABLE_MAP_EVENT</td>
+<td>用在binlog_format为ROW模式下，将表的定义映射到一个数字，在行操作事件之前记录（包括：WRITE_ROWS_EVENT，UPDATE_ROWS_EVENT，DELETE_ROWS_EVENT）</td>
+</tr>
+<tr>
+<td>PRE_GA_WRITE_ROWS_EVENT</td>
+<td>已过期，被 WRITE_ROWS_EVENT 代替</td>
+</tr>
+<tr>
+<td>PRE_GA_UPDATE_ROWS_EVENT</td>
+<td>已过期，被 UPDATE_ROWS_EVENT 代替</td>
+</tr>
+<tr>
+<td>PRE_GA_DELETE_ROWS_EVENT</td>
+<td>已过期，被 DELETE_ROWS_EVENT 代替</td>
+</tr>
+<tr>
+<td>WRITE_ROWS_EVENT</td>
+<td>用在binlog_format为ROW模式下，对应 insert 操作</td>
+</tr>
+<tr>
+<td>UPDATE_ROWS_EVENT</td>
+<td>用在binlog_format为ROW模式下，对应 update 操作</td>
+</tr>
+<tr>
+<td>DELETE_ROWS_EVENT</td>
+<td>用在binlog_format为ROW模式下，对应 delete 操作</td>
+</tr>
+<tr>
+<td>INCIDENT_EVENT</td>
+<td>主服务器发生了不正常的事件，通知从服务器并告知可能会导致数据处于不一致的状态</td>
+</tr>
+<tr>
+<td>HEARTBEAT_LOG_EVENT</td>
+<td>主服务器告诉从服务器，主服务器还活着，不写入到日志文件中</td>
+</tr>
+</tbody>
+</table>
 
-
-
-
-
-
-
-
-
-
-### 附录
-
-
-
-
+----摘自[MySQL Binlog 介绍]([MySQL Binlog 介绍 (juejin.cn)](https://juejin.cn/post/6844903794073960455))
 
