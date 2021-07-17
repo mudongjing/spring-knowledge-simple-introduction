@@ -149,8 +149,105 @@ alter table  表名 add fulltext(列名);
 ```mysql
 KEY `自定义索引名` (`列名1`, `列名2`, `等等`) # 这是在创建表的时候使用的
 #如果表已经有了
-alert table 表名 add INDEX `自定义索引名` (`列名1`, `列名2`, `等等`) 
+alert table 表名 add INDEX `自定义索引名` (`列名1`, `列名2`, `等等`);
+-- 或写
+create index `自定义索引名` on 表名 (`列名1`, `列名2`, `等等`);
+-- 其中，创建联合索引时，每个列名后面默认跟着一个asc，表示按顺序排序，当然我们可以明确写一个desc，表示该列按降序排
 ```
+
+## 倒排索引
+
+该索引的作用在于记录一个文档中不同单词所在的位置，当我们试图搜索某一语句，其中的单词将在文档中提取出包含对应单词的句子，读者此时就会发现这不就是搜索引擎的工作嘛，实际搜索引擎内部使用的ElasticSearch的底层机制也大致是这个操作。
+
+倒排索引使用的是数组结构，在创建表的时候，可以指定对哪些列进行全文索引，这样我们就可以得到一个单词在哪些记录中的列中存在，我们这里姑且节这个字段称为文档（毕竟elasticsearch也是这么干的）
+
+> 一种形式称为inverted file index：{单词，(文档1，文档2，...)}，
+>
+> 或者更具体的，
+>
+> 额外记录了内容中，单词所在的具体位置，称为full invertedindex：{单词，[(文档1: 位置1,位置2)，(文档2：位置1)]}
+>
+> 现在InnoDB采用的就是后一种形式。
+
+我们在创建表的时候可以使用下述的方法指定全文索引的列，
+
+```mysql
+CREATE TABLE 表名 (
+    -- 省略
+    列名 TEXT,
+    FULLTEXT 索引名 (列名) -- 可以指定列，没必要的列就别索引
+) ENGINE=InnoDB;
+-- 也可以在表创建之后创建全文索引
+ CREATE FULLTEXT INDEX 索引名 ON 表名(列名);
+ -- 也可以写为
+ ALTER TABLE 表名 ADD index 索引名 FULLTEXT(列名)
+ -- 需要注意的是，由于全文索引的创建比较耗资源，当表正在进行大量修改时，先不要创建全文索引
+```
+
+搜索的方法如下，
+
+```mysql
+select 列名 from 表名 match(列名) against(匹配模式);
+```
+
+- 具体实现
+
+  上面主要介绍了倒排索引的大概形式和使用的方法。但是，具体到如何建立这样的索引，自然需要考虑到效率问题。
+
+  首先，我们需要有一种表是存储单词的，InnoDB使用的是辅助表(Auxiliary Table)，并且有六张表，方便做并行处理。
+
+  而我们真正进行全文索引的是另一张表，就是对应着full invertedindex的形式，一列是索引，指向单词在辅助表中的位置，另一列就是对应着在不同文档中的位置。
+
+  这些是被持久化的内容，执行效率低。
+
+  --------------
+
+  为此需要一个全文检索索引缓存(FTS Index Cache)，很明显，这就是放在内存存放部分辅助表的内容，结构上是[红黑树](# 红黑树)，当进行各种操作时，主要是先在这个缓存中进行。
+
+  当我们插入新的文档后，就增加了单词对应的位置，可能还添加了新的单词，如果直接在磁盘文件中操作，一个文档的加入，可能就涉及到辅助表的多次修改和插入操作。只有当事务提交后，这些缓存的信息才会持久化到磁盘中。
+
+  > 如果关闭数据库，缓存中的内容也会自动持久化。缓存的空间满了，也会自动持久化。默认缓存大小是32M。
+
+  辅助删除表(DELETED auxiliary table)
+
+  > 另外，当执行删除操作时，当然也是现在缓存中操作，即使持久化，辅助表中的哪个内容也是不会删除的，而是由辅助删除表记录辅助表中被删除的id。
+  >
+  > 当然了，这些被删除的内容，终究时被抛弃的，存储的id数量太多，用户可以自己手动删除被遗弃的内容，命令有 `OPTIMIZE TABLE`或`innodb_optimize_fulltext_only`之类的。
+
+  介绍到这里，我们发现这些操作中，标记文档的id非常重要，InnoDB也专门指定了这个id的格式，这个列必须命名为`FTS_DOC_ID`，其类型必须是`BIGINT UNSIGNED NOT NULL`，并且InnoDB存储引擎自动会在该列上加入一个名为`FTS_DOC_ID_INDEX`的唯一索引。
+
+  比如，如下创建一个对应的表，
+
+  ```mysql
+  CREATE TABLE 表名(
+  FTS_DOC_ID BIGINT UNSIGNED AUTO_INCREMENT NOT NULL,
+  body TEXT,-- 对应的文档内容
+  PRIMARY KEY(FTS_DOC_ID)
+  );
+  -- 经历了一通数据的添加后，在指明全文索引的列
+  CREATE FULLTEXT INDEX 随便的索引名 ON 表名(body);
+  ```
+
+  此外，进行全文索引时，读者可能觉得，需要把其中的所有单词都搞一遍。但是，实际上有些单词就是普通的介词或感叹词，没有索引的价值，是没必要浪费时间索引它们。
+
+  > 就需要，一个stopword表，指明哪些单词是不需要索引的，InnoDB有个默认的此类表`INNODB_FT_DEFAULT_STOPWORD`，给定了 36个单词。
+  >
+  > 我们也可以自定义一个，
+  >
+  > ```mysql
+  > CREATE TABLE 表名(
+  > value VARCHAR(最大字符数量)
+  > )ENGINE=INNODB;
+  > -- 然后指定该表是stopword表
+  > SET GLOBAL innodb_ft_server_stopword_table="数据库名/表名";
+  > ```
+
+另外需要注意的是，InnoDB中查询单词时，有指定的长度范围，`innodb_ft_min_token_size`，
+`innodb_ft_max_token_size`。
+
+> 在InnoDB存储引擎中，参数innodb_ft_min_token_size的默认值为3，参数innodb_ft_max_token_size的默认值为84。
+
+~~与其对mysql的全文索引进行深入了解，不不如去学习以下ElasticSearch的使用方法。不过ElasticSearch在我这个时间段早就开始停止正常的开源协议了。不过亚马逊搞得ES的分支，[OpenSearch](https://github.com/opensearch-project/OpenSearch)已经有1.0版本了，继承了开源协议~~
 
 ## 其它
 
@@ -158,7 +255,9 @@ alert table 表名 add INDEX `自定义索引名` (`列名1`, `列名2`, `等等
 
 msql中一行记录的最大字节数不能超过$2^{16}-1$ ，另外每一行不仅仅单纯记录对应的数据，还包括
 
-> - 变长字段长度列表：针对varchar类型
+> - 变长字段长度列表：针对varchar之类的可变量
+>   - 我们在创建表时，会发现varchar(100)之类的格式，括号里的数字指明了这个字符串可以最多放多少个字符。其中也可以指定每个字符的编码格式，是原始的ASCII还是通用的utf-8，它们对应的一个字符的空间大小是不同的。
+>   - 但是，mysql指定varchar不关心字符格式，只关心最多可以存放$2^{16}-1$的字节数。但这是骗人的，因为由于其它信息的存在，留给变量的空间不可能有这些字节数。
 >
 > - NULL值列表：针对一些可以设置为空的列，当对应值为空，这里可以标记，以节省空间
 >
@@ -177,6 +276,8 @@ msql中一行记录的最大字节数不能超过$2^{16}-1$ ，另外每一行�
 > transaction_id：事务的ID，必须的，占6个字节
 >
 > roll_pointer：回滚指针，必须的，占7个字节
+
+
 
 #  日志
 
@@ -376,6 +477,14 @@ style check fill:#0460c4,color:#fff
 
 undo log每次的内容主要有trx_id（修改该记录的事务id）、roll_pointer（指向上次该记录的修改内容）、row_id（一个隐藏列，可能作为主键）、 delete_mask（该记录是否被删除）、主键列。
 
+### 慢查询日志
+
+
+
+### 错误日志
+
+
+
 ## MVCC
 
 MVCC（multiversion concurrency control）【多版本并发控制】。事务的隔离性就是有这一机制实现的。
@@ -445,6 +554,8 @@ select [选择出一些行] for update; -- 加排他锁
 
 行锁可以是一行也可以是多行，而记录锁只能是一行。【MyISAM不支持行锁】
 
+> 其中当我们设置了主键自增后，该主键为了保证并发情况下字段是按1为单位的加，就需要有一个自增锁控制
+
 - 需要注意的是，**两阶段锁协议。**
   - **在 InnoDB 事务中，行锁是在需要的时候才加上的，但并不是不需要了就立刻释放，而是要等到事务结束时才释放。**有可能出现死锁。
 
@@ -475,7 +586,7 @@ select [选择出一些行] for update; -- 加排他锁
 
   不同事务对同一间隙的间隙锁即使冲突，也是可以接受的。即不同事务之间的间隙锁是互不干扰的。
 
-  - 插入意向锁（Insert Intention Locks）
+  - **插入意向锁**（Insert Intention Locks）
 
     插入意向锁是一种在行插入之前由 INSERT 操作设置的间隙锁。
 
@@ -552,11 +663,34 @@ InnoDB 支持包含空间数据的列的空间索引（参见[优化空间分析
 
 # 执行计划
 
+所谓的执行计划并没有什么实际的作用，只是作为一个检查操作的辅助工具，基本用法就是在自己的语句前加上`expalin`就可以发挥该语句的相关执行参数，方便我们查看，例如select语句是否使用了索引，还是费力地使用了全文搜索。
+
+下面组要摘自官网介绍，
+
+- explain的输出结果包含的信息有，
+
+| Column                          | JSON Name       | Meaning                     |
+| ------------------------------- | --------------- | --------------------------- |
+| [id](# id)                      | `select_id`     | `SELECT`标识符              |
+| [select_type](#select_type)     | None            | `SELECT`类型                |
+| [table](#table)                 | `table_name`    | 输出行 table                |
+| [partitions](#partitions)       | `partitions`    | 匹配的分区                  |
+| [type](#type)                   | `access_type`   | 联接类型                    |
+| [possible_keys](#possible_keys) | `possible_keys` | 可能的索引选择              |
+| [key](#key)                     | `key`           | 实际选择的索引              |
+| [key_len](#key_len)             | `key_length`    | 所选键的长度                |
+| [ref](#ref)                     | `ref`           | 与索引比较的列              |
+| [rows](#rows)                   | `rows`          | 估计要检查的行              |
+| [filtered](#filtered)           | `filtered`      | 按 table 条件过滤的行百分比 |
+| [Extra](#extra)                 | None            | Additional information      |
 
 
 
+# 分库分表
 
+## 数据分片
 
+shardingsphere
 
 
 
@@ -595,6 +729,10 @@ InnoDB 支持包含空间数据的列的空间索引（参见[优化空间分析
 
 
 # 附录
+
+## 红黑树
+
+
 
 ## 事件类型
 
@@ -821,4 +959,125 @@ MyISAM 和 InnoDB 支持 SPATIAL 和非 SPATIAL 索引。其他存储引擎支�
 <center style="color:#C0C0C0;text-decoration:underline">
    8.0版本
 </center>
+## 执行计划附录
+
+### id
+
+SELECT标识符。这是查询中SELECT的序号。如果该行引用其他行的并集结果，则值可以为`NULL`。在这种情况下，`table`列显示类似于`<unionM,N>`的值，以指示该行引用具有`id`值* `M` *和* `N` *的行的并集。
+
+### select_type
+
+SELECT的类型，可以是下 table 中显示的任何类型。 JSON 格式的`EXPLAIN`会将`SELECT`类型公开为`query_block`的属性，除非它是`SIMPLE`或`PRIMARY`。
+
+| `select_type`值        | JSON Name                    | Meaning                                                      |
+| ---------------------- | ---------------------------- | ------------------------------------------------------------ |
+| `SIMPLE`               | None                         | 简单的SELECT(不使用UNION或子查询)                            |
+| `PRIMARY`              | None                         | Outermost SELECT                                             |
+| UNION                  | None                         | UNION中的第二个或更高版本的SELECT语句                        |
+| `DEPENDENT UNION`      | `dependent` ( `true` )       | UNION中的第二个或更高版本的SELECT语句，具体取决于外部查询    |
+| `UNION RESULT`         | `union_result`               | UNION的结果。                                                |
+| SUBQUERY               | None                         | 子查询中的前SELECT个                                         |
+| `DEPENDENT SUBQUERY`   | `dependent` ( `true` )       | 子查询中的第一个SELECT                                       |
+| `DERIVED`              | None                         | Derived table                                                |
+| `MATERIALIZED`         | `materialized_from_subquery` | Materialized subquery                                        |
+| `UNCACHEABLE SUBQUERY` | `cacheable` ( `false` )      | 子查询，其结果无法缓存，必须针对外部查询的每一行重新进行评估 |
+| `UNCACHEABLE UNION`    | `cacheable` ( `false` )      | 属于不可缓存子查询的UNION中的第二个或更高版本的选择(请参见`UNCACHEABLE SUBQUERY`) |
+
+`DEPENDENT SUBQUERY`评估不同于`UNCACHEABLE SUBQUERY`评估。对于`DEPENDENT SUBQUERY`，子查询仅针对其外部上下文中变量的每组不同值重新评估一次。对于`UNCACHEABLE SUBQUERY`，将为外部上下文的每一行重新评估子查询。
+
+子查询的可缓存性与查询结果在查询缓存中的缓存不同。子查询缓存在查询执行期间发生，而查询缓存仅在查询执行完成后才用于存储结果。
+
+当您将`EXPLAIN`指定为`FORMAT=JSON`时，输出将没有与`select_type`直接等效的单个属性； `query_block`属性对应于给定的`SELECT`。可以使用与刚刚显示的大多数`SELECT`子查询类型等效的属性(示例是`MATERIALIZED`的`materialized_from_subquery`)，并在适当时显示。 `SIMPLE`或`PRIMARY`没有 JSON 等效项。
+
+非SELECT语句的`select_type`值显示受影响 table 的语句类型。例如，对于DELETE条语句，`select_type`是`DELETE`。
+
+### table
+
+输出行所引用的 table 的名称。这也可以是以下值之一：
+
+- `<unionM,N>`：行是指具有和`N`的`id`值的行的并集。
+  - `<derivedN>`：该行引用具有`id`值* `N` *的行的派生 table 结果。派生 table 可能来自例如`FROM`子句中的子查询。
+  - `<subqueryN>`：该行引用该行的物化子查询的结果，该子查询的`id`值为* `N` *。
+- `partitions`(JSON 名称：`partitions`)
+
+查询将从中匹配记录的分区。对于非分区 table，该值为`NULL`。
+
+### partions 
+
+查询将从中匹配记录的分区。对于非分区 table，该值为`NULL`。
+
+### type
+
+从最佳类型到最差类型：
+
+| 类型            | 含义                                                         |
+| --------------- | ------------------------------------------------------------ |
+| system          | 该 table 只有一行(=系统 table)。这是const连接类型的特例。    |
+| const           | 使用主键或者唯一索引，且匹配的结果只有一条记录。因为只有一行，所以优化器的其余部分可以将这一行中列的值视为常量。 const table 非常快，因为它们只能读取一次。 |
+| eq_ref          | 在`join`查询中使用`PRIMARY KEY`or`UNIQUE NOT NULL`索引关联。                                                  对于先前 table 中的每行组合，从此 table 中读取一行。除了system和const类型，这是最好的联接类型。当连接使用索引的所有部分且索引为`PRIMARY KEY`或`UNIQUE NOT NULL`索引时使用。 |
+| ref             | 使用非唯一索引查找数据。                                                                                                                     对于先前 table 中的行的每种组合，将从该 table 中读取具有匹配索引值的所有行。如果联接仅使用键的最左前缀，或者键不是`PRIMARY KEY`或`UNIQUE`索引(换句话说，如果联接无法基于键值选择单个行)，则使用ref。如果使用的键仅匹配几行，则这是一种很好的联接类型。 |
+| fulltext        | 使用全文索引                                                 |
+| ref_or_null     | 对`Null`进行索引的优化的 ref。                                                                                                      这种连接类型类似于ref，但是 MySQL 会额外搜索包含`NULL`值的行。此联接类型优化最常用于解析子查询。 |
+| index_merge     | 此联接类型指示使用索引合并优化。在这种情况下，输出行中的`key`列包含使用的索引列 table，而`key_len`包含使用的索引的最长键部分的列 table。 |
+| unique_subquery | 在子查询中使用 eq_ref。                                      |
+| index_subquery  | 在子查询中使用 ref。此连接类型类似于unique_subquery。它代替了`IN`个子查询， |
+| range           | 索引范围查找。                                                                                                                       使用索引选择行，仅检索给定范围内的行。输出行中的`key`列指示使用哪个索引。 `key_len`包含已使用的最长键部分。此类型的`ref`列是`NULL`。                                      使用=，<>，>，>=，<，<=，IS NULL，<=>，BETWEEN，LIKE或IN()运算符将键列与常量进行比较时，可以使用range。 |
+| index           | 遍历索引。                                                                                                                        index联接类型与ALL相同，只是扫描了索引树。                                                                这发生两种方式：                                                                                                                  如果索引是查询的覆盖索引，并且可用于满足 table 中所需的所有数据，则仅扫描索引树。在这种情况下，`Extra`列 table 示`Using index`。仅索引扫描通常比ALL快，因为索引的大小通常小于 table 数据。  使用对索引的读取执行全 table 扫描，以按索引 Sequences 查找数据行。 `Uses index`没有出现在`Extra`列中。 |
+| ALL             | 扫描全表数据  。                                                                                                                     对来自先前 table 的行的每个组合进行全 table 扫描。如果该 table 是第一个未标记const的 table，则通常不好，并且在所有其他情况下通常“非常”糟糕。通常，您可以通过添加索引来避免ALL，这些索引允许基于早期 table 中的常量值或列值从 table 中检索行。 |
+
+### possible keys
+
+possible_keys 列指示 MySQL 可以选择从中查找该表中行的索引。请注意，此列完全独立于 EXPLAIN 的输出中显示的表的顺序。这意味着可能_keys 中的某些键实际上可能无法与生成的表顺序一起使用。
+
+如果此列为 NULL（或在 JSON 格式的输出中未定义），则没有相关索引。在这种情况下，您可以通过检查 WHERE 子句来检查它是否引用了一些适合索引的列，从而提高查询的性能。如果是，请创建适当的索引并再次使用 EXPLAIN 检查查询。
+要查看表具有哪些索引，请使用 SHOW INDEX FROM tbl_name。
+
+### key
+
+key 列表示 MySQL 实际决定使用的键（索引）。如果 MySQL 决定使用 possible_keys 索引之一来查找行，则该索引被列为键值。 
+
+key 可能会命名一个在 possible_keys 值中不存在的索引。如果所有 possible_keys 索引都不适合查找行，但查询选择的所有列都是某个其他索引的列，则会发生这种情况。也就是说，命名索引覆盖了选定的列，因此虽然它不用于确定要检索哪些行，但索引扫描比数据行扫描更有效。
+
+对于 InnoDB，即使查询也选择了主键，二级索引也可能覆盖选定的列，因为 InnoDB 将主键值与每个二级索引一起存储。如果 key 为 NULL，则 MySQL 找不到可用于更有效地执行查询的索引。
+
+要强制 MySQL 使用或忽略在 possible_keys 列中列出的索引，请在查询中使用 FORCE INDEX、USE INDEX 或 IGNORE INDEX。
+
+对于 MyISAM 表，运行 ANALYZE TABLE 有助于优化器选择更好的索引。对于 MyISAM 表， myisamchk --analyze 执行相同的操作。
+
+
+### key_len
+
+key_len 列表示 MySQL 决定使用的键的长度。 key_len 的值使您能够确定 MySQL 实际使用多部分键的多少部分。如果键列显示为 NULL，则 key_len 列也显示为 NULL。
+
+由于键存储格式的原因，可以为 NULL 的列的键长度比 NOT NULL 列的键长度大一。
+
+### ref
+
+ref 列显示哪些列或常量与键列中命名的索引进行比较以从表中选择行。
+
+如果值为 func，则使用的值是某个函数的结果。要查看哪个函数，请在 EXPLAIN 后面使用 SHOW WARNINGS 来查看扩展的 EXPLAIN 输出。该函数实际上可能是一个运算符，例如算术运算符。
+
+### rows
+
+rows列表示 MySQL 认为它必须检查以执行查询的行数。
+
+对于 InnoDB 表，这个数字是一个估计值，可能并不总是准确的。
+
+### filtered
+
+过滤列指示按表条件过滤的表行的估计百分比。最大值为 100，这意味着没有发生行过滤。从 100 开始减小的值表示过滤量增加。行显示检查的估计行数，行 × 过滤显示与下表连接的行数。
+
+例如，如果行数为 1000，过滤为 50.00 (50%)，则与下表连接的行数为 1000 × 50% = 500。
+
+### Extra
+
+此列包含有关 MySQL 如何解析查询的附加信息。
+
+没有与 Extra 列对应的单个 JSON 属性；但是，此列中可能出现的值作为 JSON 属性或消息属性的文本公开。
+
+
+
+
+
+
 
