@@ -50,6 +50,23 @@ mybatis:
 
 OK！
 
+> 如果是应对mysql集群，则使用类似下述形式，
+>
+> ```yaml
+> spring:
+>   datasource:
+>     master:
+>       driver-class-name: 
+>       jdbc-url: 
+>       username: 
+>       password: 
+>     slave1:
+>       driver-class-name: 
+>       jdbc-url:
+>       username: 
+>       password: 
+> ```
+
 以前花里胡哨的各种方法配置，到这里就基本结束了，springboot回自动读取这个配置文件，自动完成对应的设置。
 
 ```java

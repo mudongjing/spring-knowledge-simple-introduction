@@ -126,6 +126,7 @@
 jdbc.driver = com.mysql.cj.jdbc.Driver
 #这是对应的8.0版本，如果小于8.0，就去掉cj
 jdbc.url = jdbc:mysql://localhost:3306/mybatis_test?characterEncoding=UTF-8
+#8.0版本，后面还需要加上时区&serverTimezone=UTC
 jdbc.username = 用户名
 jdbc.password = 密码
 ```
@@ -215,7 +216,7 @@ public class MybatisConfig {
 </configuration>
 ```
 
-如果读者学习过nybatis基础的用法，可能会发现这个xml文件过于简单，要的就是这个效果。
+如果读者学习过mybatis基础的用法，可能会发现这个xml文件过于简单，要的就是这个效果。
 
 ### 3. sql语句
 
@@ -403,30 +404,6 @@ public interface UserMapper {
 问题就在于，我们现在有springBoot，原先的SSM框架需要额外的配置工作，到了springBoot就基本上可以省去很多xml文件。上述的工作大部分还是必须的，但最关键的是让读者先明白mybatis大致的情况。
 
 我们接下来会使用springboot完成SSM框架的工作。请阅读springboot。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
