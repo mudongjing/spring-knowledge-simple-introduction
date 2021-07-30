@@ -365,11 +365,485 @@ public class ServerChannel {
 
 ![][架构]
 
+- Channel的连接状态类型
+
+  用于供选择器对连接做出判断
+
+  > - OP_ACCEPT：请求在接收新连接并创建Channel时获得通知
+  > - OP_CONNECT：请求在建立一个连接的时候获得通知
+  > - OP_READ：请求的数据已就绪时，从Channel读取时获得该通知
+  > - OP_WRITE：当请求可以向Channel写入更多数据时，获得该通知。
+
+NIO的处理流程，
+
+![](https://mudongjing.github.io/gallery/netty/module/selector/frame.png)
+
+## AIO
+
+> 除了BIO、NIO，读者可能听说过AIO，在jdk1.7升级NIO的时候一起加入的，所谓的升级就是底层使用了epoll命令。【虽然准确说是jdk1.5就使用了epoll,但实际使用的java api没有变】
+>
+> 上面介绍的NIO只是非阻塞IO，和原先的BIO相比，不再需要为每个连接分配线程阻塞处理，但变成了一个线程阻塞着为多个连接服务，而且对于接收数据的操作也是一个简单的阻塞行为。本质上还是靠着阻塞。
+>
+> 而AIO则彻底的没有阻塞，是纯粹的异步非阻塞IO。这里没有选择器，
+>
+> 详细的可以参考附录中的[AIO](#AIO)
+
+简单的实现，服务端与客户端的通信，
+
+服务端，
+
+```java
+public class ServerAio {
+    @SneakyThrows
+    public static void main(String[] args) {
+        final int port = 666;
+        //首先打开一个ServerSocket通道并获取AsynchronousServerSocketChannel实例：
+        AsynchronousServerSocketChannel serverSocketChannel =
+            AsynchronousServerSocketChannel.open();
+        //绑定需要监听的端口到serverSocketChannel:
+        serverSocketChannel.bind(new InetSocketAddress(port));
+        //实现一个CompletionHandler回调接口handler，
+        //之后需要在handler的实现中处理连接请求和监听下一个连接、数据收发，以及通信异常。
+        CompletionHandler<AsynchronousSocketChannel, Object> handler =
+            ServerCompletionHandler.create(serverSocketChannel);
+        //由于是异步，因此不会阻塞，这个程序也会直接退出
+        serverSocketChannel.accept(null, handler);
+       // 确保应用程序不会立即退出。
+        TimeUnit.MINUTES.sleep(Integer.MAX_VALUE);
+    }
+}
+```
+
+其中的关键在于handler的内部逻辑，
+
+```java
+public class ServerCompletionHandler {
+    public static CompletionHandler<AsynchronousSocketChannel, Object> create(
+            AsynchronousServerSocketChannel serverSocketChannel){
+        return new
+                CompletionHandler<AsynchronousSocketChannel, Object>() {
+                    @SneakyThrows
+                    @Override
+                    public void completed(final AsynchronousSocketChannel result,
+                                          final Object attachment) {
+                        // 继续监听下一个连接请求
+                        serverSocketChannel.accept(attachment, this);
+                        System.out.println("建立连接："+result.getRemoteAddress()
+                                           .toString());
+                        // 给客户端发送数据并等待发送完成
+                        result.write(ByteBuffer.wrap("我是服务端发送的数据".getBytes()))
+                                .get();
+                        ByteBuffer readBuffer = ByteBuffer.allocate(32);
+                        // 这里将读取数据和获取一起执行，显示出阻塞的感觉
+                        result.read(readBuffer).get();
+                        System.out.println("客户端发来的数据："+new String(
+                            readBuffer.array()));
+                    }
+                    @Override
+                    public void failed(final Throwable exc, final Object attachment) {
+                        System.out.println("出错了：" + exc.getMessage());
+                    }
+                };
+    }
+}
+```
+
+客户端，
+
+```java
+public class ClientAio {
+    @SneakyThrows
+    public static void main(String[] args) {
+
+            // 打开一个SocketChannel通道并获取AsynchronousSocketChannel实例
+            AsynchronousSocketChannel client = AsynchronousSocketChannel.open();
+            // 连接到服务器并处理连接结果
+            client.connect(new InetSocketAddress("localhost", 666), null,
+                    ClientCompletionHandler.create(client));
+            TimeUnit.MINUTES.sleep(Integer.MAX_VALUE);
+    }
+}
+```
+
+handler,
+
+```java
+public class ClientCompletionHandler {
+    public static CompletionHandler<Void, Void> create(AsynchronousSocketChannel client ){
+        return new CompletionHandler<Void, Void>() {
+            @SneakyThrows
+            @Override
+            public void completed(final Void result, final Void attachment) {
+                System.out.println("建立连接");
+                // 给服务器发送信息并等待发送完成
+                client.write(ByteBuffer.wrap("我是客户端的数据".getBytes())).get();
+                //上述的写操作，也是非阻塞的，如果有需要，也是可以把get方法，放在后面执行
+                ByteBuffer readBuffer = ByteBuffer.allocate(32);
+                // 去读取数据，但没有阻塞
+                Future<Integer> integerFuture = client.read(readBuffer);
+                //中间我们可以运行一些其它逻辑
+                //这里检测一些读取是否完成，只要没完成就可以获取其内容
+                while(!integerFuture.isDone()){
+                    //获取结果
+                    integerFuture.get();
+                    System.out.println("服务器发送的数据："+new String(readBuffer.array()));
+                }
+            }
+            @Override
+            public void failed(final Throwable exc, final Void attachment) {
+                exc.printStackTrace();
+            }
+        };
+    }
+}
+```
+
+总的来说，AIO的编程要比NIO简洁许多，就像上面的示例显示的，一个通信的基本功能，只需要简单几行就结束了，剩下的一些对于连接和读写数据的操作就可以在handler中指定的位置上随意发挥。而无需定义选择器，通道之类的对象。
+
 # Netty
 
 经过上述的一番介绍后，我们基本重新了解了一遍java代码如何完成网络连接，但很明显，纯粹的java代码使用起来太过麻烦。
 
-外面的Netty文档中，我们给出了一个简单的聊天室功能的实现，而上面的代码显示，只是完成一个简单的NIO的连接并读取数据，就耗费了不少啰嗦的代码，更何况，还要进行线程分工，分连接发送数据。
+外面的Netty文档中，我们用较为简单的代码给出了一个简单的聊天室功能的实现，而上面的代码显示，只是完成一个简单的NIO的连接并读取数据，就耗费了不少啰嗦的代码，更何况，还要进行线程分工，分连接发送数据。
+
+但是，明明AIO的机制更有优势，为何Netty底层还是使用java的NIO，主要是Linux系统本身还是个同步的机制，相反，windows底层的AIO机制是真正的异步机制，而我们真正的业务大多都是在Linux系统上运行，而Linux的AIO又是个披着异步的NIO，因此还是使用NIO靠谱。
+
+> 可以看一下[Netty作者的回答](https://github.com/netty/netty/issues/2515#issuecomment-44352536)。
+>
+> 如果读者看得起windows，也可以自己分装一下自己的代码，做个框架，使用综合使用NIO和AIO。
+>
+> 也许，以后Netty会重新加入AIO的机制。
+
+但使用NIO，并不意味着Netty就是非阻塞但同步的机制，实际上完全的异步和事件驱动的，不必担心比AIO弱。
+
+## 使用
+
+就如前面的NIO，编程需要的几个主要的对象，选择器，通道，缓存。Netty也需要几个主要的模块：通道，回调方法，Future对象，ChannelHander。
+
+我们这里还是简单地实现一个通信功能，
+
+- 服务端
+
+  ```java
+  public class ServerEcho {
+      private final int port;
+      public ServerEcho(int port){
+          this.port=port;
+      }
+      public static void main(String[] args){
+          int port=666;
+          new ServerEcho(port).start();
+      }
+      @SneakyThrows
+      public void start(){
+          final ServerHandler serverHandler=new ServerHandler();
+          EventLoopGroup group=new NioEventLoopGroup();
+          try{
+              ServerBootstrap serverBootstrap=new ServerBootstrap();//服务端专用
+              serverBootstrap.group(group).channel(NioServerSocketChannel.class)
+                      .localAddress(new InetSocketAddress(port))
+                      .childHandler(new ChildHandlerCreator()
+                                    .createServer(serverHandler));
+              //绑定操作是异步的，但是用了sync造成了Thread阻塞，直到绑定完成
+              ChannelFuture channelFuture=serverBootstrap.bind().sync();
+              //同样，使用sync将阻塞等待服务器的channel关闭
+              channelFuture.channel().closeFuture().sync();
+          }finally {
+              // 关闭EventLoopGroup，释放所有资源
+              group.shutdownGracefully().sync();
+          }
+      }
+  }
+  ```
+
+  ServerHandler,
+
+  ```java
+  //为了服务器能够响应传入的消息，则需要实现ChannelInboundHandler接口，用来定义响应入站事件的方法
+  // 这里我们就直接继承了一个对应的实现类
+  @Sharable//可以保证被channel共享
+  public class ServerHandler extends ChannelInboundHandlerAdapter {
+      //每次有消息传入都会调用
+      @Override
+      public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+          ByteBuf byteBuf=(ByteBuf) msg;
+          System.out.println("服务端接收的数据："+byteBuf.toString(CharsetUtil.UTF_8));
+          ctx.write(byteBuf);//重新发送给客户端
+          //write是异步操作，该方法及时完成，这个write可能仍没有结束
+          //而这样的·消息·最终会在channelReadComplete方法中的writeAndFlush调用后被释放
+      }
+      //通知ChannelInboundHandler最后一次channelRead()的调用是当前批量读取的最后一条消息
+      @Override
+      public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+          //将当前暂存于ChannelOutboundBuffer的消息，刷新到远程节点上，并关闭该channel
+          ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).
+                  addListener(ChannelFutureListener.CLOSE);
+      }
+  	@SneakyThrows
+      @Override
+      public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
+          cause.printStackTrace();
+          ctx.close();
+      }
+  }
+  ```
+
+- ChildHandlerCreator,
+
+  ```java
+  public class ChildHandlerCreator {
+      public ChannelInitializer createServer(ServerHandler handler){
+          return new ChannelInitializer() {
+              @Override
+              protected void initChannel(Channel channel) throws Exception {
+                  //该handler放到该handler的管道上，负责接收其入站消息
+                  channel.pipeline().addLast(handler);
+                  //这里的serverHandler是那个@Sharable的类的对象，因此，可以被多个channel使用
+              }
+          };
+      }
+      public ChannelInitializer<SocketChannel> createClient(ClientEchoHandler handler){
+          return new ChannelInitializer<SocketChannel>(){
+              @Override
+              protected void initChannel(SocketChannel ch) throws Exception {
+                  ch.pipeline().addLast(handler);
+              }
+          };
+      }
+  }
+  ```
+
+- 客户端
+
+  ```java
+  public class ClientEcho {
+      private final String host;
+      private final int port;
+      public ClientEcho(String host,int port){
+          this.host=host;
+          this.port=port;
+      }
+      public static void main(String[] args){
+          String host="localhost";
+          int port=666;
+          new ClientEcho(host,port).start();
+      }
+      @SneakyThrows
+      public void start(){
+          EventLoopGroup group=new NioEventLoopGroup();
+          try{
+              //用以处理客户端事件
+              Bootstrap bootstrap=new Bootstrap();//客户端专用
+              bootstrap.group(group).channel(NioSocketChannel.class)
+                      .remoteAddress(new InetSocketAddress(host,port))
+                      .handler(new ChildHandlerCreator().createClient(new ClientEchoHandler()));
+              ChannelFuture channelFuture=bootstrap.connect().sync();
+              channelFuture.channel().closeFuture().sync();
+          }finally {
+              group.shutdownGracefully().sync();
+          }
+      }
+  }
+  ```
+
+  ClientEchoHandler,
+
+  ```java
+  //下面的几个重写的方法是必须要写的
+  @Sharable//表明该类的示例可以被多个channel共享
+  public class ClientEchoHandler extends SimpleChannelInboundHandler<ByteBuf> {
+      //这是在一个连接建立后，就自动被调用
+      @Override
+      public void channelActive(ChannelHandlerContext ctx) {
+          //当对应的channel被获悉是激活状态，则发送一条消息
+          //该消息将被写入服务器中
+          ctx.writeAndFlush(Unpooled.copiedBuffer("channel被激活",CharsetUtil.UTF_8));
+      }
+      //作为客户端，之后接收到消息，将自动调用这个方法处理
+      //这是一个面向流的处理，它会分块接收，即服务端发送的数据可能被客户端使用ByteBuf作为容器分多次接收
+      //因为使用TCP协议，能保证数据的字节是按顺序接收的
+      @Override
+      protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
+          //获悉接收到的消息并输出
+          System.out.println("客户端接收到的数据："+msg.toString(CharsetUtil.UTF_8));
+          //当该方法结束后，SimpleChannelInboundHandler将释放保存消息的ByteBuf的内存引用
+      }
+      @Override
+      public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+          cause.printStackTrace();
+          //关闭连接
+          ctx.close();
+      }
+  }
+  ```
+
+## 组件
+
+### EventLoop
+
+该类将用于处理连接存活期间的所有事件。而整体的功能由Channel，EventLoop，Thread，EventLoopGroup组成。
+
+![](https://mudongjing.github.io/gallery/netty/module/eventLoop/frame.png)
+
+> EventLoopGroup将管理若干个EventlLoop。
+>
+> 而一个EventLoop只能和一个Thread绑定。这个Thread将处理该EventLoop负责的I/O事件。
+>
+> 一个Channel也只能注册一个EventLoop。反之，一个EventLoop可能负责若干个Channel。
+>
+> 这样就导致，几个Channel的I/O操作可能都是一个Thread负责的。
+
+### ChannelFuture
+
+这一接口，就是Netty能够异步的根源。它相当于一个观察者，当对应的操作完成后，它便会获得对应的通知，既避免了阻塞，也能保证顺序执行。
+
+> 而关于观察什么操作，则是由`addListener()`注册一个`ChannelFutureListener`。
+
+### ChannelHandler
+
+这个接口明显是我们最主要使用和编写组件。它内部包含了处理入站和出站的应用程序逻辑的容器。
+
+>  它有两个常用的扩展：ChannelInboundHandler和ChannelOutboundHandler，分别对应着入站和出站。
+>
+> Netty能够保证数据会在相同方向的handler中传递。
+>
+> 而常用的handler的实现类有，
+>
+> > - ChannelHandlerAdapter
+> > - ChannelInboundHandlerAdapter
+> > - ChannelOutboundHandlerAdapter
+> > - ChannelDuplexHandler
+
+- 编码和解码
+
+  在之前的聊天室实现中，我们在管道上添加了解码与编码的对象。主要在于我们传输的数据会是各种类型的对象，而实际的传输，我们需要把它转化成对应的字节。而我们之所以能够将这些编码器添加到管道上，在于它们也需要实现ChannelInboundHandler或ChannelOutboundHandler接口。
+
+#### SimpleChannelInboundHandler
+
+上面的描述，似乎表明编码器的对象必须设置，但上面的代码并没有这样的声明，而是继承	`SimpleChannelInboundHandler<ByteBuf>`，这里ByteBuf可以是其它的类型，隐性地实现了编码处理。
+
+而在我们进行连接建立的时候，服务端与客户端的网络行为是有明显差异的，由此，对应的引导类也有明确的分化，比如服务端有专门的`ServerBootstrap`，而客户端则使用`Bootstrap`。
+
+> 这种差异体现在：
+>
+> - 客户端只需要维护一个与对应服务器的连接即可，只需要一个EventLoopGroup即可管理channel。
+> - 服务端既需要维护与客户端的连接，有需要时刻监听自己绑定的端口。因此需要两个EventLoopGroup管理不同类型的channel。【这里的两个当然也可以是同一个实例】
+
+~下图体现的就是服务器使用两个EventLoopGroup的情形~
+
+![](https://mudongjing.github.io/gallery/netty/module/eventLoop/double.png)
+
+> ~前一组EventLoopGroup只包含一个ServerChannel用于监听绑定的端口。而第二组包含的是客户端建立的连接的Channel,每次连接建立成功了，EventLoopGroup会为该Channel分配一个EventLoop。~
+
+### ChannelPipeline
+
+当一个Channel被创建时，一个特有的ChannelPipeline会赋予给这个Channel。
+
+> 当ChannelInitializer.initChannel()方法调用时，ChannelInitializer会在ChannelPipeline上加载我们的ChannelHandler。而ChannelInitializer会从ChannelPipeline中移除。
+
+我们在前面编程的使用使用`addLast`为一个管道注册handler，实际上，我们可以注册多个handler，处理不同的事件，并且这些handler会按照添加的顺序排列。
+
+> 当事件进入管道后，事件将依次经历这些handler，并可能被对应的handler做对应的处理。
+>
+> 当发送事件时，也会按照相反的顺序依次经历对应的handler，完成相应的处理。
+>
+> > 完成所有handler的处理，事件的数据到达网络传输层，显示为Socket，并大概率触发一个写操作。
+
+ChannelPipeline由于持有了我们赋予的所有handler，因此，我们可以通过实现不同的handler以获得不同的功能，只需要简单地在ChannelPipeline上添加和移除handler即可调整这一通信通道的作用。
+
+# 传输
+
+由于每个客户端的连接都有对应的Channel负责，通过对这个Channel的操作，我们可以实现数据的传输，比如简单的方法，
+
+> - write：将数据写到远程节点，但此时仅是传递给ChannelPipeline，让它排队等待刷新
+> - flush：所谓刷新，就是将数据直接移动到底层传输出去，而不仅仅是排队等待
+> - writeAndFlush：这是我们之前常使用的，读者也明白其含义。
+
+## 监听传输结果
+
+如果我们希望能够在数据传输完成后返回成功信息，则可以使用下述的基本示例，
+
+```java
+// 比如之前服务端中handler中channelRead的方法就是简单的write，并没有指定成功后有返回
+//这里可以将其做一些简单的改写
+@Override
+public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    ByteBuf byteBuf=(ByteBuf) msg;
+    System.out.println("服务端接收的数据："+byteBuf.toString(CharsetUtil.UTF_8));
+    // ctx.write(byteBuf);//重新发送给客户端
+    //write是异步操作，该方法及时完成，这个write可能仍没有结束
+    //而这样的·消息·最终会在channelReadComplete方法中的writeAndFlush调用后被释放
+    ChannelFuture channelFuture = ctx.writeAndFlush(byteBuf);
+    channelFuture.addListener(new ChannelFutureListener() {
+        @Override
+        public void operationComplete(ChannelFuture future) throws Exception {
+            if(future.isSuccess()) System.out.println("写入成功");
+            else{System.out.println("写入失败"); future.cause().printStackTrace();}
+        }
+    });
+}
+```
+
+这里要求无论成功与否，都需要返回信息。 ChannelFuture的addListener添加了一个监听器，是一个异步的操作，只有完成或失败才会做出反应。
+
+## 多线程写入
+
+```java
+//还是使用上面的例子
+//如何让一个缓冲区由多个线程写入数据
+@Override
+public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+    ByteBuf byteBuf=(ByteBuf) msg;
+    System.out.println("服务端接收的数据："+byteBuf.toString(CharsetUtil.UTF_8));
+
+    //Channel的多线程
+    //创建持有要写数据的ByteBuf
+    final ByteBuf byteBuf1=Unpooled.copiedBuffer("数据",CharsetUtil.UTF_8).retain();
+    //将数据写入这个Channel的Runnable
+    Runnable writer=new Runnable() {
+        @Override
+        public void run() {
+            ctx.writeAndFlush(byteBuf1.duplicate());
+        }
+    };
+    Executor executor=Executors.newCachedThreadPool();//获取线程池executor的引用
+    executor.execute(writer);
+    executor.execute(writer);//每次调用execute()方法，都会让一个线程执行以此写操作
+     ctx.write(byteBuf1);
+}
+```
+
+## 内部传输
+
+- 零拷贝：是将我们的数据直接放到对应的磁盘文件中，
+
+  > 而不是先IO把磁盘中对应的数据拿到用户内存空间，在调到系统内存空间，一番操作，再调用IO放入磁盘文件中
+
+  前提是，我们需要加入的数据是不需要使用磁盘中的数据，即我们知识单向地修改磁盘中的数据，那么，我们就调用sendfile函数，指明磁盘中那个文件，准备好我们自己的数据，指定磁盘文件存放数据的位置起始点，一次调用IO，之间塞进去。
+
+  > 只有我们使用NIO和epoll传输时，才可用。
+  >
+  > 由于这一机制只能简单地传送数据，对于数据加密或压缩的文件系统是无法使用。
+
+- Local传输
+
+  这是Netty提供的功能，用于在同一个JVM中运行的客户端和服务端的程序间进行异步通信。
+
+  > 这种传输并不是真正的网络传输。
+  >
+  > 和服务器的Channel关联的SocketAddress并没有绑定物理的网络地址，而是作为注册表存在，随Channel的开启而存在或注销。
+
+- Embedded传输
+
+  也是Netty提供的传输。详细可了解[Embedded传输](#Embedded传输)
+
+
+
+
+
+
+
+​	
 
 
 
@@ -381,11 +855,9 @@ public class ServerChannel {
 
 
 
-零拷贝：是将我们的数据直接放到对应的磁盘文件中，
 
-> 而不是先IO把磁盘中对应的数据拿到用户内存空间，在调到系统内存空间，一番操作，再调用IO放入磁盘文件中
 
-前提是，我们需要加入的数据是不需要使用磁盘中的数据，即我们知识单向地修改磁盘中的数据，那么，我们就调用sendfile函数，指明磁盘中那个文件，准备好我们自己的数据，指定磁盘文件存放数据的位置起始点，一次调用IO，之间塞进去。
+# Embedded传输
 
 
 
