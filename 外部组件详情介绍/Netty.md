@@ -693,6 +693,24 @@ public class ClientCompletionHandler {
 >
 > 这样就导致，几个Channel的I/O操作可能都是一个Thread负责的。
 
+#### 线程
+
+![](https://mudongjing.github.io/gallery/netty/module/eventLoop/logic.png)
+
+一个EventLoop需要同时管理多个Channel，上图介绍了Netty是如何保证这些Channel的任务能够快速与EventLoop进行交互，
+
+> 当传入的任务所负责的线程就是当前在EventLoop中正在执行的线程，那么就立即执行。否则，任务放在队列中，等待处理即可。
+>
+> 由于每个Channel对应着一个ChannelPipeline，这个国管道中的handler又通过它对应的eventLoop处理事件，即上面的过程，这是一个IO线程，一旦阻塞将极大影响效率。
+>
+> > 于是，为了处理那些长时间运行的事件，ChannelPipeline有一个add()方法，里面可以传入EventExecutorGroup对象。【可使用DefaultEventExecutorGroup类】
+> >
+> > 一个事件可以用一个Runnable对象实现任务。而这个对象可以被EventExecutorGroup用submit()接收。
+> >
+> > 之后这个事件将被EventExecutorGroup内部的EventExecutor处理，而不会交给EventLoop处理。
+
+![](https://mudongjing.github.io/gallery/netty/module/eventLoop/async.png)
+
 ### ChannelFuture
 
 这一接口，就是Netty能够异步的根源。它相当于一个观察者，当对应的操作完成后，它便会获得对应的通知，既避免了阻塞，也能保证顺序执行。
@@ -717,6 +735,8 @@ public class ClientCompletionHandler {
 - 编码和解码
 
   在之前的聊天室实现中，我们在管道上添加了解码与编码的对象。主要在于我们传输的数据会是各种类型的对象，而实际的传输，我们需要把它转化成对应的字节。而我们之所以能够将这些编码器添加到管道上，在于它们也需要实现ChannelInboundHandler或ChannelOutboundHandler接口。
+  
+- Channel的config()方法对应的ChannelConfig接口，内部包含各种设置方法，如设定允许的连接延迟，设置缓冲区中可写入的最大或最小字节数，以及其它设定。
 
 #### SimpleChannelInboundHandler
 
@@ -750,6 +770,23 @@ public class ClientCompletionHandler {
 > > 完成所有handler的处理，事件的数据到达网络传输层，显示为Socket，并大概率触发一个写操作。
 
 ChannelPipeline由于持有了我们赋予的所有handler，因此，我们可以通过实现不同的handler以获得不同的功能，只需要简单地在ChannelPipeline上添加和移除handler即可调整这一通信通道的作用。
+
+> 此外，我们还可以使用以下方法增改删handler
+>
+> - addFirst
+> - addBefore
+> - addAfter
+> - remove
+> - replace
+
+- ChannelHandlerContext
+
+  前面介绍了ChannelPipleline上的handler将放在一个有序链路上依次执行，而传入或需要传出的事件如何在不同handler之间传递，则需要ChannelContextHandler作为参数完成这一工作。
+
+  - 我们可以使用其中的`pipeline()`获得当前的ChannelPipeline的引用，相当于可以在运行期间添加或删改某些管道上的handler。
+  - 当然也可以自己准备一个ChannelHandlerContext的引用，比如继承`ChannelHandlerAdapter`类，实现其中的`handlerAdded`方法，获取ChannelHandlerContext引用，那么，我们就可以选择在何时使用该引用进行操作。
+
+  
 
 # 传输
 
@@ -839,25 +876,207 @@ public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception 
 
 
 
+# 缓冲区
+
+## ByteBuf
+
+> 这是Netty为简化jdk的byteBuffer而提供的一个缓存类。
+
+ByteBuf的特点：
+
+- 内置的复合缓冲区类型可实现透明的零拷贝
+- 容量可增长
+- 缓冲区中的读和写具有不同的索引(readerIndex、writerIndex)
+
+![](https://mudongjing.github.io/gallery/netty/module/transfer/buffer.png)
+
+> 我们可以指定ByteBuf的最大容量，默认是Integer.MAX_VALUE
+
+### ByteBuf使用模式 
+
+- 堆缓冲区
+
+  将数据存储在JVM的堆空间。该模式称之为支撑数组（backing array）。它能在没有池化的情况下快速地分配和释放。
+
+  ```java
+  //我们这里用客户端的handler中的一个方法简单介绍一下
+  @Override
+  protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg){
+      ByteBuf byteBuf=(ByteBuf) msg;
+      if(byteBuf.hasArray()){//检查是否存在一个支撑数组
+          //获取该支撑数组的引用
+          byte[] array=byteBuf.array();
+          //计算第一个字节的偏移量
+          //计算的方式是：该支撑数组在缓冲区中的偏移量+读索引偏移量
+          int offset=byteBuf.arrayOffset()+byteBuf.readerIndex();
+          int length=byteBuf.readableBytes();//可读的字节数
+          自定义方法(array,offset,length);//我们可以对可读的内容进行操作
+      }
+  }
+  ```
+
+- 直接缓冲区
+
+  这一缓冲区的内容是放在垃圾回收覆盖的堆之外的内存空间。传统的I/O方式，需要把数据读取到一个中间的缓冲区，再复制到JVM的堆中，而这种模式则省去了中间缓冲的操作。
+
+  ```java
+  @Override
+  protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) {
+      if(!byteBuf.hasArray()){//如果不是支撑数组，那么就作为直接缓冲区
+          int length=byteBuf.readableBytes();//获取可读字节数
+          byte[] array=new byte[length];
+          byteBuf.getBytes(byteBuf.readerIndex(),array);//将对应的字节复制到准备的数组中
+          自定义方法(array,0,length);//自定义的方法
+      }
+  }
+  ```
+
+- 复合缓冲区
+
+  这是一种将多个缓冲区表示为一个缓冲区的虚拟表示的方式。Netty提供了CompositeByteBuf类实现该模式。
+
+  > 这一模式，对于那些由不同程序分工完成的内容非常有用，传统方式是，将不同模块的结果再放到一个缓冲区中重新组装，这就导致必须多复制一次。
+
+  ```java
+  CompositeByteBuf compositeByteBuf=Unpooled.compositeBuffer();
+  ByteBuf byteBuf=Unpooled.copiedBuffer("something",CharsetUtil.UTF_8);
+  ByteBuf byteBuf1=Unpooled.copiedBuffer("something",CharsetUtil.UTF_8);
+  //现在由两个缓冲区的结果，byteBuf和byteBuf1
+  compositeByteBuf.addComponents(byteBuf,byteBuf1);
+  //由于多个缓冲区的底层类型可能不同，有的可能是支持数组的，有的可能是直接缓冲的
+  /*对于支撑数组的*/
+  for(ByteBuf buf:compositeByteBuf){
+      System.out.println(buf.toString());
+  }
+  /*对于直接缓冲之类的*/
+  //读取可读字节数
+  int length=compositeByteBuf.readableBytes();
+  byte[] array=new byte[length];
+  //将字节放入该数组中
+  compositeByteBuf.getBytes(compositeByteBuf.readerIndex(),array);
+  自定义方法(array,0,array.length);//自己随意操作
+  ```
+
+
+### ByteBuf操作
+
+- getByte()：可读取缓冲区中指定位置的字节
+
+- discardReadBytes()：回收可丢弃字节的空间
+
+  ![](https://mudongjing.github.io/gallery/netty/module/transfer/buffer-recyc.png)
+
+  从图中也可以看出，回收过程涉及到数据的移动，因此需要时才使用。
+
+- readByte()：读取所有可读数据。一旦读取了，这些数据就会变成可丢弃字节
+
+- writeBytes()：向可写字节中写入新的缓冲对象
+
+- 索引重置：readerIndex()、writerIndex()、clear()都可以重置对应的读写索引位置。
+
+- 查找：
+
+  - indexOf()：在给定的索引范围内查找指定byte位置
+  - ByteProcessor：(原本我们使用的是ByteBufProcessor，但已废弃)，用以判断byte的后缀
+
+- 派生：我们可以通过一些方法，通过已有的ByteBuf获得一个新的ByteBuf实例，成本小，但新的实例一旦修改，也会影响源实例
+
+  > duplicate,slice,Unpooled.unmodifiableBuffer,order,readSlice.
+  >
+  > 这些方法获得的实例，相当于原有缓冲区内容的一个试图
+
+  而copy()方法获得的是真正的实例
+
+#### 空间分配
+
+- ByteBufAllocator
+
+  按需分配，实现了ByteBuf的池化。
+
+  该接口的方法有，
+
+  > directBuffer【直接内存】、heapBuffer【堆内存】、buffer【堆或直接内存】、compositeBuffer【堆或直接内存】、ioBuffer【用于套接字的IO操作】
+
+  ByteBufAllocator引用是从Channel或ChannelHandlerContext那里获得
+
+  ```java
+  Object obj=null;
+  Object something;
+  obj=(Channel) something;
+  //或者
+  obj=(ChannelHandlerContext) something;
+  ByteBufAllocator allocator=obj.alloc();
+  ```
+
+  ByteBufAllocator的具体实现有
+
+  > PooledByteBufAllocator：池化实例，可减少内存碎片。【使用了jemalloc技术】
+  >
+  > UnpooledByteBufAllocator：每次都产生一个全新的实例。
+
+- Unpooled
+
+  可创建未池化的ByteBuf实例
+
+  方法
+
+  > buffer【堆内存】,directBuffer,wrappedBuffer【包装给定的数据】,copiedBuffer
+
+- ByteBufUtil
+
+  通用API，与池化无关，具体的方法在具体的类中实现。
+
+  > 方法示例，hexdump以16进制格式返回内容。equals(ByteBuf,ByteBuf)判断两个实例是否相等。
+
+- 引用计数
+
+  就是类似于jdk中常听说的那个垃圾回收用的计数器，虽然jdk不用，但这里用这一方法确实方便很多。
+
+  通过判断引用数决定对象是否可回收。
+
+  ```java
+  //我们这里简单的介绍一下引用计数
+  //加入有一个Channel对象
+  ByteBufAllocator allo=channel.alloc();
+  ByteBuf buffer=allocator.directBuffer(5);//在直接内存中分配出一个实例
+  System.out.println(buffer.refCnt());//显示现在的引用数
+  boolean released = buffer.release();//减少引用
+  //当最后的引用数归0，则最后那个引用该缓冲区的对象释放该实例
+  ```
+
+  类似的，ReferenceCountUtil.release()可以释放对应对象的引用，将其释放。
+
+# 引导
+
+作为最后一个主要的组件，引导类处于最重要的位置，在前面的使用代码的示例中，我们可以看到引导类起到统筹其它组件的作用，并且，对于客户端和服务端，对应的引导类也不同。
+
+## Cloneable
+
+```mermaid
+graph BT
+cl(Cloneable);ab(Abstractbootstrap);boo(Bootstrap);ser(ServerBootstrap)
+ab-->cl
+boo-->ab
+ser-->ab
+```
+
+> **为什么要实现Cloneable接口？**
+>
+> > 因为我们的引导类可能要配置多个相同的Channel。这样一个引导类的实例，可以直接使用clone()创建又一个相同的引导类实例，供我们使用。
+> >
+> > 这样只要一个引导类配置好对应的Channel，我们就可以轻松地克隆并使用。
+> >
+> > 但由于这种克隆是浅拷贝，内部的EventLoopGroup实际是同一个。
+
+## Bootstrap
 
 
 
 
-​	
 
 
 
-
-
-
-
-
-
-
-
-
-
-# Embedded传输
+# EmbeddedChannel传输
 
 
 
