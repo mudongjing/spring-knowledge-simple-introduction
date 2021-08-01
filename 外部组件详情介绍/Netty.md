@@ -1,3 +1,5 @@
+[TOC]
+
 # 介绍
 
 Netty是致力于处理用户高并发请求的场景。很久以前的处理方法是，为用户建立一个普通的socket连接，与用户建立通信通道，并等待用户发送数据，这是一种阻塞方案，一个线程只能单一地等待消息发过来，无法处理其它任务。当然也可以为每个用户分出一个线程建立socket，那样就可以让主线程该干嘛干嘛，但对于上百万的用户数量而言，需要的硬件成本太高了。
@@ -711,6 +713,16 @@ public class ClientCompletionHandler {
 
 ![](https://mudongjing.github.io/gallery/netty/module/eventLoop/async.png)
 
+#### 关闭EventLoopGroup
+
+使用方法`shutdownGracefully()`。
+
+```java
+//比如
+EventLoopGroup group=new NioEventLoopGroup();
+Future future=group.shutdownGracefully();//关闭是一个异步操作
+```
+
 ### ChannelFuture
 
 这一接口，就是Netty能够异步的根源。它相当于一个观察者，当对应的操作完成后，它便会获得对应的通知，既避免了阻塞，也能保证顺序执行。
@@ -774,6 +786,7 @@ ChannelPipeline由于持有了我们赋予的所有handler，因此，我们可�
 > 此外，我们还可以使用以下方法增改删handler
 >
 > - addFirst
+> - addLast
 > - addBefore
 > - addAfter
 > - remove
@@ -786,7 +799,6 @@ ChannelPipeline由于持有了我们赋予的所有handler，因此，我们可�
   - 我们可以使用其中的`pipeline()`获得当前的ChannelPipeline的引用，相当于可以在运行期间添加或删改某些管道上的handler。
   - 当然也可以自己准备一个ChannelHandlerContext的引用，比如继承`ChannelHandlerAdapter`类，实现其中的`handlerAdded`方法，获取ChannelHandlerContext引用，那么，我们就可以选择在何时使用该引用进行操作。
 
-  
 
 # 传输
 
@@ -873,8 +885,6 @@ public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception 
 - Embedded传输
 
   也是Netty提供的传输。详细可了解[Embedded传输](#Embedded传输)
-
-
 
 # 缓冲区
 
@@ -1070,13 +1080,199 @@ ser-->ab
 
 ## Bootstrap
 
+> | 方法名                                                       | 作用                                                         |
+> | ------------------------------------------------------------ | ------------------------------------------------------------ |
+> | group                 (EventLoopGroup)                       | 设置用于处理 Channel 所有事件的 EventLoopGroup               |
+> | channel                            (Class<? extends C>)      | 指定了 Channel 的实现类。                                    |
+> | channelFactory (ChannelFactory<? extends C>)                 | 如果该实现类没提供默认的构造函数，将被调用指定一个工厂类，它将会被bind() 方法调用。 |
+> | localAddress (SocketAddress)                                 | 指定 Channel 应该绑定到的本地地址。如果没有指定，则将由操作系统创建一个 随 机 的 地 址。 或 者，也 可 以 通 过 bind() 或 者 connect() 方 法 指 定localAddress |
+> | option                     (ChannelOption <T> option,T value) | 设置 ChannelOption ，其将被应用到每个新创建的 Channel 的 ChannelConfig 。这些选项将会通过 bind() 或者 connect() 方法设置到 Channel ，不管哪个先被调用。这个方法在 Channel 已经被创建后再调用将不会有任何的效果。支持的ChannelOption 取决于使用的 Channel 类型。 |
+> | attr                                   (Attribute <T>  key,              T value) | 指定新创建的 Channel 的属性值。这些属性值是通过 bind() 或者 connect() 方法设置到 Channel 的，具体取决于谁最先被调用。这个方法在 Channel 被创建后将不会有任何的效果 |
+> | handler           (ChannelHandler)                           | 设置将被添加到 ChannelPipeline 以接收事件通知的 ChannelHandler |
+> | clone()                                                      | 创建一个当前 Bootstrap 的克隆，其具有和原始的 Bootstrap 相同的设置信息 |
+> | remoteAddress                      (SocketAddress)           | 设置远程地址。或者，也可以通过 connect() 方法来指定它        |
+> | connect()                                                    | 连接到远程节点并返回一个 ChannelFuture ，其将会在连接操作完成后接收到通知。里面也可以指定连接。 |
+> | bind()                                                       | 绑定 Channel 并返回一个 ChannelFuture ，其将会在绑定操作完成后接收到通知，在那之后必须调用 Channel. connect() 方法来建立连接 |
 
+### 引导客户端
 
+![](https://mudongjing.github.io/gallery/netty/module/bootstrap/boot.png)
 
+## ServerBootstrap
+
+> 除了在Bootstrap中列举的一些方法外
+>
+> | 方法名       | 作用                                                         |
+> | ------------ | ------------------------------------------------------------ |
+> | childOption  | 指 定 当 子 Channel 被 接 受 时， 应 用 到 子 Channel 的 ChannelConfig 的ChannelOption 。所支持的 ChannelOption 取决于所使用的 Channel 的类型。 |
+> | attr         | 指定 ServerChannel 上的属性，属性将会通过 bind() 方法设置给 Channel 。在调用 bind() 方法之后改变它们将不会有任何的效果 |
+> | childAttr    | 将属性设置给已经被接受的子 Channel 。接下来的调用将不会有任何的效果 |
+> | childHandler | 设置将被添加到已被接受的子 Channel 的 ChannelPipeline 中的 ChannelHandler 。 handler() 方法和 childHandler() 方法之间的区别是：                                                      前者所添加的ChannelHandler 由接受子 Channel 的 ServerChannel 处理，               而 childHandler() 方法所添加的 ChannelHandler 将由已被接受的子 Channel 处理，其代表一个绑定到远程节点的套接字 |
+
+### 引导服务器
+
+![](https://mudongjing.github.io/gallery/netty/module/bootstrap/server.png)
+
+####  从Channel引导客户端
+
+> 共享EventLoop。
+>
+> 当服务端已建立了几个连接，因此已经有现有的几个Channel，比如服务端连接了几个代理服务器或连接了某个数据库或其它服务。
+>
+> 当我们再与客户端建立连接时，通常为了处理客户端的请求需要一个新的Bootstrap的实例，导致产生新的线程。为了避免多余的线程。
+>
+> 可以在已有的Channel中建立新的子Channel，如下图，这样就可以与旧Channel共用EventLoopGroup和对应的线程，节约资源。
+
+![](https://mudongjing.github.io/gallery/netty/module/bootstrap/channel.png)
+
+```java
+ServerBootstrap serverBootstrap=new ServerBootstrap();
+serverBootstrap.group(new NioEventLoopGroup(),new NioEventLoopGroup())
+    //设置EventLoopGroup，分别对应新连接和旧连接
+    .channel(NioServerSocketChannel.class)//指明Channel的实现类
+    .childHandler(
+    //指明用于负责旧的子Channel的IO和数据的ChannelInboundHandler
+    new SimpleChannelInboundHandler<ByteBuf>() {
+        ChannelFuture channelFuture;
+        @SneakyThrows
+        @Override
+        public void channelActive(ChannelHandlerContext ctx) {
+            Bootstrap bootstrap=new Bootstrap();//这里对应的是客户端
+            bootstrap.channel(NioSocketChannel.class)//同样是针对客户端
+                .handler(
+                //设置入站的IO的处理方法
+                new SimpleChannelInboundHandler<ByteBuf>() {
+                    @SneakyThrows
+                    @Override
+                    protected void channelRead0(
+                        ChannelHandlerContext ctx, ByteBuf msg){
+                        System.out.println("接收了数据！");
+                    }
+                }
+            );
+            //获得旧的子channel的EventLoopGroup，并使用
+            bootstrap.group(ctx.channel().eventLoop());
+            //连接远程节点
+            channelFuture=bootstrap.connect(new InetSocketAddress(
+                "www.baidu.com",80));
+        }
+        @SneakyThrows
+        @Override
+        protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg){
+            if(channelFuture.isDone()){
+                //随便做点数据的操作
+                System.out.println(msg.toString());
+            }
+        }
+    }
+);
+ChannelFuture channelFuture=serverBootstrap.bind(new InetSocketAddress(8080));
+channelFuture.addListener(new ChannelFutureListener(){
+    @SneakyThrows
+    @Override
+    public void operationComplete(ChannelFuture future){
+        if(future.isSuccess()){
+            System.out.println("服务已绑定");
+        }else{
+            System.err.println("绑定失败");
+            future.cause().printStackTrace();
+        }
+    }
+});
+```
+
+### 连接属性
+
+#### option
+
+```java
+//创建一个AttributeKey标识指定的属性
+final AttributeKey<Integer> id=AttributeKey.newInstance("ID");
+//用以处理客户端事件
+Bootstrap bootstrap=new Bootstrap();
+bootstrap.group((new NioEventLoopGroup()))
+    .channel(NioSocketChannel.class)
+    .handler(
+    new SimpleChannelInboundHandler<ByteBuf>() {
+        @Override
+        public void channelRegistered(ChannelHandlerContext ctx) throws Exception {
+            Integer idValue=ctx.channel().attr(id).get();
+            //获得对应设置属性的内容在AttributeKey
+        }
+
+        @Override
+        protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
+            //随便做点操作
+            System.out.println(msg.toString());
+        }
+    }
+);
+bootstrap.option(ChannelOption.SO_KEEPALIVE,true)
+    .option(ChannelOption.CONNECT_TIMEOUT_MILLIS,1000);
+bootstrap.attr(id,123);
+//将我们设置的属性，保存到一个Map中，·Map<AttributeKey<?>, Object>·
+ChannelFuture channelFutur=bootstrap.connect(new InetSocketAddress("www.baidu.com",80));
+//当建立连接后，会自动使用我们给定的设置
+channelFutur.syncUninterruptibly();
+```
+
+#### 无协议连接
+
+> 只需要bind()方法，不再需要使用connect()，否则就是TCP协议
+
+```java
+Bootstrap bootstrap=new Bootstrap();
+bootstrap.group(new NioEventLoopGroup())
+    .channel(NioDatagramChannel.class)
+    //使用数据报包传递数据
+    .handler(
+    new SimpleChannelInboundHandler<DatagramPacket>() {
+        @Override
+        protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket msg) throws Exception {
+            //随便对数据报包做处理
+            System.out.println(msg.toString());
+        }
+    }
+);
+ChannelFuture channelFuture=bootstrap.bind(new InetSocketAddress(0));
+channelFuture.addListener(
+    new ChannelFutureListener() {
+        @Override
+        public void operationComplete(ChannelFuture future) throws Exception {
+            if(future.isSuccess()){
+                System.out.println("通道已建立");
+            }else{
+                System.err.println("绑定失败");
+                future.cause().printStackTrace();
+            }
+        }
+    }
+);
+```
 
 
 
 # EmbeddedChannel传输
+
+
+
+![](https://mudongjing.github.io/gallery/netty/module/embed/channel.png)
+
+
+
+
+
+==---------------------------------------------------------编解码器------------------------------------------------------------------------------==
+
+
+
+
+
+
+
+
+
+==---------------------------------------------------------网络协议------------------------------------------------------------------------------==
 
 
 
