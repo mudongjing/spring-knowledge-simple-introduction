@@ -1,0 +1,30 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: order-service #服务的名称，将被nacos用于注册
+  cloud:
+    nacos:
+      server-addr: localhost:8889
+      discovery:
+        username: nacos
+        password: nacos
+#        group: dev
+#        namespace: 837d0dbd-f8ca-4289-990b-4f097ea6f4ea
+        #ephemeral: false #永久实例
+        #weight: 1 #分配权重
+        #metadata: something #可以是自己随便写的内容，主要负责用于扩展更多的内容
+        namespace: 837d0dbd-f8ca-4289-990b-4f097ea6f4ea
+        group: orderGroup
+
+
+stockService:
+  name: stock-service
+
+feign:
+  client:
+    config:
+      stock-service:
+        connectionTimeout: 1000
+        readTimeout: 1000
+

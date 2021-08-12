@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.dao.OrderMapper">
+    <!--<resultMap id="BaseResultMap" type="类的全限定名">-->
+    <!--    <result column="数据库中的列名" jdbcType="INTEGER" property="类中对应的属性名"/>-->
+    <!--</resultMap>-->
+    <!--<insert id="addOrder" parameterType="xyz.pojo.Order">-->
+    <!--    insert into order_table(order_num) values(#{orderNum});-->
+    <!--</insert>-->
+    <update id="addOrder" parameterType="Integer">
+        update order_table set order_num=order_num+1 where id=#{id}
+    </update>
+    <update id="deleOrder" parameterType="Integer">
+        update order_table set order_num=order_num-1 where id=#{id}
+    </update>
+    <select id="gainOrder" parameterType="Integer" resultType="xyz.pojo.Order">
+        select id,order_num from order_table where id=#{id}
+    </select>
+</mapper>

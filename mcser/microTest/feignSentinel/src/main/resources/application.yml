@@ -1,0 +1,21 @@
+server:
+  port: 8079
+spring:
+  application:
+    name: order-service #服务的名称，将被nacos用于注册
+  cloud:
+    nacos:
+      server-addr: 
+      discovery:
+        username: 
+        password: 
+
+
+feign:
+  client:
+    config:
+      stock-service:
+        connectionTimeout: 1000
+        readTimeout: 1000
+  sentinel:
+    enabled: true # 允许整合sentinel

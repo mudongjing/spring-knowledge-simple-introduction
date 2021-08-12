@@ -1,0 +1,9 @@
+server:
+  port: 8090
+spring:
+  profiles:
+    active: dev
+    # 在配置中心设置对应的配置文件名，与服务名相同，在`-dev.yaml`
+
+
+

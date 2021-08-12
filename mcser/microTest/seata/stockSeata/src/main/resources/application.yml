@@ -1,0 +1,46 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: 
+    password: 
+    url: jdbc:mysql://地址:3306/stockSeata?characterEncoding=utf-8&useSSL=false
+  application:
+    name: stockSeata-service
+  cloud:
+    nacos:
+      discovery:
+        group: 
+        namespace: 
+        username: 
+        password: 
+      server-addr: 
+    alibaba:
+      seata:
+        tx-service-group: 
+server:
+  port: 8081
+
+mybatis:
+  type-aliases-package: xyz.dao
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true #启用驼峰命名机制，不需要可以不设置
+seata:
+  registry:
+    nacos:
+      application: 
+      server-addr: 
+      group: 
+      namespace:
+      username:
+      password:
+    type: nacos
+  config:
+    nacos:
+      group: 
+      server-addr: 
+      namespace: 
+      username: 
+      password: 
+    type: nacos

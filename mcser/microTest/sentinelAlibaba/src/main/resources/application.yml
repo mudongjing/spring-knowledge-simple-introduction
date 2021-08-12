@@ -1,0 +1,32 @@
+server:
+  port: 9010
+
+spring:
+  application:
+    name: sentinel-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8110 #控制台地址
+#        port: 8719
+#      datasource:
+#        flow-rule: # 自定义一个名字
+#          serverAddr:
+#          username:
+#          password:
+#          dataId:
+#          ruleType:
+
+
+    #为了持久化sentinel的规则，需要在nacos中设置一个dataid,可以自定义为sentinel.rule-durable
+    #配置内容为
+#    {
+#      {
+#        "resource":"restResource",  指定一个资源，即对应的一个api。如order/add
+#        "controlBehavior":0,流量控制方式
+#        "count":10.0
+#        "grade":1,
+#        "limitApp":"default",
+#        "strategy":0
+#      }
+#    }

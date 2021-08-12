@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="xyz.dao.StockMapper">
+    <!--<resultMap id="BaseResultMap" type="类的全限定名">-->
+    <!--    <result column="数据库中的列名" jdbcType="INTEGER" property="类中对应的属性名"/>-->
+    <!--</resultMap>-->
+    <insert id="addStock" parameterType="xyz.pojo.Stock">
+        insert into stock_table(stock_num) values(#{stockNum})
+    </insert>
+
+    <update id="deleStock" parameterType="Integer">
+        update stock_table set stock_num=stock_num-1 where id=#{id}
+    </update>
+    <select id="gainStock" parameterType="Integer" resultType="xyz.pojo.Stock">
+        select id,stock_num from stock_table where id=#{id}
+    </select>
+</mapper>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gateway" />
+        <module name="order" />
+        <module name="feignSentinel" />
+        <module name="sentinelDura" />
+        <module name="sentinelTest" />
+        <module name="stock" />
+        <module name="sentinelAlibaba" />
+        <module name="stockSeata" />
+        <module name="orderSeata" />
+        <module name="configNacos" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="11">
+      <module name="configNacos" target="1.8" />
+      <module name="feignSentinel" target="1.8" />
+      <module name="gateway" target="1.8" />
+      <module name="microTest" target="1.8" />
+      <module name="order" target="1.8" />
+      <module name="orderSeata" target="1.8" />
+      <module name="seata" target="1.8" />
+      <module name="sentinelAlibaba" target="1.8" />
+      <module name="sentinelDura" target="1.8" />
+      <module name="sentinelTest" target="1.8" />
+      <module name="stock" target="1.8" />
+      <module name="stockSeata" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configNacos" options="-parameters" />
+      <module name="feignSentinel" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="microTest" options="-parameters" />
+      <module name="order" options="-parameters" />
+      <module name="orderSeata" options="-parameters" />
+      <module name="seata" options="-parameters" />
+      <module name="sentinelAlibaba" options="-parameters" />
+      <module name="sentinelDura" options="-parameters" />
+      <module name="sentinelTest" options="-parameters" />
+      <module name="stock" options="-parameters" />
+      <module name="stockSeata" options="-parameters" />
+    </option>
+  </component>
+</project>
