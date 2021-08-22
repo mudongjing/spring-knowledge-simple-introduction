@@ -136,11 +136,95 @@ public ConfigurableApplicationContext run(String... args) {
 }
 ```
 
-
-
 # Bean
 
+```mermaid
+graph TD
+ano[注解];dkdu[BeanDefintionReader--从不同地方读取关于bean的属性定义--]
+befac[BeanFactory--内部使用反射创建实例--];dkyi[BeanDefinition--bean定义信息--]
+bfpp1[BeanFactoryPostProcessor];bfpp2[BeanFactoryPostProcessor];
+new[对象实例化];init[对象初始化];bppb[beanPostProcessor--before__创建代理对象];bppa[beanPostProcessor--after__创建代理对象];dvxl[完整对象]
+cli((客户端))
+popu[填充属性];aware[执行对应的aware接口方法];comment[\此时已经获得了bean\]
+style popu fill:#7ceed4,stroke:#333
+style aware fill:#7ceed4,stroke:#333
+style cli fill:#68a016,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+style bfpp1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+style bfpp2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+style bppb fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+style bppa fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+style befac fill:#f9f,stroke:#333,stroke-width:4px
+style comment fill:#ffffff,stroke:#f66,stroke-width:2px,color:#000000,stroke-dasharray: 5 5
+ano-->dkdu;xml-->dkdu
+dkdu-->dkyi;
+bfpp1-.->|1填充属性值|befac;befac-.->bfpp1
+subgraph IOC Container
+    dkyi-->bfpp1;bfpp1--2-->bfpp2;
+     dkyi-.->|可直接通过new方法进行实例化|new
+     new
+    subgraph  完整初始化
+        init;bppb;bppa;
+        popu;aware
+    end
+    dvxl
+end
+bfpp2-.->|3填充属性值|befac;befac-.->bfpp2
+bfpp2===>befac
+befac==>new;
+new-->popu;popu-->aware;aware-->comment
+o-->bppb;bppb==>init;init-->bppa;bppa==>dvxl
+cli-.->|读取bean|dvxl
+```
 
+
+
+一般来说，不管我们使用何种方式定义了一个bean，都要经历`BeanDefinitionReader`这个接口，做相关bean信息的提取，无论是xml文件还是注解都将一视同仁。
+
+但此时，只是知道了bean大致需要的原料，但原料本身可能有的需要加工一下，就像我们在配置bean的时候，使用了各种`${}`的方式从其它地方指定具体的值，大概率是我们写的配置文件，那么在正式生产bean之前，需要完成这些原料的加工，获取实际的值，这个工作就是`BeanFactoryPostProcessor`接口负责，在已经获得相关的bean信息后，这个接口可以让我们在对其中的各种信息做修改，可以理解为是根据环境的改造。
+
+比如，我们可以实现一下这个Processor，然后截取其中的BeanDefinition，修改其中的属性，
+
+```java
+//这里简单做个示例
+public class MyBeanFactoryProcessor implements BeanFactoryPostProcessor {
+    @Override//在这里，我们可以获取某个bean的对应属性设置，即BeanDefinition
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+        BeanDefinition a = beanFactory.getBeanDefinition("a");
+        //获取了关于bean a的属性设置，我们可以随意改动，这里仅是示例写两个方法
+        a.setBeanClassName("b");
+        a.setLazyInit(false);
+        //其它方法可以看一下接口BeanDefinition的定义
+    }
+}
+```
+
+经历了BeanFactoryPostProcessor的洗礼，BeanDefinition才算是真正可以使用，将送入`BeanFactory`中进行处理。
+
+~插一句~
+
+> 这里再插一句，最前面的bean的设置时，我们可以为bean的定义添加类似·`ApplicationContextAware`的Aware接口，可以允许bean在创建完成后，可以直接通过它获取对应的ApplicationContextAware。
+>
+> 官方文档中，对Aware接口的使用是，
+>
+> > ```
+> > Bean factory implementations should support the standard bean lifecycle interfaces as far as possible. The full set of initialization methods and their standard order is:
+> > 1.BeanNameAware's setBeanName
+> > 2.BeanClassLoaderAware's setBeanClassLoader
+> > 3.BeanFactoryAware's setBeanFactory
+> > 4.EnvironmentAware's setEnvironment
+> > 5.EmbeddedValueResolverAware's setEmbeddedValueResolver
+> > 6.ResourceLoaderAware's setResourceLoader (only applicable when running in an application context)
+> > 7.ApplicationEventPublisherAware's setApplicationEventPublisher (only applicable when running in an application context)
+> > 8.MessageSourceAware's setMessageSource (only applicable when running in an application context)
+> > 9.ApplicationContextAware's setApplicationContext (only applicable when running in an application context)
+> > 10.ServletContextAware's setServletContext (only applicable when running in a web application context)
+> > ```
+
+~插一句结束~
+
+经历了BeanFactory的处理，则进入了bean的正式创建中，而在创建中又需要经历实例化和初始化。
+
+而在每个步骤前，都可能有`beanPostProcessor`的处理，实际是AOP编程，分别对应其中的before和after方法。
 
 # spring 循环依赖
 
@@ -241,6 +325,14 @@ spring的解决方法称为`三级缓存`，这三个缓存就是`DefaultSinglet
 ## AbstractApplicationContext.class++>refresh()
 
 ```java
+/*
+前期的准备
+    1. 设置容器的启动时间
+    2. 设置活跃状态为true
+    3. 设置关闭状态为false
+    4. 获取Enviroment对象，加载当前系统的属性到Enviroment对象中
+    5. 准备监听器和事件集合对象，默认为空的集合
+*/
 // Prepare this context for refreshing.
 prepareRefresh();
 // Tell the subclass to refresh the internal bean factory.
@@ -249,9 +341,10 @@ ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();
 prepareBeanFactory(beanFactory);
 try {
     // Allows post-processing of the bean factory in context subclasses.
+    //子类覆盖方法可做额外的处理
     postProcessBeanFactory(beanFactory);
 
-    //---------准备工作，阅读这里------------
+    //*****---------准备工作，阅读这里------------*****
     /*
     	上面的工作主要就是为了得到一个完整的bean工厂，下面的这个方法才是关键，
     	其内部使用的各种方法，最终的目的在于确认我们给定主类是否包含@Configuration注解，
@@ -259,9 +352,9 @@ try {
     	比如我们常使用的@ComponentScan，都会在这个时候被处理。
     	最重要的是，扫描其中所有的@import注解
     */
-    //---------准备工作的介绍到这里就可以了----------
     // Invoke factory processors registered as beans in the context.
     invokeBeanFactoryPostProcessors(beanFactory);
+    //---------准备工作的介绍到这里就可以了----------
     
     // Register bean processors that intercept bean creation.
     registerBeanPostProcessors(beanFactory);
@@ -269,15 +362,15 @@ try {
     initMessageSource();
     // Initialize event multicaster for this context.
     initApplicationEventMulticaster();
-    
-    //这个方法内部会试图创建育成web服务器，如果我们不设置的话，就会去使用tomcat
+    //这个方法内部会试图创建一个web服务器，如果我们不设置的话，springboot就会去使用tomcat
     // Initialize other special beans in specific context subclasses.
     onRefresh();
-    
     // Check for listener beans and register them.
     registerListeners();
+    /*以上5个方法也属于是做前期准备的，只不过目的不同，主要是主备好后面需要的各种处理器和监听器等*/
     
-    //----------循环依赖，阅读这里--------------
+    //下面的这个方法才是真正开始实例化操作
+    //*******----------循环依赖，阅读这里--------------*******
     //实例化bean
     //这个在循环依赖的介绍中，也会常提及
     //因为前面的种种操作，最多是在内存中为对象分配一块空间，而这里则真正赋予其中的内容
@@ -319,12 +412,20 @@ try {
     */
     //这样，就能够把对应的bean彻底实现
     //---------
-    //----------循环依赖到这里结束--------------------
     // Instantiate all remaining (non-lazy-init) singletons.
     finishBeanFactoryInitialization(beanFactory);
+    //----------循环依赖到这里结束-------------------- 
     
     // Last step: publish corresponding event.
     finishRefresh();
+}
+catch (BeansException ex) {//这里面的不重要，因此省略不展示了}
+    
+finally {
+    // Reset common introspection caches in Spring's core, since we
+    // might not ever need metadata for singleton beans anymore...
+    resetCommonCaches();
+    contextRefresh.end();
 }
 ```
 
