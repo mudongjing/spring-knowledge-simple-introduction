@@ -1251,7 +1251,17 @@ spec:
 			# NodePort: 外部端口
 			# LoadBalancer: 需外部云环境
 			# ExternalName: 把外部服务引入集群内部，直接使用
+	externalName: # 用于ExternalName模式，指明对应的域名或ip
 	clusterIP: # 虚拟服务的ip，可以自己写一个
+				# 如果这里写None，就得到的是headliness的服务类型
+				# 这种情况下，如果想访问service，就需要使用其域名
+				# 进入其中一个pod
+				# kubectl exec -it pod名 /bin/sh
+				# cat /etc/resolv.conf
+				# 其中的nameserver对应的是ip
+				# search 对应的几个值是域名
+				# 访问
+				# dig @ip 服务名.域名
 	sessionAffinity: # 支持ClientIP和None选项，session亲和性
 					# 意思是同一个客户端的请求就交由同一个node处理
 					# None是不执行那种操作
@@ -1259,7 +1269,7 @@ spec:
 		- protocol: 
 		  port: # service端口
 		  targetPort: # pod端口
-		  nodePort: # 主机端口
+		  nodePort: # 主机端口，默认范围30000~32767，也可不主动设置
 ```
 
 一个service对应的所有pod的访问地址，都存放在etcd中，是一个Endpoint资源对象。
@@ -1267,59 +1277,391 @@ spec:
 ```bash
 # 可以查看一下对应命名空间下的endpoints信息
 kubectl get endpoints -n 命名空间 -o wide
+# 也可以在service创建好后，去看详细内容，其中包含了endpoints
+kubectl describe svc service名 -n 命名空间
 ```
 
+## Ingress
 
+现在的一个问题是，我们使用了Service来与外界建立通信，但是NodePort需要一个主机的端口，如果service对象很多显然不行。而LoadBalance则是需要外部云环境的辅助，不太简洁。
 
+Ingress就是通过内部使用nginx之类的代理组件，读取定义的相关规则，将对应的请求转发到对应的service，在将响应赶回给客户端。
 
+简单而言，ingress让service像几个不同的机器，由代理组件如nginx做代理统一进行请求分发，因此只需要一个端口即可。9
 
+```mermaid
+flowchart TD
+cl[客户端];ng[(<font color=red>Proxy</font>_如Nginx)];in[Ingress 控制器];ser[Ingress Service_service 规则_]
+p1((Pod));p2((Pod))
+style cl fill:#417505
+style in fill:#d0021b
+style ser fill:#f8e71c
+subgraph pods
+	p1;p2
+end
 
+cl-->ng-->services-->pods
+style services fill:#4a90e2
+in--->|将ingress service规则转化为类似nginx的规则|ng
+in-->|通过k8s api感知其变化|ser
+用户编写-.->ser
+```
 
+> 我们只需要编写对应的规则，指明域名和service的对应关系。
+>
+> ingress控制器就会去主动感知服务规则的变化，并生成对应的反向代理配置，然后写入指定的一个Proxy代理组件中，并更新。
 
+- 安装Ingress
 
+  ```bash
+  # 准备一个目录，用以存放我们将要下载的文件
+  # 这里我们使用nginx作为代理组件
+  # 需获取ingress-nginx，版本0.30版本
+  wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/mandatory.yaml
+  wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/nginx-0.30.0/deploy/static/provider/baremetal/service-nodeport.yaml
+  # 修改mandatory.yaml文件中的仓库
+  # 原为 quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
+  # 修为quay-mirror.qiniu.com/kubernetes-ingress-controller/nginx-ingress-controller:0.30.0
+  # 保存后，就可以创建
+  kubectl apply -f ./
+  # 查看
+  kubectl get pod -n ingress-nginx
+  # 查看service
+  kubectl get svc -n ingress-nginx
+  ```
 
+- 配置文件
 
+  ```yaml
+  apiVersion: extensions/v1beata1
+  kind: Ingress
+  metadata: 
+  	name:
+  	namespace:
+  spec:
+  	rules: # 下面就是写规则，指定域名和service的关系
+  	- host: 域名
+  			# 如果域名已经有对应的DNS负责解析还好，否则需要我们自己在系统的hosts文件中指明
+  			# 应用这个配置文件后，使用下面的命令就可以看到代理组件在主机上的端口
+  			# 例如80:32440/TCP,443:31335/TCP
+  			# 32440和31335就是真正的主机端口，只不过分别对应的是http和https
+  			# 使用我们定义的域名结合端口号即可访问对应的服务
+  			# kubectl get svc -n ingress-nginx
+  	  http:
+            paths:
+            - path: / # 或其它url形式
+              backend:
+                  serviceNmae: service名
+                  servicePort:
+  ```
 
+  上面提及了，产生的主机端口包含http和https，上面的操作已经可以访问http，但是https就稍稍需要多一些操作
 
+  > ```bash
+  > # 生成一个证书
+  > openssl req -x509 -sha256 -nodes -day 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/C=CN/ST=BJ/L=BJ/O=nginx/CN=itheima.com"
+  > # 创建密钥
+  > kubectl create secret tls tls-secret --key tls.key --cert tls.crt
+  > ```
+  >
+  > ```yaml
+  > apiVersion: extensions/v1beta1
+  > kind: Ingress
+  > metadata: 
+  > 	name: 
+  > 	namespace:
+  > spec:
+  > 	tls:
+  > 		- hosts:
+  > 			- 域名1
+  > 			- 域名2
+  > 			secretName: 上面生成的密钥 # 即 tls-secret
+  > 	rules:
+  > 	# 同样的，定义几个域名和对应的规则
+  > # 应用文件后，查看一下结果
+  > # kubectl get ing 这个pod名
+  > # 此时访问就需要结合对应的https对应的端口，以及https协议
+  > ```
 
+# 存储
 
+> `Volume`是Pod中能够被多个容器访问的共享目录，它被定义在Pod上，然后被其中的容器挂载到具体的文件目录下，由此实现同一Pod下不同容器之间的数据共享以及数据持久化存储。
 
+> 常见的Volume类型有：
+>
+> - 简单： EmptyDir, HostPath, NFS
+> - 高级： PV,PVC
+> - 配置存储： ConfigMap, Secret
 
+## 简单存储
 
+### EmptyDir
 
+最基础的一种，对应的就是主机上的一个空目录。
 
+> 当它分配到Node上时，无需指定对应的主机目录，初始为空，k8s会自动分配指定的目录。随Pod的销毁，其中的数据会删除。
+>
+> > 主要用于做临时空间，或多容器共享目录
 
+我们可以使用这种存储实现一个类似消息中间件的工作，Pod中的一个容器像其中写入数据，而另一个从中读数据，
 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+	# 忽略
+spec:
+	containers:
+	- name: 容器名
+	  image: 镜像
+	  ports:
+	  - containerPort:
+	  volumeMounts: # 进行目录挂载
+	  - name: 目录名
+	  	mountPath: 实际对应的主机目录
+	- name: 另一个容器名
+	  # 忽略
+	  volumeMount:
+	  - name: 还是那个目录名
+	  	mountPath: 另一个主机目录位置
+	volumes:
+	- name: 目录名
+	  emptyDir: {} # 指明时EmptyDir类型，内容为空
+```
 
+### HostPath
 
+这是将主机的一个目录直接挂载到Pod上，即使pod销毁，数据也存在。
 
+> 简单而言，就相当于在上面的基础上，为数据准备了一个备份。
+>
+> 因此，我们同样可以像上面那样在Pod内部指定每个目录名以及对应的位置。
 
+```yaml
+# 前面的部分可以复用上面的
+# 这里着重需要修改的是volumes
+spec:
+	# 忽略
+	volumes:
+	- name: 目录名
+	  hostPath:
+	  	path: 主机的一个目录
+	  	type: DirectoryOrCreate # 目录存在就用，不存在就创建
+	  		 # 其它的type
+	  		 # Directory 目录必须存在
+	  		 # FileOrCreate 文件存在就用，不存在就创建
+	  		 # File 文件必须存在
+```
 
+### NFS
 
+上面的存储虽然有了备份，但是备份也是在同一个节点上，一点节点发生故障，数据也会消失。
 
+而NFS，则是一个网络文件存储系统，需要我们自己搭建这样一个NFS的服务器，可以理解为自己弄一个网盘备份。
 
+- 搭建NFS
 
+  ```bash
+  # 在主节点上安装nfs
+  yum install nfs-utils -y
+  # 准备一个共享目录，例如
+  mkdir /root/data/nfs -pv
+  # 将该目录的读写权限暴露给当前网段的所有主机，例如192.168.109.0/24
+  # 在/etc/exports 文件中添加
+  # /root/data/nfs 192.168.109.0/24(rw,no_root_squash)
+  
+  # 启动nfs
+  systemctl start nfs
+  # 此时，只需要在其它从节点上简单安装上nfs即可
+  ```
 
+  ```yaml
+  # 配置文件，还是与上面的基本相同
+  # 需要改动的还是volumes
+  spec:
+  	# 忽略
+  	volumes:
+  	- name: 目录名
+  	  nfs:
+  	  	server: nfs服务器地址 # 就是我们刚才的主节点地址
+  	  	path: /root/data/nfs # 共享目录
+  ```
 
+  > 这类网络存储，不仅只有NFS，其它的还有CIFS, GlusterFS等
 
+## 高级存储
 
+> PV(Persistent Volume): 即持久化卷，是一种对底层共享存储的抽象。
+>
+> PVC(Persistent Volume Claim): 持久卷声明信息，是对于存储需求的一种声明。
 
+```mermaid
+graph TD
+p1((Pod));p2((Pod));p3((Pod))
+style p1 fill:#81b149
+style p2 fill:#81b149
+style p3 fill:#81b149
+pc1[\pvc1/];pc2[\pvc2/];pc3[\pvc3/]
+style pc1 fill:#ab7ad6
+style pc2 fill:#ab7ad6
+style pc3 fill:#ab7ad6
+pv1[/pv1\];pv2[/pv2\];pv3[/pv3\];
+style pv1 fill:#6f98c7
+style pv2 fill:#6f98c7
+style pv3 fill:#6f98c7
+n[(NFS)];ci[(CIFS)];g[(GlusterFS)]
+style n fill:#f5a623
+style ci fill:#f5a623
+style g fill:#f5a623
+subgraph 用户
+	p1---pc1;p2---pc2;p3---pc3;
+end
+subgraph 管理员
+	pv1---n;pv2---ci;pv3---g
+	pv4[/pv4\]---n;pv5[/pv5\]---ci;pv6[/pv6\]---g
+	style pv4 fill:#6f98c7
+	style pv5 fill:#6f98c7
+	style pv6 fill:#6f98c7
+end
+pc1-.-pv1;pc2-.-pv2;pc3-.-pv3
+```
 
+上面的图就解释了，pv和pvc其实就是实现一种工作的隔离机制，管理员负责创建具体的存储服务，提供的pv就是可用的一个服务，可以根据实际情况创建不同类型的存储。
 
+但对于用户而言，存储技术的不同是感觉不到的，只需要使用pvc向存储服务那里申请存储空间即可，
 
+### PV
 
+```yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+	name:
+	# 不能写命名空间
+spec:
+	nfs: # 存储类型
+		path:
+		server:
+	capacity:
+		storage: 分配的空间大小
+	accessModes: # 访问模式
+	- ReadWriteOnce
+				# ReadWriteOnce (RWO): 读写权限，但只能被单个节点挂载
+				# ReadOnlyMany (ROX): 只读权限，能被多个节点挂载
+				# ReadWriteMany (RWX): 读写权限，能被迭戈节点挂载
+				# 不同的存储类型，支持的模式也不一定相同
+	storageClassName: # 存储类别
+				# 使用storageclassName指定一个类别
+				# 所谓的类别就是pv自己附加的属性，可以通过指定属性，指定特定的某些pv
+	persistentVolumeReclaimPolicy: # 回收策略
+							# Retain (保留)：保留数据，需管理员手工清理
+							# Recycle (回收)：清除pv的数据
+							# Delete (删除)：与pv相连的后端存储完成volume的删除
+							# 同样，不同的存储类型，对应的策略可能不同
+```
 
+### PVC
 
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+	name:
+	namespace:
+spec:
+	accessMode: # 对应的模式，需要和对应的pv相同
+	selector: # 使用标签对pv进行选择
+	storageClassName:
+	resources:
+		requests:
+			storage: 需要的空间大小
+```
 
+实现上面两个配置文件，就是将pv和pvc绑定起来了，但还缺少主角Pod。
 
+```yaml
+# 可以通过
+---
+# 在文件中隔离，实现多个pod
+# 忽略
+spec:
+	containers:
+	- name:
+	  image:
+	  command:
+	  volumeMounts:
+	  - name:
+	    mountPath:
+	 volume:
+	 	- name: 
+	 	  persistentVolumeClaim:
+	 	  	claimName: 对应的pvc名
+	 	  	readOnly:
+```
 
+实现了pod后，pod自己的输出会放到当前节点定义的目录中，同时会传递给pvc，交由对应的pv，在对应的存储系统中做备份。
 
+## 配置存储
 
+### ConfigMap(cm)
 
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+	name:
+	namespace:
+data: # 下面将采取k-v格式，k将在之后成为对应的文件名，而，v则是文件内容
+	# 例如,info，就是k,而后面的就是v
+	info: 
+		username:admin
+		pw:123
+```
 
+声明一个pod
 
+```yaml
+apiVersion: v1
+kind: Pod
+meadata:
+	name:
+	namespace:
+spec:
+	containers:
+	- name:
+	  image:
+	  volumeMounts:
+	  - name:
+	    mountPath: # 之后configMap生成的配置文件将在这里
+	 volumes: # 引入configMap
+	 - name:
+	   configMap: 
+	   	name: configmap名
+```
 
+上述完美都实现后，可以在对应的目录下找到对应的配置文件，以及其中的内容
 
+```bash
+# 进入查看配置文件
+kubectl exec -it pod名 -n 命名空间 /bin/sh
+# 到对应的mountPath路径下即可找到如 info 的文件
+# 也可以修改配置信息
+# 就是之前的那种运行期间的edit
+kubectl edit cm configMap名 -n 命名空间
+# 就一样可以修改任何内容
+```
+
+### Secret
+
+就相当于在前面的基础上，具备了加密机制。
+
+```yaml
+type: Opaque # 这是代表用户自定义数据，
+# 其它还有kubernetes.io/service-account-token之类的type
+data: # 下面将添加k-v格式的值，v必须是base64编码的字符串
+	# 比如 username:admin 就变成
+	username:YWRtaW4K
+```
 
 # 附录
 
