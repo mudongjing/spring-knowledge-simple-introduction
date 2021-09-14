@@ -651,6 +651,7 @@ unsigned char *__ziplistInsert(unsigned char *zl, unsigned char *p, unsigned cha
 ## 删除
 
 ```c
+// *p指向待删除元素的首地址（参数p同时可以作为输出参数）；返回参数为压缩列表首地址
 unsigned char *ziplistDelete(unsigned char *zl, unsigned char **p) {
     size_t offset = *p-zl;
     zl = __ziplistDelete(zl,*p,1);
@@ -664,63 +665,66 @@ unsigned char *ziplistDelete(unsigned char *zl, unsigned char **p) {
 }
 ```
 
+![](https://mudongjing.github.io/gallery/redis/zip/dele.png)
+
 ```c
-/* Delete "num" entries, starting at "p". Returns pointer to the ziplist. */
+// 可以同时删除多个元素，输入参数p指向的是首个待删除元素的地址；num表示待删除元素数目。
+/* 删除元素同样可以简要分为三个步骤：①计算待删除元素的总长度；②数据复制；③重
+   新分配空间。下面分别讨论每个步骤的实现逻辑。*/
 unsigned char *__ziplistDelete(unsigned char *zl, unsigned char *p, unsigned int num) {
     unsigned int i, totlen, deleted = 0;
     size_t offset;
     int nextdiff = 0;
     zlentry first, tail;
     size_t zlbytes = intrev32ifbe(ZIPLIST_BYTES(zl));
-
-    zipEntry(p, &first); /* no need for "safe" variant since the input pointer was validated by the function that returned it. */
+	
+    //解码第一个待删除元素
+    zipEntry(p, &first); 
+    //遍历所有待删除元素，同时指针p向后偏移
     for (i = 0; p[0] != ZIP_END && i < num; i++) {
         p += zipRawEntryLengthSafe(zl, zlbytes, p);
         deleted++;
     }
 
     assert(p >= first.p);
-    totlen = p-first.p; /* Bytes taken by the element(s) to delete. */
+    totlen = p-first.p; //totlen即为待删除元素总长度
+    
+    // 现在，指针first与指针p之间的元素都是待删除的
+    // 此后需要完成数据复制
+    
+    // 当指针p恰好指向zlend字段时，不再需要复制数据，只需要更新尾节点的偏移量即可
+    
     if (totlen > 0) {
         uint32_t set_tail;
         if (p[0] != ZIP_END) {
-            /* Storing `prevrawlen` in this entry may increase or decrease the
-             * number of bytes required compare to the current `prevrawlen`.
-             * There always is room to store this, because it was previously
-             * stored by an entry that is now being deleted. */
+            //计算元素entryN长度的变化量
             nextdiff = zipPrevLenByteDiff(p,first.prevrawlen);
 
-            /* Note that there is always space when p jumps backward: if
-             * the new previous entry is large, one of the deleted elements
-             * had a 5 bytes prevlen header, so there is for sure at least
-             * 5 bytes free and we need just 4. */
+            //更新元素entryN的previous_entry_length字段
             p -= nextdiff;
             assert(p >= first.p && p<zl+zlbytes-1);
             zipStorePrevEntryLength(p,first.prevrawlen);
 
-            /* Update offset for tail */
+            //更新zltail
             set_tail = intrev32ifbe(ZIPLIST_TAIL_OFFSET(zl))-totlen;
 
             /* When the tail contains more than one entry, we need to take
              * "nextdiff" in account as well. Otherwise, a change in the
              * size of prevlen doesn't have an effect on the *tail* offset. */
             assert(zipEntrySafe(zl, zlbytes, p, &tail, 1));
-            if (p[tail.headersize+tail.len] != ZIP_END) {
-                set_tail = set_tail + nextdiff;
-            }
+            
+            /* 当entryN元素就是尾元素时，只需要更新一次尾元素的偏移量；但是当entryN元素不是尾元素且				   entryN元素的长度发生了改变时，尾元素偏移量还需要加上nextdiff的值。*/
+            if (p[tail.headersize+tail.len] != ZIP_END) {set_tail = set_tail + nextdiff;}
 
-            /* Move tail to the front of the ziplist */
-            /* since we asserted that p >= first.p. we know totlen >= 0,
-             * so we know that p > first.p and this is guaranteed not to reach
-             * beyond the allocation, even if the entries lens are corrupted. */
             size_t bytes_to_move = zlbytes-(p-zl)-1;
+            //数据复制
             memmove(first.p,p,bytes_to_move);
         } else {
             /* The entire tail was deleted. No need to move memory. */
             set_tail = (first.p-zl)-first.prevrawlen;
         }
 
-        /* Resize the ziplist */
+        
         offset = first.p-zl;
         zlbytes -= totlen - nextdiff;
         zl = ziplistResize(zl, zlbytes);
@@ -735,16 +739,162 @@ unsigned char *__ziplistDelete(unsigned char *zl, unsigned char *p, unsigned int
 
         /* When nextdiff != 0, the raw length of the next entry has changed, so
          * we need to cascade the update throughout the ziplist */
-        if (nextdiff != 0)
-            zl = __ziplistCascadeUpdate(zl,p);
+        if (nextdiff != 0) zl = __ziplistCascadeUpdate(zl,p);
     }
     return zl;
 }
 ```
 
+## 遍历
+
+```c
+// 分为向后查和向前查
+unsigned char *ziplistNext(unsigned char *zl, unsigned char *p) {
+    //zl参数无用；这里只是为了避免警告
+    ((void) zl);
+    size_t zlbytes = intrev32ifbe(ZIPLIST_BYTES(zl));
+
+    /* "p" could be equal to ZIP_END, caused by ziplistDelete,
+     * and we should return NULL. Otherwise, we should return NULL
+     * when the *next* element is ZIP_END (there is no next entry). */
+    if (p[0] == ZIP_END) { return NULL;}
+
+    p += zipRawEntryLength(p);
+    if (p[0] == ZIP_END) { return NULL; }
+
+    zipAssertValidEntry(zl, zlbytes, p);
+    return p;
+}
+
+/* Return pointer to previous entry in ziplist. */
+unsigned char *ziplistPrev(unsigned char *zl, unsigned char *p) {
+    unsigned int prevlensize, prevlen = 0;
+
+    /* Iterating backwards from ZIP_END should return the tail. When "p" is
+     * equal to the first element of the list, we're already at the head,
+     * and should return NULL. */
+    if (p[0] == ZIP_END) {
+        p = ZIPLIST_ENTRY_TAIL(zl);
+        return (p[0] == ZIP_END) ? NULL : p;
+    } else if (p == ZIPLIST_ENTRY_HEAD(zl)) { return NULL;} 
+    else {
+        ZIP_DECODE_PREVLEN(p, prevlensize, prevlen);
+        assert(prevlen > 0);
+        p-=prevlen;
+        size_t zlbytes = intrev32ifbe(ZIPLIST_BYTES(zl));
+        zipAssertValidEntry(zl, zlbytes, p);
+        return p;
+    }
+}
+```
+
+## 连锁更新
+
+![](https://mudongjing.github.io/gallery/redis/zip/update.png)
+
+> 当删除元素entryX时，元素entryX +1 的 前 驱 节 点 改 为 元 素 entryX-1， 长 度 为 512 字 节， 元 素 entryX +1 的previous_entry_length字段需要5字节才能存储元素entryX-1的长度，则元素entryX+1的长度需
+> 要扩展至257字节；而由于元素entryX+1长度的增大，元素entryX+2的previous_entry_length字
+> 段同样需要改变。依此类推，由于删除了元素entryX，之后的所有元素（entryX+1、entryX+2
+> 等）的长度都必须扩展，而每次扩展都将重新分配内存，导致效率很低。压缩列表zl2中，插
+> 入元素entryY时同样会出现这种情况，称为连锁更新。
+
+# 字典【散列表】
+
+c语言中没有实现的哈希表，因此，redis需要自己实现，而底层的实现就是数组加hash函数，与我们了解的hashMap一样，通过对字符串计算哈希值，得到数组的下标，再通过下标直接获得对应数组的值。
+
+> 比如版本1的时候有个简单的hash函数
+>
+> ```c
+> unsigned int dictGenHashFunction(const unsigned char *buf, int len) {
+>     unsigned int hash = 5381;
+>     while (len--)
+>         hash = ((hash << 5) + hash) + (*buf++); /* hash * 33 + c */
+>     return hash;
+> }
+> ```
+
+![](https://mudongjing.github.io/gallery/redis/dict/dict.png)
 
 
-# 字典
+
+## 结构
+
+> 当已存入数据量将超过总容量时需进行扩容一倍。因此我们设计的字典数据结构在这就需要添加第2及第3个字段，分别为：①总容量——size字段；②已存入数据量——used字段
+>
+> ```c
+> // 哈希表结构
+> // Hash表的结构体整体占用32字节
+> typedef struct dictht {
+>     /*指针数组，用于存储键值对*/
+>     dictEntry **table;
+>     unsigned long size; // 数组大小,size是大于2的2次幂
+>     unsigned long sizemask; // 掩码 size-1
+>     unsigned long used;
+>     // 获取的下标就是 hash值 & sizemask
+> } dictht;
+> ```
+
+```c
+// 哈希表节点
+typedef struct dictEntry {
+    void *key;
+    union { // 这个联合体，用于存储实际的数据
+        void *val;
+        uint64_t u64;
+        int64_t s64; // 存储过期时间
+        double d;
+    } v;
+    struct dictEntry *next; // 冲突元素组成链表
+} dictEntry;
+```
+
+```c
+// 字典类型
+typedef struct dictType {
+    uint64_t (*hashFunction)(const void *key); // 哈希函数
+    void *(*keyDup)(void *privdata, const void *key); // 键的复制函数
+    void *(*valDup)(void *privdata, const void *obj); // 值的复制函数
+    int (*keyCompare)(void *privdata, const void *key1, const void *key2);
+    void (*keyDestructor)(void *privdata, void *key);
+    void (*valDestructor)(void *privdata, void *obj); // 以上两个是销毁函数
+    int (*expandAllowed)(size_t moreMem, double usedRatio);
+} dictType;
+```
+
+![](https://mudongjing.github.io/gallery/redis/dict/construct.png)
+
+```c
+// 字典
+typedef struct dict {
+    dictType *type;
+    void *privdata;
+    dictht ht[2]; // k-v 哈希表， 虽然有两个元素，但一般情况下只会使用ht[0]，只有当该字典扩容、缩容需要进行rehash时，才会用到ht[1]
+    long rehashidx; /*rehash标识。默认值为-1，代表没进行rehash操作；不为-1时，代表
+					  正进行rehash操作，存储的值表示Hash表ht[0]的rehash操作进行到了哪个索引值*/
+    int16_t pauserehash; /* If >0 rehashing is paused (<0 indicates coding error) */
+} dict;
+```
+
+## 初始化
+
+```c
+dict *dictCreate(dictType *type, void *privDataPtr){
+    dict *d = zmalloc(sizeof(*d));
+
+    _dictInit(d,type,privDataPtr);
+    return d;
+}
+
+int _dictInit(dict *d, dictType *type, void *privDataPtr){
+    _dictReset(&d->ht[0]);
+    _dictReset(&d->ht[1]);
+    d->type = type;
+    d->privdata = privDataPtr;
+    d->rehashidx = -1;
+    d->pauserehash = 0;
+    return DICT_OK;
+}
+```
 
 
 
