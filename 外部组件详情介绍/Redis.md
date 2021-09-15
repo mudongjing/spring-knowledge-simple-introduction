@@ -877,6 +877,8 @@ typedef struct dict {
 
 ## 初始化
 
+![](https://mudongjing.github.io/gallery/redis/dict/mem.png)
+
 ```c
 dict *dictCreate(dictType *type, void *privDataPtr){
     dict *d = zmalloc(sizeof(*d));
@@ -896,17 +898,759 @@ int _dictInit(dict *d, dictType *type, void *privDataPtr){
 }
 ```
 
+## 添加
 
+```c
+int dictAdd(dict *d, void *key, void *val){
+    // 添加键，字典中键已存在则返回NULL，否则添加键至新节点中，返回新节点
+    dictEntry *entry = dictAddRaw(d,key,NULL);
+	/*键存在则返回错误*/
+    if (!entry) return DICT_ERR;
+    dictSetVal(d, entry, val);
+    return DICT_OK;
+}
+
+```
+
+```c
+dictEntry *dictAddRaw(dict *d, void *key, dictEntry **existing){
+    long index;
+    dictEntry *entry;
+    dictht *ht;
+	/*该字典是否在进行rehash操作中,是则执行一次rehash*/
+    if (dictIsRehashing(d)) _dictRehashStep(d);
+
+    /*查找键，找到则直接返回-1, 并把老节点存入existing字段，否则把新节点的索引值返回。如果遇到Hash表容	    量不足，则进行扩容*/
+    // dictHashKey(d,key) 调用该字典的Hash函数得到键的Hash值
+    if ((index = _dictKeyIndex(d, key, dictHashKey(d,key), existing)) == -1) return NULL;
+
+    /*是否进行rehash操作中,是则插入至散列表ht[1]中，否则插入散列表ht[0] */
+    ht = dictIsRehashing(d) ? &d->ht[1] : &d->ht[0];
+
+    /*申请新节点内存，插入散列表中，给新节点存入键信息*/
+    entry = zmalloc(sizeof(*entry));
+    entry->next = ht->table[index];
+    ht->table[index] = entry;
+    ht->used++;
+
+    /* Set the hash entry fields. */
+    dictSetKey(d, entry, key);
+    return entry;
+}
+#define dictSetVal(d, entry, _val_) do { 
+    if ((d)->type->valDup) (entry)->v.val = (d)->type->valDup((d)->privdata, _val_); 
+    else  (entry)->v.val = (_val_); 
+} while(0)
+    
+static long _dictKeyIndex(dict *d, const void *key, uint64_t hash, dictEntry **existing){
+    unsigned long idx, table;
+    dictEntry *he;
+    if (existing) *existing = NULL;
+
+    /* Expand the hash table if needed */
+    if (_dictExpandIfNeeded(d) == DICT_ERR) return -1;
+    for (table = 0; table <= 1; table++) {
+        idx = hash & d->ht[table].sizemask; // 用键的Hash值与字典掩码取与，得到索引值
+        /* Search if this slot does not already contain the given key */
+        he = d->ht[table].table[idx];
+        while(he) {
+            if (key==he->key || dictCompareKeys(d, key, he->key)) {
+                if (existing) *existing = he;
+                return -1;
+            }
+            he = he->next;
+        }
+        if (!dictIsRehashing(d)) break;
+    }
+    return idx;
+}
+```
+
+## 扩容
+
+![](https://mudongjing.github.io/gallery/redis/dict/expansion.png)
+
+```c
+/*扩容主要流程为：
+  ①申请一块新内存，初次申请时默认容量大小为4个dictEntry；非初次申请时，申请内存的大小则为当前Hash表容量    的一倍。
+  ②把新申请的内存地址赋值给ht[1]，并把字典的rehashidx标识由-1改为0，表示之后需要进行rehash操作。*/
+int dictExpand(dict *d, unsigned long size) {
+    return _dictExpand(d, size, NULL);
+}
+/* 扩容后，字典容量及掩码值会发生改变，同一个键与掩码经位运算后得到的索引值就会发生改变，从而导致根据键查 找不到值的情况。
+   解决这个问题的方法是，新扩容的内存放到一个全新的Hash表中（ht[1]），并给字典打上在进行rehash操作中的标 识（即rehashidx!=-1）。
+   此后，新添加的键值对都往新的Hash表中存储；而修改、删除、查找操作需要在ht[0]、ht[1]中进行检查，然后再决定去对哪个Hash表操作。除此之外，还需要把老Hash表（ht[0]）中的数据重新计算索引值后全部迁移插入到新的Hash表(ht[1])中，此迁移过程称作rehash，*/
+```
+
+```c
+int _dictExpand(dict *d, unsigned long size, int* malloc_failed){
+    if (malloc_failed) *malloc_failed = 0;
+
+    if (dictIsRehashing(d) || d->ht[0].used > size) return DICT_ERR;
+
+    dictht n; /* the new hash table */
+    unsigned long realsize = _dictNextPower(size); /*重新计算扩容后的值，必须为2的N次方幂*/
+
+    /* Rehashing to the same table size is not useful. */
+    if (realsize == d->ht[0].size) return DICT_ERR;
+
+    /* Allocate the new hash table and initialize all pointers to NULL */
+    n.size = realsize;
+    n.sizemask = realsize-1;
+    if (malloc_failed) {
+        n.table = ztrycalloc(realsize*sizeof(dictEntry*));
+        *malloc_failed = n.table == NULL;
+        if (*malloc_failed) return DICT_ERR;
+    } 
+    else  n.table = zcalloc(realsize*sizeof(dictEntry*));
+
+    n.used = 0;
+
+    /* Is this the first initialization? If so it's not really a rehashing
+     * we just set the first hash table so that it can accept keys. */
+    if (d->ht[0].table == NULL) {
+        d->ht[0] = n;
+        return DICT_OK;
+    }
+
+    /* Prepare a second hash table for incremental rehashing */
+    d->ht[1] = n; // 扩容后的新内存放入ht[1]中
+    d->rehashidx = 0; // 非默认的-1,表示需进行rehash
+    return DICT_OK;
+}
+
+static unsigned long _dictNextPower(unsigned long size){
+    unsigned long i = DICT_HT_INITIAL_SIZE;
+
+    if (size >= LONG_MAX) return LONG_MAX + 1LU;
+    while(1) {
+        if (i >= size)  return i;
+        i *= 2;
+    }
+}
+```
+
+![](https://mudongjing.github.io/gallery/redis/dict/refresh.png)
+
+### rehash
+
+rehash除了扩容时会触发，缩容时也会触发。Redis整个rehash的实现，主要分为如下几步
+完成。
+
+1. 给Hash表ht[1]申请足够的空间；扩容时空间大小为当前容量*2，即d->ht[0].used*2；
+   当使用量不到总空间10%时，则进行缩容。缩容时空间大小则为能恰好包含d->ht[0].used个节
+   点的2^N次方幂整数，并把字典中字段rehashidx标识为0。
+2. 进行rehash操作调用的是dictRehash函数，重新计算ht[0]中每个键的Hash值与索引值
+   （重新计算就叫rehash），依次添加到新的Hash表ht[1]，并把老Hash表中该键值对删除。把字
+   典中字段rehashidx字段修改为Hash表ht[0]中正在进行rehash操作节点的索引值。
+3. rehash操作后，清空ht[0]，然后对调一下ht[1]与ht[0]的值，并把字典中rehashidx字段
+   标识为-1。
+
+> 执行插入、删除、查找、修改等操作前，都先判断当前字典rehash操作是否在进行中，进
+> 行中则调用dictRehashStep函数进行rehash操作（每次只对1个节点进行rehash操作，共执行1
+> 次）。
+>
+> 除这些操作之外，当服务空闲时，如果当前字典也需要进行rehsh操作，则会调用
+> incrementallyRehash函数进行批量rehash操作（每次对100个节点进行rehash操作，共执行1毫
+> 秒）。
+>
+> 在经历N次rehash操作后，整个ht[0]的数据都会迁移到ht[1]中，这样做的好处就把是本
+> 应集中处理的时间分散到了上百万、千万、亿次操作中，所以其耗时可忽略不计。
+
+
+
+## 查找
+
+```c
+dictEntry *dictFind(dict *d, const void *key){
+    dictEntry *he;
+    uint64_t h, idx, table;
+
+    if (dictSize(d) == 0) return NULL; /* dict is empty */
+    if (dictIsRehashing(d)) _dictRehashStep(d);
+    h = dictHashKey(d, key);// 获取键值的hash值
+    for (table = 0; table <= 1; table++) { // 遍历查找Hash表 ht[0]与ht[1]
+        idx = h & d->ht[table].sizemask; // 根据Hash值获取到对应的索引值
+        he = d->ht[table].table[idx];
+        while(he) {
+            if (key==he->key || dictCompareKeys(d, key, he->key))
+                return he;
+            he = he->next;
+        }
+        if (!dictIsRehashing(d)) return NULL; // 如果未进行rehash操作，则只读取ht[0]
+    }
+    return NULL;
+}
+```
+
+
+
+## 修改
+
+```c
+void dbOverwrite(redisDb *db, robj *key, robj *val) {
+    dictEntry *de = dictFind(db->dict,key->ptr); // 查找键存在与否，返回存在的节点
+    serverAssertWithInfo(NULL,key,de != NULL); // 不存在则中断执行
+    dictEntry auxentry = *de;
+    robj *old = dictGetVal(de); // 获取老节点的val字段值
+    if (server.maxmemory_policy & MAXMEMORY_FLAG_LFU) {
+        val->lru = old->lru;
+    }
+    /* Although the key is not really deleted from the database, we regard 
+    overwrite as two steps of unlink+add, so we still need to call the unlink 
+    callback of the module. */
+    moduleNotifyKeyUnlink(key,old);
+    dictSetVal(db->dict, de, val); // 给节点设置新的值
+
+    if (server.lazyfree_lazy_server_del) {
+        freeObjAsync(key,old);
+        dictSetVal(db->dict, &auxentry, NULL);
+    }
+
+    dictFreeVal(db->dict, &auxentry); // 释放节点中旧val内存
+}
+```
+
+## 删除
+
+```c
+int dictDelete(dict *ht, const void *key) {
+    return dictGenericDelete(ht,key,0) ? DICT_OK : DICT_ERR;
+}
+```
+
+```c
+static dictEntry *dictGenericDelete(dict *d, const void *key, int nofree) {
+    uint64_t h, idx;
+    dictEntry *he, *prevHe;
+    int table;
+
+    if (d->ht[0].used == 0 && d->ht[1].used == 0) return NULL;
+
+    if (dictIsRehashing(d)) _dictRehashStep(d);
+    h = dictHashKey(d, key);
+
+    for (table = 0; table <= 1; table++) {
+        idx = h & d->ht[table].sizemask;
+        he = d->ht[table].table[idx];
+        prevHe = NULL;
+        while(he) {
+            if (key==he->key || dictCompareKeys(d, key, he->key)) {
+                /* Unlink the element from the list */
+                if (prevHe) prevHe->next = he->next;
+                else  d->ht[table].table[idx] = he->next;
+                if (!nofree) {
+                    dictFreeKey(d, he);
+                    dictFreeVal(d, he);
+                    zfree(he);
+                }
+                d->ht[table].used--;
+                return he;
+            }
+            prevHe = he;
+            he = he->next;
+        }
+        if (!dictIsRehashing(d)) break;
+    }
+    return NULL; /* not found */
+}
+```
+
+## 遍历
+
+### 迭代器
+
+```c
+typedef struct dictIterator {
+    dict *d; //迭代的字典
+    long index; //当前迭代到Hash表中哪个索引值
+    //table用于表示当前正在迭代的Hash表,即ht[0]与ht[1]，safe用于表示当前创建的是否为安全迭代器
+    int table, safe; 
+    dictEntry *entry, *nextEntry; //当前节点，下一个节点
+    //字典的指纹，当字典未发生改变时，该值不变，发生改变时则值也随着改变
+    //该字段的值为字典（dict结构体）中所有字段值组合在一起生成的Hash值，所以当字典中数据发生任何变化时，		 其值都会不同
+    long long fingerprint;
+} dictIterator;
+```
+
+ ```c
+ // 指纹生成函数
+ long long dictFingerprint(dict *d) {
+     long long integers[6], hash = 0;
+     int j;
+ 
+     integers[0] = (long) d->ht[0].table;
+     integers[1] = d->ht[0].size;
+     integers[2] = d->ht[0].used;
+     integers[3] = (long) d->ht[1].table;
+     integers[4] = d->ht[1].size;
+     integers[5] = d->ht[1].used;
+ 
+     for (j = 0; j < 6; j++) {
+         hash += integers[j];
+         /* For the hashing step we use Tomas Wang's 64 bit integer hash. */
+         hash = (~hash) + (hash << 21); // hash = (hash << 21) - hash - 1;
+         hash = hash ^ (hash >> 24);
+         hash = (hash + (hash << 3)) + (hash << 8); // hash * 265
+         hash = hash ^ (hash >> 14);
+         hash = (hash + (hash << 2)) + (hash << 4); // hash * 21
+         hash = hash ^ (hash >> 28);
+         hash = hash + (hash << 31);
+     }
+     return hash;
+ }
+ ```
+
+> Redis如何解决增删数据的同时不出现读取数据重复的问题。Redis为单进程单线程模式，不存在两个命令同时执行的情况，因此只有当执行的命令在遍历的同时删除了数据，才会触发前面的问题。我们把迭代器
+> 遍历数据分为两类：
+>
+> 1. 普通迭代器，只遍历数据；
+> 2. 安全迭代器，遍历的同时删除数据。
+>
+> ![](https://mudongjing.github.io/gallery/redis/dict/iter-init.png)
+>
+> ![](https://mudongjing.github.io/gallery/redis/dict/itera.png)
+
+
+
+### 间断遍历
+
+```c
+/* 变量d是当前迭代的字典；变量v标识迭代开始的游标（即Hash表中数组索引），每次遍历后会返回新的游标值，整个    遍历过程都是围绕这个游标值的改动进行，来保证所有的数据能被遍历到；fn是函数指针，每遍历一个节点则调用该    函数处理；bucketfn函数在整理碎片时调用；privdata是回调函数fn所需参数。*/
+unsigned long dictScan(dict *d, unsigned long v, dictScanFunction *fn,
+                       dictScanBucketFunction* bucketfn, void *privdata){
+    dictht *t0, *t1;
+    const dictEntry *de, *next;
+    unsigned long m0, m1;
+    if (dictSize(d) == 0) return 0;
+
+    /* This is needed in case the scan callback tries to do dictFind or alike. */
+    dictPauseRehashing(d);
+
+    if (!dictIsRehashing(d)) {
+        t0 = &(d->ht[0]);
+        m0 = t0->sizemask;
+
+        /* Emit entries at cursor */
+        if (bucketfn) bucketfn(privdata, &t0->table[v & m0]);
+        de = t0->table[v & m0];
+        while (de) {
+            next = de->next;
+            fn(privdata, de);
+            de = next;
+        }
+        /* Set unmasked bits so incrementing the reversed cursor
+         * operates on the masked bits */
+        v |= ~m0;
+
+        /* Increment the reverse cursor */
+        v = rev(v);
+        v++;
+        v = rev(v);
+    } else {
+        t0 = &d->ht[0];
+        t1 = &d->ht[1];
+
+        /* Make sure t0 is the smaller and t1 is the bigger table */
+        if (t0->size > t1->size) {
+            t0 = &d->ht[1];
+            t1 = &d->ht[0];
+        }
+
+        m0 = t0->sizemask;
+        m1 = t1->sizemask;
+
+        /* Emit entries at cursor */
+        if (bucketfn) bucketfn(privdata, &t0->table[v & m0]);
+        de = t0->table[v & m0];
+        while (de) {
+            next = de->next;
+            fn(privdata, de);
+            de = next;
+        }
+
+        /* Iterate over indices in larger table that are the expansion
+         * of the index pointed to by the cursor in the smaller table */
+        do {
+            /* Emit entries at cursor */
+            if (bucketfn) bucketfn(privdata, &t1->table[v & m1]);
+            de = t1->table[v & m1];
+            while (de) {
+                next = de->next;
+                fn(privdata, de);
+                de = next;
+            }
+
+            /* Increment the reverse cursor not covered by the smaller mask.*/
+            v |= ~m1; v = rev(v); 
+            v++;  v = rev(v);
+            /* Continue while bits covered by mask difference is non-zero */
+        } while (v & (m0 ^ m1));
+    }
+    dictResumeRehashing(d);
+    return v;
+}
+```
+
+> dictScan函数间断遍历字典过程中会遇到如下3种情况。
+>
+> 1. 从迭代开始到结束，散列表没有进行rehash操作。
+> 2. 从迭代开始到结束，散列表进行了扩容或缩容操作，且恰好为两次迭代间隔期间完成了rehash操作。
+> 3. 从迭代开始到结束，某次或某几次迭代时散列表正在进行rehash操作。
 
 # 整数集合
+
+整数集合（intset）是一个有序的、存储整型数据的结构。我们知道Redis是一个内存数据库，所以必须考虑如何能够高效地利用内存。当Redis集合类型的元素都是整数并且都处在64位有符号整数范围之内时，使用该结构体存储。
+
+在两种情况下，底层编码会发生转换。一种情况为当元素个数超过一定数量之后（默认值为512），即使元素类型仍然是整型，也会将编码转换为hashtable，该值由如下配置项决定：
+
+`set-max-intset-entries 512`
+另一种情况为当增加非整型变量时，例如在集合中增加元素'a'后，testSet的底层编码从intset转换为hashtable。
+
+```c
+typedef struct intset {
+    uint32_t encoding; //编码类型，决定每个元素占用几个字节
+   /*INTSET_ENC_INT16：当元素值都位于INT16_MIN和INT16_MAX之间时使用。该编码方式为每个元素占用2个字节。
+	 INTSET_ENC_INT32：当元素值位于INT16_MAX到INT32_MAX或者INT32_MIN到INT16_MIN之间时使用。该编码方式为每个元素占用4个字节。
+	 INTSET_ENC_INT64：当元素值位于INT32_MAX到INT64_MAX或者INT64_MIN到INT32_MIN之间时使用。该编码方式为每个元素占用8个字节。*/
+    uint32_t length; //元素个数
+    int8_t contents[];
+} intset;
+```
+
+## 查询
+
+```c
+uint8_t intsetFind(intset *is, int64_t value) {
+    uint8_t valenc = _intsetValueEncoding(value);
+    return valenc <= intrev32ifbe(is->encoding) && intsetSearch(is,value,NULL);
+}
+```
+
+```c
+// intset是按从小到大有序排列的，使用二分查找
+static uint8_t intsetSearch(intset *is, int64_t value, uint32_t *pos) {
+    int min = 0, max = intrev32ifbe(is->length)-1, mid = -1;
+    int64_t cur = -1;
+
+    /* The value can never be found when the set is empty */
+    if (intrev32ifbe(is->length) == 0) {
+        if (pos) *pos = 0;
+        return 0;
+    } else {
+        /* Check for the case where we know we cannot find the value,
+         * but do know the insert position. */
+        if (value > _intsetGet(is,max)) {
+            if (pos) *pos = intrev32ifbe(is->length);
+            return 0;
+        } else if (value < _intsetGet(is,0)) {
+            if (pos) *pos = 0;
+            return 0;
+        }
+    }
+
+    while(max >= min) {
+        mid = ((unsigned int)min + (unsigned int)max) >> 1;
+        cur = _intsetGet(is,mid);
+        if (value > cur) { min = mid+1;
+        } else if (value < cur) { max = mid-1;
+        } else { break;
+        }
+    }
+
+    if (value == cur) {
+        if (pos) *pos = mid;
+        return 1;
+    } else {
+        if (pos) *pos = min;
+        return 0;
+    }
+}
+```
+
+## 添加
+
+```c
+// 该函数根据插入值的编码类型和当前intset的编码类型决定是直接插入还是先进行intset升级再执行插入
+intset *intsetAdd(intset *is, int64_t value, uint8_t *success) {
+    uint8_t valenc = _intsetValueEncoding(value); //获取添加元素的编码值
+    uint32_t pos;
+    if (success) *success = 1;
+
+    /* Upgrade encoding if necessary. If we need to upgrade, we know that
+     * this value should be either appended (if > 0) or prepended (if < 0),
+     * because it lies outside the range of existing values. */
+    if (valenc > intrev32ifbe(is->encoding)) {
+       //调用intsetUpgradeAndAdd进行升级后添加
+        return intsetUpgradeAndAdd(is,value);
+    } else {
+       //否则先进行查重,如果已经存在该元素，直接返回
+        if (intsetSearch(is,value,&pos)) {
+            if (success) *success = 0;
+            return is;
+        }
+
+        is = intsetResize(is,intrev32ifbe(is->length)+1);//首先将intset占用内存扩容
+        //如果插入元素在intset中间位置，调用intsetMoveTail给元素挪出空间
+        if (pos < intrev32ifbe(is->length)) intsetMoveTail(is,pos,pos+1);
+    }
+
+    _intsetSet(is,pos,value);//保存元素
+    is->length = intrev32ifbe(intrev32ifbe(is->length)+1);//修改intset的长度，将其加1
+    return is;
+}
+```
+
+## 删除
+
+```c
+//该函数查找需要删除的元素然后通过内存地址的移动直接将该元素覆盖掉
+intset *intsetRemove(intset *is, int64_t value, int *success) {
+    uint8_t valenc = _intsetValueEncoding(value);
+    uint32_t pos;
+    if (success) *success = 0;
+	//待删除元素编码必须小于等于intset编码并且查找到该元素，才会执行删除操作
+    if (valenc <= intrev32ifbe(is->encoding) && intsetSearch(is,value,&pos)) {
+        uint32_t len = intrev32ifbe(is->length);
+
+        /* We know we can delete */
+        if (success) *success = 1;
+
+        //如果待删除元素位于中间位置,则调用intsetMoveTail直接覆盖掉该元素
+		//如果待删除元素位于intset末尾,则intset收缩内存后直接将其丢弃
+        if (pos < (len-1)) intsetMoveTail(is,pos+1,pos);
+        is = intsetResize(is,len-1);
+        is->length = intrev32ifbe(len-1);//修改intset的长度，将其减1
+    }
+    return is;
+}
+```
 
 
 
 # quciklist
 
+> 在引入quicklist之前，Redis采用压缩链表（ziplist）以及双向链表（adlist）作为List的底层实现。当元素个数比较少并且元素长度比较小时，Redis采用ziplist作为其底层存储；当任意一个条件不满足时，Redis采用adlist作为底层存储结构。这么做的主要原因是，当元素长度较小时，采用ziplist可以有效节省存储空间，但ziplist的存储空间是连续的，当元素个数比较多时，修改元素时，必须重新分配存储空间，这无疑会影响Redis的执行效率，故而采用一般的双向链表。
+> quicklist是综合考虑了时间效率与空间效率引入的新型数据结构，quicklist由List和ziplist结合而成。
+>
+> > quicklist是一个双向链表，链表中的每个节点是一个ziplist结构。quicklist可以看成是用双向链表将若干小型的ziplist连接到一起组成的一种数据结构。当ziplist节点个数过多，quicklist退化为双向链表，一
+> > 个极端的情况就是每个ziplist节点只包含一个entry，即只有一个元素。当ziplist元素个数过少
+> > 时，quicklist可退化为ziplist，一种极端的情况就是quicklist中只有一个ziplist节点。
+
+![](https://mudongjing.github.io/gallery/redis/quicklist/construct.png)
+
+```c
+typedef struct quicklist {
+    quicklistNode *head;
+    quicklistNode *tail;
+    unsigned long count;        /* total count of all entries in all ziplists */
+    unsigned long len;          /* number of quicklistNodes */
+    int fill : QL_FILL_BITS;    /* 指明每个quicklistNode中ziplist长度，当fill为正数时，表明每									个ziplist最多含有的数据项数，当fill为负数时，如下标所示*/
+    unsigned int compress : QL_COMP_BITS; /* depth of end nodes not to compress;0=off */
+    unsigned int bookmark_count: QL_BM_BITS;
+    quicklistBookmark bookmarks[];
+} quicklist;
+```
+
+| fill | 含义                 |
+| ---- | -------------------- |
+| -1   | ziplist节点最大为4KB |
+| -2   | 8KB                  |
+| -3   | 16                   |
+| -4   | 32                   |
+| -5   | 64                   |
+
+![](https://mudongjing.github.io/gallery/redis/quicklist/zip.png)
+
+```c
+typedef struct quicklistNode {
+    struct quicklistNode *prev;
+    struct quicklistNode *next;
+    unsigned char *zl; // 指向该节点对应的ziplist结构
+    unsigned int sz;           //代表整个ziplist结构的大小
+    unsigned int count : 16;     /* count of items in ziplist */
+    unsigned int encoding : 2;  //代表采用的编码方式：1代表是原生的，2代表使用LZF进行压缩
+    unsigned int container : 2;  //为quicklistNode节点zl指向的容器类型：1代表none，                                                    2代表使用ziplist存储数据
+    unsigned int recompress : 1; //代表这个节点之前是否是压缩节点，若是，则在使用压缩节点前先进行解压								   缩，使用后需要重新压缩，此外为1，代表是压缩节点
+    unsigned int attempted_compress : 1; /* node can't compress; too small */
+    unsigned int extra : 10; /* more bits to steal for future usage */
+} quicklistNode;
+```
+
+## 初始化
+
+```c
+quicklist *quicklistCreate(void) {
+    struct quicklist *quicklist;
+
+    quicklist = zmalloc(sizeof(*quicklist));
+    quicklist->head = quicklist->tail = NULL;
+    quicklist->len = 0;
+    quicklist->count = 0;
+    quicklist->compress = 0;
+    quicklist->fill = -2;
+    quicklist->bookmark_count = 0;
+    return quicklist;
+}
+```
+
+## 添加
+
+```c
+int quicklistPushHead(quicklist *quicklist, void *value, size_t sz) {
+    quicklistNode *orig_head = quicklist->head;
+    // 当ziplist已经包含节点时，在ziplist头部插入数据可能导致ziplist的连锁更新
+    if (likely(_quicklistNodeAllowInsert(quicklist->head, quicklist->fill, sz))) {
+        //头部节点仍然可以插入
+        quicklist->head->zl = ziplistPush(quicklist->head->zl, value, sz, ZIPLIST_HEAD);
+        quicklistNodeUpdateSz(quicklist->head);
+    } else {//头部节点不可以继续插入, 新建quicklistNode, ziplist
+        quicklistNode *node = quicklistCreateNode();
+        node->zl = ziplistPush(ziplistNew(), value, sz, ZIPLIST_HEAD);
+        quicklistNodeUpdateSz(node);
+        //将新建的quicklistNode插入到quicklist结构体中
+        _quicklistInsertNodeBefore(quicklist, quicklist->head, node);
+    }
+    quicklist->count++;
+    quicklist->head->count++;
+    return (orig_head != quicklist->head);
+}
+```
+
+```c
+int quicklistPushTail(quicklist *quicklist, void *value, size_t sz) {
+    quicklistNode *orig_tail = quicklist->tail;
+    if (likely(_quicklistNodeAllowInsert(quicklist->tail, quicklist->fill, sz))) {
+        quicklist->tail->zl = ziplistPush(quicklist->tail->zl, value, sz, ZIPLIST_TAIL);
+        quicklistNodeUpdateSz(quicklist->tail);
+    } else {
+        quicklistNode *node = quicklistCreateNode();
+        node->zl = ziplistPush(ziplistNew(), value, sz, ZIPLIST_TAIL);
+        quicklistNodeUpdateSz(node);
+        _quicklistInsertNodeAfter(quicklist, quicklist->tail, node);
+    }
+    quicklist->count++;
+    quicklist->tail->count++;
+    return (orig_tail != quicklist->tail);
+}
+```
+
+### 插入
+
+![](https://mudongjing.github.io/gallery/redis/quicklist/insert.png)
+
+```c
+REDIS_STATIC void _quicklistInsert(quicklist *quicklist, quicklistEntry *entry,
+                                   void *value, const size_t sz, int after) {
+    int full = 0, at_tail = 0, at_head = 0, full_next = 0, full_prev = 0;
+    int fill = quicklist->fill;
+    quicklistNode *node = entry->node;
+    quicklistNode *new_node = NULL;
+
+    if (!node) {
+        /* we have no reference node, so let's create only node in the list */
+        D("No node given!");
+        new_node = quicklistCreateNode();
+        new_node->zl = ziplistPush(ziplistNew(), value, sz, ZIPLIST_HEAD);
+        __quicklistInsertNode(quicklist, NULL, new_node, after);
+        new_node->count++;
+        quicklist->count++;
+        return;
+    }
+
+    /* Populate accounting flags for easier boolean checks later */
+    if (!_quicklistNodeAllowInsert(node, fill, sz)) {
+        D("Current node is full with count %d with requested fill %lu",node->count, fill);
+        full = 1;
+    }
+
+    if (after && (entry->offset == node->count)) {
+        D("At Tail of current ziplist");
+        at_tail = 1;
+        if (!_quicklistNodeAllowInsert(node->next, fill, sz)) {
+            D("Next node is full too.");
+            full_next = 1;
+        }
+    }
+
+    if (!after && (entry->offset == 0)) {
+        D("At Head");
+        at_head = 1;
+        if (!_quicklistNodeAllowInsert(node->prev, fill, sz)) {
+            D("Prev node is full too.");
+            full_prev = 1;
+        }
+    }
+
+    /* Now determine where and how to insert the new element */
+    if (!full && after) {
+        D("Not full, inserting after current position.");
+        quicklistDecompressNodeForUse(node);
+        unsigned char *next = ziplistNext(node->zl, entry->zi);
+        if (next == NULL) { node->zl = ziplistPush(node->zl, value, sz, ZIPLIST_TAIL);
+        } else { node->zl = ziplistInsert(node->zl, next, value, sz);}
+        node->count++;
+        quicklistNodeUpdateSz(node);
+        quicklistRecompressOnly(quicklist, node);
+    } else if (!full && !after) {
+        D("Not full, inserting before current position.");
+        quicklistDecompressNodeForUse(node);
+        node->zl = ziplistInsert(node->zl, entry->zi, value, sz);
+        node->count++;
+        quicklistNodeUpdateSz(node);
+        quicklistRecompressOnly(quicklist, node);
+    } else if (full && at_tail && node->next && !full_next && after) {
+        /* If we are: at tail, next has free space, and inserting after:
+         *   - insert entry at head of next node. */
+        D("Full and tail, but next isn't full; inserting next node head");
+        new_node = node->next;
+        quicklistDecompressNodeForUse(new_node);
+        new_node->zl = ziplistPush(new_node->zl, value, sz, ZIPLIST_HEAD);
+        new_node->count++;
+        quicklistNodeUpdateSz(new_node);
+        quicklistRecompressOnly(quicklist, new_node);
+    } else if (full && at_head && node->prev && !full_prev && !after) {
+        /* If we are: at head, previous has free space, and inserting before:
+         *   - insert entry at tail of previous node. */
+        D("Full and head, but prev isn't full, inserting prev node tail");
+        new_node = node->prev;
+        quicklistDecompressNodeForUse(new_node);
+        new_node->zl = ziplistPush(new_node->zl, value, sz, ZIPLIST_TAIL);
+        new_node->count++;
+        quicklistNodeUpdateSz(new_node);
+        quicklistRecompressOnly(quicklist, new_node);
+    } else if (full && ((at_tail && node->next && full_next && after) ||
+                        (at_head && node->prev && full_prev && !after))) {
+        /* If we are: full, and our prev/next is full, then:
+         *   - create new node and attach to quicklist */
+        D("\tprovisioning new node...");
+        new_node = quicklistCreateNode();
+        new_node->zl = ziplistPush(ziplistNew(), value, sz, ZIPLIST_HEAD);
+        new_node->count++;
+        quicklistNodeUpdateSz(new_node);
+        __quicklistInsertNode(quicklist, node, new_node, after);
+    } else if (full) {
+        /* else, node is full we need to split it. */
+        /* covers both after and !after cases */
+        D("\tsplitting node...");
+        quicklistDecompressNodeForUse(node);
+        new_node = _quicklistSplitNode(node, entry->offset, after);
+        new_node->zl = ziplistPush(new_node->zl, value, sz,
+                                   after ? ZIPLIST_HEAD : ZIPLIST_TAIL);
+        new_node->count++;
+        quicklistNodeUpdateSz(new_node);
+        __quicklistInsertNode(quicklist, node, new_node, after);
+        _quicklistMergeNodes(quicklist, node);
+    }
+    quicklist->count++;
+}
+```
+
 
 
 # Stream
+
+这是用于消息队列。
 
 
 
