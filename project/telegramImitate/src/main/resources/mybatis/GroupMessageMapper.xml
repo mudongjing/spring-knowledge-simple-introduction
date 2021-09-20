@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mybatis.mapper.GroupMessageMapper">
+    <update id="createGroupMessageTable" parameterType="String">
+        CREATE TABLE IF NOT EXISTS message_${name} (
+          `message_id` int(10) not null auto_increment,
+          `message_content` varchar(255) not null,
+          `message_type` int(2) not null,
+          `message_creator` int(10) not null,
+          `message_date`  date not null,
+          `message_time` time not null,
+           primary key(`message_id`)
+        )engine=InnoDB default charset=utf8
+    </update>
+    <insert id="insertMessageItem" parameterType="com.example.demo.pojo.expand.ExpandGroupMessage" useGeneratedKeys="true" keyProperty="messageId">
+        INSERT INTO ${tableName}(
+        `message_content`,`message_type`,`message_creator`,`message_date`,`message_time`
+        )values (
+        #{messageContent},#{messageType},#{messageCreator},#{messageDate},#{messageTime}
+        )
+    </insert>
+</mapper>
